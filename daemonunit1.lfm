@@ -1,0 +1,8 @@
+object Daemon1: TDaemon1
+  OldCreateOrder = False
+  OnExecute = DataModuleExecute
+  Height = 219
+  HorizontalOffset = 301
+  VerticalOffset = 169
+  Width = 537
+end

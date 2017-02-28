@@ -1,0 +1,55 @@
+package CopyCat_2014;
+
+{$R *.res}
+{$R 'CopyCat.dcr'}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DESCRIPTION 'CopyCat Replication Suite'}
+{$IMPLICITBUILD OFF}
+
+requires
+  designide,
+  dbrtl,
+  rtl;
+
+contains
+  CCat in 'CCat.pas',
+  CcConf in 'CcConf.pas',
+  CcConflictMgr in 'CcConflictMgr.pas',
+  CcLog in 'CcLog.pas',
+  CcMemDS in 'CcMemDS.pas',
+  CcInterbase in 'CcInterbase.pas',
+  CcProviders in 'CcProviders.pas',
+  CcReplicator in 'CcReplicator.pas',
+  CcKeys in 'CcKeys.pas',
+  CcTransports in 'CcTransports.pas',
+  CcEditors in 'CcEditors.pas',
+  CcSQLServer in 'CcSQLServer.pas',
+  CcDB in 'CcDB.pas',
+  CcInterbaseConn in 'CcInterbaseConn.pas',
+  CcNexusDB in 'CcNexusDB.pas',
+  CcSQLite in 'CcSQLite.pas',
+  CcMySQL in 'CcMySQL.pas',
+  CcOracle in 'CcOracle.pas',
+  CcPostgres in 'CcPostgres.pas';
+
+end.

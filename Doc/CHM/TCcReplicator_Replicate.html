@@ -1,0 +1,141 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>TCcReplicator.Replicate Method </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+    <meta name="generator" content="Doc-O-Matic" />
+    <meta name="save" content="history" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <link rel="STYLESHEET" href="default.css" type="text/css" />
+
+<script type="text/javascript" src="scripts.js"></script>
+</head>
+<body class="Element700" onload="onBodyLoad();" onmousedown="onBodyMouseDown();">
+<div id="persistenceDiv" style="display:none; behavior:url(#default#userData);"></div>
+
+<!-- Begin Popups -->
+<div class="Element801" id="popup00641">
+<div class="Element800">
+<div class="Element14">
+Links</div>
+<div class="Element11">
+<div class="Element10">
+<a href="TCcReplicator.html">TCcReplicator Class</a></div>
+</div>
+</div>
+</div>
+
+<!-- End Popups -->
+
+<!-- Begin Page Header -->
+<div class="Element710" id="areafixed">
+<div class="Element92">
+<table width="100%" cellspacing="0" cellpadding="0">
+<tr><td width="33%">
+<div class="Element1">
+<a href="#" onmousedown="showPopup(this, 'popup00641');"><img src="seealsolink.png" border="0" alt=""></a> <a href="http://www.copycat.fr" target="new_page"><img src="copycat_70x70.png" border="0"><h3>CopyCat Developer Tools</h3></img></a></div>
+</td><td width="34%">
+<div class="Element2">
+<a href="contents.html">Contents</a> | <a href="idx.html">Index</a></div>
+</td><td width="33%">
+<div class="Element90">
+<a href="TCcReplicator.html">Up</a> | <a href="TCcReplicator_RefreshDisplay.html">Previous</a> | <a href="TCcReplicator_SynchronizeRows@string@string@TCcSyncDirection@Boolean.html">Next</a></div>
+</td></tr></table><div class="Element5">
+TCcReplicator.Replicate Method </div>
+<div class="Element7">
+<a href="TCcReplicator.html">TCcReplicator Class</a></div>
+<div class="Element730">
+<a href="#" onclick="showAllElements();">Show All</a></div>
+</div>
+</div>
+
+<!-- End Page Header -->
+
+<!-- Begin Client Area -->
+<div class="Element720" id="areascroll">
+<div class="Element721">
+
+<!-- Begin Page Content -->
+<div class="Element58">
+<div class="Element11">
+<div class="Element10">
+<p class="Element10">
+Call Replicate to start replicating the two databases.</p></div>
+</div>
+<div class="Element101"><div class="Element100"><pre class="Element100"><strong>procedure</strong> Replicate;</pre></div></div>
+<div class="Element101"><div class="Element100"><pre class="Element100">Replicate();</pre></div></div>
+<div class="Element14">
+<a onclick="toggleVisibilityStored('Description');" class="a_Element14"><img src="sectionminus.png" border="0" alt="sectionminus.png" id="imgDescription">Description</a></div>
+<div id="divDescription">
+<div class="Element11">
+<div class="Element10">
+<p class="Element10">
+If no replication process is already in progress, calling the Replicate method initiates the replication.&nbsp;</p>
+<p class="Element10">
+First a <a href="TCcReplicator_BeforeReplicate.html">BeforeReplicate</a> event is fired, after which, the database connections are established, and the replication log is loaded. If the same record is found in both the remote and the local logs, a conflict is detected, and the <a href="TCcReplicator_OnConflict.html">OnConflict</a> event occurs. This does not stop the other records from replicating, it merely means that the conflictual record will be put &quot;in hold&quot; until the user resolves the conflict. See <a href="TCcConflictMgr.html">TCcConflictMgr</a> for more information about conflict management.&nbsp;</p>
+<p class="Element10">
+&nbsp;</p>
+<p class="Element10">
+If the log is empty, an <a href="TCcReplicator_OnEmptyLog.html">OnEmptyLog</a> event is fired. If not, an <a href="TCcReplicator_OnLogLoaded.html">OnLogLoaded</a> event is fired, and replication begins.&nbsp;</p>
+<p class="Element10">
+If <a href="TCcReplicator_AutoPriority.html">AutoPriority</a> is false, then all the records to be replicated are grouped up by table priority , so all the records of the same table replicate together (whether they from the local or remote databases). Each table is enclosed by the <a href="TCcReplicator_OnTableBegin.html">OnTableBegin</a> and <a href="TCcReplicator_OnTableEnd.html">OnTableEnd</a> events.&nbsp;</p>
+<p class="Element10">
+If <a href="TCcReplicator_AutoPriority.html">AutoPriority</a> is true, then the rows are replicated in the order the changes occured, without taking table priority into account. However, if the same record was changed several times, the duplicate rows in RPL$LOG will still be grouped up together and only replicated once, which means that there can be situations where the order can be wrong (for example, if a row is inserted into a table, then row into a different table, and then the first row gets updated to point to the row from the second table, with a foreign key constraint : a situation like that will cause a foreign key violation because the first table will be replicated first). That means that it can sometimes be normal to get foreign key violations during replication, but it has little incidence as the affected rows will be replicated successfully on the next attempt.&nbsp;</p>
+<p class="Element10">
+The <a href="TCcReplicator_OnRowReplicating.html">OnRowReplicating</a> and <a href="TCcReplicator_OnRowReplicated.html">OnRowReplicated</a> events are fired before and after each record. For further detail, the <a href="TCcReplicator_OnQueryDone.html">OnQueryDone</a> event is fired after every query (SELECT, UPDATE, INSERT or DELETE) that is performed during the replication of one record.&nbsp;</p>
+<p class="Element10">
+&nbsp;</p>
+<p class="Element10">
+Once replication has started, you may abort it at any time using the <a href="TCcReplicator_AbortReplication.html">AbortReplication</a> method. If you choose to do so, an <a href="TCcReplicator_OnReplicationAborted.html">OnReplicationAborted</a> event will be fired as soon as the replication process is actually stopped.&nbsp;</p>
+<p class="Element10">
+&nbsp;</p>
+<p class="Element10">
+If an exception occurs during the replication of a record, the <a href="TCcReplicator_OnReplicationError.html">OnReplicationError</a> event is fired, allowing to either resume replication, or to abort. If an exception occurs at any other point, an <a href="TCcReplicator_OnException.html">OnException</a> event is fired, and replication is stopped.&nbsp;</p>
+<p class="Element10">
+&nbsp;</p>
+<p class="Element10">
+If the log was not empty, an <a href="TCcReplicator_OnFinished.html">OnFinished</a> event is fired after replicating the records, even if an error occured and replication was aborted. <a href="TCcReplicator_OnFinished.html">OnFinished</a> merely indicates that the replication process is no longer in progress, and can be used for such things as refreshing the user display and status labels (for example). The <a href="TCcReplicator_OnFinished.html">OnFinished</a> event is only fire if the log was not empty however : for an event that always fires whatever the outcome of replication, you can use <a href="TCcReplicator_OnReplicationResult.html">OnReplicationResult</a>, and from there examine the <a href="TCcReplicator_LastResult.html">LastResult</a> property.</p></div>
+</div>
+</div>
+<div class="Element14">
+<a onclick="toggleVisibilityStored('Class');" class="a_Element14"><img src="sectionminus.png" border="0" alt="sectionminus.png" id="imgClass">Class</a></div>
+<div id="divClass">
+<div class="Element11">
+<div class="Element10">
+<p class="Element10">
+<a href="TCcReplicator.html">TCcReplicator Class</a></p></div>
+</div>
+</div>
+<div class="Element14">
+<a onclick="toggleVisibilityStored('Links');" class="a_Element14"><img src="sectionminus.png" border="0" alt="sectionminus.png" id="imgLinks">Links</a></div>
+<div id="divLinks">
+<div class="Element11">
+<div class="Element10">
+<a href="TCcReplicator.html">TCcReplicator Class</a></div>
+</div>
+</div>
+<div class="Element62">
+Created with a commercial version of <a href="http://www.doc-o-matic.com">Doc-O-Matic</a>. In order to make this message disappear you need to register this software. If you have problems registering this software please contact us at <a href="mailto:support@toolsfactory.com">support@toolsfactory.com</a>.</div>
+</div>
+<!-- End Page Content -->
+
+<!-- Begin Page Footer -->
+<div class="Element93">
+<table width="100%" cellspacing="0" cellpadding="0">
+<tr><td width="100%">
+<div class="Element3">
+Copyright (c) 2015. All rights reserved. http://www.copycat.fr</div>
+</td></tr><tr><td width="100%">
+<div class="Element4">
+<a href="contents.html">Contents</a> | <a href="idx.html">Index</a></div>
+</td></tr><tr><td width="100%">
+<div class="Element97">
+What do you think about this topic?  <a href="#" onclick="sendFeedback('jonathan@copycat.fr', 'Documentation Feedback', 'Project: CopyCat Developer Tools%0ATopic ID: TCcReplicator.Replicate%0ATitle: TCcReplicator.Replicate Method ');"> Send feedback! </a></div>
+</td></tr></table></div>
+
+<!-- End Page Footer -->
+</div>
+</div>
+
+<!-- End Client Area -->
+</body></html>

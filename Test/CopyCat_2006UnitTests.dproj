@@ -1,0 +1,198 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{a07c6ad8-0056-4101-b202-bc8daf04ac3f}</ProjectGuid>
+        <MainSource>CopyCat_2006UnitTests.dpr</MainSource>
+        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+        <DCC_DCCCompiler>DCC32</DCC_DCCCompiler>
+        <DCC_DependencyCheckOutputName>CopyCat_2006UnitTests.exe</DCC_DependencyCheckOutputName>
+        <FrameworkType>VCL</FrameworkType>
+        <ProjectVersion>15.4</ProjectVersion>
+        <Base>True</Base>
+        <Config Condition="'$(Config)'==''">Debug</Config>
+        <Platform Condition="'$(Platform)'==''">Win32</Platform>
+        <TargetedPlatforms>1</TargetedPlatforms>
+        <AppType>Application</AppType>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Base)'=='true') or '$(Base_Win32)'!=''">
+        <Base_Win32>true</Base_Win32>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win64' and '$(Base)'=='true') or '$(Base_Win64)'!=''">
+        <Base_Win64>true</Base_Win64>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_1)'!=''">
+        <Cfg_1>true</Cfg_1>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_2)'!=''">
+        <Cfg_2>true</Cfg_2>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base)'!=''">
+        <SanitizedProjectName>CopyCat_2006UnitTests</SanitizedProjectName>
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <DCC_Namespace>Vcl;Vcl.Imaging;Vcl.Touch;Vcl.Samples;Vcl.Shell;System;Xml;Data;Datasnap;Web;Soap;Winapi;Data.Win;System.Win;$(DCC_Namespace)</DCC_Namespace>
+        <VerInfo_Locale>1036</VerInfo_Locale>
+        <VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base_Win32)'!=''">
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <Icon_MainIcon>CopyCat_2006UnitTests_Icon.ico</Icon_MainIcon>
+        <DCC_Namespace>Datasnap.Win;Web.Win;Soap.Win;Xml.Win;Bde;$(DCC_Namespace)</DCC_Namespace>
+        <VerInfo_Locale>1033</VerInfo_Locale>
+        <Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base_Win64)'!=''">
+        <Icon_MainIcon>CopyCat_2006UnitTests_Icon.ico</Icon_MainIcon>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_1)'!=''">
+        <Version>7.0</Version>
+        <DCC_DebugInformation>0</DCC_DebugInformation>
+        <DCC_LocalDebugSymbols>False</DCC_LocalDebugSymbols>
+        <DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+        <DCC_MapFile>3</DCC_MapFile>
+        <DCC_UnitSearchPath>$(BDS)\Source\DUnit\src;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
+        <DCC_ResourcePath>$(BDS)\Source\DUnit\src;$(DCC_ResourcePath)</DCC_ResourcePath>
+        <DCC_ObjPath>$(BDS)\Source\DUnit\src;$(DCC_ObjPath)</DCC_ObjPath>
+        <DCC_IncludePath>$(BDS)\Source\DUnit\src;$(DCC_IncludePath)</DCC_IncludePath>
+        <DCC_Define>_CONSOLE_TESTRUNNER;EUREKALOG;EUREKALOG_VER5;RELEASE;$(DCC_Define)</DCC_Define>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_2)'!=''">
+        <Version>7.0</Version>
+        <DCC_MapFile>3</DCC_MapFile>
+        <DCC_UnitSearchPath>$(BDS)\Source\DUnit\src;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
+        <DCC_ResourcePath>$(BDS)\Source\DUnit\src;$(DCC_ResourcePath)</DCC_ResourcePath>
+        <DCC_ObjPath>$(BDS)\Source\DUnit\src;$(DCC_ObjPath)</DCC_ObjPath>
+        <DCC_IncludePath>$(BDS)\Source\DUnit\src;$(DCC_IncludePath)</DCC_IncludePath>
+        <DCC_Define>_CONSOLE_TESTRUNNER;EUREKALOG;EUREKALOG_VER5;DEBUG;$(DCC_Define)</DCC_Define>
+    </PropertyGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Delphi.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Delphi.Personality>
+                <Parameters>
+                    <Parameters Name="UseLauncher">False</Parameters>
+                    <Parameters Name="LoadAllSymbols">True</Parameters>
+                    <Parameters Name="LoadUnspecifiedSymbols">False</Parameters>
+                </Parameters>
+                <VersionInfo>
+                    <VersionInfo Name="IncludeVerInfo">True</VersionInfo>
+                    <VersionInfo Name="AutoIncBuild">False</VersionInfo>
+                    <VersionInfo Name="MajorVer">1</VersionInfo>
+                    <VersionInfo Name="MinorVer">0</VersionInfo>
+                    <VersionInfo Name="Release">0</VersionInfo>
+                    <VersionInfo Name="Build">0</VersionInfo>
+                    <VersionInfo Name="Debug">False</VersionInfo>
+                    <VersionInfo Name="PreRelease">False</VersionInfo>
+                    <VersionInfo Name="Special">False</VersionInfo>
+                    <VersionInfo Name="Private">False</VersionInfo>
+                    <VersionInfo Name="DLL">False</VersionInfo>
+                    <VersionInfo Name="Locale">1036</VersionInfo>
+                    <VersionInfo Name="CodePage">1252</VersionInfo>
+                </VersionInfo>
+                <VersionInfoKeys>
+                    <VersionInfoKeys Name="CompanyName"/>
+                    <VersionInfoKeys Name="FileDescription"/>
+                    <VersionInfoKeys Name="FileVersion">1.0.0.0</VersionInfoKeys>
+                    <VersionInfoKeys Name="InternalName"/>
+                    <VersionInfoKeys Name="LegalCopyright"/>
+                    <VersionInfoKeys Name="LegalTrademarks"/>
+                    <VersionInfoKeys Name="OriginalFilename"/>
+                    <VersionInfoKeys Name="ProductName"/>
+                    <VersionInfoKeys Name="ProductVersion">1.0.0.0</VersionInfoKeys>
+                    <VersionInfoKeys Name="Comments"/>
+                </VersionInfoKeys>
+                <Excluded_Packages>
+                    <Excluded_Packages Name="C:\Documents and Settings\Microtec\Mes documents\Borland Studio Projects\Bpl\CopyCatIBO_2006.bpl">CopyCat IBO provider</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Documents and Settings\Microtec\Mes documents\Borland Studio Projects\Bpl\CopyCatIBX_2006.bpl">CopyCat IBX provider</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Documents and Settings\Microtec\Mes documents\Borland Studio Projects\Bpl\CopyCatXMLRPC_2006.bpl">(untitled)</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Documents and Settings\Microtec\Mes documents\Borland Studio Projects\Bpl\CopyCatFIB_2006.bpl">(untitled)</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Documents and Settings\Microtec\Mes documents\Borland Studio Projects\Bpl\CopyCatUIB_2006.bpl">CopyCat UIB provider</Excluded_Packages>
+                </Excluded_Packages>
+                <Source>
+                    <Source Name="MainSource">CopyCat_2006UnitTests.dpr</Source>
+                </Source>
+                <DebugEnvironmentVariables>
+                    <DebugEnvironmentVariables Name="Path">&apos;C:\PROGRA~1\Borland\Delphi5\Projects\Bpl;C:\PROGRA~1\Borland\Delphi5\Bin;C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\;C:\Program Files\Borland\BDS\4.0\Bin;C:\Program Files\Borland\Delphi7\Bin;C:\Program Files\Borland\Delphi7\Projects\Bpl\;C:\Oracle\OraHomeAPISOFT\bin;C:\Program Files\Oracle\jre\1.1.7\bin;C:\PROGRA~1\Borland\CBUILDER5\Projects\Bpl;C:\PROGRA~1\Borland\CBUILDER3\bin;C:\PROGRA~1\Borland\CBUILDER5\bin;C:\PROGRA~1\Borland\CBUILDER\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\Program Files\WinSCP3\;C:\Program Files\Fichiers communs\GTK\2.0\bin;C:\Tools;C:\Program Files\Borland\CaliberRM SDK 2005 R2\lib;C:\Sun\jwsdp-2.0\jwsdp-shared\bin;C:\Program Files\Sun\jstudio_ent8\AppServ8.1UR2\bin;;;;&quot;C:\Documents and Settings\Microtec\Mes documents\Borland Studio Projects\Bpl&quot;;&quot;C:\Program Files\FinalBuilder 3&quot;;C:\Program Files\Sun\jstudio_ent8\ide\uml1\modules\DoorsIntegrationFiles\modules\bin;c:\tools&apos;</DebugEnvironmentVariables>
+                </DebugEnvironmentVariables>
+                <DebugSysEnvironmentVariables>
+                    <DebugSysEnvironmentVariables Name="ALLUSERSPROFILE">&apos;C:\Documents and Settings\All Users&apos;</DebugSysEnvironmentVariables>
+                    <DebugSysEnvironmentVariables Name="APPDATA">&apos;C:\Documents and Settings\Microtec\Application Data&apos;</DebugSysEnvironmentVariables>
+                    <DebugSysEnvironmentVariables Name="BDS">&apos;c:\program files\borland\bds\4.0&apos;</DebugSysEnvironmentVariables>
+                    <DebugSysEnvironmentVariables Name="BDSPROJECTSDIR">&apos;C:\Documents and Settings\Microtec\Mes documents\Borland Studio Projects&apos;</DebugSysEnvironmentVariables>
+                    <DebugSysEnvironmentVariables Name="Chemin d'accŠs">&apos;C:\Program Files\Symantec\pcAnywhere\&apos;</DebugSysEnvironmentVariables>
+                    <DebugSysEnvironmentVariables Name="CLASSPATH">&apos;%AMPC%\classes\jasmin.jar;%AMPC%\classes\ampc_graphics.jar;%AMPC%\classes\acc_std.jar;%AMPC%\classes\jcmp.jar;.;C:\Program Files\Java\jre1.6.0\lib\ext\QTJava.zip&apos;</DebugSysEnvironmentVariables>
+                    <DebugSysEnvironmentVariables Name="CLIENTNAME">&apos;Console&apos;</DebugSysEnvironmentVariables>
+                    <DebugSysEnvironmentVariables Name="CommonProgramFiles">&apos;C:\Program Files\Fichiers communs&apos;</DebugSysEnvironmentVariables>
+                    <DebugSysEnvironmentVariables Name="COMPUTERNAME">&apos;KANGAROO&apos;</DebugSysEnvironmentVariables>
+                    <DebugSysEnvironmentVariables Name="ComSpec">&apos;C:\WINDOWS\system32\cmd.exe&apos;</DebugSysEnvironmentVariables>
+                    <DebugSysEnvironmentVariables Name="DELPHI">&apos;c:\program files\borland\bds\4.0&apos;</DebugSysEnvironmentVariables>
+                    <DebugSysEnvironmentVariables Name="FP_NO_HOST_CHECK">&apos;NO&apos;</DebugSysEnvironmentVariables>
+                    <DebugSysEnvironmentVariables Name="HOMEDRIVE">&apos;C:&apos;</DebugSysEnvironmentVariables>
+                    <DebugSysEnvironmentVariables Name="HOMEPATH">&apos;\Documents and Settings\Microtec&apos;</DebugSysEnvironmentVariables>
+                    <DebugSysEnvironmentVariables Name="LOGONSERVER">&apos;\\KANGAROO&apos;</DebugSysEnvironmentVariables>
+                    <DebugSysEnvironmentVariables Name="NUMBER_OF_PROCESSORS">&apos;1&apos;</DebugSysEnvironmentVariables>
+                    <DebugSysEnvironmentVariables Name="OS">&apos;Windows_NT&apos;</DebugSysEnvironmentVariables>
+                    <DebugSysEnvironmentVariables Name="PATHEXT">&apos;.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH&apos;</DebugSysEnvironmentVariables>
+                    <DebugSysEnvironmentVariables Name="PROCESSOR_ARCHITECTURE">&apos;x86&apos;</DebugSysEnvironmentVariables>
+                    <DebugSysEnvironmentVariables Name="PROCESSOR_IDENTIFIER">&apos;x86 Family 6 Model 13 Stepping 6, GenuineIntel&apos;</DebugSysEnvironmentVariables>
+                    <DebugSysEnvironmentVariables Name="PROCESSOR_LEVEL">&apos;6&apos;</DebugSysEnvironmentVariables>
+                    <DebugSysEnvironmentVariables Name="PROCESSOR_REVISION">&apos;0d06&apos;</DebugSysEnvironmentVariables>
+                    <DebugSysEnvironmentVariables Name="ProgramFiles">&apos;C:\Program Files&apos;</DebugSysEnvironmentVariables>
+                    <DebugSysEnvironmentVariables Name="QTJAVA">&apos;C:\Program Files\Java\jre1.6.0\lib\ext\QTJava.zip&apos;</DebugSysEnvironmentVariables>
+                    <DebugSysEnvironmentVariables Name="SESSIONNAME">&apos;Console&apos;</DebugSysEnvironmentVariables>
+                    <DebugSysEnvironmentVariables Name="SystemDrive">&apos;C:&apos;</DebugSysEnvironmentVariables>
+                    <DebugSysEnvironmentVariables Name="SystemRoot">&apos;C:\WINDOWS&apos;</DebugSysEnvironmentVariables>
+                    <DebugSysEnvironmentVariables Name="TEMP">&apos;C:\Temp&apos;</DebugSysEnvironmentVariables>
+                    <DebugSysEnvironmentVariables Name="TMP">&apos;C:\Temp&apos;</DebugSysEnvironmentVariables>
+                    <DebugSysEnvironmentVariables Name="USERDOMAIN">&apos;KANGAROO&apos;</DebugSysEnvironmentVariables>
+                    <DebugSysEnvironmentVariables Name="USERNAME">&apos;Microtec&apos;</DebugSysEnvironmentVariables>
+                    <DebugSysEnvironmentVariables Name="USERPROFILE">&apos;C:\Documents and Settings\Microtec&apos;</DebugSysEnvironmentVariables>
+                    <DebugSysEnvironmentVariables Name="windir">&apos;C:\WINDOWS&apos;</DebugSysEnvironmentVariables>
+                </DebugSysEnvironmentVariables>
+            </Delphi.Personality>
+            <Platforms>
+                <Platform value="Win32">True</Platform>
+                <Platform value="Win64">False</Platform>
+            </Platforms>
+            <UnitTesting>
+                <TestProjectName>C:\Projects\CopyCat\Test\Test\CopyCat_2006UnitTestsTests.dproj</TestProjectName>
+            </UnitTesting>
+        </BorlandProject>
+        <ProjectFileVersion>12</ProjectFileVersion>
+    </ProjectExtensions>
+    <ItemGroup>
+        <DelphiCompile Include="$(MainSource)">
+            <MainSource>MainSource</MainSource>
+        </DelphiCompile>
+        <DCCReference Include="TestCcReplicator.pas"/>
+        <DCCReference Include="..\CcReplicator.pas"/>
+        <DCCReference Include="TestCcProviders.pas"/>
+        <DCCReference Include="..\CcProviders.pas"/>
+        <DCCReference Include="TestCcInterbaseConn.pas"/>
+        <BuildConfiguration Include="Debug">
+            <Key>Cfg_2</Key>
+            <CfgParent>Base</CfgParent>
+        </BuildConfiguration>
+        <BuildConfiguration Include="Base">
+            <Key>Base</Key>
+        </BuildConfiguration>
+        <BuildConfiguration Include="Release">
+            <Key>Cfg_1</Key>
+            <CfgParent>Base</CfgParent>
+        </BuildConfiguration>
+    </ItemGroup>
+    <ItemGroup/>
+    <Import Project="$(BDS)\Bin\CodeGear.Delphi.Targets"/>
+    <Import Condition="Exists('$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj')" Project="$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj"/>
+    <Import Project="$(BDS)\Bin\CodeGear.Delphi.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Delphi.Targets')"/>
+</Project>

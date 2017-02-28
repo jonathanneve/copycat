@@ -1,0 +1,117 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN">
+<html>
+<head>
+<title>TCcReplicator.MergeChangedFieldsOnConflict Property</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+    <meta name="generator" content="Doc-O-Matic" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <link rel="STYLESHEET" href="default.css" type="text/css" />
+
+<script type="text/javascript" src="scripts.js"></script>
+</head>
+<body class="Element700" onload="onBodyLoadEx('frames.html', 'topic', 'TCcReplicator_MergeChangedFieldsOnConflict.html');" onmousedown="onBodyMouseDown();">
+
+<!-- Begin Popups -->
+<div class="Element801" id="popup00586">
+<div class="Element800">
+<div class="Element14">
+Links</div>
+<div class="Element11">
+<div class="Element10">
+<a href="TCcReplicator.html" target="topic">TCcReplicator Class</a></div>
+</div>
+</div>
+</div>
+
+<!-- End Popups -->
+
+<!-- Begin Page Header -->
+<div class="Element710" id="areafixed">
+<div class="Element92">
+<table width="100%" cellspacing="0" cellpadding="0">
+<tr><td width="33%">
+<div class="Element1">
+<a href="#" onmousedown="showPopup(this, 'popup00586');"><img src="seealsolink.png" border="0" alt=""></a> <a href="http://www.copycat.fr" target="new_page"><img src="copycat_70x70.png"><h3>CopyCat Developer Tools</h3></img></a></div>
+</td><td width="34%">
+<div class="Element2">
+<a href="contents.html" target="tocidx">Contents</a> | <a href="idx.html" target="tocidx">Index</a></div>
+</td><td width="33%">
+<div class="Element90">
+<a href="TCcReplicator.html" target="topic">Up</a> | <a href="TCcReplicator_LogErrors.html" target="topic">Previous</a> | <a href="TCcReplicator_Nodes.html" target="topic">Next</a></div>
+</td></tr></table><div class="Element5">
+TCcReplicator.MergeChangedFieldsOnConflict Property</div>
+<div class="Element7">
+<a href="TCcReplicator.html" target="topic">TCcReplicator Class</a></div>
+<div class="Element730">
+<a href="#" onclick="showAllElements();">Show All</a></div>
+</div>
+</div>
+
+<!-- End Page Header -->
+
+<!-- Begin Client Area -->
+<div class="Element720" id="areascroll">
+<div class="Element721">
+
+<!-- Begin Page Content -->
+<div class="Element58">
+<div class="Element11">
+<div class="Element10">
+<p class="Element10">
+Merges values of changed fields from both nodes, so as to avoid conflicts where possible</p></div>
+</div>
+<div class="Element101"><div class="Element100"><pre class="Element100"><strong>property</strong> MergeChangedFieldsOnConflict: Boolean;</pre></div></div>
+<div class="Element101"><div class="Element100"><pre class="Element100"><strong>__property</strong> Boolean MergeChangedFieldsOnConflict;</pre></div></div>
+<div class="Element14">
+<a onclick="toggleVisibilityStored('Description');" class="a_Element14"><img src="sectionminus.png" border="0" alt="sectionminus.png" id="imgDescription">Description</a></div>
+<div id="divDescription">
+<div class="Element11">
+<div class="Element10">
+<p class="Element10">
+MergeChangedFieldsOnConflict allows many conflicts to be automatically resolved by merging the changes from both nodes, in cases where none of the same fields were changed on both sides. In cases that are still conflictual, the <a href="TCcReplicator_OnResolveConflict.html" target="topic">OnResolveConflict</a> event and the RPL$CONFLICTS table provide the list of fields changed on each side as well as the list of fields changed on both sides, and it is also possible to find out for each field the value that it was changed from and to on each side, making conflict resolution much easier&nbsp;</p>
+<p class="Element10">
+If the MergeChangedFieldsOnConflict property is set to True and a conflict is detected, the fields that were changed on only one of the nodes will be merged. For instance, if the first node changed fields A, B and C while the seconde node changed fields C and D, if the conflict is resolved in favor of the second node, the values of A and B from the first node will be kept, as they were not conflictual with the change from the second node. Thus, conflict resolution can be much finer-grained.</p></div>
+</div>
+</div>
+<div class="Element14">
+<a onclick="toggleVisibilityStored('Class');" class="a_Element14"><img src="sectionminus.png" border="0" alt="sectionminus.png" id="imgClass">Class</a></div>
+<div id="divClass">
+<div class="Element11">
+<div class="Element10">
+<p class="Element10">
+<a href="TCcReplicator.html" target="topic">TCcReplicator Class</a></p></div>
+</div>
+</div>
+<div class="Element14">
+<a onclick="toggleVisibilityStored('Links');" class="a_Element14"><img src="sectionminus.png" border="0" alt="sectionminus.png" id="imgLinks">Links</a></div>
+<div id="divLinks">
+<div class="Element11">
+<div class="Element10">
+<a href="TCcReplicator.html" target="topic">TCcReplicator Class</a></div>
+</div>
+</div>
+<div class="Element62">
+Created with a commercial version of <a href="http://www.doc-o-matic.com">Doc-O-Matic</a>. In order to make this message disappear you need to register this software. If you have problems registering this software please contact us at <a href="mailto:support@toolsfactory.com">support@toolsfactory.com</a>.</div>
+</div>
+<!-- End Page Content -->
+
+<!-- Begin Page Footer -->
+<div class="Element93">
+<table width="100%" cellspacing="0" cellpadding="0">
+<tr><td width="100%">
+<div class="Element3">
+Copyright (c) 2015. All rights reserved. http://www.copycat.fr</div>
+</td></tr><tr><td width="100%">
+<div class="Element4">
+<a href="contents.html" target="tocidx">Contents</a> | <a href="idx.html" target="tocidx">Index</a></div>
+</td></tr><tr><td width="100%">
+<div class="Element97">
+What do you think about this topic?  Send feedback through our <a href="http://copycat.fr/wordpress/contact-us/" target="new_page">contact form</a></div>
+</td></tr></table></div>
+
+<!-- End Page Footer -->
+</div>
+</div>
+
+<!-- End Client Area -->
+</body></html>

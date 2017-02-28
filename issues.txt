@@ -1,0 +1,135 @@
+MISC
+
+- Write stuff for RTC partnership
+- Find other places to post about LiveMirror / CopyCat
+- Setup affiliate system for Carlos Cantu
+- Post to blog with link to download precompiled demo including FB embedded
+
+LIVEMIRROR
+
+- MS SQL support
+- New CopyCat triggers
+- FB 1.5 fixes
+- UCar fixes
+
+LIVEMIRROR NEXT
+
+- Add support for other databases
+- Make database comparer tool so users can check replication
+- Limit unnecessary RPL$ tables
+- Run in one single service
+
+LIVEMIRROR MISC
+
+- Make multiple levels of automated tests 
+- Error reporting
+- Installer : refuse to install if LiveMirror is already running
+- Don't store clear passwords in the ini file
+- Add a text file explaining how to upgrade from old versions
+- Offer installation / configuration service for sale
+- Add detailed information during database configuration
+- Add site licence
+- Fix "Run now" so that it checks whether process has been started before displaying the log
+- Update translations
+- Add option in config to auto-upload bug reports, providing email address
+- Feature to create full copy of master database, instead of backup/restore
+- Port to Linux and MacOS
+- Enable replication to secondary mirror
+- Make it possible to dissociate replication from config, so that you can have all the config in one server, and then have several instances somewhere else, just replicating.
+- Make mirror database preparation module
+- Support 64-bit
+- Support MacOS
+- TCcConfig.GenerateConfig : auto-detect PK change
+- Enable Unlimited licence
+- Translate Delphi RTL
+- Meta-data synchronization
+- Fail-over and restore features, so as to easily switch the mirror database into production mode (add triggers, etc), so that the changes made during downtime will be logged, and then be able to sync them back to production datbase when it goes back online.
+- Create LiveMirror server so that you can use compressed RTC network protocol
+- Disable triggers on mirror
+
+COPYCAT 3.10.0
+
+- Android access violation fix
+- Finish and test comparer
+- Update trigger creation mechanism for other databases, as well as PK sync stuff
+- Batch operation procedure : store SQL in RPL$LOG and don't fire triggers - maybe handle meta-data the same way
+- Add misc information to RPL$LOG (transaction number, etc)
+- If trigger can't be created, give a clear error message stating table name and text of trigger
+
+COPYCAT MISC
+
+- Flag to stop replication until validation (boolean flag in RPL$LOG, so that changes will only be sent after validation)
+- Dynamic included/excuded fields (handled in triggers)
+- Meta-data replication
+- Store primary key names in RPL$LOG so PK change can be handled seamlessly
+- Support for MERGE / IF EXISTS for MS SQL / MySQL
+- Test MySQL replication over FireDAC / MyDAC / ADO
+
+- Document PK sync mechanism
+- Optimize blob management so that they don't get copied around in memory for nothing
+- Use memory string to directly copy blobs from one connector to another or from TCcMemoryRow to connector without loading into memory
+- Raise an error if PKSynchronization = false and there are PK sync statements in RPL$TABLES
+- Include precompiled ADO, FireDAC and DataSnap connectors
+- Use msbuild for compiling
+- Separate into Runtime and Designtime packages so that you can add unit uses for CcDB
+- Implement missing features in other DBs compared to Firebird
+- Check issue with connection loss : http://copycat.fr/wordpress/discussions/#/discussion/64/critical-bug
+- Create a TCcPump component for pumping data and meta-data
+- Automatic priority calculation based on foreign keys for data pump
+- Update local RPL$LOG rows after synchronizing primary keys when in ReplicateOnlyChangedFields
+- Translate CopyCat messages
+- Store node connection information in RPL$USERS ? http://copycat.fr/wordpress/discussions/#/discussion/29/store-all-information-for-physical-nodes-in-the-master-remote-source-database
+
+COPYCAT 
+
+- Beef up batch import based on config
+- Improve formatting in triggers by data type
+- Get LineCount working with ReplicateOnlyChangedFields and if Direction <> sdBoth
+- Remove tracing mechanism
+- Get rid of unnecessary RPL$ tables
+
+- Compile connectors in installer
+- Select NexusDB version in installer and use pre-compiler defines to change the requires of the package accordingly
+- Add documentation explaining how to write replication conditions : http://copycat.fr/wordpress/discussions/#/discussion/28/replication-of-subsets-of-data
+- CcReplicator : fix potential error when there is a field name called 'W' + the name of another field
+- Make sure the installer installs components for Android and iOS as well
+- Activate product in installer
+- OnRowReplicating is not called for delete
+- Create a logger component ?
+- Create an error reporter component ?
+- Create rules-based checking system and configurable error reporting
+- Gzegrorz : memory leak ADO connector
+- Use random data for unit tests and specifically test for empty string and null values
+- Create unit test for transport
+- BatchImport : rethink CrushAll functionality so that it doesn't delete rows unnecessarily
+- New PKSynchronization system using RPL$KEYS table instead of RPL$LOCAL
+
+WEBSITE
+
+- Install new AMember version
+- Improve SEO
+- Can't use arrow keys in helpdesk : http://copycat.fr/amember/helpdesk/admin/p/view/view/ticket/OFQ-548498
+- Make banners for affiliates
+- Contact more potential partners
+- Post version history (on the blog, using categories)
+- Setup bug tracker
+- Check AMember licencing (Raph email)
+- Make example of RTC and XMLRPC replication on blog
+- Document the fact that ModuleFileName has to be set to / 
+- Diagram missing in http://copycat.fr/wordpress/network-transports/
+- Add more content, using tabs
+- Setup email notification system + contact form
+- Document PKSynchronization system
+- Improve management of CopyCat trials (track downloads and send automatic emails to customers having downloaded to nag them into buying)
+- Same with LiveMirror 
+- Make it so that people who write through the contact form are automatically added to the blog's news feed
+- Make it so that registered users are automatically added to the blog's news feed
+- Add bug tracker
+- Send contact form requests to tickets@microtec.fr?
+
+IDEAS FOR LATER
+
+- Enable over-the-wire and/or full data encryption with LiveMirror
+- Make a hosted LiveMirror service
+- Support for Xamarin? Oxygene for Java?
+- Bunch up data rows during replication so as to go faster

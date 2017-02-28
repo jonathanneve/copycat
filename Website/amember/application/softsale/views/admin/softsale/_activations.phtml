@@ -1,0 +1,38 @@
+<h3>License Activations</h3>
+
+<table class="grid">
+<tr>
+    <th>Time</th>
+    <th>Bindings</th>
+    <th>Disabled?</th>
+    <th></th>
+</tr>
+<?php foreach ($this->activations as $activation): ?>
+<tr>
+    <td><?php echo amDateTime($activation->dattm)?></td>
+    <td><?php echo $activation->renderRequest() ?></td>
+    <td><?php if ($activation->is_disabled): ?>
+        Disabled <?php echo amTime($activation->disabled_dattm)?>
+        <?php else: ?>
+        Active <a href="<?php p(REL_ROOT_URL)?>/softsale/admin-license/disable-activation?license_id=<?php echo $activation->license_id?>&license_activation_id=<?php echo $activation->pk()?>" 
+                  class="local activation-disable">(disable)</a>
+        <?php endif ?>
+    </td>
+    <td></td>
+</tr>
+<?php endforeach; ?>
+<tr>
+    <td colspan="4">
+    <label>New Activation</label>  
+    <?php foreach ($license->getScheme()->getBindTo() as $bind) : ?>
+        <input type="text" name="request[<?php p($bind) ?>]"
+                 size="15" placeholder="<?php p($bind)?>"/>
+    <?php endforeach; ?>
+        
+        <input type="hidden" name="license_id" value="<?php echo $license->pk(); ?>" />
+        <input type="submit" value="Activate" class="add-activation-button" />
+    </td>
+</tr>
+</table>
+<div class="div-flash-message" style="display:none"
+     id="activation-message"></div>

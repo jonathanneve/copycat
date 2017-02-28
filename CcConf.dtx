@@ -1,0 +1,409 @@
+
+@@CcConf.pas
+CopyCat replication suite                     
+                                              
+Copyright (c) 2005 Microtec Communications    
+                                              
+For any questions or technical support,       
+contact Jonathan Neve (jonathan@microtec.fr)
+
+@@TCcConfig
+Summary:
+Component for generating replication meta-data.
+Description:
+Before any replication can take place, the appropriate meta-data must be created
+in both databases. TCcConfig allows you to generate this meta-data (based on
+settings specific to each setup), and apply it to the database.<p/>
+<p/>
+First of all, you must set the DBProvider property, and then the Tables and
+Procedures properties must also be assigned. Tables and Procedures are datasets
+that hold the list of all tables and procedures in the database, with all the
+specific replication settings of each one. It's based on these settings that
+CopyCat is able to generate the necessary replication meta-data.<p/>
+<p/>
+TCcConfig defines several methods for generating the meta-data (GenerateTriggers,
+GenerateProcedure, RemoveTriggers and RemoveProcedure). In each case, when the
+method is called, the Script property is first cleared, and then filled with the
+generated meta-data. The SQL isn't actually executed by TCcConfig. For every
+individual SQL statement produced, the OnQueryReady event is fired, so as to let
+the application execute the SQL one statement at a time. When the entire script
+is prepared, it is placed in the Script property, and the OnScriptReady event is
+fired.<p/>
+<p/>
+Other than this meta-data, the replication users must also be configured in the
+RPL$USERS table in each database. See TCcUsers for more information.
+
+@@TCcConfig.Connect
+Summary:
+Connect to the database.
+Description:
+Call Connect to open a connection to the database, using the parameters specified
+in the ConnectParams property. The Tables and Procedures properties must be
+assigned before calling Connect.<p/>
+<p/>
+After connecting, TCcConfig loads the list of tables and procedures into the
+Tables and Procedures properties, and then checks that the necessary replication
+meta-data exists in the database. See OnCreateMetaData for more information.
+See Also:
+Disconnect
+
+@@TCcConfig.ConnectParams
+Summary:
+Database connection parameters.
+Description:
+ConnectParams defines the necessary parameters for connecting to the database to
+be configured.
+
+@@TCcConfig.DB
+Summary:
+Database connection object.
+Description:
+DB must not be accessed before the DBProvider property has been set.
+
+@@TCcConfig.Disconnect
+Summary:
+Disconnect from the database.
+Description:
+Call Disconnect to close the connection to the database.
+See Also:
+Connect
+
+@@TCcConfig.GenerateProcedure
+Summary:
+Generate the replication meta-data for the current procedure.
+Description:
+Use GenerateProcedure to generate the SQL necessary for creating the replication
+meta-data for the current procedure.
+See Also:
+RemoveProcedure
+
+@@TCcConfig.GenerateProcedure@String
+Summary:
+Generate the replication meta-data for the selected procedure.
+Description:
+Use GenerateProcedure to generate the SQL necessary for creating the replication
+meta-data for the selected procedure.
+Parameters:
+ProcName :  Name of the procedure to generate meta\-data for.
+See Also:
+RemoveProcedure
+
+@@TCcConfig.GenerateTriggers
+Summary:
+Generate the replication triggers for the current table.
+Description:
+Call this method to create the necessary replication triggers for the current
+table, based on the options set in Tables and Procedures.
+See Also:
+RemoveTriggers
+
+@@TCcConfig.GenerateTriggers@String
+Summary:
+Generate the replication triggers for the selected table.
+Description:
+Call this method to create the necessary replication triggers for the selected
+table, based on the options set in Tables and Procedures.
+Parameters:
+TableName :  Table for which to generate triggers
+See Also:
+RemoveTriggers
+
+@@TCcConfig.GetGenerator@String@Integer
+Summary:
+Build SQL statement for synchronizing a primary key or generator field, based on
+a generator.
+Parameters:
+GenName :    Name of the generator to use.
+Increment :  Amount to increment the generator by.
+Returns:
+The generated SQL statement, in a format suitable to be put in a 'PKn_GEN' or
+'GENn_VALUE' field of Tables.
+See Also:
+GetProcGenerator, Tables
+Note:
+This function does not alter the Script property, it merely returns the SQL
+statement.
+
+@@TCcConfig.GetProcGenerator@String@String@TCcProcParams@String
+Summary:
+Build SQL statement for synchronizing a primary key or generator field of the
+selected table, based on a stored procedure.
+Returns:
+The generated SQL statement, in a format suitable to be put in a 'PKn_GEN' or
+'GENn_VALUE' field of Tables.
+Parameters:
+TableName :    Name of the table for which to generate the SQL.
+ProcName :     Name of the stored procedure to select from.
+Params :       \Input parameters for the procedure, with their values filled in.
+OutputParam :  \Output parameter to be selected from the procedure.
+See Also:
+GetGenerator, Tables
+Note:
+This function does not alter the Script property, it merely returns the SQL
+statement.
+
+@@TCcConfig.GetProcGenerator@String@TCcProcParams@String
+Summary:
+Build SQL statement for synchronizing a primary key or generator field of the
+current table, based on a stored procedure.
+Returns:
+The generated SQL statement, in a format suitable to be put in a 'PKn_GEN' or
+'GENn_VALUE' field of Tables.
+Parameters:
+ProcName :     Name of the stored procedure to select from.
+Params :       \Input parameters for the procedure, with their values filled in.
+OutputParam :  \Output parameter to be selected from the procedure.
+See Also:
+GetGenerator, Tables
+Note:
+This function does not alter the Script property, it merely returns the SQL
+statement.
+
+@@TCcConfig.GetProcParams@String@TCcProcParams@Boolean
+Summary:
+Get the list of parameters for a stored procedure.
+Parameters:
+ProcName :    Name of the stored procedure.
+Params :      Empty TCcProcParams object to fill.
+InputParam :  Fill Params with input or output parameters of the procedure?
+See Also:
+GetProcGenerator
+
+@@TCcConfig.OnCreateMetadata
+Summary:
+Fired when the minimal replication meta-data needs to be created.
+Description:
+After connecting to a database, TCcConfig checks that the minimal replication
+meta-data is present, without which CopyCat can't function. If some or all of the
+meta-data is found to be missing, OnCreateMetadata is called, to get confirmation
+whether the missing meta-data should be generated or not.<p/>
+<p/>
+If the application confirms that it's ok to create the meta-data, it is generated
+into the Script property, firing the OnQueryReady and OnScriptReady events as
+appropriate.
+See Also:
+Connect
+
+@@TCcConfig.OnQueryReady
+Summary:
+Fired for every individual meta-data query.
+Description:
+The purpose of OnQueryReady is to give the application the possibility to execute
+the meta-data statements created by TCcConfig, one statement at a time.
+See Also:
+OnScriptReady
+
+@@TCcConfig.OnScriptReady
+Summary:
+Fired when an entire meta-data Script has been prepared.
+Description:
+When an script has been generated by TCcConfig, it is placed in the Script
+property, and the OnScriptReady event is fired to give the application the
+opportunity to either execute it, or stores it. The individual statements in the
+script are separated using the Terminator character.
+See Also:
+OnQueryReady
+
+@@TCcConfig.Procedures
+Summary:
+List of database procedures.
+Description:
+Procedures is a TCcTable dataset, holding the list of procedures existing in the
+database. It is automatically filled upon connecting to the database. Procedures
+holds all the replication configuration options for each procedure, which, when
+they are changed, are written to the registry or to an INI-file.
+   
+<table 25c%, 15c%>
+Field Name       Data type   \Description
+===============  ==========  --------------------------------------------------------------------------
+PROCEDURE_NAME   String      Name of the procedure.
+BASE_NAME        String      Base name for the replication procedure. By default, the base name is
+                              'RPL$', followed by as much of the procedure name as will fit. This might
+                              need to be changed for long procedure names, in order to keep unicity.
+PRIORITY         Integer     Priority of the procedure. This value is designed to avoid problems
+                              arising from dependencies upon tables or other procedures. Each procedure
+                              should have a higher priority than any of the tables or procedures it
+                              depends on, so as to ensure that it is replicated after them.
+CREATED          String      Indicates whether of not the procedure's replication procedure has been
+                              generated (either 'Y' or 'N'). This field is not used internally by
+                              CopyCat, it's provided merely for convenience. It's up to the application
+                              to set its value ('N' by default).
+</table>
+
+@@TCcConfig.RemoveProcedure
+Summary:
+Remove the replication meta-data for the current procedure.
+Description:
+Use RemoveProcedure to generate the SQL necessary for removing the replication
+meta-data for the selected procedure. The procedure itself is not removed, only
+the meta-data necessary for replicating it.
+See Also:
+GenerateProcedure
+
+@@TCcConfig.RemoveProcedure@String
+Summary:
+Remove the replication meta-data for the selected procedure.
+Description:
+Use RemoveProcedure to generate the SQL necessary for removing the replication
+meta-data for the selected procedure. The procedure itself is not removed, only
+the meta-data necessary for replicating it.
+Parameters:
+ProcName :  Name of the stored procedure to remove
+See Also:
+GenerateProcedure
+
+@@TCcConfig.RemoveTriggers
+Summary:
+Remove replication triggers from the current table.
+Description:
+Use RemoveTriggers to generate the SQL necessary for removing the replication
+triggers from the the current table.
+See Also:
+GenerateTriggers
+
+@@TCcConfig.RemoveTriggers@String
+Summary:
+Remove replication triggers from the selected table.
+Description:
+Use RemoveTriggers to generate the SQL necessary for removing the replication
+triggers from the "TableName" table.
+See Also:
+GenerateTriggers
+Parameters:
+TableName :  Name of the table from which to remove triggers
+
+@@TCcConfig.Script
+Summary:
+Last meta-data script generated.
+Description:
+Script is filled (and overwritten) every time GenerateTriggers,
+GenerateProcedure, RemoveTriggers or RemoveProcedure are called. It represents
+the last generated Script.
+See Also:
+Terminator
+
+@@TCcConfig.Tables
+Summary:
+List of database tables.
+Description:
+Tables is a TCcTable dataset, holding the list of tables existing in the
+database. It is automatically filled upon connecting to the database. Tables
+holds all the replication configuration options for each table, which, when they
+are changed, are written to the registry or to an INI-file.<p/>
+<p/>
+TCcTables defines the following fields:
+<table 17c%, 15c%>
+Field name   Data type   \Description
+===========  ==========  ---------------------------------------------------------------------
+TABLE_NAME   String      Name of the table.
+BASE_NAME    String      Base name for the triggers. To this will be added '_I', '_U' or '_D'
+                          depending on the type of trigger. By default, the base name is
+                          'RPL$', followed by as much of the table name as will fit. This
+                          might need to be changed for long table names, in order to have
+                          unique trigger names.
+PK1_NAME     String      Names of the primary key fields. A maximum of 3 are supported. These
+                          field names are automatically loaded from the database, they are
+                          provided merely for information.
+PK2_NAME     String      
+PK3_NAME     String      
+PK1_GEN      String      Generator values for the each primary key field. These are SQL
+                          statements that can be used for fetching unique primary key values
+                          from the remote server.
+PK2_GEN      String      
+PK3_GEN      String      
+GEN1_NAME    String      Names of up to three fields (called 'generator fields') for which
+                          global unicity is to be maintained.
+GEN2_NAME    String      
+GEN3_NAME    String      
+GEN1_VALUE   String      Generator values for each of the generator fields. These are SQL
+                          statements that can be used for fetching unique field values from
+                          the remote server.
+GEN2_VALUE   String      
+GEN3_VALUE   String      
+REF_FIELD    String      Deprecated, don't use for now.
+PRIORITY     Integer     Priority of the table. This value is designed to avoid problems
+                          arising from inter-table dependencies. Each table should have a
+                          higher priority than any of the other tables it depends on, so as to
+                          ensure that it is replicated after them.
+CREATED      String      Indicates whether of not the table's replication triggers have been
+                          generated (either 'Y' or 'N'). This field is not used internally by
+                          CopyCat, it's provided merely for convenience. It's up to the
+                          application to set its value ('N' by default).
+</table>
+
+@@TCcConfig.Terminator
+Summary:
+Terminator character.
+Description:
+Terminator is the character used for separating statements in the meta-data
+script.
+See Also:
+Script
+
+@@TCcConfig.TR
+Summary:
+Database transaction object.
+Description:
+TR must not be accessed before the DBProvider property has been set.
+
+@@TCcConnectParams
+Summary:
+Database connection parameters.
+Description:
+TCcConnectParams holds the database connection parameters for the TCcConfig
+component.
+
+@@TCcConnectParams.CharSet
+Character set to connect to the database with.
+
+@@TCcConnectParams.Clear
+TCcConnectParams
+
+@@TCcConnectParams.DBName
+Name of the database to connect to.
+
+@@TCcConnectParams.Password
+Password for database login.
+
+@@TCcConnectParams.RoleName
+Optional role name to use when connecting to the database.
+
+@@TCcConnectParams.SQLDialect
+SQL dialect for connecting to the database.
+
+@@TCcConnectParams.UserName
+User name for database login.
+
+@@TCcProcParams
+Summary:
+\Parameters of a stored procedure.
+Description:
+TCcProcParams represents the parameters of a stored procedure. It is only used in
+conjunction with the TCcConfig component, when generating primary key
+synchronization SQL based on a stored procedure.<p/>
+<p/>
+The most common way to use TCcProcParams (for holding input parameters) is as
+follows:
+  1. Create an instance of TCcProcParams.
+  2. Pass it as a parameter to the TCcConfig.GetProcParams method, in order to
+     fill it with the list of parameters of a given stored procedure, along with the
+     data-type and field length of each one.
+  3. Fill in the values of the parameters, using the PARAM_VALUE field.
+  4. Call TCcConfig.GetProcGenerator, passing the TCcProcParams object in order
+     to provide input parameter values.
+
+TCcProcParams is a TDataSet descendant, that defines the following fields:
+<table 25c%, 15c%>
+Field name       Data type        \Description
+===============  ===============  -----------------------------
+PARAM_NAME       <align center>   Name of the stored procedure
+                  String           parameter.
+                  </align>         
+<align center>   String           Value of the parameter.
+ PARAM_VALUE                       
+ </align>                          
+FIELD_TYPE       <align center>   Data type.
+                  Integer          
+                  </align>         
+FIELD_LENGTH     Integer          Field size.
+</table>

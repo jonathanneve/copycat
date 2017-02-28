@@ -1,0 +1,655 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN">
+<html>
+<head>
+<title>TCcReplicator Class</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+    <meta name="generator" content="Doc-O-Matic" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <link rel="STYLESHEET" href="default.css" type="text/css" />
+
+<script type="text/javascript" src="scripts.js"></script>
+</head>
+<body class="Element700" onload="onBodyLoadEx('frames.html', 'topic', 'TCcReplicator.html');" onmousedown="onBodyMouseDown();">
+
+<!-- Begin Popups -->
+<div class="Element801" id="popup00563">
+<div class="Element800">
+<div class="Element14">
+Links</div>
+<div class="Element11">
+<div class="Element10">
+<a href="CcReplicator_pas.html" target="topic">CcReplicator</a>, <a href="_TCcReplicator_14_Fields.html" target="topic">Fields</a>, <a href="_TCcReplicator_14_Properties.html" target="topic">Properties</a>, <a href="_TCcReplicator_14_Methods.html" target="topic">Methods</a>, <a href="_TCcReplicator_14_Events.html" target="topic">Events</a>, <a href="_TCcReplicator_14_Legend.html" target="topic">Legend</a>, <a href="_TCcReplicator_5_See_Also.html" target="topic">See Also</a></div>
+</div>
+</div>
+</div>
+
+<!-- End Popups -->
+
+<!-- Begin Page Header -->
+<div class="Element710" id="areafixed">
+<div class="Element92">
+<table width="100%" cellspacing="0" cellpadding="0">
+<tr><td width="33%">
+<div class="Element1">
+<a href="#" onmousedown="showPopup(this, 'popup00563');"><img src="seealsolink.png" border="0" alt=""></a> <a href="http://www.copycat.fr" target="new_page"><img src="copycat_70x70.png"><h3>CopyCat Developer Tools</h3></img></a></div>
+</td><td width="34%">
+<div class="Element2">
+<a href="contents.html" target="tocidx">Contents</a> | <a href="idx.html" target="tocidx">Index</a></div>
+</td><td width="33%">
+<div class="Element90">
+<a href="TCcRecord.html" target="topic">Previous</a> | <a href="TCcReplicatorList.html" target="topic">Next</a></div>
+</td></tr></table><div class="Element5">
+TCcReplicator Class</div>
+<div class="Element7">
+<a href="CcReplicator_pas.html" target="topic">CcReplicator</a> | <a href="_TCcReplicator_14_Fields.html" target="topic">Fields</a> | <a href="_TCcReplicator_14_Properties.html" target="topic">Properties</a> | <a href="_TCcReplicator_14_Methods.html" target="topic">Methods</a> | <a href="_TCcReplicator_14_Events.html" target="topic">Events</a> | <a href="_TCcReplicator_14_Legend.html" target="topic">Legend</a> | <a href="_TCcReplicator_5_See_Also.html" target="topic">See Also</a></div>
+<div class="Element730">
+<a href="#" onclick="showAllElements();">Show All</a></div>
+</div>
+</div>
+
+<!-- End Page Header -->
+
+<!-- Begin Client Area -->
+<div class="Element720" id="areascroll">
+<div class="Element721">
+
+<!-- Begin Page Content -->
+<div class="Element58">
+<div class="Element11">
+<div class="Element10">
+<p class="Element10">
+TCcReplicator provides the core replication functionality of CopyCat.</p></div>
+</div>
+<div class="Element14">
+<a onclick="toggleVisibilityStored('Class_Hierarchy');" class="a_Element14"><img src="sectionminus.png" border="0" alt="sectionminus.png" id="imgClass_Hierarchy">Class Hierarchy</a></div>
+<div id="divClass_Hierarchy">
+<div class="Element151"><div class="Element150"><pre class="Element150"><img src="TCcReplicator.png" border="0" alt=""></pre></div></div>
+</div>
+<div class="Element101"><div class="Element100"><pre class="Element100">TCcReplicator = <strong>class</strong>(TComponent);</pre></div></div>
+<div class="Element101"><div class="Element100"><pre class="Element100"><strong>class</strong> TCcReplicator : <strong>public</strong> TComponent;</pre></div></div>
+<div class="Element14">
+<a onclick="toggleVisibilityStored('File');" class="a_Element14"><img src="sectionminus.png" border="0" alt="sectionminus.png" id="imgFile">File</a></div>
+<div id="divFile">
+<div class="Element11">
+<div class="Element10">
+<p class="Element10">
+<a href="CcReplicator_pas.html" target="topic">CcReplicator</a></p></div>
+</div>
+</div>
+<div class="Element14">
+<a onclick="toggleVisibilityStored('Description');" class="a_Element14"><img src="sectionminus.png" border="0" alt="sectionminus.png" id="imgDescription">Description</a></div>
+<div id="divDescription">
+<div class="Element11">
+<div class="Element10">
+<p class="Element10">
+  &nbsp;</p>
+<p class="Element10">
+<strong>How to use TCcReplicator:</strong></p>
+<ol class="Element630">
+<li value="1" class="Element600">Fill in the Nodes.LocalNode.Connector and Nodes.RemoteNode.Connector</li>
+</ol><p class="Element10">
+properties with the connectors of your choice for accessing the local and remote databases</p>
+<ol class="Element630">
+<li value="2" class="Element600">Provide the names of the local and remote nodes via the Nodes.LocalNode.Name</li>
+</ol><p class="Element10">
+and Nodes.RemoteNode.Name properties. See <a href="TCcReplicator_Nodes.html" target="topic">Nodes</a> for more information.</p>
+<ol class="Element630">
+<li value="3" class="Element600">Call the <a href="TCcReplicator_Replicate.html" target="topic">Replicate</a> method.</li>
+<li value="4" class="Element600">Optionnaly, implement a few of the events, in order to provide user feedback</li>
+</ol><p class="Element10">
+at every stage of the replication process.</p>
+<ol class="Element630">
+<li value="5" class="Element600">Optionnaly, you may set up automatic timer-based replication, using the</li>
+</ol><p class="Element10">
+<a href="TCcReplicator_AutoReplicate.html" target="topic">AutoReplicate</a> property.&nbsp;</p>
+<p class="Element10">
+&nbsp;</p><p class="Element10" style="text-align: justify">
+If an exception occurs during replication, an <a href="TCcReplicator_OnReplicationError.html" target="topic">OnReplicationError</a> event is fired, where you can choose to either abort the whole replication process, or to continue trying to <a href="TCcReplicator_Replicate.html" target="topic">replicate</a> the next record. The default behaviour depends on the <a href="TCcReplicator_AbortOnError.html" target="topic">AbortOnError</a> property.&nbsp;</p>
+<p class="Element10" style="text-align: justify">
+If an exception occurs at any other point (e.g. during database connection), an <a href="TCcReplicator_OnException.html" target="topic">OnException</a> event is fired, and replication is aborted.&nbsp;</p>
+<p class="Element10" style="text-align: justify">
+TCcReplicator frequently fires the <a href="TCcReplicator_OnProgress.html" target="topic">OnProgress</a> event, in order to allow the application to refresh user interface, process any pending user messages, and possibly, update a progress bar. It is also possible to abort the replication at any time, using the <a href="TCcReplicator_AbortReplication.html" target="topic">AbortReplication</a> method. Refer to the provided example projects for an illustration of the use of most of the events and properties.</p></div>
+</div>
+</div>
+<div class="Element14">
+<a onclick="toggleVisibilityStored('See_Also');" class="a_Element14"><img src="sectionminus.png" border="0" alt="sectionminus.png" id="imgSee_Also">See Also</a></div>
+<div id="divSee_Also">
+<div class="Element11">
+<div class="Element10">
+<p class="Element10">
+<a href="TCcReplicator_AbortOnError.html" target="topic">AbortOnError</a>, <a href="TCcReplicator_OnProgress.html" target="topic">OnProgress</a></p></div>
+</div>
+</div>
+<div class="Element14">
+<a onclick="toggleVisibilityStored('Events');" class="a_Element14"><img src="sectionminus.png" border="0" alt="sectionminus.png" id="imgEvents">Events</a></div>
+<div id="divEvents">
+<div class="Element11">
+<div class="Element10">
+<div class="Element212">
+<div class="TableDiv">
+<table cellspacing="0" class="Table1">
+<tr>
+<td class="Element200" valign="top" width="50%">
+<div class="Element201">
+Event&nbsp;</div></td><td class="Element204" valign="top" width="50%">
+<div class="Element205">
+Description&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_event.png" border="0" alt=""> <a href="TCcReplicator_BeforeReplicate.html" target="topic">BeforeReplicate</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Fired just before replication begins.&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_event.png" border="0" alt=""> <a href="TCcReplicator_OnAutoCommit.html" target="topic">OnAutoCommit</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Fired whenever the replication transactions are auto-committed.&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_event.png" border="0" alt=""> <a href="TCcReplicator_OnCanReplicate.html" target="topic">OnCanReplicate</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Event fired in order to determine whether the current record should be replicated or not&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_event.png" border="0" alt=""> <a href="TCcReplicator_OnCommit.html" target="topic">OnCommit</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Fired just before the transaction is commited at the end of the replication process.&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_event.png" border="0" alt=""> <a href="TCcReplicator_OnConflict.html" target="topic">OnConflict</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Fired when a conflict is detected.&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_event.png" border="0" alt=""> <a href="TCcReplicator_OnConnectionLost.html" target="topic">OnConnectionLost</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Fired when a database connection is lost.&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_event.png" border="0" alt=""> <a href="TCcReplicator_OnConnectLocal.html" target="topic">OnConnectLocal</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Fired before connecting to the local database.&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_event.png" border="0" alt=""> <a href="TCcReplicator_OnConnectRemote.html" target="topic">OnConnectRemote</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Fired before connecting to the remote database.&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_event.png" border="0" alt=""> <a href="TCcReplicator_OnDisconnect.html" target="topic">OnDisconnect</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Fired before disconnecting from both local and remote database.&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_event.png" border="0" alt=""> <a href="TCcReplicator_OnEmptyLog.html" target="topic">OnEmptyLog</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Fired when neither local nor remote replication logs contain any records.&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_event.png" border="0" alt=""> <a href="TCcReplicator_OnException.html" target="topic">OnException</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Fired when an error occurs while no records are being replicated.&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_event.png" border="0" alt=""> <a href="TCcReplicator_OnFinished.html" target="topic">OnFinished</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Fired when the replication process is finished.&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_event.png" border="0" alt=""> <a href="TCcReplicator_OnGenReplError.html" target="topic">OnGenReplError</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Fired if an error occurs when trying to update the local value of a generator field.&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_event.png" border="0" alt=""> <a href="TCcReplicator_OnGenReplicating.html" target="topic">OnGenReplicating</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Fired just before replicating the generator fields of a record.&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_event.png" border="0" alt=""> <a href="TCcReplicator_OnGetExtraFieldValue.html" target="topic">OnGetExtraFieldValue</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+This event fires during replication if <a href="TCcReplicator_ExtraFields.html" target="topic">ExtraFields</a> are defined.&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_event.png" border="0" alt=""> <a href="TCcReplicator_OnGetFields.html" target="topic">OnGetFields</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Fired after creating the list of fields to be replicated for a table&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_event.png" border="0" alt=""> <a href="TCcReplicator_OnKeySynchronized.html" target="topic">OnKeySynchronized</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Fired after a generator field was replicated.&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_event.png" border="0" alt=""> <a href="TCcReplicator_OnLogLoaded.html" target="topic">OnLogLoaded</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Fired after a non-empty replication log has been loaded&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_event.png" border="0" alt=""> <a href="TCcReplicator_OnProgress.html" target="topic">OnProgress</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Frequently fired to give the application a chance to refresh the display.&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_event.png" border="0" alt=""> <a href="TCcReplicator_OnQueryDone.html" target="topic">OnQueryDone</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Fired for every query that is executing while replicating a record.&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_event.png" border="0" alt=""> <a href="TCcReplicator_OnReplicateProc.html" target="topic">OnReplicateProc</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Fired every time a stored procedure is replicated.&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_event.png" border="0" alt=""> <a href="TCcReplicator_OnReplicationAborted.html" target="topic">OnReplicationAborted</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Fired when the replication is aborted&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_event.png" border="0" alt=""> <a href="TCcReplicator_OnReplicationError.html" target="topic">OnReplicationError</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Fired when an error occurs while records are being replicated.&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_event.png" border="0" alt=""> <a href="TCcReplicator_OnResolveConflict.html" target="topic">OnResolveConflict</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Fired as soon as a conflict has been detected;&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_event.png" border="0" alt=""> <a href="TCcReplicator_OnRowBeforeReplicate.html" target="topic">OnRowBeforeReplicate</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Fired upon starting to <a href="TCcReplicator_Replicate.html" target="topic">replicate</a> a new record.&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_event.png" border="0" alt=""> <a href="TCcReplicator_OnRowReplFinishing.html" target="topic">OnRowReplFinishing</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Fired after a record has been replicated, just before removing row from RPL$LOG&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_event.png" border="0" alt=""> <a href="TCcReplicator_OnRowReplicated.html" target="topic">OnRowReplicated</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Fired after a record has been replicated.&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_event.png" border="0" alt=""> <a href="TCcReplicator_OnRowReplicating.html" target="topic">OnRowReplicating</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Fired during replication of each record&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_event.png" border="0" alt=""> <a href="TCcReplicator_OnRowReplicatingError.html" target="topic">OnRowReplicatingError</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+This event fires if one of the SQL statements used during replication (INSERT, UPDATE or DELETE) fails.&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_event.png" border="0" alt=""> <a href="TCcReplicator_OnRowReplicatingQuery.html" target="topic">OnRowReplicatingQuery</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Fired for every query executed during replication of a record.&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_event.png" border="0" alt=""> <a href="TCcReplicator_OnTableBegin.html" target="topic">OnTableBegin</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Fired upon beginning a new table.&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_event.png" border="0" alt=""> <a href="TCcReplicator_OnTableEnd.html" target="topic">OnTableEnd</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Fired upon finishing a table.&nbsp;</div></td></tr></table></div></div>
+</div>
+</div>
+</div>
+<div class="Element14">
+<a onclick="toggleVisibilityStored('Fields');" class="a_Element14"><img src="sectionminus.png" border="0" alt="sectionminus.png" id="imgFields">Fields</a></div>
+<div id="divFields">
+<div class="Element11">
+<div class="Element10">
+<div class="Element212">
+<div class="TableDiv">
+<table cellspacing="0" class="Table1">
+<tr>
+<td class="Element200" valign="top" width="50%">
+<div class="Element201">
+Field&nbsp;</div></td><td class="Element204" valign="top" width="50%">
+<div class="Element205">
+Description&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_field.png" border="0" alt=""> <a href="TCcReplicator_LastResult.html" target="topic">LastResult</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+LastResult holds the result of the last call to <a href="TCcReplicator_Replicate.html" target="topic">Replicate</a>.&nbsp;</div></td></tr></table></div></div>
+</div>
+</div>
+</div>
+<div class="Element14">
+<a onclick="toggleVisibilityStored('Methods');" class="a_Element14"><img src="sectionminus.png" border="0" alt="sectionminus.png" id="imgMethods">Methods</a></div>
+<div id="divMethods">
+<div class="Element11">
+<div class="Element10">
+<div class="Element212">
+<div class="TableDiv">
+<table cellspacing="0" class="Table1">
+<tr>
+<td class="Element200" valign="top" width="50%">
+<div class="Element201">
+Method&nbsp;</div></td><td class="Element204" valign="top" width="50%">
+<div class="Element205">
+Description&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_method.png" border="0" alt=""> <a href="TCcReplicator_AbortReplication.html" target="topic">AbortReplication</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Call AbortReplication to stop the current replication process.&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_method.png" border="0" alt=""> <a href="TCcReplicator_BatchImport@string@TCcSyncDirection@string@string@Boolean.html" target="topic">BatchImport</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Synchronize a batch of records&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_method.png" border="0" alt=""> <a href="TCcReplicator_ClearMetadataCache.html" target="topic">ClearMetadataCache</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Clear list of fields for each table&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_method.png" border="0" alt=""> <a href="TCcReplicator_Connect.html" target="topic">Connect</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Connect to both local and remote databases.&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_method.png" border="0" alt=""><img src="indicator_virtual.png" border="0" alt=""> <a href="TCcReplicator_Create@TComponent.html" target="topic">Create</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_method.png" border="0" alt=""><img src="indicator_virtual.png" border="0" alt=""> <a href="TCcReplicator_Destroy.html" target="topic">Destroy</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_method.png" border="0" alt=""> <a href="TCcReplicator_Disconnect.html" target="topic">Disconnect</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Disconnect local and remote databases.&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_method.png" border="0" alt=""> <a href="TCcReplicator_GetLocalTableName@string.html" target="topic">GetLocalTableName</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Returns the table name in the local database corresponding to the supplied remote table name&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_method.png" border="0" alt=""> <a href="TCcReplicator_GetRemoteTableName@string.html" target="topic">GetRemoteTableName</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Returns the table name in the remote database corresponding to the supplied local table name&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_method.png" border="0" alt=""> <a href="TCcReplicator_GetWhereValues@TCcQuery.html" target="topic">GetWhereValues</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_method.png" border="0" alt=""> <a href="TCcReplicator_RefreshDisplay.html" target="topic">RefreshDisplay</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_method.png" border="0" alt=""> <a href="TCcReplicator_Replicate.html" target="topic">Replicate</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Call Replicate to start replicating the two databases.&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_method.png" border="0" alt=""> <a href="TCcReplicator_SynchronizeRows@string@string@TCcSyncDirection@Boolean.html" target="topic">SynchronizeRows</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Synchronize one or several rows between local and remote databases&nbsp;</div></td></tr></table></div></div>
+</div>
+</div>
+</div>
+<div class="Element14">
+<a onclick="toggleVisibilityStored('Properties');" class="a_Element14"><img src="sectionminus.png" border="0" alt="sectionminus.png" id="imgProperties">Properties</a></div>
+<div id="divProperties">
+<div class="Element11">
+<div class="Element10">
+<div class="Element212">
+<div class="TableDiv">
+<table cellspacing="0" class="Table1">
+<tr>
+<td class="Element200" valign="top" width="50%">
+<div class="Element201">
+Property&nbsp;</div></td><td class="Element204" valign="top" width="50%">
+<div class="Element205">
+Description&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_property.png" border="0" alt=""> <a href="TCcReplicator_AbortOnError.html" target="topic">AbortOnError</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Determines whether or not to abort replication when an error occurs.&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_property.png" border="0" alt=""> <a href="TCcReplicator_AutoClearMetadata.html" target="topic">AutoClearMetadata</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Clear cached metadata after every replication cycle&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_property.png" border="0" alt=""> <a href="TCcReplicator_AutoCommit.html" target="topic">AutoCommit</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Handles automatic, timer-based committing during replication.&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_property.png" border="0" alt=""> <a href="TCcReplicator_AutoPriority.html" target="topic">AutoPriority</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Specify whether to handle priorities automatically or not&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_property.png" border="0" alt=""> <a href="TCcReplicator_AutoReplicate.html" target="topic">AutoReplicate</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Handles automatic, timer-based replication.&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_property.png" border="0" alt=""><img src="indicator_readonly.png" border="0" alt=""> <a href="TCcReplicator_Busy.html" target="topic">Busy</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Indicates whether the replicator component is available or not.&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_property.png" border="0" alt=""><img src="indicator_readonly.png" border="0" alt=""> <a href="TCcReplicator_Closing.html" target="topic">Closing</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Indicates that the replication in the process of closing.&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_property.png" border="0" alt=""> <a href="TCcReplicator_CommitOnFinished.html" target="topic">CommitOnFinished</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Determines how the transaction is ended after replication.&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_property.png" border="0" alt=""><img src="indicator_readonly.png" border="0" alt=""> <a href="TCcReplicator_ConfigurationName.html" target="topic">ConfigurationName</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Name of the currently selected configuration, coming either from a <a href="TCcReplicatorList.html" target="topic">TCcReplicatorList</a>, or from a ConfigStorage component&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_property.png" border="0" alt=""> <a href="TCcReplicator_Direction.html" target="topic">Direction</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Set Direction to sdLocalToRemote or sdRemoteToLocal to enable various performance optimizations when replicating only one way&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_property.png" border="0" alt=""> <a href="TCcReplicator_EmptyStringsToNull.html" target="topic">EmptyStringsToNull</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+If this property is set, empty string values are set to null for field types other than ftString This is useful only for database types (such as SQLite) with loose data type management, such that it may be possible to get a string value out of an integer or date column.&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_property.png" border="0" alt=""><img src="indicator_readonly.png" border="0" alt=""> <a href="TCcReplicator_ExtraFields.html" target="topic">ExtraFields</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Use ExtraFields to hold the list of fields which are needed in the destination database but do not exist in the source database.&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_property.png" border="0" alt=""> <a href="TCcReplicator_FailIfNoPK.html" target="topic">FailIfNoPK</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Indicates whether tables with no primary key are accepted or not If FailIfNoPK is true (the default value), then an error will be raised if a table is detected with no primary key.&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_property.png" border="0" alt=""><img src="indicator_readonly.png" border="0" alt=""> <a href="TCcReplicator_Finished.html" target="topic">Finished</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Indicates that replication is finished.&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_property.png" border="0" alt=""> <a href="TCcReplicator_HarmonizeFields.html" target="topic">HarmonizeFields</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Harmonize field list between local and remote databases.&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_property.png" border="0" alt=""> <a href="TCcReplicator_KeepConnection.html" target="topic">KeepConnection</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Keep the database connections open after replication ends.&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_property.png" border="0" alt=""><img src="indicator_readonly.png" border="0" alt=""> <a href="TCcReplicator_LocalDB.html" target="topic">LocalDB</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Short cut for Nodes.LocalNode.Connection&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_property.png" border="0" alt=""><img src="indicator_readonly.png" border="0" alt=""> <a href="TCcReplicator_LocalNode.html" target="topic">LocalNode</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Short cut for Nodes.LocalNode&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_property.png" border="0" alt=""><img src="indicator_readonly.png" border="0" alt=""> <a href="TCcReplicator_Log.html" target="topic">Log</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Replication log.&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_property.png" border="0" alt=""> <a href="TCcReplicator_LogErrors.html" target="topic">LogErrors</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Set LogErrors to indicate whether replication errors should get automatically logged to the RPL$ERRORS table in the local database.&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_property.png" border="0" alt=""> <a href="TCcReplicator_MergeChangedFieldsOnConflict.html" target="topic">MergeChangedFieldsOnConflict</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Merges values of changed fields from both nodes, so as to avoid conflicts where possible&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_property.png" border="0" alt=""> <a href="TCcReplicator_Nodes.html" target="topic">Nodes</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Connection parameters for the local and remote nodes&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_property.png" border="0" alt=""> <a href="TCcReplicator_OnReplicationResult.html" target="topic">OnReplicationResult</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Fired at the end of the replication, whatever the outcome&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_property.png" border="0" alt=""> <a href="TCcReplicator_RecordChunks.html" target="topic">RecordChunks</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+The number of records to <a href="TCcReplicator_Replicate.html" target="topic">replicate</a> at a time&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_property.png" border="0" alt=""><img src="indicator_readonly.png" border="0" alt=""> <a href="TCcReplicator_RemoteDB.html" target="topic">RemoteDB</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Short cut for Nodes.RemoteNode.Connection&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_property.png" border="0" alt=""><img src="indicator_readonly.png" border="0" alt=""> <a href="TCcReplicator_RemoteNode.html" target="topic">RemoteNode</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Short cut for Nodes.RemoteNode&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_property.png" border="0" alt=""> <a href="TCcReplicator_ReplicateOnlyChangedFields.html" target="topic">ReplicateOnlyChangedFields</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Set ReplicateOnlyChangedFields to True to <a href="TCcReplicator_Replicate.html" target="topic">replicate</a> only the fields that were changed, as opposed to whole records&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_property.png" border="0" alt=""> <a href="TCcReplicator_TableMapping.html" target="topic">TableMapping</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Summmary: Map table names between local and remote databases&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_property.png" border="0" alt=""> <a href="TCcReplicator_TraceEvents.html" target="topic">TraceEvents</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Indicates whether you would like to trace the replication events to the database or not&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_property.png" border="0" alt=""> <a href="TCcReplicator_TrimCharFields.html" target="topic">TrimCharFields</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Indicates whether or not char fields (data type ftString or ftMemo) should be trimmed during replication&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_property.png" border="0" alt=""> <a href="TCcReplicator_UsePKSynchronization.html" target="topic">UsePKSynchronization</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Indicates whether primary key synchronization features are activated or not.&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_property.png" border="0" alt=""> <a href="TCcReplicator_Version.html" target="topic">Version</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+&nbsp;</div></td></tr></table></div></div>
+</div>
+</div>
+</div>
+<div class="Element14">
+<a onclick="toggleVisibilityStored('Legend');" class="a_Element14"><img src="sectionminus.png" border="0" alt="sectionminus.png" id="imgLegend">Legend</a></div>
+<div id="divLegend">
+<div class="Element11">
+<div class="Element10">
+<div class="Element212">
+<div class="TableDiv">
+<table cellspacing="0" class="Table3">
+<tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_field.png" border="0" alt="">&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Data Member&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_property.png" border="0" alt="">&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Property&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_readonly.png" border="0" alt="">&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+read only&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_event.png" border="0" alt="">&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Event&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_method.png" border="0" alt="">&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Method&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_virtual.png" border="0" alt="">&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+virtual&nbsp;</div></td></tr></table></div></div>
+</div>
+</div>
+</div>
+<div class="Element14">
+<a onclick="toggleVisibilityStored('Links');" class="a_Element14"><img src="sectionminus.png" border="0" alt="sectionminus.png" id="imgLinks">Links</a></div>
+<div id="divLinks">
+<div class="Element11">
+<div class="Element10">
+<a href="CcReplicator_pas.html" target="topic">CcReplicator</a>, <a href="_TCcReplicator_14_Fields.html" target="topic">Fields</a>, <a href="_TCcReplicator_14_Properties.html" target="topic">Properties</a>, <a href="_TCcReplicator_14_Methods.html" target="topic">Methods</a>, <a href="_TCcReplicator_14_Events.html" target="topic">Events</a>, <a href="_TCcReplicator_14_Legend.html" target="topic">Legend</a>, <a href="_TCcReplicator_5_See_Also.html" target="topic">See Also</a></div>
+</div>
+</div>
+<div class="Element62">
+Created with a commercial version of <a href="http://www.doc-o-matic.com">Doc-O-Matic</a>. In order to make this message disappear you need to register this software. If you have problems registering this software please contact us at <a href="mailto:support@toolsfactory.com">support@toolsfactory.com</a>.</div>
+</div>
+<!-- End Page Content -->
+
+<!-- Begin Page Footer -->
+<div class="Element93">
+<table width="100%" cellspacing="0" cellpadding="0">
+<tr><td width="100%">
+<div class="Element3">
+Copyright (c) 2015. All rights reserved. http://www.copycat.fr</div>
+</td></tr><tr><td width="100%">
+<div class="Element4">
+<a href="contents.html" target="tocidx">Contents</a> | <a href="idx.html" target="tocidx">Index</a></div>
+</td></tr><tr><td width="100%">
+<div class="Element97">
+What do you think about this topic?  Send feedback through our <a href="http://copycat.fr/wordpress/contact-us/" target="new_page">contact form</a></div>
+</td></tr></table></div>
+
+<!-- End Page Footer -->
+</div>
+</div>
+
+<!-- End Client Area -->
+</body></html>

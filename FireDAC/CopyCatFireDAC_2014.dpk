@@ -1,0 +1,48 @@
+package CopyCatFireDAC_2014;
+
+{$R *.res}
+{$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES ON}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DEFINE DEBUG}
+{$ENDIF IMPLICITBUILDING}
+{$DESCRIPTION 'CopyCat FireDAC provider'}
+{$IMPLICITBUILD ON}
+
+requires
+  {$IFDEF MSWINDOWS}
+    vcl,
+    FireDACCommonDriver,
+    FireDACCommon,
+    FireDAC,
+    xmlrtl,
+  {$ELSE}
+    fmx,
+  {$ENDIF}
+  dbrtl,
+  CopyCat_2014;
+
+contains
+  CcProvFireDAC in 'CcProvFireDAC.pas',
+  CcProvFDSQLite in 'CcProvFDSQLite.pas';
+
+end.

@@ -1,0 +1,260 @@
+object Form6: TForm6
+  Left = 0
+  Top = 0
+  Caption = 'Form6'
+  ClientHeight = 1004
+  ClientWidth = 768
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [dkDesktop]
+  DesignerMobile = True
+  DesignerWidth = 768
+  DesignerHeight = 1024
+  DesignerDeviceName = 'iPad'
+  DesignerOrientation = 0
+  DesignerOSVersion = '7'
+  object Button1: TButton
+    Height = 30.000000000000000000
+    Position.X = 72.000000000000000000
+    Position.Y = 13.000000000000000000
+    TabOrder = 0
+    Text = 'Config'
+    Trimming = ttCharacter
+    Width = 75.000000000000000000
+    OnClick = Button1Click
+    Left = 168
+    Top = 72
+  end
+  object Button2: TButton
+    Height = 30.000000000000000000
+    Position.X = 200.000000000000000000
+    Position.Y = 13.000000000000000000
+    TabOrder = 1
+    Text = 'Replicate'
+    Trimming = ttCharacter
+    Width = 75.000000000000000000
+    OnClick = Button2Click
+    Left = 87
+    Top = 72
+  end
+  object memLog: TMemo
+    Touch.InteractiveGestures = [igPan, igLongTap, igDoubleTap]
+    Height = 153.000000000000000000
+    Position.X = 8.000000000000000000
+    Position.Y = 48.000000000000000000
+    TabOrder = 2
+    Width = 419.000000000000000000
+    Left = 8
+    Top = 121
+  end
+  object Grid1: TGrid
+    Height = 209.000000000000000000
+    Position.X = 24.000000000000000000
+    Position.Y = 208.000000000000000000
+    TabOrder = 3
+    Width = 417.000000000000000000
+    RowCount = 0
+    RowHeight = 21.000000000000000000
+  end
+  object NavigatorBindSourceTEST: TBindNavigator
+    Height = 25.000000000000000000
+    Position.X = 440.000000000000000000
+    Position.Y = 160.000000000000000000
+    Width = 240.000000000000000000
+    DataSource = BindSourceTEST
+    xRadius = 4.000000000000000000
+    yRadius = 4.000000000000000000
+  end
+  object Button3: TButton
+    Height = 30.000000000000000000
+    Position.X = 280.000000000000000000
+    Position.Y = 13.000000000000000000
+    TabOrder = 5
+    Text = 'Open'
+    Trimming = ttCharacter
+    Width = 75.000000000000000000
+    OnClick = Button3Click
+    Left = 87
+    Top = 72
+  end
+  object Button4: TButton
+    Height = 30.000000000000000000
+    Position.X = 368.000000000000000000
+    Position.Y = 13.000000000000000000
+    TabOrder = 6
+    Text = 'Close'
+    Trimming = ttCharacter
+    Width = 75.000000000000000000
+    OnClick = Button4Click
+    Left = 87
+    Top = 72
+  end
+  object CcDSClientTransport1: TCcDSClientTransport
+    AutoCommit = False
+    DatabaseAlias = 'TEST'
+    SQLConnection = SQLConnection1
+    Left = 56
+    Top = 24
+  end
+  object SQLConnection1: TSQLConnection
+    DriverName = 'DataSnap'
+    KeepConnection = False
+    LoginPrompt = False
+    Params.Strings = (
+      'DriverUnit=Data.DBXDataSnap'
+      'HostName=192.168.2.28'
+      'Port=211'
+      'CommunicationProtocol=tcp/ip'
+      'DatasnapContext=datasnap/'
+      
+        'DriverAssemblyLoader=Borland.Data.TDBXClientDriverLoader,Borland' +
+        '.Data.DbxClientDriver,Version=19.0.0.0,Culture=neutral,PublicKey' +
+        'Token=91d62ebb5b0d1b1b')
+    Left = 48
+    Top = 80
+  end
+  object CcConfig: TCcConfig
+    Version = '3.06.0 alpha'
+    ConfigName = 'TEST'
+    Nodes.Strings = (
+      '2')
+    DatabaseNode = dnLocal
+    Terminator = #167
+    Connection = CcDSClientTransport1
+    Tables = <
+      item
+        Priority = 0
+        TableName = 'TEST'
+      end>
+    Left = 152
+    Top = 24
+  end
+  object FDConnection1: TFDConnection
+    Params.Strings = (
+      'Database=C:\Projects\CopyCat\Test\SQLiteTest.db'
+      'DriverID=sQLite')
+    LoginPrompt = False
+    Transaction = FDTransaction1
+    UpdateTransaction = FDTransaction1
+    BeforeConnect = FDConnection1BeforeConnect
+    Left = 272
+    Top = 152
+  end
+  object FDTransaction1: TFDTransaction
+    Connection = FDConnection1
+    Left = 376
+    Top = 158
+  end
+  object CcConfig2: TCcConfig
+    Version = '3.06.0 alpha'
+    ConfigName = 'TEST'
+    Nodes.Strings = (
+      '1')
+    DatabaseNode = dnLocal
+    Terminator = #167
+    Connection = CcConnectionFDSQLite1
+    Tables = <
+      item
+        Priority = 0
+        TableName = 'TEST'
+      end>
+    Left = 216
+    Top = 24
+  end
+  object CcReplicator: TCcReplicator
+    Version = '3.06.0 alpha'
+    TrimCharFields = False
+    AutoPriority = True
+    LogErrors = False
+    HarmonizeFields = False
+    KeepConnection = False
+    Nodes.LocalNode.Connection = CcConnectionFDSQLite1
+    Nodes.LocalNode.Name = '2'
+    Nodes.RemoteNode.Connection = CcDSClientTransport1
+    Nodes.RemoteNode.Name = '1'
+    AutoReplicate.Frequency = 30
+    AutoReplicate.Enabled = False
+    AutoCommit.Frequency = 30
+    AutoCommit.CommitType = ctNone
+    CommitOnFinished = ctCommit
+    AbortOnError = False
+    OnRowReplicated = CcReplicatorRowReplicated
+    OnReplicationError = CcReplicatorReplicationError
+    OnException = CcReplicatorException
+    OnEmptyLog = CcReplicatorEmptyLog
+    Left = 496
+    Top = 160
+  end
+  object FDPhysSQLiteDriverLink1: TFDPhysSQLiteDriverLink
+    Left = 536
+    Top = 96
+  end
+  object FDGUIxWaitCursor1: TFDGUIxWaitCursor
+    Provider = 'FMX'
+    Left = 456
+    Top = 280
+  end
+  object CcConnectionFDSQLite1: TCcConnectionFDSQLite
+    FDConnection = FDConnection1
+    FDTransaction = FDTransaction1
+    DriverLink = FDPhysSQLiteDriverLink1
+    DBVersion = '3.x'
+    Left = 272
+    Top = 88
+  end
+  object qInsert: TCcQuery
+    Connection = CcConnectionFDSQLite1
+    ParamCheck = True
+    SQL.Strings = (
+      'insert into test (libelle) values ('#39'ezrfezrf'#39')')
+    Left = 536
+    Top = 216
+  end
+  object BindSourceTEST: TBindSourceDB
+    DataSet = FDTableTEST
+    ScopeMappings = <>
+    Left = 368
+    Top = 488
+  end
+  object FDTableTEST: TFDTable
+    IndexFieldNames = 'Code'
+    Connection = FDConnection1
+    FetchOptions.AssignedValues = [evLiveWindowParanoic]
+    FetchOptions.LiveWindowParanoic = True
+    UpdateOptions.UpdateTableName = 'TEST'
+    TableName = 'TEST'
+    Left = 376
+    Top = 496
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 20
+    Top = 5
+    object LinkGridToDataSourceBindSourceTEST: TLinkGridToDataSource
+      Category = 'Liaisons rapides'
+      DataSource = BindSourceTEST
+      GridControl = Grid1
+      AutoBufferCount = False
+      Columns = <>
+    end
+  end
+  object qUpdate: TCcQuery
+    Connection = CcConnectionFDSQLite1
+    ParamCheck = True
+    SQL.Strings = (
+      'update test set code = 11 where code = 1')
+    Left = 488
+    Top = 216
+  end
+  object FDMemTable1: TFDMemTable
+    FetchOptions.AssignedValues = [evMode]
+    FetchOptions.Mode = fmAll
+    ResourceOptions.AssignedValues = [rvSilentMode]
+    ResourceOptions.SilentMode = True
+    UpdateOptions.AssignedValues = [uvCheckRequired]
+    UpdateOptions.CheckRequired = False
+    Left = 496
+    Top = 40
+  end
+end

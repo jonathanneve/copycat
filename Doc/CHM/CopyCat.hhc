@@ -1,0 +1,3394 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Contents</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+    <meta name="generator" content="Doc-O-Matic" />
+    <meta name="save" content="history" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <link rel="STYLESHEET" href="default.css" type="text/css" />
+
+<script type="text/javascript" src="scripts.js"></script>
+</head>
+<body>
+<div id="persistenceDiv" style="display:none; behavior:url(#default#userData);"></div>
+<ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="Introduction">
+    <PARAM name="Local" value="Introduction.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="Getting started">
+    <PARAM name="Local" value="Getting_started.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="Replication nodes">
+    <PARAM name="Local" value="Replication_nodes.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="Conflict management">
+    <PARAM name="Local" value="Conflict_management.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="Database tables">
+    <PARAM name="Local" value="Database_tables.html">
+    </OBJECT>
+<ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="RPL$LOG">
+    <PARAM name="Local" value="RPL$LOG.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="RPL$USERS">
+    <PARAM name="Local" value="RPL$USERS.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="RPL$CONFLICTS">
+    <PARAM name="Local" value="RPL$CONFLICTS.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="RPL$TABLES">
+    <PARAM name="Local" value="RPL$TABLES.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="RPL$PROCEDURES">
+    <PARAM name="Local" value="RPL$PROCEDURES.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="RPL$ERRORS">
+    <PARAM name="Local" value="RPL$ERRORS.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="RPL$TRACE">
+    <PARAM name="Local" value="RPL$TRACE.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="RPL$LOG_VALUES">
+    <PARAM name="Local" value="RPL$LOG_VALUES.html">
+    </OBJECT>
+</ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="Classes">
+    </OBJECT>
+<ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="ECcLostConnection Class">
+    <PARAM name="Local" value="ECcLostConnection.html">
+    </OBJECT>
+<ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="ECcLostConnection.Connection Property">
+    <PARAM name="Local" value="ECcLostConnection_Connection.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="ECcLostConnection.Create Constructor ">
+    <PARAM name="Local" value="ECcLostConnection_Create@TCcConnection.html">
+    </OBJECT>
+</ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="ECcReplicationAborted Class">
+    <PARAM name="Local" value="ECcReplicationAborted.html">
+    </OBJECT>
+<ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="ECcReplicationAborted.Replicator Property">
+    <PARAM name="Local" value="ECcReplicationAborted_Replicator.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="ECcReplicationAborted.Create Constructor ">
+    <PARAM name="Local" value="ECcReplicationAborted_Create@TCcReplicator.html">
+    </OBJECT>
+</ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="EReplError Class">
+    <PARAM name="Local" value="EReplError.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TAutoRepl Class">
+    <PARAM name="Local" value="TAutoRepl.html">
+    </OBJECT>
+<ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TAutoRepl.Enabled Property">
+    <PARAM name="Local" value="TAutoRepl_Enabled.html">
+    </OBJECT>
+</ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcAbstractQueryObject Class">
+    <PARAM name="Local" value="TCcAbstractQueryObject.html">
+    </OBJECT>
+<ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcAbstractQueryObject.Query Property">
+    <PARAM name="Local" value="TCcAbstractQueryObject_Query.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcAbstractQueryObject.SelectStatement Property">
+    <PARAM name="Local" value="TCcAbstractQueryObject_SelectStatement.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcAbstractQueryObject.Create Constructor ">
+    <PARAM name="Local" value="TCcAbstractQueryObject_Create@TCcConnection@TCcQuery@Integer@Boolean.html">
+    </OBJECT>
+</ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcArray Class">
+    <PARAM name="Local" value="TCcArray.html">
+    </OBJECT>
+<ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcArray.Count Property">
+    <PARAM name="Local" value="TCcArray_Count.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcArray.Value Property">
+    <PARAM name="Local" value="TCcArray_Value.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcArray.Add Method ">
+    <PARAM name="Local" value="TCcArray_Add.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcArray.AddValue Method ">
+    <PARAM name="Local" value="TCcArray_AddValue@TCcValue.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcArray.Clear Method ">
+    <PARAM name="Local" value="TCcArray_Clear.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcArray.Create Constructor ">
+    <PARAM name="Local" value="TCcArray_Create.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcArray.Destroy Destructor ">
+    <PARAM name="Local" value="TCcArray_Destroy.html">
+    </OBJECT>
+</ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcAutoCommit Class">
+    <PARAM name="Local" value="TCcAutoCommit.html">
+    </OBJECT>
+<ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcAutoCommit.CommitType Property">
+    <PARAM name="Local" value="TCcAutoCommit_CommitType.html">
+    </OBJECT>
+</ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcClientTransport Class">
+    <PARAM name="Local" value="TCcClientTransport.html">
+    </OBJECT>
+<ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcClientTransport.AutoCommit Property">
+    <PARAM name="Local" value="TCcClientTransport_AutoCommit.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcClientTransport.DatabaseAlias Property">
+    <PARAM name="Local" value="TCcClientTransport_DatabaseAlias.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcClientTransport.KeepAliveInterval Property">
+    <PARAM name="Local" value="TCcClientTransport_KeepAliveInterval.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcClientTransport.Password Property">
+    <PARAM name="Local" value="TCcClientTransport_Password.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcClientTransport.ServerCopyCatVersion Property">
+    <PARAM name="Local" value="TCcClientTransport_ServerCopyCatVersion.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcClientTransport.SessionActive Property">
+    <PARAM name="Local" value="TCcClientTransport_SessionActive.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcClientTransport.Create Constructor ">
+    <PARAM name="Local" value="TCcClientTransport_Create@TComponent.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcClientTransport.Destroy Destructor ">
+    <PARAM name="Local" value="TCcClientTransport_Destroy.html">
+    </OBJECT>
+</ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcConfig Class">
+    <PARAM name="Local" value="TCcConfig.html">
+    </OBJECT>
+<ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcConfig.ConfigName Property">
+    <PARAM name="Local" value="TCcConfig_ConfigName.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcConfig.Connection Property">
+    <PARAM name="Local" value="TCcConfig_Connection.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcConfig.FailIfNoPK Property">
+    <PARAM name="Local" value="TCcConfig_FailIfNoPK.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcConfig.Nodes Property">
+    <PARAM name="Local" value="TCcConfig_Nodes.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcConfig.OnQueryReady Event">
+    <PARAM name="Local" value="TCcConfig_OnQueryReady.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcConfig.OnScriptReady Event">
+    <PARAM name="Local" value="TCcConfig_OnScriptReady.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcConfig.Script Property">
+    <PARAM name="Local" value="TCcConfig_Script.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcConfig.Tables Property">
+    <PARAM name="Local" value="TCcConfig_Tables.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcConfig.TrackFieldChanges Property">
+    <PARAM name="Local" value="TCcConfig_TrackFieldChanges.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcConfig.Version Property">
+    <PARAM name="Local" value="TCcConfig_Version.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcConfig.Connect Method ">
+    <PARAM name="Local" value="TCcConfig_Connect.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcConfig.ConnectAndRemoveConfig Method ">
+    <PARAM name="Local" value="TCcConfig_ConnectAndRemoveConfig.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcConfig.Create Constructor ">
+    <PARAM name="Local" value="TCcConfig_Create@TComponent.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcConfig.Destroy Destructor ">
+    <PARAM name="Local" value="TCcConfig_Destroy.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcConfig.Disconnect Method ">
+    <PARAM name="Local" value="TCcConfig_Disconnect.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcConfig.GenerateConfig Method ">
+    <PARAM name="Local" value="TCcConfig_GenerateConfig.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcConfig.GenerateTriggers Method ">
+    <PARAM name="Local" value="TCcConfig_GenerateTriggers@String.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcConfig.GetGenerator Method ">
+    <PARAM name="Local" value="TCcConfig_GetGenerator@String@Integer.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcConfig.PrepareBatchImport Method ">
+    <PARAM name="Local" value="TCcConfig_PrepareBatchImport@String@String@String.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcConfig.RemoveTriggers Method ">
+    <PARAM name="Local" value="TCcConfig_RemoveTriggers@String.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcConfig.TableNameWithConfig Method ">
+    <PARAM name="Local" value="TCcConfig_TableNameWithConfig@String.html">
+    </OBJECT>
+</ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcConfigTable Class">
+    <PARAM name="Local" value="TCcConfigTable.html">
+    </OBJECT>
+<ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcConfigTable.Condition Property">
+    <PARAM name="Local" value="TCcConfigTable_Condition.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcConfigTable.DeleteCondition Property">
+    <PARAM name="Local" value="TCcConfigTable_DeleteCondition.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcConfigTable.FieldsExcluded Property">
+    <PARAM name="Local" value="TCcConfigTable_FieldsExcluded.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcConfigTable.FieldsIncluded Property">
+    <PARAM name="Local" value="TCcConfigTable_FieldsIncluded.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcConfigTable.InsertCondition Property">
+    <PARAM name="Local" value="TCcConfigTable_InsertCondition.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcConfigTable.PKSyncStatements Property">
+    <PARAM name="Local" value="TCcConfigTable_PKSyncStatements.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcConfigTable.Priority Property">
+    <PARAM name="Local" value="TCcConfigTable_Priority.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcConfigTable.SyncFieldNames Property">
+    <PARAM name="Local" value="TCcConfigTable_SyncFieldNames.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcConfigTable.SyncStatements Property">
+    <PARAM name="Local" value="TCcConfigTable_SyncStatements.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcConfigTable.TableName Property">
+    <PARAM name="Local" value="TCcConfigTable_TableName.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcConfigTable.UpdateCondition Property">
+    <PARAM name="Local" value="TCcConfigTable_UpdateCondition.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcConfigTable.Create Constructor ">
+    <PARAM name="Local" value="TCcConfigTable_Create@TCollection.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcConfigTable.Destroy Destructor ">
+    <PARAM name="Local" value="TCcConfigTable_Destroy.html">
+    </OBJECT>
+</ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcConfigTables Class">
+    <PARAM name="Local" value="TCcConfigTables.html">
+    </OBJECT>
+<ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcConfigTables.Item Property">
+    <PARAM name="Local" value="TCcConfigTables_Item.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcConfigTables.Add Method ">
+    <PARAM name="Local" value="TCcConfigTables_Add.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcConfigTables.Create Constructor ">
+    <PARAM name="Local" value="TCcConfigTables_Create@TPersistent.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcConfigTables.FindTable Method ">
+    <PARAM name="Local" value="TCcConfigTables_FindTable@String.html">
+    </OBJECT>
+</ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcConflictMgr Class">
+    <PARAM name="Local" value="TCcConflictMgr.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcConnection Class">
+    <PARAM name="Local" value="TCcConnection.html">
+    </OBJECT>
+<ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcConnection.CanUseRowsAffected Property">
+    <PARAM name="Local" value="TCcConnection_CanUseRowsAffected.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcConnection.Connected Property">
+    <PARAM name="Local" value="TCcConnection_Connected.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcConnection.ConnectionParams Property">
+    <PARAM name="Local" value="TCcConnection_ConnectionParams.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcConnection.DBAdaptor Property">
+    <PARAM name="Local" value="TCcConnection_DBAdaptor.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcConnection.DBName Property">
+    <PARAM name="Local" value="TCcConnection_DBName.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcConnection.DBType Property">
+    <PARAM name="Local" value="TCcConnection_DBType.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcConnection.DBVersion Property">
+    <PARAM name="Local" value="TCcConnection_DBVersion.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcConnection.DDLQuery Property">
+    <PARAM name="Local" value="TCcConnection_DDLQuery.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcConnection.InTransaction Property">
+    <PARAM name="Local" value="TCcConnection_InTransaction.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcConnection.OnConnectionLost Event">
+    <PARAM name="Local" value="TCcConnection_OnConnectionLost.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcConnection.OnDestroyQueries Property">
+    <PARAM name="Local" value="TCcConnection_OnDestroyQueries.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcConnection.OnQueryExecute Property">
+    <PARAM name="Local" value="TCcConnection_OnQueryExecute.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcConnection.ReplicatingNode Property">
+    <PARAM name="Local" value="TCcConnection_ReplicatingNode.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcConnection.ReplicatingNodePassword Property">
+    <PARAM name="Local" value="TCcConnection_ReplicatingNodePassword.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcConnection.SelectQuery Property">
+    <PARAM name="Local" value="TCcConnection_SelectQuery.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcConnection.UpdateQuery Property">
+    <PARAM name="Local" value="TCcConnection_UpdateQuery.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcConnection.Assign Method ">
+    <PARAM name="Local" value="TCcConnection_Assign@TPersistent.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcConnection.CheckDisconnected Method ">
+    <PARAM name="Local" value="TCcConnection_CheckDisconnected.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcConnection.ClearQueries Method ">
+    <PARAM name="Local" value="TCcConnection_ClearQueries.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcConnection.Commit Method ">
+    <PARAM name="Local" value="TCcConnection_Commit.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcConnection.CommitRetaining Method ">
+    <PARAM name="Local" value="TCcConnection_CommitRetaining.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcConnection.Connect Method ">
+    <PARAM name="Local" value="TCcConnection_Connect.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcConnection.ConnectAsNode Method ">
+    <PARAM name="Local" value="TCcConnection_ConnectAsNode@string@string.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcConnection.ConnectorName Method ">
+    <PARAM name="Local" value="TCcConnection_ConnectorName.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcConnection.Create Constructor ">
+    <PARAM name="Local" value="TCcConnection_Create@TComponent.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcConnection.DatabaseTypes Method ">
+    <PARAM name="Local" value="TCcConnection_DatabaseTypes@TStrings.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcConnection.DatabaseVersions Method ">
+    <PARAM name="Local" value="TCcConnection_DatabaseVersions@TStrings.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcConnection.Destroy Destructor ">
+    <PARAM name="Local" value="TCcConnection_Destroy.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcConnection.Disconnect Method ">
+    <PARAM name="Local" value="TCcConnection_Disconnect.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcConnection.ExecQuery Method ">
+    <PARAM name="Local" value="TCcConnection_ExecQuery@string.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcConnection.FindQuery Method ">
+    <PARAM name="Local" value="TCcConnection_FindQuery@string.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcConnection.Gen_Id Method ">
+    <PARAM name="Local" value="TCcConnection_Gen_Id@string@Integer.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcConnection.GetFieldType Method ">
+    <PARAM name="Local" value="TCcConnection_GetFieldType@string@string.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcConnection.ListAllProcedures Method ">
+    <PARAM name="Local" value="TCcConnection_ListAllProcedures.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcConnection.ListAllTables Method ">
+    <PARAM name="Local" value="TCcConnection_ListAllTables.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcConnection.ListFieldsForNoPK Method ">
+    <PARAM name="Local" value="TCcConnection_ListFieldsForNoPK@string.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcConnection.ListGenerators Method ">
+    <PARAM name="Local" value="TCcConnection_ListGenerators.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcConnection.ListKeywordsForbiddenAsFieldNames Method ">
+    <PARAM name="Local" value="TCcConnection_ListKeywordsForbiddenAsFieldNames.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcConnection.ListPrimaryKeys Method ">
+    <PARAM name="Local" value="TCcConnection_ListPrimaryKeys@string.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcConnection.ListProcedures Method ">
+    <PARAM name="Local" value="TCcConnection_ListProcedures.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcConnection.ListTableFields Method ">
+    <PARAM name="Local" value="TCcConnection_ListTableFields@string.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcConnection.ListTables Method ">
+    <PARAM name="Local" value="TCcConnection_ListTables.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcConnection.ListTriggers Method ">
+    <PARAM name="Local" value="TCcConnection_ListTriggers.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcConnection.ListUpdatableTableFields Method ">
+    <PARAM name="Local" value="TCcConnection_ListUpdatableTableFields@string.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcConnection.Loaded Method ">
+    <PARAM name="Local" value="TCcConnection_Loaded.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcConnection.MaxDDLNameLength Method ">
+    <PARAM name="Local" value="TCcConnection_MaxDDLNameLength.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcConnection.RefreshNodes Method ">
+    <PARAM name="Local" value="TCcConnection_RefreshNodes.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcConnection.Rollback Method ">
+    <PARAM name="Local" value="TCcConnection_Rollback.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcConnection.RollbackRetaining Method ">
+    <PARAM name="Local" value="TCcConnection_RollbackRetaining.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcConnection.StartTransaction Method ">
+    <PARAM name="Local" value="TCcConnection_StartTransaction.html">
+    </OBJECT>
+</ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcCustomConflictMgr Class">
+    <PARAM name="Local" value="TCcCustomConflictMgr.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcCustomLog Class">
+    <PARAM name="Local" value="TCcCustomLog.html">
+    </OBJECT>
+<ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcCustomLog.AllowedOperations Property">
+    <PARAM name="Local" value="TCcCustomLog_AllowedOperations.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcCustomLog.CurrentLine Property">
+    <PARAM name="Local" value="TCcCustomLog_CurrentLine.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcCustomLog.Dest Property">
+    <PARAM name="Local" value="TCcCustomLog_Dest.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcCustomLog.Eof Property">
+    <PARAM name="Local" value="TCcCustomLog_Eof.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcCustomLog.Keys Property">
+    <PARAM name="Local" value="TCcCustomLog_Keys.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcCustomLog.LineCount Property">
+    <PARAM name="Local" value="TCcCustomLog_LineCount.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcCustomLog.LocalMode Property">
+    <PARAM name="Local" value="TCcCustomLog_LocalMode.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcCustomLog.OldRecordID Property">
+    <PARAM name="Local" value="TCcCustomLog_OldRecordID.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcCustomLog.Origin Property">
+    <PARAM name="Local" value="TCcCustomLog_Origin.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcCustomLog.PrimaryKeys Property">
+    <PARAM name="Local" value="TCcCustomLog_PrimaryKeys.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcCustomLog.RecordID Property">
+    <PARAM name="Local" value="TCcCustomLog_RecordID.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcCustomLog.RemoteTableName Property">
+    <PARAM name="Local" value="TCcCustomLog_RemoteTableName.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcCustomLog.TableName Property">
+    <PARAM name="Local" value="TCcCustomLog_TableName.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcCustomLog.FBN Method ">
+    <PARAM name="Local" value="TCcCustomLog_FBN@string.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcCustomLog.FieldByName Method ">
+    <PARAM name="Local" value="TCcCustomLog_FieldByName@string.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcCustomLog.FieldExists Method ">
+    <PARAM name="Local" value="TCcCustomLog_FieldExists@string.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcCustomLog.Next Method ">
+    <PARAM name="Local" value="TCcCustomLog_Next.html">
+    </OBJECT>
+</ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcDataSet Class">
+    <PARAM name="Local" value="TCcDataSet.html">
+    </OBJECT>
+<ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcDataSet.Active Property">
+    <PARAM name="Local" value="TCcDataSet_Active.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcDataSet.Connection Property">
+    <PARAM name="Local" value="TCcDataSet_Connection.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcDataSet.DeleteQuery Property">
+    <PARAM name="Local" value="TCcDataSet_DeleteQuery.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcDataSet.InsertQuery Property">
+    <PARAM name="Local" value="TCcDataSet_InsertQuery.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcDataSet.RefreshQuery Property">
+    <PARAM name="Local" value="TCcDataSet_RefreshQuery.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcDataSet.RowsAffected Property">
+    <PARAM name="Local" value="TCcDataSet_RowsAffected.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcDataSet.SelectQuery Property">
+    <PARAM name="Local" value="TCcDataSet_SelectQuery.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcDataSet.SQL Property">
+    <PARAM name="Local" value="TCcDataSet_SQL.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcDataSet.SQLDelete Property">
+    <PARAM name="Local" value="TCcDataSet_SQLDelete.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcDataSet.SQLInsert Property">
+    <PARAM name="Local" value="TCcDataSet_SQLInsert.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcDataSet.SQLRefresh Property">
+    <PARAM name="Local" value="TCcDataSet_SQLRefresh.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcDataSet.SQLUpdate Property">
+    <PARAM name="Local" value="TCcDataSet_SQLUpdate.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcDataSet.UpdateQuery Property">
+    <PARAM name="Local" value="TCcDataSet_UpdateQuery.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcDataSet.CopyCurrentRecord Method ">
+    <PARAM name="Local" value="TCcDataSet_CopyCurrentRecord@TCcRecord.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcDataSet.Create Constructor ">
+    <PARAM name="Local" value="TCcDataSet_Create@TComponent.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcDataSet.Destroy Destructor ">
+    <PARAM name="Local" value="TCcDataSet_Destroy.html">
+    </OBJECT>
+</ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcDBAdaptor Class">
+    <PARAM name="Local" value="TCcDBAdaptor.html">
+    </OBJECT>
+<ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcDBAdaptor.CurrentTimeStampSQL Property">
+    <PARAM name="Local" value="TCcDBAdaptor_CurrentTimeStampSQL.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcDBAdaptor.QuoteMetadata Property">
+    <PARAM name="Local" value="TCcDBAdaptor_QuoteMetadata.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcDBAdaptor.SupportedVersions Property">
+    <PARAM name="Local" value="TCcDBAdaptor_SupportedVersions.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcDBAdaptor.UseRowsAffected Property">
+    <PARAM name="Local" value="TCcDBAdaptor_UseRowsAffected.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcDBAdaptor.Version Property">
+    <PARAM name="Local" value="TCcDBAdaptor_Version.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcDBAdaptor.CheckCustomMetadata Method ">
+    <PARAM name="Local" value="TCcDBAdaptor_CheckCustomMetadata.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcDBAdaptor.CheckExtraCustomMetadata Method ">
+    <PARAM name="Local" value="TCcDBAdaptor_CheckExtraCustomMetadata.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcDBAdaptor.ConvertValue Method ">
+    <PARAM name="Local" value="TCcDBAdaptor_ConvertValue@Variant@TFieldType.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcDBAdaptor.Create Constructor ">
+    <PARAM name="Local" value="TCcDBAdaptor_Create@TCcConnection.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcDBAdaptor.CreateProcedures Method ">
+    <PARAM name="Local" value="TCcDBAdaptor_CreateProcedures.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcDBAdaptor.DeclareField Method ">
+    <PARAM name="Local" value="TCcDBAdaptor_DeclareField@string@TFieldType@Integer@Boolean@Boolean@Boolean.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcDBAdaptor.DeclareGenerator Method ">
+    <PARAM name="Local" value="TCcDBAdaptor_DeclareGenerator@string.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcDBAdaptor.DeclarePK Method ">
+    <PARAM name="Local" value="TCcDBAdaptor_DeclarePK@string.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcDBAdaptor.Destroy Destructor ">
+    <PARAM name="Local" value="TCcDBAdaptor_Destroy.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcDBAdaptor.DropGenerator Method ">
+    <PARAM name="Local" value="TCcDBAdaptor_DropGenerator@string.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcDBAdaptor.DropProcedures Method ">
+    <PARAM name="Local" value="TCcDBAdaptor_DropProcedures.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcDBAdaptor.ExecutedReplicationQuery Method ">
+    <PARAM name="Local" value="TCcDBAdaptor_ExecutedReplicationQuery@String@String@TStringList.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcDBAdaptor.ExecutingReplicationQuery Method ">
+    <PARAM name="Local" value="TCcDBAdaptor_ExecutingReplicationQuery@String@String@TStringList.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcDBAdaptor.ExecutingReplicationQuerySQL Method ">
+    <PARAM name="Local" value="TCcDBAdaptor_ExecutingReplicationQuerySQL@String@String@TCcQuery.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcDBAdaptor.FieldExists Method ">
+    <PARAM name="Local" value="TCcDBAdaptor_FieldExists@string@string.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcDBAdaptor.GenDeclared Method ">
+    <PARAM name="Local" value="TCcDBAdaptor_GenDeclared@string.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcDBAdaptor.GenerateTriggers Method ">
+    <PARAM name="Local" value="TCcDBAdaptor_GenerateTriggers@TCcQuery@TCcQuery@Boolean@Boolean.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcDBAdaptor.GetAdaptorName Method ">
+    <PARAM name="Local" value="TCcDBAdaptor_GetAdaptorName.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcDBAdaptor.GetGenerator Method ">
+    <PARAM name="Local" value="TCcDBAdaptor_GetGenerator@string@Integer.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcDBAdaptor.GetInsertOrUpdateSQL Method ">
+    <PARAM name="Local" value="TCcDBAdaptor_GetInsertOrUpdateSQL@TStringList@TCcDBAdaptor@TStringList.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcDBAdaptor.GetProcGenerator Method ">
+    <PARAM name="Local" value="TCcDBAdaptor_GetProcGenerator@string@TDataSet@string@TStringList.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcDBAdaptor.GetProcParams Method ">
+    <PARAM name="Local" value="TCcDBAdaptor_GetProcParams@string@TDataSet@Boolean.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcDBAdaptor.GrantRightsToTable Method ">
+    <PARAM name="Local" value="TCcDBAdaptor_GrantRightsToTable@string.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="MetaQuote">
+    </OBJECT>
+<ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcDBAdaptor.MetaQuote Method (string)">
+    <PARAM name="Local" value="TCcDBAdaptor_MetaQuote@string.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcDBAdaptor.MetaQuote Method (string, TCcDBAdaptor)">
+    <PARAM name="Local" value="TCcDBAdaptor_MetaQuote@string@TCcDBAdaptor.html">
+    </OBJECT>
+</ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcDBAdaptor.ProcedureExists Method ">
+    <PARAM name="Local" value="TCcDBAdaptor_ProcedureExists@string.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcDBAdaptor.RemoveCustomMetadata Method ">
+    <PARAM name="Local" value="TCcDBAdaptor_RemoveCustomMetadata.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcDBAdaptor.RemoveExtraCustomMetadata Method ">
+    <PARAM name="Local" value="TCcDBAdaptor_RemoveExtraCustomMetadata.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcDBAdaptor.RemoveTriggers Method ">
+    <PARAM name="Local" value="TCcDBAdaptor_RemoveTriggers@TCcQuery.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcDBAdaptor.SQLFormatValue Method ">
+    <PARAM name="Local" value="TCcDBAdaptor_SQLFormatValue@Variant@TFieldType.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcDBAdaptor.SupportsGenerators Method ">
+    <PARAM name="Local" value="TCcDBAdaptor_SupportsGenerators.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcDBAdaptor.SupportsInsertOrUpdate Method ">
+    <PARAM name="Local" value="TCcDBAdaptor_SupportsInsertOrUpdate.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcDBAdaptor.TableExists Method ">
+    <PARAM name="Local" value="TCcDBAdaptor_TableExists@string.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcDBAdaptor.TriggerExists Method ">
+    <PARAM name="Local" value="TCcDBAdaptor_TriggerExists@string.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcDBAdaptor.UnQuotedIdentifier Method ">
+    <PARAM name="Local" value="TCcDBAdaptor_UnQuotedIdentifier@string.html">
+    </OBJECT>
+</ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcDBAdaptorsEditor Class">
+    <PARAM name="Local" value="TCcDBAdaptorsEditor.html">
+    </OBJECT>
+<ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcDBAdaptorsEditor.GetAttributes Method ">
+    <PARAM name="Local" value="TCcDBAdaptorsEditor_GetAttributes.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcDBAdaptorsEditor.GetValues Method ">
+    <PARAM name="Local" value="TCcDBAdaptorsEditor_GetValues@TGetStrProc.html">
+    </OBJECT>
+</ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcDBAdaptorVersionsEditor Class">
+    <PARAM name="Local" value="TCcDBAdaptorVersionsEditor.html">
+    </OBJECT>
+<ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcDBAdaptorVersionsEditor.GetAttributes Method ">
+    <PARAM name="Local" value="TCcDBAdaptorVersionsEditor_GetAttributes.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcDBAdaptorVersionsEditor.GetValues Method ">
+    <PARAM name="Local" value="TCcDBAdaptorVersionsEditor_GetValues@TGetStrProc.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcDBAdaptorVersionsEditor.SetValue Method ">
+    <PARAM name="Local" value="TCcDBAdaptorVersionsEditor_SetValue@string.html">
+    </OBJECT>
+</ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcField Class">
+    <PARAM name="Local" value="TCcField.html">
+    </OBJECT>
+<ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcField.AsCurrency Property">
+    <PARAM name="Local" value="TCcField_AsCurrency.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcField.AsDateTime Property">
+    <PARAM name="Local" value="TCcField_AsDateTime.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcField.AsFloat Property">
+    <PARAM name="Local" value="TCcField_AsFloat.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcField.AsInteger Property">
+    <PARAM name="Local" value="TCcField_AsInteger.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcField.AsString Property">
+    <PARAM name="Local" value="TCcField_AsString.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcField.DataType Property">
+    <PARAM name="Local" value="TCcField_DataType.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcField.FieldName Property">
+    <PARAM name="Local" value="TCcField_FieldName.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcField.index Property">
+    <PARAM name="Local" value="TCcField_index.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcField.IsNull Property">
+    <PARAM name="Local" value="TCcField_IsNull.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcField.IsParam Property">
+    <PARAM name="Local" value="TCcField_IsParam.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcField.Size Property">
+    <PARAM name="Local" value="TCcField_Size.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcField.Value Property">
+    <PARAM name="Local" value="TCcField_Value.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcField.Clear Method ">
+    <PARAM name="Local" value="TCcField_Clear.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcField.Create Constructor ">
+    <PARAM name="Local" value="TCcField_Create@TCcQuery@string@TFieldType@Integer@Boolean.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcField.SetValueAsType Method ">
+    <PARAM name="Local" value="TCcField_SetValueAsType@Variant@TFieldType.html">
+    </OBJECT>
+</ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcFieldInfo Class">
+    <PARAM name="Local" value="TCcFieldInfo.html">
+    </OBJECT>
+<ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcFieldInfo.DataType Field">
+    <PARAM name="Local" value="TCcFieldInfo_DataType.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcFieldInfo.FieldName Field">
+    <PARAM name="Local" value="TCcFieldInfo_FieldName.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcFieldInfo.IsNull Field">
+    <PARAM name="Local" value="TCcFieldInfo_IsNull.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcFieldInfo.Size Field">
+    <PARAM name="Local" value="TCcFieldInfo_Size.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcFieldInfo.Value Field">
+    <PARAM name="Local" value="TCcFieldInfo_Value.html">
+    </OBJECT>
+</ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcFieldList Class">
+    <PARAM name="Local" value="TCcFieldList.html">
+    </OBJECT>
+<ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcFieldList.Count Property">
+    <PARAM name="Local" value="TCcFieldList_Count.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcFieldList.FieldInfo Property">
+    <PARAM name="Local" value="TCcFieldList_FieldInfo.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcFieldList.FieldInfoByName Property">
+    <PARAM name="Local" value="TCcFieldList_FieldInfoByName.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcFieldList.Add Method ">
+    <PARAM name="Local" value="TCcFieldList_Add@TCcFieldInfo.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcFieldList.Clear Method ">
+    <PARAM name="Local" value="TCcFieldList_Clear.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcFieldList.Create Constructor ">
+    <PARAM name="Local" value="TCcFieldList_Create.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcFieldList.Destroy Destructor ">
+    <PARAM name="Local" value="TCcFieldList_Destroy.html">
+    </OBJECT>
+</ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcInterbaseAdaptor Class">
+    <PARAM name="Local" value="TCcInterbaseAdaptor.html">
+    </OBJECT>
+<ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcInterbaseAdaptor.BranchVersion Property">
+    <PARAM name="Local" value="TCcInterbaseAdaptor_BranchVersion.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcInterbaseAdaptor.DBBranch Property">
+    <PARAM name="Local" value="TCcInterbaseAdaptor_DBBranch.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcInterbaseAdaptor.SQLDialect Property">
+    <PARAM name="Local" value="TCcInterbaseAdaptor_SQLDialect.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcInterbaseAdaptor.CheckCustomMetadata Method ">
+    <PARAM name="Local" value="TCcInterbaseAdaptor_CheckCustomMetadata.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcInterbaseAdaptor.CheckExtraCustomMetadata Method ">
+    <PARAM name="Local" value="TCcInterbaseAdaptor_CheckExtraCustomMetadata.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcInterbaseAdaptor.ConvertValue Method ">
+    <PARAM name="Local" value="TCcInterbaseAdaptor_ConvertValue@Variant@TFieldType.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcInterbaseAdaptor.Create Constructor ">
+    <PARAM name="Local" value="TCcInterbaseAdaptor_Create@TCcConnection.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcInterbaseAdaptor.CreateProcedures Method ">
+    <PARAM name="Local" value="TCcInterbaseAdaptor_CreateProcedures.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcInterbaseAdaptor.DeclareField Method ">
+    <PARAM name="Local" value="TCcInterbaseAdaptor_DeclareField@String@TFieldType@Integer@Boolean@Boolean@Boolean.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcInterbaseAdaptor.DeclareGenerator Method ">
+    <PARAM name="Local" value="TCcInterbaseAdaptor_DeclareGenerator@String.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcInterbaseAdaptor.DeclarePK Method ">
+    <PARAM name="Local" value="TCcInterbaseAdaptor_DeclarePK@String.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcInterbaseAdaptor.Destroy Destructor ">
+    <PARAM name="Local" value="TCcInterbaseAdaptor_Destroy.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcInterbaseAdaptor.DropProcedures Method ">
+    <PARAM name="Local" value="TCcInterbaseAdaptor_DropProcedures.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcInterbaseAdaptor.GenDeclared Method ">
+    <PARAM name="Local" value="TCcInterbaseAdaptor_GenDeclared@String.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcInterbaseAdaptor.GenerateTriggers Method ">
+    <PARAM name="Local" value="TCcInterbaseAdaptor_GenerateTriggers@TCcQuery@TCcQuery@Boolean@Boolean.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcInterbaseAdaptor.GetAdaptorName Method ">
+    <PARAM name="Local" value="TCcInterbaseAdaptor_GetAdaptorName.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcInterbaseAdaptor.GetGenerator Method ">
+    <PARAM name="Local" value="TCcInterbaseAdaptor_GetGenerator@String@Integer.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcInterbaseAdaptor.GetGeneratorValue Method ">
+    <PARAM name="Local" value="TCcInterbaseAdaptor_GetGeneratorValue@String@Integer.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcInterbaseAdaptor.GetProcParams Method ">
+    <PARAM name="Local" value="TCcInterbaseAdaptor_GetProcParams@String@TDataSet@Boolean.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcInterbaseAdaptor.RemoveCustomMetadata Method ">
+    <PARAM name="Local" value="TCcInterbaseAdaptor_RemoveCustomMetadata.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcInterbaseAdaptor.RemoveExtraCustomMetadata Method ">
+    <PARAM name="Local" value="TCcInterbaseAdaptor_RemoveExtraCustomMetadata.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcInterbaseAdaptor.RemoveTriggers Method ">
+    <PARAM name="Local" value="TCcInterbaseAdaptor_RemoveTriggers@TCcQuery.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcInterbaseAdaptor.SQLFormatValue Method ">
+    <PARAM name="Local" value="TCcInterbaseAdaptor_SQLFormatValue@Variant@TFieldType.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcInterbaseAdaptor.SupportsGenerators Method ">
+    <PARAM name="Local" value="TCcInterbaseAdaptor_SupportsGenerators.html">
+    </OBJECT>
+</ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcInterbaseConnection Class">
+    <PARAM name="Local" value="TCcInterbaseConnection.html">
+    </OBJECT>
+<ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcInterbaseConnection.CharSet Property">
+    <PARAM name="Local" value="TCcInterbaseConnection_CharSet.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcInterbaseConnection.DBName Property">
+    <PARAM name="Local" value="TCcInterbaseConnection_DBName.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcInterbaseConnection.DBType Property">
+    <PARAM name="Local" value="TCcInterbaseConnection_DBType.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcInterbaseConnection.DBVersion Property">
+    <PARAM name="Local" value="TCcInterbaseConnection_DBVersion.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcInterbaseConnection.RoleName Property">
+    <PARAM name="Local" value="TCcInterbaseConnection_RoleName.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcInterbaseConnection.SQLDialect Property">
+    <PARAM name="Local" value="TCcInterbaseConnection_SQLDialect.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcInterbaseConnection.TRParams Property">
+    <PARAM name="Local" value="TCcInterbaseConnection_TRParams.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcInterbaseConnection.UserLogin Property">
+    <PARAM name="Local" value="TCcInterbaseConnection_UserLogin.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcInterbaseConnection.UserPassword Property">
+    <PARAM name="Local" value="TCcInterbaseConnection_UserPassword.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcInterbaseConnection.Assign Method ">
+    <PARAM name="Local" value="TCcInterbaseConnection_Assign@TPersistent.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcInterbaseConnection.Create Constructor ">
+    <PARAM name="Local" value="TCcInterbaseConnection_Create@TComponent.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcInterbaseConnection.Destroy Destructor ">
+    <PARAM name="Local" value="TCcInterbaseConnection_Destroy.html">
+    </OBJECT>
+</ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcInternalMemoryData Class">
+    <PARAM name="Local" value="TCcInternalMemoryData.html">
+    </OBJECT>
+<ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcInternalMemoryData.Active Property">
+    <PARAM name="Local" value="TCcInternalMemoryData_Active.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcInternalMemoryData.AfterCancel Property">
+    <PARAM name="Local" value="TCcInternalMemoryData_AfterCancel.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcInternalMemoryData.AfterClose Property">
+    <PARAM name="Local" value="TCcInternalMemoryData_AfterClose.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcInternalMemoryData.AfterDelete Property">
+    <PARAM name="Local" value="TCcInternalMemoryData_AfterDelete.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcInternalMemoryData.AfterEdit Property">
+    <PARAM name="Local" value="TCcInternalMemoryData_AfterEdit.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcInternalMemoryData.AfterInsert Property">
+    <PARAM name="Local" value="TCcInternalMemoryData_AfterInsert.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcInternalMemoryData.AfterOpen Property">
+    <PARAM name="Local" value="TCcInternalMemoryData_AfterOpen.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcInternalMemoryData.AfterPost Property">
+    <PARAM name="Local" value="TCcInternalMemoryData_AfterPost.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcInternalMemoryData.AfterScroll Property">
+    <PARAM name="Local" value="TCcInternalMemoryData_AfterScroll.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcInternalMemoryData.BeforeCancel Property">
+    <PARAM name="Local" value="TCcInternalMemoryData_BeforeCancel.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcInternalMemoryData.BeforeClose Property">
+    <PARAM name="Local" value="TCcInternalMemoryData_BeforeClose.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcInternalMemoryData.BeforeDelete Property">
+    <PARAM name="Local" value="TCcInternalMemoryData_BeforeDelete.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcInternalMemoryData.BeforeEdit Property">
+    <PARAM name="Local" value="TCcInternalMemoryData_BeforeEdit.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcInternalMemoryData.BeforeInsert Property">
+    <PARAM name="Local" value="TCcInternalMemoryData_BeforeInsert.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcInternalMemoryData.BeforeOpen Property">
+    <PARAM name="Local" value="TCcInternalMemoryData_BeforeOpen.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcInternalMemoryData.BeforePost Property">
+    <PARAM name="Local" value="TCcInternalMemoryData_BeforePost.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcInternalMemoryData.BeforeScroll Property">
+    <PARAM name="Local" value="TCcInternalMemoryData_BeforeScroll.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcInternalMemoryData.Capacity Property">
+    <PARAM name="Local" value="TCcInternalMemoryData_Capacity.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcInternalMemoryData.OnCalcFields Property">
+    <PARAM name="Local" value="TCcInternalMemoryData_OnCalcFields.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcInternalMemoryData.OnDeleteError Property">
+    <PARAM name="Local" value="TCcInternalMemoryData_OnDeleteError.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcInternalMemoryData.OnEditError Property">
+    <PARAM name="Local" value="TCcInternalMemoryData_OnEditError.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcInternalMemoryData.OnFilterRecord Property">
+    <PARAM name="Local" value="TCcInternalMemoryData_OnFilterRecord.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcInternalMemoryData.OnNewRecord Property">
+    <PARAM name="Local" value="TCcInternalMemoryData_OnNewRecord.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcInternalMemoryData.OnPostError Property">
+    <PARAM name="Local" value="TCcInternalMemoryData_OnPostError.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcInternalMemoryData.BookmarkValid Method ">
+    <PARAM name="Local" value="TCcInternalMemoryData_BookmarkValid@TBookmark.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcInternalMemoryData.CompareBookmarks Method ">
+    <PARAM name="Local" value="TCcInternalMemoryData_CompareBookmarks@TBookmark@TBookmark.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcInternalMemoryData.Create Constructor ">
+    <PARAM name="Local" value="TCcInternalMemoryData_Create@TComponent.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcInternalMemoryData.CreateBlobStream Method ">
+    <PARAM name="Local" value="TCcInternalMemoryData_CreateBlobStream@TField@TBlobStreamMode.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcInternalMemoryData.Destroy Destructor ">
+    <PARAM name="Local" value="TCcInternalMemoryData_Destroy.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcInternalMemoryData.EmptyTable Method ">
+    <PARAM name="Local" value="TCcInternalMemoryData_EmptyTable.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcInternalMemoryData.GetCurrentRecord Method ">
+    <PARAM name="Local" value="TCcInternalMemoryData_GetCurrentRecord@PCcMemBuffer.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="GetFieldData">
+    </OBJECT>
+<ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcInternalMemoryData.GetFieldData Method (TField, Pointer)">
+    <PARAM name="Local" value="TCcInternalMemoryData_GetFieldData@TField@Pointer.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcInternalMemoryData.GetFieldData Method (TField, TValueBuffer)">
+    <PARAM name="Local" value="TCcInternalMemoryData_GetFieldData@TField@TValueBuffer.html">
+    </OBJECT>
+</ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcInternalMemoryData.IsSequenced Method ">
+    <PARAM name="Local" value="TCcInternalMemoryData_IsSequenced.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcInternalMemoryData.Locate Method ">
+    <PARAM name="Local" value="TCcInternalMemoryData_Locate@string@Variant@TLocateOptions.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcInternalMemoryData.SaveToDataSet Method ">
+    <PARAM name="Local" value="TCcInternalMemoryData_SaveToDataSet@TDataSet@Integer.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcInternalMemoryData.SortOnFields Method ">
+    <PARAM name="Local" value="TCcInternalMemoryData_SortOnFields@string@Boolean@Boolean.html">
+    </OBJECT>
+</ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcKey Class">
+    <PARAM name="Local" value="TCcKey.html">
+    </OBJECT>
+<ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcKey.DataType Field">
+    <PARAM name="Local" value="TCcKey_DataType.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcKey.GenericSyncStatement Field">
+    <PARAM name="Local" value="TCcKey_GenericSyncStatement.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcKey.KeyName Field">
+    <PARAM name="Local" value="TCcKey_KeyName.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcKey.KeyValue Field">
+    <PARAM name="Local" value="TCcKey_KeyValue.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcKey.OriginalKeyValue Field">
+    <PARAM name="Local" value="TCcKey_OriginalKeyValue.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcKey.PrimaryKey Field">
+    <PARAM name="Local" value="TCcKey_PrimaryKey.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcKey.SyncStatement Field">
+    <PARAM name="Local" value="TCcKey_SyncStatement.html">
+    </OBJECT>
+</ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcKeyRing Class">
+    <PARAM name="Local" value="TCcKeyRing.html">
+    </OBJECT>
+<ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcKeyRing.Count Property">
+    <PARAM name="Local" value="TCcKeyRing_Count.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcKeyRing.FailIfNoPK Property">
+    <PARAM name="Local" value="TCcKeyRing_FailIfNoPK.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcKeyRing.GenericPrimaryKeySync Property">
+    <PARAM name="Local" value="TCcKeyRing_GenericPrimaryKeySync.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcKeyRing.GenericUniqueKeySync Property">
+    <PARAM name="Local" value="TCcKeyRing_GenericUniqueKeySync.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcKeyRing.Keys Property">
+    <PARAM name="Local" value="TCcKeyRing_Keys.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcKeyRing.PrimaryKeySync Property">
+    <PARAM name="Local" value="TCcKeyRing_PrimaryKeySync.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcKeyRing.PrimaryKeyValues Property">
+    <PARAM name="Local" value="TCcKeyRing_PrimaryKeyValues.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcKeyRing.TableKeys Property">
+    <PARAM name="Local" value="TCcKeyRing_TableKeys.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcKeyRing.TableName Property">
+    <PARAM name="Local" value="TCcKeyRing_TableName.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcKeyRing.UniqueKeyNames Property">
+    <PARAM name="Local" value="TCcKeyRing_UniqueKeyNames.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcKeyRing.UniqueKeySync Property">
+    <PARAM name="Local" value="TCcKeyRing_UniqueKeySync.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcKeyRing.Clear Method ">
+    <PARAM name="Local" value="TCcKeyRing_Clear.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcKeyRing.ClearTableKeys Method ">
+    <PARAM name="Local" value="TCcKeyRing_ClearTableKeys.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcKeyRing.Create Constructor ">
+    <PARAM name="Local" value="TCcKeyRing_Create@TCcConnection.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcKeyRing.Destroy Destructor ">
+    <PARAM name="Local" value="TCcKeyRing_Destroy.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcKeyRing.FindKey Method ">
+    <PARAM name="Local" value="TCcKeyRing_FindKey@String.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcKeyRing.KeyExists Method ">
+    <PARAM name="Local" value="TCcKeyRing_KeyExists@String.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcKeyRing.LoadFromDataSet Method ">
+    <PARAM name="Local" value="TCcKeyRing_LoadFromDataSet@TDataSet@String@String@String.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcKeyRing.LoadKeys Method ">
+    <PARAM name="Local" value="TCcKeyRing_LoadKeys@String@String@String@String@String@String@String@TCcKeyOrigin.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="LoadKeysFromDataSet">
+    </OBJECT>
+<ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcKeyRing.LoadKeysFromDataSet Method (String, TCcMemoryTable, String, String)">
+    <PARAM name="Local" value="TCcKeyRing_LoadKeysFromDataSet@String@TCcMemoryTable@String@String.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcKeyRing.LoadKeysFromDataSet Method (String, TCcQuery, String, String)">
+    <PARAM name="Local" value="TCcKeyRing_LoadKeysFromDataSet@String@TCcQuery@String@String.html">
+    </OBJECT>
+</ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcKeyRing.SaveKeys Method ">
+    <PARAM name="Local" value="TCcKeyRing_SaveKeys.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcKeyRing.SaveToDataSet Method ">
+    <PARAM name="Local" value="TCcKeyRing_SaveToDataSet@TDataSet@String@String@Boolean.html">
+    </OBJECT>
+</ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcLog Class">
+    <PARAM name="Local" value="TCcLog.html">
+    </OBJECT>
+<ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcLog.Create Constructor ">
+    <PARAM name="Local" value="TCcLog_Create@TComponent.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcLog.Destroy Destructor ">
+    <PARAM name="Local" value="TCcLog_Destroy.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcLog.FBN Method ">
+    <PARAM name="Local" value="TCcLog_FBN@string.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcLog.FieldByName Method ">
+    <PARAM name="Local" value="TCcLog_FieldByName@string.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcLog.FieldExists Method ">
+    <PARAM name="Local" value="TCcLog_FieldExists@string.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcLog.ListChangedFields Method ">
+    <PARAM name="Local" value="TCcLog_ListChangedFields@TCcConnection@TStringList@String@String@String.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcLog.Next Method ">
+    <PARAM name="Local" value="TCcLog_Next.html">
+    </OBJECT>
+</ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcLogConfigListener Class">
+    <PARAM name="Local" value="TCcLogConfigListener.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcLogFile Class">
+    <PARAM name="Local" value="TCcLogFile.html">
+    </OBJECT>
+<ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcLogFile.Create Constructor ">
+    <PARAM name="Local" value="TCcLogFile_Create@TComponent.html">
+    </OBJECT>
+</ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcLogFileList Class">
+    <PARAM name="Local" value="TCcLogFileList.html">
+    </OBJECT>
+<ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcLogFileList.Active Property">
+    <PARAM name="Local" value="TCcLogFileList_Active.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcLogFileList.ConfigName Property">
+    <PARAM name="Local" value="TCcLogFileList_ConfigName.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcLogFileList.ConfigNames Property">
+    <PARAM name="Local" value="TCcLogFileList_ConfigNames.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcLogFileList.ConfigStorage Property">
+    <PARAM name="Local" value="TCcLogFileList_ConfigStorage.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcLogFileList.Logs Property">
+    <PARAM name="Local" value="TCcLogFileList_Logs.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcLogFileList.OnLogLine Event">
+    <PARAM name="Local" value="TCcLogFileList_OnLogLine.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcLogFileList.Clear Method ">
+    <PARAM name="Local" value="TCcLogFileList_Clear.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcLogFileList.Create Constructor ">
+    <PARAM name="Local" value="TCcLogFileList_Create@TComponent.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcLogFileList.Destroy Destructor ">
+    <PARAM name="Local" value="TCcLogFileList_Destroy.html">
+    </OBJECT>
+</ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcMacro Class">
+    <PARAM name="Local" value="TCcMacro.html">
+    </OBJECT>
+<ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcMacro.name Property">
+    <PARAM name="Local" value="TCcMacro_name.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcMacro.Value Property">
+    <PARAM name="Local" value="TCcMacro_Value.html">
+    </OBJECT>
+</ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcMemoField Class">
+    <PARAM name="Local" value="TCcMemoField.html">
+    </OBJECT>
+<ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcMemoField.GetAsVariant Method ">
+    <PARAM name="Local" value="TCcMemoField_GetAsVariant.html">
+    </OBJECT>
+</ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcMemoryData Class">
+    <PARAM name="Local" value="TCcMemoryData.html">
+    </OBJECT>
+<ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcMemoryData.AddField Method ">
+    <PARAM name="Local" value="TCcMemoryData_AddField@string@TFieldType@Integer.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcMemoryData.SortRows Method ">
+    <PARAM name="Local" value="TCcMemoryData_SortRows@string@Boolean.html">
+    </OBJECT>
+</ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcMemoryField Class">
+    <PARAM name="Local" value="TCcMemoryField.html">
+    </OBJECT>
+<ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcMemoryField.AsString Property">
+    <PARAM name="Local" value="TCcMemoryField_AsString.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcMemoryField.DataType Property">
+    <PARAM name="Local" value="TCcMemoryField_DataType.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcMemoryField.FieldName Property">
+    <PARAM name="Local" value="TCcMemoryField_FieldName.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcMemoryField.index Property">
+    <PARAM name="Local" value="TCcMemoryField_index.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcMemoryField.IsNull Property">
+    <PARAM name="Local" value="TCcMemoryField_IsNull.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcMemoryField.Size Property">
+    <PARAM name="Local" value="TCcMemoryField_Size.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcMemoryField.Value Property">
+    <PARAM name="Local" value="TCcMemoryField_Value.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcMemoryField.Visible Property">
+    <PARAM name="Local" value="TCcMemoryField_Visible.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcMemoryField.Clear Method ">
+    <PARAM name="Local" value="TCcMemoryField_Clear.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcMemoryField.Create Constructor ">
+    <PARAM name="Local" value="TCcMemoryField_Create@TCcMemoryFields.html">
+    </OBJECT>
+</ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcMemoryFields Class">
+    <PARAM name="Local" value="TCcMemoryFields.html">
+    </OBJECT>
+<ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcMemoryFields.Count Property">
+    <PARAM name="Local" value="TCcMemoryFields_Count.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcMemoryFields.FieldByIndex Property">
+    <PARAM name="Local" value="TCcMemoryFields_FieldByIndex.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcMemoryFields.Add Method ">
+    <PARAM name="Local" value="TCcMemoryFields_Add@String.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcMemoryFields.Clear Method ">
+    <PARAM name="Local" value="TCcMemoryFields_Clear.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcMemoryFields.Create Constructor ">
+    <PARAM name="Local" value="TCcMemoryFields_Create@TCcMemoryTable.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcMemoryFields.Delete Method ">
+    <PARAM name="Local" value="TCcMemoryFields_Delete@Integer.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcMemoryFields.Destroy Destructor ">
+    <PARAM name="Local" value="TCcMemoryFields_Destroy.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcMemoryFields.FieldByName Method ">
+    <PARAM name="Local" value="TCcMemoryFields_FieldByName@string.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcMemoryFields.FindField Method ">
+    <PARAM name="Local" value="TCcMemoryFields_FindField@string.html">
+    </OBJECT>
+</ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcMemoryRow Class">
+    <PARAM name="Local" value="TCcMemoryRow.html">
+    </OBJECT>
+<ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcMemoryRow.Count Property">
+    <PARAM name="Local" value="TCcMemoryRow_Count.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcMemoryRow.Value Property">
+    <PARAM name="Local" value="TCcMemoryRow_Value.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcMemoryRow.CopyFrom Method ">
+    <PARAM name="Local" value="TCcMemoryRow_CopyFrom@TCcMemoryRow.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcMemoryRow.Create Constructor ">
+    <PARAM name="Local" value="TCcMemoryRow_Create@TCcMemoryTable.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcMemoryRow.Destroy Destructor ">
+    <PARAM name="Local" value="TCcMemoryRow_Destroy.html">
+    </OBJECT>
+</ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcMemoryTable Class">
+    <PARAM name="Local" value="TCcMemoryTable.html">
+    </OBJECT>
+<ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcMemoryTable.Active Property">
+    <PARAM name="Local" value="TCcMemoryTable_Active.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcMemoryTable.Bof Property">
+    <PARAM name="Local" value="TCcMemoryTable_Bof.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcMemoryTable.CanCancelEdits Property">
+    <PARAM name="Local" value="TCcMemoryTable_CanCancelEdits.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcMemoryTable.Eof Property">
+    <PARAM name="Local" value="TCcMemoryTable_Eof.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcMemoryTable.fields Property">
+    <PARAM name="Local" value="TCcMemoryTable_fields.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcMemoryTable.RecNo Property">
+    <PARAM name="Local" value="TCcMemoryTable_RecNo.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcMemoryTable.RecordCount Property">
+    <PARAM name="Local" value="TCcMemoryTable_RecordCount.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcMemoryTable.AddNewRecord Method ">
+    <PARAM name="Local" value="TCcMemoryTable_AddNewRecord.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcMemoryTable.Append Method ">
+    <PARAM name="Local" value="TCcMemoryTable_Append.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcMemoryTable.CancelChanges Method ">
+    <PARAM name="Local" value="TCcMemoryTable_CancelChanges.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcMemoryTable.CheckActive Method ">
+    <PARAM name="Local" value="TCcMemoryTable_CheckActive.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcMemoryTable.CheckInactive Method ">
+    <PARAM name="Local" value="TCcMemoryTable_CheckInactive.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcMemoryTable.Clear Method ">
+    <PARAM name="Local" value="TCcMemoryTable_Clear.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcMemoryTable.CopyStructure Method ">
+    <PARAM name="Local" value="TCcMemoryTable_CopyStructure@TCcQuery.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcMemoryTable.Create Constructor ">
+    <PARAM name="Local" value="TCcMemoryTable_Create@TComponent.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcMemoryTable.Delete Method ">
+    <PARAM name="Local" value="TCcMemoryTable_Delete.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcMemoryTable.Destroy Destructor ">
+    <PARAM name="Local" value="TCcMemoryTable_Destroy.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcMemoryTable.EditCurrentRecord Method ">
+    <PARAM name="Local" value="TCcMemoryTable_EditCurrentRecord.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcMemoryTable.FieldByName Method ">
+    <PARAM name="Local" value="TCcMemoryTable_FieldByName@string.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcMemoryTable.FindField Method ">
+    <PARAM name="Local" value="TCcMemoryTable_FindField@string.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcMemoryTable.First Method ">
+    <PARAM name="Local" value="TCcMemoryTable_First.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcMemoryTable.Last Method ">
+    <PARAM name="Local" value="TCcMemoryTable_Last.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcMemoryTable.LoadFromDataSet Method ">
+    <PARAM name="Local" value="TCcMemoryTable_LoadFromDataSet@TCcQuery@Boolean@Boolean@Boolean.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcMemoryTable.Next Method ">
+    <PARAM name="Local" value="TCcMemoryTable_Next.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcMemoryTable.PostChanges Method ">
+    <PARAM name="Local" value="TCcMemoryTable_PostChanges.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcMemoryTable.Prior Method ">
+    <PARAM name="Local" value="TCcMemoryTable_Prior.html">
+    </OBJECT>
+</ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcMySQLAdaptor Class">
+    <PARAM name="Local" value="TCcMySQLAdaptor.html">
+    </OBJECT>
+<ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcMySQLAdaptor.CheckCustomMetadata Method ">
+    <PARAM name="Local" value="TCcMySQLAdaptor_CheckCustomMetadata.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcMySQLAdaptor.ConvertValue Method ">
+    <PARAM name="Local" value="TCcMySQLAdaptor_ConvertValue@Variant@TFieldType.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcMySQLAdaptor.Create Constructor ">
+    <PARAM name="Local" value="TCcMySQLAdaptor_Create@TCcConnection.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcMySQLAdaptor.CreateProcedures Method ">
+    <PARAM name="Local" value="TCcMySQLAdaptor_CreateProcedures.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcMySQLAdaptor.DeclareField Method ">
+    <PARAM name="Local" value="TCcMySQLAdaptor_DeclareField@String@TFieldType@Integer@Boolean@Boolean@Boolean.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcMySQLAdaptor.DeclareGenerator Method ">
+    <PARAM name="Local" value="TCcMySQLAdaptor_DeclareGenerator@String.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcMySQLAdaptor.Destroy Destructor ">
+    <PARAM name="Local" value="TCcMySQLAdaptor_Destroy.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcMySQLAdaptor.DropProcedures Method ">
+    <PARAM name="Local" value="TCcMySQLAdaptor_DropProcedures.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcMySQLAdaptor.GenDeclared Method ">
+    <PARAM name="Local" value="TCcMySQLAdaptor_GenDeclared@String.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcMySQLAdaptor.GenerateTriggers Method ">
+    <PARAM name="Local" value="TCcMySQLAdaptor_GenerateTriggers@TCcQuery@TCcQuery@Boolean@Boolean.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcMySQLAdaptor.GetAdaptorName Method ">
+    <PARAM name="Local" value="TCcMySQLAdaptor_GetAdaptorName.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcMySQLAdaptor.GetGenerator Method ">
+    <PARAM name="Local" value="TCcMySQLAdaptor_GetGenerator@String@Integer.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcMySQLAdaptor.GetProcParams Method ">
+    <PARAM name="Local" value="TCcMySQLAdaptor_GetProcParams@String@TDataSet@Boolean.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcMySQLAdaptor.GrantRightsToTable Method ">
+    <PARAM name="Local" value="TCcMySQLAdaptor_GrantRightsToTable@String.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcMySQLAdaptor.RemoveCustomMetadata Method ">
+    <PARAM name="Local" value="TCcMySQLAdaptor_RemoveCustomMetadata.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcMySQLAdaptor.RemoveTriggers Method ">
+    <PARAM name="Local" value="TCcMySQLAdaptor_RemoveTriggers@TCcQuery.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcMySQLAdaptor.SQLFormatValue Method ">
+    <PARAM name="Local" value="TCcMySQLAdaptor_SQLFormatValue@Variant@TFieldType.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcMySQLAdaptor.SupportsGenerators Method ">
+    <PARAM name="Local" value="TCcMySQLAdaptor_SupportsGenerators.html">
+    </OBJECT>
+</ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcNexusDBAdaptor Class">
+    <PARAM name="Local" value="TCcNexusDBAdaptor.html">
+    </OBJECT>
+<ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcNexusDBAdaptor.CheckCustomMetadata Method ">
+    <PARAM name="Local" value="TCcNexusDBAdaptor_CheckCustomMetadata.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcNexusDBAdaptor.ConvertValue Method ">
+    <PARAM name="Local" value="TCcNexusDBAdaptor_ConvertValue@Variant@TFieldType.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcNexusDBAdaptor.Create Constructor ">
+    <PARAM name="Local" value="TCcNexusDBAdaptor_Create@TCcConnection.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcNexusDBAdaptor.DeclareField Method ">
+    <PARAM name="Local" value="TCcNexusDBAdaptor_DeclareField@string@TFieldType@Integer@Boolean@Boolean@Boolean.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcNexusDBAdaptor.DeclarePK Method ">
+    <PARAM name="Local" value="TCcNexusDBAdaptor_DeclarePK@string.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcNexusDBAdaptor.Destroy Destructor ">
+    <PARAM name="Local" value="TCcNexusDBAdaptor_Destroy.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcNexusDBAdaptor.GenDeclared Method ">
+    <PARAM name="Local" value="TCcNexusDBAdaptor_GenDeclared@string.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcNexusDBAdaptor.GenerateTriggers Method ">
+    <PARAM name="Local" value="TCcNexusDBAdaptor_GenerateTriggers@TCcQuery@TCcQuery@Boolean@Boolean.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcNexusDBAdaptor.GetAdaptorName Method ">
+    <PARAM name="Local" value="TCcNexusDBAdaptor_GetAdaptorName.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcNexusDBAdaptor.GrantRightsToTable Method ">
+    <PARAM name="Local" value="TCcNexusDBAdaptor_GrantRightsToTable@String.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcNexusDBAdaptor.RemoveCustomMetadata Method ">
+    <PARAM name="Local" value="TCcNexusDBAdaptor_RemoveCustomMetadata.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcNexusDBAdaptor.RemoveTriggers Method ">
+    <PARAM name="Local" value="TCcNexusDBAdaptor_RemoveTriggers@TCcQuery.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcNexusDBAdaptor.SQLFormatValue Method ">
+    <PARAM name="Local" value="TCcNexusDBAdaptor_SQLFormatValue@Variant@TFieldType.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcNexusDBAdaptor.SupportsGenerators Method ">
+    <PARAM name="Local" value="TCcNexusDBAdaptor_SupportsGenerators.html">
+    </OBJECT>
+</ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcNode Class">
+    <PARAM name="Local" value="TCcNode.html">
+    </OBJECT>
+<ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcNode.ConfigName Property">
+    <PARAM name="Local" value="TCcNode_ConfigName.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcNode.Connection Property">
+    <PARAM name="Local" value="TCcNode_Connection.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcNode.CurrentTableName Property">
+    <PARAM name="Local" value="TCcNode_CurrentTableName.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcNode.Name Property">
+    <PARAM name="Local" value="TCcNode_Name.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcNode.Password Property">
+    <PARAM name="Local" value="TCcNode_Password.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcNode.Create Constructor ">
+    <PARAM name="Local" value="TCcNode_Create@TCcReplicator.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcNode.FindConfigName Method ">
+    <PARAM name="Local" value="TCcNode_FindConfigName@TCcNode.html">
+    </OBJECT>
+</ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcNodes Class">
+    <PARAM name="Local" value="TCcNodes.html">
+    </OBJECT>
+<ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcNodes.LocalNode Property">
+    <PARAM name="Local" value="TCcNodes_LocalNode.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcNodes.RemoteNode Property">
+    <PARAM name="Local" value="TCcNodes_RemoteNode.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcNodes.Create Constructor ">
+    <PARAM name="Local" value="TCcNodes_Create@TCcReplicator.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcNodes.Destroy Destructor ">
+    <PARAM name="Local" value="TCcNodes_Destroy.html">
+    </OBJECT>
+</ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcPostgresAdaptor Class">
+    <PARAM name="Local" value="TCcPostgresAdaptor.html">
+    </OBJECT>
+<ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcPostgresAdaptor.BranchVersion Property">
+    <PARAM name="Local" value="TCcPostgresAdaptor_BranchVersion.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcPostgresAdaptor.CheckCustomMetadata Method ">
+    <PARAM name="Local" value="TCcPostgresAdaptor_CheckCustomMetadata.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcPostgresAdaptor.CheckExtraCustomMetadata Method ">
+    <PARAM name="Local" value="TCcPostgresAdaptor_CheckExtraCustomMetadata.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcPostgresAdaptor.ConvertValue Method ">
+    <PARAM name="Local" value="TCcPostgresAdaptor_ConvertValue@Variant@TFieldType.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcPostgresAdaptor.Create Constructor ">
+    <PARAM name="Local" value="TCcPostgresAdaptor_Create@TCcConnection.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcPostgresAdaptor.CreateProcedures Method ">
+    <PARAM name="Local" value="TCcPostgresAdaptor_CreateProcedures.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcPostgresAdaptor.DeclareField Method ">
+    <PARAM name="Local" value="TCcPostgresAdaptor_DeclareField@String@TFieldType@Integer@Boolean@Boolean@Boolean.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcPostgresAdaptor.DeclareGenerator Method ">
+    <PARAM name="Local" value="TCcPostgresAdaptor_DeclareGenerator@String.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcPostgresAdaptor.DeclarePK Method ">
+    <PARAM name="Local" value="TCcPostgresAdaptor_DeclarePK@String.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcPostgresAdaptor.Destroy Destructor ">
+    <PARAM name="Local" value="TCcPostgresAdaptor_Destroy.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcPostgresAdaptor.DropProcedures Method ">
+    <PARAM name="Local" value="TCcPostgresAdaptor_DropProcedures.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcPostgresAdaptor.GenDeclared Method ">
+    <PARAM name="Local" value="TCcPostgresAdaptor_GenDeclared@String.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcPostgresAdaptor.GenerateTriggers Method ">
+    <PARAM name="Local" value="TCcPostgresAdaptor_GenerateTriggers@TCcQuery@TCcQuery@Boolean@Boolean.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcPostgresAdaptor.GetAdaptorName Method ">
+    <PARAM name="Local" value="TCcPostgresAdaptor_GetAdaptorName.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcPostgresAdaptor.GetGenerator Method ">
+    <PARAM name="Local" value="TCcPostgresAdaptor_GetGenerator@String@Integer.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcPostgresAdaptor.GetGeneratorValue Method ">
+    <PARAM name="Local" value="TCcPostgresAdaptor_GetGeneratorValue@String@Integer.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcPostgresAdaptor.RemoveCustomMetadata Method ">
+    <PARAM name="Local" value="TCcPostgresAdaptor_RemoveCustomMetadata.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcPostgresAdaptor.RemoveExtraCustomMetadata Method ">
+    <PARAM name="Local" value="TCcPostgresAdaptor_RemoveExtraCustomMetadata.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcPostgresAdaptor.RemoveTriggers Method ">
+    <PARAM name="Local" value="TCcPostgresAdaptor_RemoveTriggers@TCcQuery.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcPostgresAdaptor.SQLFormatValue Method ">
+    <PARAM name="Local" value="TCcPostgresAdaptor_SQLFormatValue@Variant@TFieldType.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcPostgresAdaptor.SupportsGenerators Method ">
+    <PARAM name="Local" value="TCcPostgresAdaptor_SupportsGenerators.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcPostgresAdaptor.UnQuotedIdentifier Method ">
+    <PARAM name="Local" value="TCcPostgresAdaptor_UnQuotedIdentifier@String.html">
+    </OBJECT>
+</ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcProcParams Class">
+    <PARAM name="Local" value="TCcProcParams.html">
+    </OBJECT>
+<ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcProcParams.Create Constructor ">
+    <PARAM name="Local" value="TCcProcParams_Create@TComponent.html">
+    </OBJECT>
+</ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcQuery Class">
+    <PARAM name="Local" value="TCcQuery.html">
+    </OBJECT>
+<ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcQuery.Active Property">
+    <PARAM name="Local" value="TCcQuery_Active.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcQuery.Connection Property">
+    <PARAM name="Local" value="TCcQuery_Connection.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcQuery.Eof Property">
+    <PARAM name="Local" value="TCcQuery_Eof.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcQuery.Field Property">
+    <PARAM name="Local" value="TCcQuery_Field.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcQuery.FieldByIndex Property">
+    <PARAM name="Local" value="TCcQuery_FieldByIndex.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcQuery.FieldCount Property">
+    <PARAM name="Local" value="TCcQuery_FieldCount.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcQuery.Macro Property">
+    <PARAM name="Local" value="TCcQuery_Macro.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcQuery.MacroCount Property">
+    <PARAM name="Local" value="TCcQuery_MacroCount.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcQuery.Param Property">
+    <PARAM name="Local" value="TCcQuery_Param.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcQuery.ParamByIndex Property">
+    <PARAM name="Local" value="TCcQuery_ParamByIndex.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcQuery.ParamCheck Property">
+    <PARAM name="Local" value="TCcQuery_ParamCheck.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcQuery.ParamCount Property">
+    <PARAM name="Local" value="TCcQuery_ParamCount.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcQuery.Prepared Property">
+    <PARAM name="Local" value="TCcQuery_Prepared.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcQuery.Properties Property">
+    <PARAM name="Local" value="TCcQuery_Properties.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcQuery.QueryID Property">
+    <PARAM name="Local" value="TCcQuery_QueryID.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcQuery.RealSQL Property">
+    <PARAM name="Local" value="TCcQuery_RealSQL.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcQuery.RecordCount Property">
+    <PARAM name="Local" value="TCcQuery_RecordCount.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcQuery.RowsAffected Property">
+    <PARAM name="Local" value="TCcQuery_RowsAffected.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcQuery.SelectStatement Property">
+    <PARAM name="Local" value="TCcQuery_SelectStatement.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcQuery.SQL Property">
+    <PARAM name="Local" value="TCcQuery_SQL.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcQuery.CheckInactive Method ">
+    <PARAM name="Local" value="TCcQuery_CheckInactive.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcQuery.Close Method ">
+    <PARAM name="Local" value="TCcQuery_Close.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="Create">
+    </OBJECT>
+<ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcQuery.Create Constructor (TCcConnection, string, Boolean)">
+    <PARAM name="Local" value="TCcQuery_Create@TCcConnection@string@Boolean.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcQuery.Create Constructor (TComponent)">
+    <PARAM name="Local" value="TCcQuery_Create@TComponent.html">
+    </OBJECT>
+</ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcQuery.Destroy Destructor ">
+    <PARAM name="Local" value="TCcQuery_Destroy.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcQuery.Exec Method ">
+    <PARAM name="Local" value="TCcQuery_Exec.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcQuery.FieldExists Method ">
+    <PARAM name="Local" value="TCcQuery_FieldExists@string.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcQuery.FindField Method ">
+    <PARAM name="Local" value="TCcQuery_FindField@string.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcQuery.FindMacro Method ">
+    <PARAM name="Local" value="TCcQuery_FindMacro@string.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcQuery.FindParam Method ">
+    <PARAM name="Local" value="TCcQuery_FindParam@string.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcQuery.MacroExists Method ">
+    <PARAM name="Local" value="TCcQuery_MacroExists@string.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcQuery.Next Method ">
+    <PARAM name="Local" value="TCcQuery_Next.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcQuery.ParamExists Method ">
+    <PARAM name="Local" value="TCcQuery_ParamExists@string.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcQuery.Prepare Method ">
+    <PARAM name="Local" value="TCcQuery_Prepare.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcQuery.UnPrepare Method ">
+    <PARAM name="Local" value="TCcQuery_UnPrepare.html">
+    </OBJECT>
+</ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcQueryClient Class">
+    <PARAM name="Local" value="TCcQueryClient.html">
+    </OBJECT>
+<ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcQueryClient.Transport Property">
+    <PARAM name="Local" value="TCcQueryClient_Transport.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcQueryClient.Create Constructor ">
+    <PARAM name="Local" value="TCcQueryClient_Create@TCcConnection@TCcQuery@Integer@Boolean.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcQueryClient.Destroy Destructor ">
+    <PARAM name="Local" value="TCcQueryClient_Destroy.html">
+    </OBJECT>
+</ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcRecord Class">
+    <PARAM name="Local" value="TCcRecord.html">
+    </OBJECT>
+<ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcRecord.Count Property">
+    <PARAM name="Local" value="TCcRecord_Count.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcRecord.FieldName Property">
+    <PARAM name="Local" value="TCcRecord_FieldName.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcRecord.Value Property">
+    <PARAM name="Local" value="TCcRecord_Value.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcRecord.Add Method ">
+    <PARAM name="Local" value="TCcRecord_Add@string.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcRecord.Clear Method ">
+    <PARAM name="Local" value="TCcRecord_Clear.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcRecord.Create Constructor ">
+    <PARAM name="Local" value="TCcRecord_Create.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcRecord.Destroy Destructor ">
+    <PARAM name="Local" value="TCcRecord_Destroy.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcRecord.FieldExists Method ">
+    <PARAM name="Local" value="TCcRecord_FieldExists@string.html">
+    </OBJECT>
+</ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicator Class">
+    <PARAM name="Local" value="TCcReplicator.html">
+    </OBJECT>
+<ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicator.LastResult Field">
+    <PARAM name="Local" value="TCcReplicator_LastResult.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicator.AbortOnError Property">
+    <PARAM name="Local" value="TCcReplicator_AbortOnError.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicator.AutoClearMetadata Property">
+    <PARAM name="Local" value="TCcReplicator_AutoClearMetadata.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicator.AutoCommit Property">
+    <PARAM name="Local" value="TCcReplicator_AutoCommit.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicator.AutoPriority Property">
+    <PARAM name="Local" value="TCcReplicator_AutoPriority.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicator.AutoReplicate Property">
+    <PARAM name="Local" value="TCcReplicator_AutoReplicate.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicator.BeforeReplicate Event">
+    <PARAM name="Local" value="TCcReplicator_BeforeReplicate.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicator.Busy Property">
+    <PARAM name="Local" value="TCcReplicator_Busy.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicator.Closing Property">
+    <PARAM name="Local" value="TCcReplicator_Closing.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicator.CommitOnFinished Property">
+    <PARAM name="Local" value="TCcReplicator_CommitOnFinished.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicator.ConfigurationName Property">
+    <PARAM name="Local" value="TCcReplicator_ConfigurationName.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicator.Direction Property">
+    <PARAM name="Local" value="TCcReplicator_Direction.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicator.EmptyStringsToNull Property">
+    <PARAM name="Local" value="TCcReplicator_EmptyStringsToNull.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicator.ExtraFields Property">
+    <PARAM name="Local" value="TCcReplicator_ExtraFields.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicator.FailIfNoPK Property">
+    <PARAM name="Local" value="TCcReplicator_FailIfNoPK.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicator.Finished Property">
+    <PARAM name="Local" value="TCcReplicator_Finished.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicator.HarmonizeFields Property">
+    <PARAM name="Local" value="TCcReplicator_HarmonizeFields.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicator.KeepConnection Property">
+    <PARAM name="Local" value="TCcReplicator_KeepConnection.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicator.LocalDB Property">
+    <PARAM name="Local" value="TCcReplicator_LocalDB.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicator.LocalNode Property">
+    <PARAM name="Local" value="TCcReplicator_LocalNode.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicator.Log Property">
+    <PARAM name="Local" value="TCcReplicator_Log.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicator.LogErrors Property">
+    <PARAM name="Local" value="TCcReplicator_LogErrors.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicator.MergeChangedFieldsOnConflict Property">
+    <PARAM name="Local" value="TCcReplicator_MergeChangedFieldsOnConflict.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicator.Nodes Property">
+    <PARAM name="Local" value="TCcReplicator_Nodes.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicator.OnAutoCommit Event">
+    <PARAM name="Local" value="TCcReplicator_OnAutoCommit.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicator.OnCanReplicate Event">
+    <PARAM name="Local" value="TCcReplicator_OnCanReplicate.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicator.OnCommit Event">
+    <PARAM name="Local" value="TCcReplicator_OnCommit.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicator.OnConflict Event">
+    <PARAM name="Local" value="TCcReplicator_OnConflict.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicator.OnConnectionLost Event">
+    <PARAM name="Local" value="TCcReplicator_OnConnectionLost.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicator.OnConnectLocal Event">
+    <PARAM name="Local" value="TCcReplicator_OnConnectLocal.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicator.OnConnectRemote Event">
+    <PARAM name="Local" value="TCcReplicator_OnConnectRemote.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicator.OnDisconnect Event">
+    <PARAM name="Local" value="TCcReplicator_OnDisconnect.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicator.OnEmptyLog Event">
+    <PARAM name="Local" value="TCcReplicator_OnEmptyLog.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicator.OnException Event">
+    <PARAM name="Local" value="TCcReplicator_OnException.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicator.OnFinished Event">
+    <PARAM name="Local" value="TCcReplicator_OnFinished.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicator.OnGenReplError Event">
+    <PARAM name="Local" value="TCcReplicator_OnGenReplError.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicator.OnGenReplicating Event">
+    <PARAM name="Local" value="TCcReplicator_OnGenReplicating.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicator.OnGetExtraFieldValue Event">
+    <PARAM name="Local" value="TCcReplicator_OnGetExtraFieldValue.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicator.OnGetFields Event">
+    <PARAM name="Local" value="TCcReplicator_OnGetFields.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicator.OnKeySynchronized Event">
+    <PARAM name="Local" value="TCcReplicator_OnKeySynchronized.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicator.OnLogLoaded Event">
+    <PARAM name="Local" value="TCcReplicator_OnLogLoaded.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicator.OnProgress Event">
+    <PARAM name="Local" value="TCcReplicator_OnProgress.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicator.OnQueryDone Event">
+    <PARAM name="Local" value="TCcReplicator_OnQueryDone.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicator.OnReplicateProc Event">
+    <PARAM name="Local" value="TCcReplicator_OnReplicateProc.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicator.OnReplicationAborted Event">
+    <PARAM name="Local" value="TCcReplicator_OnReplicationAborted.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicator.OnReplicationError Event">
+    <PARAM name="Local" value="TCcReplicator_OnReplicationError.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicator.OnReplicationResult Property">
+    <PARAM name="Local" value="TCcReplicator_OnReplicationResult.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicator.OnResolveConflict Event">
+    <PARAM name="Local" value="TCcReplicator_OnResolveConflict.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicator.OnRowBeforeReplicate Event">
+    <PARAM name="Local" value="TCcReplicator_OnRowBeforeReplicate.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicator.OnRowReplFinishing Event">
+    <PARAM name="Local" value="TCcReplicator_OnRowReplFinishing.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicator.OnRowReplicated Event">
+    <PARAM name="Local" value="TCcReplicator_OnRowReplicated.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicator.OnRowReplicating Event">
+    <PARAM name="Local" value="TCcReplicator_OnRowReplicating.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicator.OnRowReplicatingError Event">
+    <PARAM name="Local" value="TCcReplicator_OnRowReplicatingError.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicator.OnRowReplicatingQuery Event">
+    <PARAM name="Local" value="TCcReplicator_OnRowReplicatingQuery.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicator.OnTableBegin Event">
+    <PARAM name="Local" value="TCcReplicator_OnTableBegin.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicator.OnTableEnd Event">
+    <PARAM name="Local" value="TCcReplicator_OnTableEnd.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicator.RecordChunks Property">
+    <PARAM name="Local" value="TCcReplicator_RecordChunks.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicator.RemoteDB Property">
+    <PARAM name="Local" value="TCcReplicator_RemoteDB.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicator.RemoteNode Property">
+    <PARAM name="Local" value="TCcReplicator_RemoteNode.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicator.ReplicateOnlyChangedFields Property">
+    <PARAM name="Local" value="TCcReplicator_ReplicateOnlyChangedFields.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicator.TableMapping Property">
+    <PARAM name="Local" value="TCcReplicator_TableMapping.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicator.TraceEvents Property">
+    <PARAM name="Local" value="TCcReplicator_TraceEvents.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicator.TrimCharFields Property">
+    <PARAM name="Local" value="TCcReplicator_TrimCharFields.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicator.UsePKSynchronization Property">
+    <PARAM name="Local" value="TCcReplicator_UsePKSynchronization.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicator.Version Property">
+    <PARAM name="Local" value="TCcReplicator_Version.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicator.AbortReplication Method ">
+    <PARAM name="Local" value="TCcReplicator_AbortReplication.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicator.BatchImport Method ">
+    <PARAM name="Local" value="TCcReplicator_BatchImport@string@TCcSyncDirection@string@string@Boolean.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicator.ClearMetadataCache Method ">
+    <PARAM name="Local" value="TCcReplicator_ClearMetadataCache.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicator.Connect Method ">
+    <PARAM name="Local" value="TCcReplicator_Connect.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="Create">
+    </OBJECT>
+<ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicator.Create Constructor (TComponent)">
+    <PARAM name="Local" value="TCcReplicator_Create@TComponent.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicator.Create Constructor (TComponent, string)">
+    <PARAM name="Local" value="TCcReplicator_Create@TComponent@string.html">
+    </OBJECT>
+</ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicator.Destroy Destructor ">
+    <PARAM name="Local" value="TCcReplicator_Destroy.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicator.Disconnect Method ">
+    <PARAM name="Local" value="TCcReplicator_Disconnect.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicator.GetLocalTableName Method ">
+    <PARAM name="Local" value="TCcReplicator_GetLocalTableName@string.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicator.GetRemoteTableName Method ">
+    <PARAM name="Local" value="TCcReplicator_GetRemoteTableName@string.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicator.GetWhereValues Method ">
+    <PARAM name="Local" value="TCcReplicator_GetWhereValues@TCcQuery.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicator.RefreshDisplay Method ">
+    <PARAM name="Local" value="TCcReplicator_RefreshDisplay.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicator.Replicate Method ">
+    <PARAM name="Local" value="TCcReplicator_Replicate.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicator.SynchronizeRows Method ">
+    <PARAM name="Local" value="TCcReplicator_SynchronizeRows@string@string@TCcSyncDirection@Boolean.html">
+    </OBJECT>
+</ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicatorList Class">
+    <PARAM name="Local" value="TCcReplicatorList.html">
+    </OBJECT>
+<ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicatorList.BeforeReplicate Event">
+    <PARAM name="Local" value="TCcReplicatorList_BeforeReplicate.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicatorList.ConfigNames Property">
+    <PARAM name="Local" value="TCcReplicatorList_ConfigNames.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicatorList.CurrentReplicator Property">
+    <PARAM name="Local" value="TCcReplicatorList_CurrentReplicator.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicatorList.OnAbort Event">
+    <PARAM name="Local" value="TCcReplicatorList_OnAbort.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicatorList.OnAutoCommit Event">
+    <PARAM name="Local" value="TCcReplicatorList_OnAutoCommit.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicatorList.OnCommit Event">
+    <PARAM name="Local" value="TCcReplicatorList_OnCommit.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicatorList.OnConflict Event">
+    <PARAM name="Local" value="TCcReplicatorList_OnConflict.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicatorList.OnConnectionLost Event">
+    <PARAM name="Local" value="TCcReplicatorList_OnConnectionLost.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicatorList.OnConnectLocal Event">
+    <PARAM name="Local" value="TCcReplicatorList_OnConnectLocal.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicatorList.OnConnectRemote Event">
+    <PARAM name="Local" value="TCcReplicatorList_OnConnectRemote.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicatorList.OnDisconnect Event">
+    <PARAM name="Local" value="TCcReplicatorList_OnDisconnect.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicatorList.OnEmptyLog Event">
+    <PARAM name="Local" value="TCcReplicatorList_OnEmptyLog.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicatorList.OnException Event">
+    <PARAM name="Local" value="TCcReplicatorList_OnException.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicatorList.OnFinished Event">
+    <PARAM name="Local" value="TCcReplicatorList_OnFinished.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicatorList.OnGenReplError Event">
+    <PARAM name="Local" value="TCcReplicatorList_OnGenReplError.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicatorList.OnGenReplicated Event">
+    <PARAM name="Local" value="TCcReplicatorList_OnGenReplicated.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicatorList.OnGenReplicating Event">
+    <PARAM name="Local" value="TCcReplicatorList_OnGenReplicating.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicatorList.OnGetFields Event">
+    <PARAM name="Local" value="TCcReplicatorList_OnGetFields.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicatorList.OnLogLoaded Event">
+    <PARAM name="Local" value="TCcReplicatorList_OnLogLoaded.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicatorList.OnProgress Event">
+    <PARAM name="Local" value="TCcReplicatorList_OnProgress.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicatorList.OnQueryDone Event">
+    <PARAM name="Local" value="TCcReplicatorList_OnQueryDone.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicatorList.OnReplicateProc Event">
+    <PARAM name="Local" value="TCcReplicatorList_OnReplicateProc.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicatorList.OnReplicationError Event">
+    <PARAM name="Local" value="TCcReplicatorList_OnReplicationError.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicatorList.OnRowBeforeReplicate Event">
+    <PARAM name="Local" value="TCcReplicatorList_OnRowBeforeReplicate.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicatorList.OnRowReplicated Event">
+    <PARAM name="Local" value="TCcReplicatorList_OnRowReplicated.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicatorList.OnRowReplicating Event">
+    <PARAM name="Local" value="TCcReplicatorList_OnRowReplicating.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicatorList.OnTableBegin Event">
+    <PARAM name="Local" value="TCcReplicatorList_OnTableBegin.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicatorList.OnTableEnd Event">
+    <PARAM name="Local" value="TCcReplicatorList_OnTableEnd.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicatorList.ReplicatorCount Property">
+    <PARAM name="Local" value="TCcReplicatorList_ReplicatorCount.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicatorList.Replicators Property">
+    <PARAM name="Local" value="TCcReplicatorList_Replicators.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicatorList.Create Constructor ">
+    <PARAM name="Local" value="TCcReplicatorList_Create@TComponent.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicatorList.Destroy Destructor ">
+    <PARAM name="Local" value="TCcReplicatorList_Destroy.html">
+    </OBJECT>
+</ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcServerTransport Class">
+    <PARAM name="Local" value="TCcServerTransport.html">
+    </OBJECT>
+<ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcServerTransport.Connection Property">
+    <PARAM name="Local" value="TCcServerTransport_Connection.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcServerTransport.DatabaseAlias Property">
+    <PARAM name="Local" value="TCcServerTransport_DatabaseAlias.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcServerTransport.OnCloseSession Event">
+    <PARAM name="Local" value="TCcServerTransport_OnCloseSession.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcServerTransport.OnNewSession Event">
+    <PARAM name="Local" value="TCcServerTransport_OnNewSession.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcServerTransport.Password Property">
+    <PARAM name="Local" value="TCcServerTransport_Password.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcServerTransport.Session Property">
+    <PARAM name="Local" value="TCcServerTransport_Session.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcServerTransport.SessionCount Property">
+    <PARAM name="Local" value="TCcServerTransport_SessionCount.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcServerTransport.SessionTimeout Property">
+    <PARAM name="Local" value="TCcServerTransport_SessionTimeout.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcServerTransport.Create Constructor ">
+    <PARAM name="Local" value="TCcServerTransport_Create@TComponent.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcServerTransport.Destroy Destructor ">
+    <PARAM name="Local" value="TCcServerTransport_Destroy.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcServerTransport.FindSession Method ">
+    <PARAM name="Local" value="TCcServerTransport_FindSession@string.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcServerTransport.StartServer Method ">
+    <PARAM name="Local" value="TCcServerTransport_StartServer.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcServerTransport.StopServer Method ">
+    <PARAM name="Local" value="TCcServerTransport_StopServer.html">
+    </OBJECT>
+</ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcSession Class">
+    <PARAM name="Local" value="TCcSession.html">
+    </OBJECT>
+<ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcSession.ClientCopyCatVersion Property">
+    <PARAM name="Local" value="TCcSession_ClientCopyCatVersion.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcSession.Connection Property">
+    <PARAM name="Local" value="TCcSession_Connection.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcSession.SessionID Property">
+    <PARAM name="Local" value="TCcSession_SessionID.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcSession.Create Constructor ">
+    <PARAM name="Local" value="TCcSession_Create@string@TCcConnection.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcSession.Destroy Destructor ">
+    <PARAM name="Local" value="TCcSession_Destroy.html">
+    </OBJECT>
+</ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcSQLiteAdaptor Class">
+    <PARAM name="Local" value="TCcSQLiteAdaptor.html">
+    </OBJECT>
+<ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcSQLiteAdaptor.CheckCustomMetadata Method ">
+    <PARAM name="Local" value="TCcSQLiteAdaptor_CheckCustomMetadata.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcSQLiteAdaptor.ConvertValue Method ">
+    <PARAM name="Local" value="TCcSQLiteAdaptor_ConvertValue@Variant@TFieldType.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcSQLiteAdaptor.Create Constructor ">
+    <PARAM name="Local" value="TCcSQLiteAdaptor_Create@TCcConnection.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcSQLiteAdaptor.DeclareField Method ">
+    <PARAM name="Local" value="TCcSQLiteAdaptor_DeclareField@String@TFieldType@Integer@Boolean@Boolean@Boolean.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcSQLiteAdaptor.Destroy Destructor ">
+    <PARAM name="Local" value="TCcSQLiteAdaptor_Destroy.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcSQLiteAdaptor.GenDeclared Method ">
+    <PARAM name="Local" value="TCcSQLiteAdaptor_GenDeclared@String.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcSQLiteAdaptor.GenerateTriggers Method ">
+    <PARAM name="Local" value="TCcSQLiteAdaptor_GenerateTriggers@TCcQuery@TCcQuery@Boolean@Boolean.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcSQLiteAdaptor.GetAdaptorName Method ">
+    <PARAM name="Local" value="TCcSQLiteAdaptor_GetAdaptorName.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcSQLiteAdaptor.GrantRightsToTable Method ">
+    <PARAM name="Local" value="TCcSQLiteAdaptor_GrantRightsToTable@String.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcSQLiteAdaptor.RemoveTriggers Method ">
+    <PARAM name="Local" value="TCcSQLiteAdaptor_RemoveTriggers@TCcQuery.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcSQLiteAdaptor.SQLFormatValue Method ">
+    <PARAM name="Local" value="TCcSQLiteAdaptor_SQLFormatValue@Variant@TFieldType.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcSQLiteAdaptor.SupportsGenerators Method ">
+    <PARAM name="Local" value="TCcSQLiteAdaptor_SupportsGenerators.html">
+    </OBJECT>
+</ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcSqlParser Class">
+    <PARAM name="Local" value="TCcSqlParser.html">
+    </OBJECT>
+<ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcSqlParser.Offset Property">
+    <PARAM name="Local" value="TCcSqlParser_Offset.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcSqlParser.QuoteCount Property">
+    <PARAM name="Local" value="TCcSqlParser_QuoteCount.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcSqlParser.Token Property">
+    <PARAM name="Local" value="TCcSqlParser_Token.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcSqlParser.TokenChar Property">
+    <PARAM name="Local" value="TCcSqlParser_TokenChar.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcSqlParser.TokenCount Property">
+    <PARAM name="Local" value="TCcSqlParser_TokenCount.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcSqlParser.Create Constructor ">
+    <PARAM name="Local" value="TCcSqlParser_Create.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcSqlParser.Destroy Destructor ">
+    <PARAM name="Local" value="TCcSqlParser_Destroy.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcSqlParser.Parse Method ">
+    <PARAM name="Local" value="TCcSqlParser_Parse@string.html">
+    </OBJECT>
+</ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcSQLServerAdaptor Class">
+    <PARAM name="Local" value="TCcSQLServerAdaptor.html">
+    </OBJECT>
+<ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcSQLServerAdaptor.CheckCustomMetadata Method ">
+    <PARAM name="Local" value="TCcSQLServerAdaptor_CheckCustomMetadata.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcSQLServerAdaptor.Create Constructor ">
+    <PARAM name="Local" value="TCcSQLServerAdaptor_Create@TCcConnection.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcSQLServerAdaptor.CreateProcedures Method ">
+    <PARAM name="Local" value="TCcSQLServerAdaptor_CreateProcedures.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcSQLServerAdaptor.DeclareField Method ">
+    <PARAM name="Local" value="TCcSQLServerAdaptor_DeclareField@String@TFieldType@Integer@Boolean@Boolean@Boolean.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcSQLServerAdaptor.DeclareGenerator Method ">
+    <PARAM name="Local" value="TCcSQLServerAdaptor_DeclareGenerator@String.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcSQLServerAdaptor.Destroy Destructor ">
+    <PARAM name="Local" value="TCcSQLServerAdaptor_Destroy.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcSQLServerAdaptor.DropProcedures Method ">
+    <PARAM name="Local" value="TCcSQLServerAdaptor_DropProcedures.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcSQLServerAdaptor.GenDeclared Method ">
+    <PARAM name="Local" value="TCcSQLServerAdaptor_GenDeclared@String.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcSQLServerAdaptor.GenerateTriggers Method ">
+    <PARAM name="Local" value="TCcSQLServerAdaptor_GenerateTriggers@TCcQuery@TCcQuery@Boolean@Boolean.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcSQLServerAdaptor.GetAdaptorName Method ">
+    <PARAM name="Local" value="TCcSQLServerAdaptor_GetAdaptorName.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcSQLServerAdaptor.GetGenerator Method ">
+    <PARAM name="Local" value="TCcSQLServerAdaptor_GetGenerator@String@Integer.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcSQLServerAdaptor.GetGeneratorValue Method ">
+    <PARAM name="Local" value="TCcSQLServerAdaptor_GetGeneratorValue@String@Integer.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcSQLServerAdaptor.RemoveCustomMetadata Method ">
+    <PARAM name="Local" value="TCcSQLServerAdaptor_RemoveCustomMetadata.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcSQLServerAdaptor.RemoveTriggers Method ">
+    <PARAM name="Local" value="TCcSQLServerAdaptor_RemoveTriggers@TCcQuery.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcSQLServerAdaptor.SQLFormatValue Method ">
+    <PARAM name="Local" value="TCcSQLServerAdaptor_SQLFormatValue@Variant@TFieldType.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcSQLServerAdaptor.SupportsGenerators Method ">
+    <PARAM name="Local" value="TCcSQLServerAdaptor_SupportsGenerators.html">
+    </OBJECT>
+</ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcStringList Class">
+    <PARAM name="Local" value="TCcStringList.html">
+    </OBJECT>
+<ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcStringList.SQLCommaText Property">
+    <PARAM name="Local" value="TCcStringList_SQLCommaText.html">
+    </OBJECT>
+</ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcValue Class">
+    <PARAM name="Local" value="TCcValue.html">
+    </OBJECT>
+<ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcValue.AsArray Property">
+    <PARAM name="Local" value="TCcValue_AsArray.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcValue.AsField Property">
+    <PARAM name="Local" value="TCcValue_AsField.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcValue.Value Property">
+    <PARAM name="Local" value="TCcValue_Value.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcValue.ValueType Property">
+    <PARAM name="Local" value="TCcValue_ValueType.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcValue.Assign Method ">
+    <PARAM name="Local" value="TCcValue_Assign@TCcValue.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcValue.Clear Method ">
+    <PARAM name="Local" value="TCcValue_Clear.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcValue.Create Constructor ">
+    <PARAM name="Local" value="TCcValue_Create.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcValue.Destroy Destructor ">
+    <PARAM name="Local" value="TCcValue_Destroy.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcValue.SetValueAsType Method ">
+    <PARAM name="Local" value="TCcValue_SetValueAsType@Variant@TFieldType.html">
+    </OBJECT>
+</ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcWideMemoField Class">
+    <PARAM name="Local" value="TCcWideMemoField.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TPeriodicity Class">
+    <PARAM name="Local" value="TPeriodicity.html">
+    </OBJECT>
+<ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TPeriodicity.Frequency Property">
+    <PARAM name="Local" value="TPeriodicity_Frequency.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TPeriodicity.Create Constructor ">
+    <PARAM name="Local" value="TPeriodicity_Create@TComponent.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TPeriodicity.Destroy Destructor ">
+    <PARAM name="Local" value="TPeriodicity_Destroy.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TPeriodicity.Start Method ">
+    <PARAM name="Local" value="TPeriodicity_Start.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TPeriodicity.Stop Method ">
+    <PARAM name="Local" value="TPeriodicity_Stop.html">
+    </OBJECT>
+</ul>
+</ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="Functions">
+    </OBJECT>
+<ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="ExtractItemsInCommon Function">
+    <PARAM name="Local" value="ExtractItemsInCommon@TStringList@TStringList@TStringList.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="GetDBConnectorClass Function">
+    <PARAM name="Local" value="GetDBConnectorClass@string.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="ParseKeyValues Function">
+    <PARAM name="Local" value="ParseKeyValues@String@Integer@Boolean.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="ReadBinaryStream Function">
+    <PARAM name="Local" value="ReadBinaryStream@TCustomIniFile@string@string@TStream.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="RegisterDBConnector Function">
+    <PARAM name="Local" value="RegisterDBConnector@TCcConnectionClass@string.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="RemoveItemsInCommon Function">
+    <PARAM name="Local" value="RemoveItemsInCommon@TStringList@TStringList.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="RxAssignRecord Function">
+    <PARAM name="Local" value="RxAssignRecord@TDataSet@TDataSet@Boolean.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="WriteBinaryStream Function">
+    <PARAM name="Local" value="WriteBinaryStream@TCustomIniFile@string@string@TStream.html">
+    </OBJECT>
+</ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="Structs, Records, Enums">
+    </OBJECT>
+<ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcCommitType Enumeration">
+    <PARAM name="Local" value="TCcCommitType.html">
+    </OBJECT>
+<ul>
+</ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcFieldType Record">
+    <PARAM name="Local" value="TCcFieldType.html">
+    </OBJECT>
+<ul>
+</ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcInterbaseBranch Enumeration">
+    <PARAM name="Local" value="TCcInterbaseBranch.html">
+    </OBJECT>
+<ul>
+</ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcKeyOrigin Enumeration">
+    <PARAM name="Local" value="TCcKeyOrigin.html">
+    </OBJECT>
+<ul>
+</ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcLogState Enumeration">
+    <PARAM name="Local" value="TCcLogState.html">
+    </OBJECT>
+<ul>
+</ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcQueryResult Enumeration">
+    <PARAM name="Local" value="TCcQueryResult.html">
+    </OBJECT>
+<ul>
+</ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcQueryType Enumeration">
+    <PARAM name="Local" value="TCcQueryType.html">
+    </OBJECT>
+<ul>
+</ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcRemoteFunction Enumeration">
+    <PARAM name="Local" value="TCcRemoteFunction.html">
+    </OBJECT>
+<ul>
+</ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicationResult Record">
+    <PARAM name="Local" value="TCcReplicationResult.html">
+    </OBJECT>
+<ul>
+</ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcReplicationResultType Enumeration">
+    <PARAM name="Local" value="TCcReplicationResultType.html">
+    </OBJECT>
+<ul>
+</ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcSyncDirection Enumeration">
+    <PARAM name="Local" value="TCcSyncDirection.html">
+    </OBJECT>
+<ul>
+</ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcSysTable Enumeration">
+    <PARAM name="Local" value="TCcSysTable.html">
+    </OBJECT>
+<ul>
+</ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcTraceType Enumeration">
+    <PARAM name="Local" value="TCcTraceType.html">
+    </OBJECT>
+<ul>
+</ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TCcValueType Enumeration">
+    <PARAM name="Local" value="TCcValueType.html">
+    </OBJECT>
+<ul>
+</ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="TConflictRecord Record">
+    <PARAM name="Local" value="TConflictRecord.html">
+    </OBJECT>
+<ul>
+</ul>
+</ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="Files">
+    </OBJECT>
+<ul>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="CCat.pas">
+    <PARAM name="Local" value="CCat_pas.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="CcConf.pas">
+    <PARAM name="Local" value="CcConf_pas.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="CcConflictMgr.pas">
+    <PARAM name="Local" value="CcConflictMgr_pas.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="CcDB.pas">
+    <PARAM name="Local" value="CcDB_pas.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="CcEditors.pas">
+    <PARAM name="Local" value="CcEditors_pas.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="CcInterbase.pas">
+    <PARAM name="Local" value="CcInterbase_pas.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="CcInterbaseConn.pas">
+    <PARAM name="Local" value="CcInterbaseConn_pas.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="CcKeys.pas">
+    <PARAM name="Local" value="CcKeys_pas.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="CcLog.pas">
+    <PARAM name="Local" value="CcLog_pas.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="CcMemDS.pas">
+    <PARAM name="Local" value="CcMemDS_pas.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="CcMySQL.pas">
+    <PARAM name="Local" value="CcMySQL_pas.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="CcNexusDB.pas">
+    <PARAM name="Local" value="CcNexusDB_pas.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="CcOracle.pas">
+    <PARAM name="Local" value="CcOracle_pas.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="CcPostgres.pas">
+    <PARAM name="Local" value="CcPostgres_pas.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="CcProviders.pas">
+    <PARAM name="Local" value="CcProviders_pas.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="CcReplicator.pas">
+    <PARAM name="Local" value="CcReplicator_pas.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="CcRplList.pas">
+    <PARAM name="Local" value="CcRplList_pas.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="CcSQLite.pas">
+    <PARAM name="Local" value="CcSQLite_pas.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="CcSQLServer.pas">
+    <PARAM name="Local" value="CcSQLServer_pas.html">
+    </OBJECT>
+<li><OBJECT type="text/sitemap">
+    <PARAM name="Name" value="CcTransports.pas">
+    <PARAM name="Local" value="CcTransports_pas.html">
+    </OBJECT>
+</ul>
+</ul>
+
+<!-- End Client Area -->
+</body></html>

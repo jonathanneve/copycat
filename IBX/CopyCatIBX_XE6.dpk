@@ -1,0 +1,14 @@
+package CopyCatIBX_XE6;
+
+requires
+  rtl,
+  dbrtl,
+  vcl,
+  vcldb,
+  ibxpress,
+  CopyCat_XE6;
+
+contains
+  CcProvIBX in 'CcProvIBX.pas';
+
+end.

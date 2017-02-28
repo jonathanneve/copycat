@@ -1,0 +1,162 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN">
+<html>
+<head>
+<title>Database tables</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+    <meta name="generator" content="Doc-O-Matic" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <link rel="STYLESHEET" href="default.css" type="text/css" />
+
+<script type="text/javascript" src="scripts.js"></script>
+</head>
+<body class="Element700" onload="onBodyLoadEx('frames.html', 'topic', 'Database_tables.html');" onmousedown="onBodyMouseDown();">
+
+<!-- Begin Popups -->
+<div class="Element801" id="popup00003">
+<div class="Element800">
+<div class="Element14">
+Links</div>
+<div class="Element11">
+<div class="Element10">
+<a href="_Database_tables_14_Topics.html" target="topic">Topics</a></div>
+</div>
+</div>
+</div>
+
+<!-- End Popups -->
+
+<!-- Begin Page Header -->
+<div class="Element710" id="areafixed">
+<div class="Element92">
+<table width="100%" cellspacing="0" cellpadding="0">
+<tr><td width="33%">
+<div class="Element1">
+<a href="#" onmousedown="showPopup(this, 'popup00003');"><img src="seealsolink.png" border="0" alt=""></a> <a href="http://www.copycat.fr" target="new_page"><img src="copycat_70x70.png"><h3>CopyCat Developer Tools</h3></img></a></div>
+</td><td width="34%">
+<div class="Element2">
+<a href="contents.html" target="tocidx">Contents</a> | <a href="idx.html" target="tocidx">Index</a></div>
+</td><td width="33%">
+<div class="Element90">
+<a href="Conflict_management.html" target="topic">Previous</a></div>
+</td></tr></table><div class="Element5">
+Database tables</div>
+<div class="Element7">
+<a href="_Database_tables_14_Topics.html" target="topic">Topics</a></div>
+<div class="Element730">
+<a href="#" onclick="showAllElements();">Show All</a></div>
+</div>
+</div>
+
+<!-- End Page Header -->
+
+<!-- Begin Client Area -->
+<div class="Element720" id="areascroll">
+<div class="Element721">
+
+<!-- Begin Page Content -->
+<div class="Element58">
+<div class="Element11">
+<div class="Element10">
+<p class="Element10">
+CopyCat requires and creates the following database tables:&nbsp;</p>
+<p class="Element10">
+&nbsp;</p>
+<ol class="Element630">
+<li value="1" class="Element600"><a href="RPL$LOG.html" target="topic">RPL$LOG</a> – A log of every data change that takes place in the database.</li>
+<li value="1" class="Element600"><a href="RPL$LOG_VALUES.html" target="topic">RPL$LOG_VALUES</a> – The values of each field changed – only used if TCcConfig.TrackChangedFields option is set.</li>
+<li value="2" class="Element600"><a href="RPL$USERS.html" target="topic">RPL$USERS</a> – The list of all the nodes the database is to replicate towards.</li>
+<li value="3" class="Element600"><a href="RPL$CONFLICTS.html" target="topic">RPL$CONFLICTS</a> – All the currently conflicting data changes.</li>
+<li value="4" class="Element600"><a href="RPL$TABLES.html" target="topic">RPL$TABLES</a> – The list of all tables in the database, with replication options for each one.</li>
+<li value="5" class="Element600"><a href="RPL$PROCEDURES.html" target="topic">RPL$PROCEDURES</a> – The list of all non-selectable procedures in the database, with replication options for each one.</li>
+</ol></div>
+</div>
+<div class="Element14">
+<a onclick="toggleVisibilityStored('Topics');" class="a_Element14"><img src="sectionminus.png" border="0" alt="sectionminus.png" id="imgTopics">Topics</a></div>
+<div id="divTopics">
+<div class="Element11">
+<div class="Element10">
+<div class="Element212">
+<div class="TableDiv">
+<table cellspacing="0" class="Table1">
+<tr>
+<td class="Element200" valign="top" width="50%">
+<div class="Element201">
+Topic&nbsp;</div></td><td class="Element204" valign="top" width="50%">
+<div class="Element205">
+Description&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<a href="RPL$LOG.html" target="topic">RPL$LOG</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+The RPL$LOG table is a log of every data change that takes place in the database. One line is created per user in <a href="RPL$USERS.html" target="topic">RPL$USERS</a>. It has the following fields:<br>&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<a href="RPL$USERS.html" target="topic">RPL$USERS</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+The RPL$USERS table holds the list of all the nodes the database is to replicate towards. Until this table is filled, no data changes will be logged in <a href="RPL$LOG.html" target="topic">RPL$LOG</a>. It has the following fields:<br>&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<a href="RPL$CONFLICTS.html" target="topic">RPL$CONFLICTS</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+The RPL$CONFLICTS table is a log of all the currently conflicting data changes in the database. It has the following fields:<br>&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<a href="RPL$TABLES.html" target="topic">RPL$TABLES</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+The RPL$TABLES table holds the list of all the non-system tables in the database, with the replication configuration options for each one.<br><br>RPL$TABLES has the following fields:<br>&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<a href="RPL$PROCEDURES.html" target="topic">RPL$PROCEDURES</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+The RPL$PROCEDURES table holds the list of all the executable (that is, non-selectable) procedures in the database, with the replication configuration options for each one.<br><br>RPL$PROCEDURES has the following fields: &nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<a href="RPL$ERRORS.html" target="topic">RPL$ERRORS</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+The RPL$ERRORS table holds the list of rows that failed to replicate last replication session, and stores the error message and context information. This table is emptied at every replication, meaning that only errors that are not resolved during the next replication will appear in this table.<br><br>RPL$ERRORS has the following fields: &nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<a href="RPL$TRACE.html" target="topic">RPL$TRACE</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+The RPL$TRACE table holds a trace of all the SQL statements that are applied databases. This log is activated by setting the TCcReplicator.TraceType property. Warning : this can take a lot of space, so tracing should either be used only occasionally, for debug purposes, or else care should be taken to empty RPL$TRACE regularly.<br><br>RPL$TRACE has the following fields: &nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<a href="RPL$LOG_VALUES.html" target="topic">RPL$LOG_VALUES</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+The RPL$LOG_VALUES table contains the list of all the fields changed, with their values. It has the following fields:<br>&nbsp;</div></td></tr></table></div></div>
+</div>
+</div>
+</div>
+<div class="Element14">
+<a onclick="toggleVisibilityStored('Links');" class="a_Element14"><img src="sectionminus.png" border="0" alt="sectionminus.png" id="imgLinks">Links</a></div>
+<div id="divLinks">
+<div class="Element11">
+<div class="Element10">
+<a href="_Database_tables_14_Topics.html" target="topic">Topics</a></div>
+</div>
+</div>
+<div class="Element62">
+Created with a commercial version of <a href="http://www.doc-o-matic.com">Doc-O-Matic</a>. In order to make this message disappear you need to register this software. If you have problems registering this software please contact us at <a href="mailto:support@toolsfactory.com">support@toolsfactory.com</a>.</div>
+</div>
+<!-- End Page Content -->
+
+<!-- Begin Page Footer -->
+<div class="Element93">
+<table width="100%" cellspacing="0" cellpadding="0">
+<tr><td width="100%">
+<div class="Element3">
+Copyright (c) 2015. All rights reserved. http://www.copycat.fr</div>
+</td></tr><tr><td width="100%">
+<div class="Element4">
+<a href="contents.html" target="tocidx">Contents</a> | <a href="idx.html" target="tocidx">Index</a></div>
+</td></tr><tr><td width="100%">
+<div class="Element97">
+What do you think about this topic?  Send feedback through our <a href="http://copycat.fr/wordpress/contact-us/" target="new_page">contact form</a></div>
+</td></tr></table></div>
+
+<!-- End Page Footer -->
+</div>
+</div>
+
+<!-- End Client Area -->
+</body></html>

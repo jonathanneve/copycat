@@ -1,0 +1,688 @@
+# Copyright (C) 2014 
+# This file is distributed under the same license as the  package.
+msgid ""
+msgstr ""
+"Project-Id-Version:  \n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/wpbugtracktor\n"
+"POT-Creation-Date: 2014-03-12 00:29:35+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2014-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: php/admin/admin.php:38
+msgid ""
+"wpBugTracktor: You do not have sufficient permissions to access this page."
+msgstr ""
+
+#: php/admin/admin.php:78
+msgid "Open Source Issue Tracker"
+msgstr ""
+
+#: php/admin/admin.php:79
+msgid "Configure Settings"
+msgstr ""
+
+#: php/admin/admin.php:80 php/admin/adminpages.php:34
+#: php/admin/adminpages.php:191
+msgid "Add New Project"
+msgstr ""
+
+#: php/admin/admin.php:81 php/admin/adminpages.php:189
+msgid "Edit Projects"
+msgstr ""
+
+#: php/admin/admin.php:82
+msgid "Manage Versions"
+msgstr ""
+
+#: php/admin/admin.php:83
+msgid "Manage Issues"
+msgstr ""
+
+#: php/admin/admin.php:84
+msgid "Manage Comments"
+msgstr ""
+
+#: php/admin/adminajax.php:146
+msgid "Are you sure you wish to delete this issue?"
+msgstr ""
+
+#: php/admin/adminajax.php:152 php/admin/adminpages.php:729
+#: php/issues/issues.php:528
+msgid "Guest"
+msgstr ""
+
+#: php/admin/adminajax.php:164 php/admin/adminajax.php:334
+#: php/admin/adminpages.php:613 php/issues/issues.php:119
+#: php/issues/issues.php:303 php/issues/issues.php:423
+msgid "Bug"
+msgstr ""
+
+#: php/admin/adminajax.php:167 php/admin/adminajax.php:337
+#: php/admin/adminpages.php:613 php/issues/issues.php:122
+#: php/issues/issues.php:304 php/issues/issues.php:426
+msgid "Feature Request"
+msgstr ""
+
+#: php/admin/adminajax.php:170 php/admin/adminajax.php:340
+#: php/admin/adminpages.php:613 php/issues/issues.php:125
+#: php/issues/issues.php:305 php/issues/issues.php:429
+msgid "Regression"
+msgstr ""
+
+#: php/admin/adminajax.php:173 php/admin/adminajax.php:343
+#: php/admin/adminpages.php:613 php/issues/issues.php:128
+#: php/issues/issues.php:306 php/issues/issues.php:432
+msgid "Enhancement"
+msgstr ""
+
+#: php/admin/adminajax.php:176 php/admin/adminajax.php:346
+#: php/admin/adminpages.php:613 php/issues/issues.php:131
+#: php/issues/issues.php:307 php/issues/issues.php:435
+msgid "Idea"
+msgstr ""
+
+#: php/admin/adminajax.php:186 php/admin/adminajax.php:354
+#: php/admin/adminpages.php:632 php/issues/issues.php:137
+#: php/issues/issues.php:333
+msgid "Non-critical"
+msgstr ""
+
+#: php/admin/adminajax.php:189 php/admin/adminajax.php:357
+#: php/admin/adminpages.php:632 php/issues/issues.php:140
+#: php/issues/issues.php:334
+msgid "Low priority"
+msgstr ""
+
+#: php/admin/adminajax.php:192 php/admin/adminajax.php:360
+#: php/admin/adminpages.php:632 php/issues/issues.php:143
+#: php/issues/issues.php:335
+msgid "Medium"
+msgstr ""
+
+#: php/admin/adminajax.php:195 php/admin/adminajax.php:363
+#: php/admin/adminpages.php:632 php/issues/issues.php:146
+#: php/issues/issues.php:336
+msgid "Above Average"
+msgstr ""
+
+#: php/admin/adminajax.php:198 php/admin/adminajax.php:366
+#: php/admin/adminpages.php:632 php/issues/issues.php:149
+#: php/issues/issues.php:337
+msgid "Critical"
+msgstr ""
+
+#: php/admin/adminajax.php:201 php/admin/adminajax.php:369
+#: php/admin/adminpages.php:632 php/issues/issues.php:152
+#: php/issues/issues.php:338
+msgid "Emergency"
+msgstr ""
+
+#: php/admin/adminajax.php:223
+msgid "Saved as draft."
+msgstr ""
+
+#: php/admin/adminajax.php:223
+msgid "Publish"
+msgstr ""
+
+#: php/admin/adminajax.php:226
+msgid "Published."
+msgstr ""
+
+#: php/admin/adminajax.php:226
+msgid "Unpublish"
+msgstr ""
+
+#: php/admin/adminajax.php:229
+msgid "View Page"
+msgstr ""
+
+#: php/admin/adminajax.php:230
+msgid "Edit Page"
+msgstr ""
+
+#: php/admin/adminajax.php:231
+msgid "Edit Comments"
+msgstr ""
+
+#: php/admin/adminajax.php:239 php/admin/adminajax.php:245
+#: php/admin/adminajax.php:389 php/admin/adminpages.php:677
+msgid "None"
+msgstr ""
+
+#: php/admin/adminajax.php:255 php/admin/adminajax.php:261
+#: php/admin/adminajax.php:270 php/admin/adminajax.php:284
+#: php/admin/adminajax.php:380 php/admin/adminajax.php:398
+#: php/admin/adminajax.php:405 php/admin/adminpages.php:154
+#: php/admin/adminpages.php:651 php/admin/adminpages.php:703
+#: php/admin/adminpages.php:756 php/projects/projects.php:35
+msgid "Unassigned"
+msgstr ""
+
+#: php/admin/adminpages.php:17
+msgid "Welcome to Our BETA Test"
+msgstr ""
+
+#: php/admin/adminpages.php:18
+msgid ""
+"wpbugtracktor is an open source issue tracking solution for Wordpress.  "
+"The software is fresh out the oven, and really not ready for production.  "
+"This is early beta software.  As in, we haven't even finished implementing "
+"all of our basic features yet.  Don't worry, we're going to take care of "
+"that very quickly.  Within a month or two this software will be feature "
+"complete and ready for the good old 1.0 stable production release... at "
+"least that's that goal.  You can help!  Give us feedback, bug reports, "
+"feature requests, and any help or encouragement you can spare.  Thanks for "
+"checking out our software; we hope you enjoy it!"
+msgstr ""
+
+#: php/admin/adminpages.php:20
+msgid "Beta Test Feedback"
+msgstr ""
+
+#: php/admin/adminpages.php:21
+msgid "Report a bug"
+msgstr ""
+
+#: php/admin/adminpages.php:21
+msgid "Feature request"
+msgstr ""
+
+#: php/admin/adminpages.php:37
+msgid "Value"
+msgstr ""
+
+#: php/admin/adminpages.php:42
+msgid "Project Title"
+msgstr ""
+
+#: php/admin/adminpages.php:43
+msgid ""
+"The public name of the project, without version numbers or edition names."
+msgstr ""
+
+#: php/admin/adminpages.php:52 php/admin/adminpages.php:177
+#: php/admin/adminpages.php:194 php/admin/adminpages.php:418
+#: php/admin/adminpages.php:446 php/admin/adminpages.php:900
+#: php/admin/adminpages.php:998 php/issues/issues.php:522
+#: php/projects/projects.php:31
+msgid "Description"
+msgstr ""
+
+#: php/admin/adminpages.php:53
+msgid ""
+"The public description of the project, which should summarize what the "
+"project is all about."
+msgstr ""
+
+#: php/admin/adminpages.php:61
+msgid "Project Prefix"
+msgstr ""
+
+#: php/admin/adminpages.php:62
+msgid ""
+"Each issue is assigned a number, and this, the project prefix, is appended "
+"to the beginning of the issue number."
+msgstr ""
+
+#: php/admin/adminpages.php:71
+msgid "Project Leader"
+msgstr ""
+
+#: php/admin/adminpages.php:72
+msgid ""
+"This is the user in charge of the project, who also manages any other users "
+"assigned to this project."
+msgstr ""
+
+#: php/admin/adminpages.php:89
+msgid "Create New Project"
+msgstr ""
+
+#: php/admin/adminpages.php:123 php/admin/adminpages.php:206
+msgid "Are you sure you wish to delete this component?"
+msgstr ""
+
+#: php/admin/adminpages.php:132 php/admin/adminpages.php:145
+#: php/admin/adminpages.php:152 php/admin/adminpages.php:611
+#: php/admin/adminpages.php:630 php/admin/adminpages.php:649
+#: php/admin/adminpages.php:675 php/admin/adminpages.php:701
+#: php/admin/adminpages.php:727 php/admin/adminpages.php:754
+msgid "Cancel"
+msgstr ""
+
+#: php/admin/adminpages.php:133 php/admin/adminpages.php:146
+#: php/admin/adminpages.php:151 php/admin/adminpages.php:610
+#: php/admin/adminpages.php:629 php/admin/adminpages.php:648
+#: php/admin/adminpages.php:674 php/admin/adminpages.php:700
+#: php/admin/adminpages.php:726 php/admin/adminpages.php:753
+msgid "Save"
+msgstr ""
+
+#: php/admin/adminpages.php:134 php/admin/adminpages.php:147
+msgid "Click to Edit"
+msgstr ""
+
+#: php/admin/adminpages.php:171
+msgid "Create a New Component"
+msgstr ""
+
+#: php/admin/adminpages.php:172
+msgid ""
+"Create a new component for this project.  Think of components as completely "
+"optional sub-projects.  For example, a video game might have a Graphical "
+"component, a Network component, a Quest System component, and more.  If your "
+"project has large, but relatively unrelated sections to them, you can "
+"optionally use Components to isolate bugs within those specific sections."
+msgstr ""
+
+#: php/admin/adminpages.php:176
+msgid "Component Name/Title"
+msgstr ""
+
+#: php/admin/adminpages.php:179
+msgid "Save New Component"
+msgstr ""
+
+#: php/admin/adminpages.php:194
+msgid "Key"
+msgstr ""
+
+#: php/admin/adminpages.php:194 php/admin/adminpages.php:895
+#: php/admin/adminpages.php:998 php/issues/issues.php:463
+msgid "Title"
+msgstr ""
+
+#: php/admin/adminpages.php:194
+msgid "Prefix"
+msgstr ""
+
+#: php/admin/adminpages.php:194
+msgid "Owner"
+msgstr ""
+
+#: php/admin/adminpages.php:194
+msgid "Components"
+msgstr ""
+
+#: php/admin/adminpages.php:200
+msgid "Are you sure you wish to delete this project?"
+msgstr ""
+
+#: php/admin/adminpages.php:203
+msgid "Add New Component to this Project"
+msgstr ""
+
+#: php/admin/adminpages.php:389
+msgid "Saved successfully."
+msgstr ""
+
+#: php/admin/adminpages.php:402
+msgid "Save successfully."
+msgstr ""
+
+#: php/admin/adminpages.php:413
+msgid "Make a new release (Milestones, Versions, Editions, etc.)"
+msgstr ""
+
+#: php/admin/adminpages.php:414
+msgid ""
+"Here you can create a new release for any of your projects.  A release can "
+"be anything, including but not limited to milestones, major releases (1.x), "
+"minor releases (1.1), prototypes, alphas, betas, platform releases, or any "
+"other division or revision of your project."
+msgstr ""
+
+#: php/admin/adminpages.php:418 php/admin/adminpages.php:446
+msgid "Version Number"
+msgstr ""
+
+#: php/admin/adminpages.php:418 php/admin/adminpages.php:446
+msgid "Version Name/Codename"
+msgstr ""
+
+#: php/admin/adminpages.php:418 php/admin/adminpages.php:446
+#: php/admin/adminpages.php:935 php/admin/adminpages.php:998
+#: php/issues/issues.php:310 php/issues/issues.php:483
+msgid "Project"
+msgstr ""
+
+#: php/admin/adminpages.php:418
+msgid "Is It Currently Released?"
+msgstr ""
+
+#: php/admin/adminpages.php:418 php/admin/adminpages.php:446
+msgid "Start Date"
+msgstr ""
+
+#: php/admin/adminpages.php:418 php/admin/adminpages.php:446
+msgid "Release Date"
+msgstr ""
+
+#: php/admin/adminpages.php:430 php/admin/adminpages.php:471
+msgid "Not released yet"
+msgstr ""
+
+#: php/admin/adminpages.php:430 php/admin/adminpages.php:471
+msgid "Yes, already released"
+msgstr ""
+
+#: php/admin/adminpages.php:433
+msgid "Create New Release"
+msgstr ""
+
+#: php/admin/adminpages.php:440
+msgid "Edit &amp; Manage Releases:"
+msgstr ""
+
+#: php/admin/adminpages.php:441
+msgid "Here you can edit or delete previous releases."
+msgstr ""
+
+#: php/admin/adminpages.php:446
+msgid "Is Currently Released?"
+msgstr ""
+
+#: php/admin/adminpages.php:478
+msgid "Save All Edits"
+msgstr ""
+
+#: php/admin/adminpages.php:887
+msgid "Show these fields"
+msgstr ""
+
+#: php/admin/adminpages.php:890 php/admin/adminpages.php:998
+msgid "Bug ID"
+msgstr ""
+
+#: php/admin/adminpages.php:905 php/admin/adminpages.php:998
+#: php/issues/issues.php:103 php/issues/issues.php:467
+msgid "Type"
+msgstr ""
+
+#: php/admin/adminpages.php:910 php/admin/adminpages.php:998
+#: php/issues/issues.php:103 php/issues/issues.php:475
+msgid "Status"
+msgstr ""
+
+#: php/admin/adminpages.php:915 php/admin/adminpages.php:998
+msgid "Reported By"
+msgstr ""
+
+#: php/admin/adminpages.php:920 php/admin/adminpages.php:998
+msgid "Reporter Email"
+msgstr ""
+
+#: php/admin/adminpages.php:925 php/admin/adminpages.php:998
+msgid "Reporter IP Address"
+msgstr ""
+
+#: php/admin/adminpages.php:930 php/admin/adminpages.php:998
+msgid "Issue Assigned To"
+msgstr ""
+
+#: php/admin/adminpages.php:940 php/admin/adminpages.php:998
+#: php/issues/issues.php:327 php/issues/issues.php:510
+msgid "Component"
+msgstr ""
+
+#: php/admin/adminpages.php:945 php/admin/adminpages.php:998
+#: php/issues/issues.php:103 php/issues/issues.php:331
+msgid "Severity"
+msgstr ""
+
+#: php/admin/adminpages.php:950 php/admin/adminpages.php:998
+#: php/issues/issues.php:323 php/issues/issues.php:496
+msgid "Version"
+msgstr ""
+
+#: php/admin/adminpages.php:955 php/admin/adminpages.php:998
+msgid "Target fix for"
+msgstr ""
+
+#: php/admin/adminpages.php:960 php/admin/adminpages.php:998
+msgid "Tags"
+msgstr ""
+
+#: php/admin/adminpages.php:965 php/admin/adminpages.php:998
+msgid "Date Reported"
+msgstr ""
+
+#: php/admin/adminpages.php:970 php/admin/adminpages.php:998
+msgid "Last Modified"
+msgstr ""
+
+#: php/admin/adminpages.php:975 php/admin/adminpages.php:998
+msgid "View Issue Page"
+msgstr ""
+
+#: php/admin/adminpages.php:980 php/admin/adminpages.php:998
+msgid "Related Issues"
+msgstr ""
+
+#: php/admin/adminpages.php:985 php/admin/adminpages.php:998
+msgid "Email Updates to"
+msgstr ""
+
+#: php/admin/adminpages.php:990 php/admin/adminpages.php:998
+msgid "Attachments"
+msgstr ""
+
+#: php/admin/adminpages.php:1023
+msgid "Settings"
+msgstr ""
+
+#: php/admin/adminpages.php:1026
+msgid "Configure a Main Page To Show wpBugTracktor"
+msgstr ""
+
+#: php/admin/adminpages.php:1031
+msgid ""
+"This is your main wpBugTracktor parent page.  All other wpBugTracktor pages "
+"are children of this page."
+msgstr ""
+
+#: php/admin/adminpages.php:1031
+msgid ""
+"This page requires the wpBugTracktor shortcode be inserted into it, like "
+"this:"
+msgstr ""
+
+#: php/admin/adminpages.php:1035
+msgid "Select page"
+msgstr ""
+
+#: php/admin/adminpages.php:1055
+msgid ""
+"wpBugTacktor can automatically create this page for you if you click this "
+"button: "
+msgstr ""
+
+#: php/admin/adminpages.php:1055
+msgid "Create My \"Main Page\""
+msgstr ""
+
+#: php/admin/adminpages.php:1066
+msgid "Configure Who Can Administrate wpBugTracktor"
+msgstr ""
+
+#: php/admin/adminpages.php:1071
+msgid "Choose the user Roles who will have access to manage issues. "
+msgstr ""
+
+#: php/admin/adminpages.php:1075
+msgid "Administrator"
+msgstr ""
+
+#: php/admin/adminpages.php:1076
+msgid "Editor &amp; above"
+msgstr ""
+
+#: php/admin/adminpages.php:1077
+msgid "Author &amp; above"
+msgstr ""
+
+#: php/admin/adminpages.php:1078
+msgid "Contributor &amp; above"
+msgstr ""
+
+#: php/admin/adminpages.php:1102
+msgid "Publishing Issues"
+msgstr ""
+
+#: php/admin/adminpages.php:1107
+msgid ""
+"You should probably have a human manually review each issue before posting "
+"it live, but if you trust your users you can set it to publish immediately."
+msgstr ""
+
+#: php/admin/adminpages.php:1111
+msgid "Save Issues as Drafts"
+msgstr ""
+
+#: php/admin/adminpages.php:1112
+msgid "Publish Issues immediately"
+msgstr ""
+
+#: php/admin/adminpages.php:1136
+msgid "Update Settings"
+msgstr ""
+
+#: php/admin/publicajax.php:36
+msgid "Unknown IP Address"
+msgstr ""
+
+#: php/admin/publicajax.php:104
+msgid "Submitted (Pending Review)"
+msgstr ""
+
+#: php/issues/issues.php:64
+msgid "Pending"
+msgstr ""
+
+#: php/issues/issues.php:64
+msgid "Approve"
+msgstr ""
+
+#: php/issues/issues.php:66
+msgid "Approved"
+msgstr ""
+
+#: php/issues/issues.php:66
+msgid "Unapprove"
+msgstr ""
+
+#: php/issues/issues.php:68
+msgid "Spam"
+msgstr ""
+
+#: php/issues/issues.php:73
+msgid "Edit"
+msgstr ""
+
+#: php/issues/issues.php:103 php/projects/projects.php:31
+msgid "ID #"
+msgstr ""
+
+#: php/issues/issues.php:103 php/issues/issues.php:341
+msgid "Issue Title"
+msgstr ""
+
+#: php/issues/issues.php:105
+msgid "Comments"
+msgstr ""
+
+#: php/issues/issues.php:166
+msgid "There are no issues to display."
+msgstr ""
+
+#: php/issues/issues.php:243
+msgid ""
+"Your report has been submitted to our staff for approval.  Note that your "
+"submission will not show up on this website immediately.  First, a staff "
+"member must review it.  If they find your submission relevant, they may or "
+"may not choose to publish your submission.  There is no need to resubmit "
+"your report.  Thank you."
+msgstr ""
+
+#: php/issues/issues.php:248
+msgid "Your report has been created."
+msgstr ""
+
+#: php/issues/issues.php:255
+msgid ""
+"Error! Your report could not be created.  Please double check that all "
+"required fields and security validations have been followed, then try again."
+msgstr ""
+
+#: php/issues/issues.php:295
+msgid "Report a new issue:"
+msgstr ""
+
+#: php/issues/issues.php:297
+msgid "Bug/Regression"
+msgstr ""
+
+#: php/issues/issues.php:298
+msgid "Feature Request, Enhancement, or Idea"
+msgstr ""
+
+#: php/issues/issues.php:301
+msgid "Issue Type"
+msgstr ""
+
+#: php/issues/issues.php:342
+msgid "Issue Description"
+msgstr ""
+
+#: php/issues/issues.php:343
+msgid "Your Email Address"
+msgstr ""
+
+#: php/issues/issues.php:348
+msgid "CAPTCHA"
+msgstr ""
+
+#: php/issues/issues.php:348
+msgid "CAPTCHA Image"
+msgstr ""
+
+#: php/issues/issues.php:352
+msgid "Different Image"
+msgstr ""
+
+#: php/issues/issues.php:356
+msgid "Submit"
+msgstr ""
+
+#: php/issues/issues.php:405 php/issues/issues.php:413
+msgid "Untitled"
+msgstr ""
+
+#: php/issues/issues.php:406 php/issues/issues.php:414
+msgid "No description"
+msgstr ""
+
+#: php/issues/issues.php:546
+msgid "Submitted by"
+msgstr ""
+
+#: php/issues/issues.php:546
+msgid "on"
+msgstr ""
+
+#: php/projects/projects.php:31
+msgid "Project Name"
+msgstr ""
+
+#: php/projects/projects.php:31
+msgid "Prefix/Abbreviation"
+msgstr ""
+
+#: php/projects/projects.php:31
+msgid "Project Lead"
+msgstr ""

@@ -1,0 +1,6 @@
+application\softsale\Bootstrap.php
+ *            settings will be saved into scheme->data()->set(plugin_type.plugin_id.'config-key')
+application\softsale\library\LicenseScheme.php
+            $this->_pl = new $cl($this->getDi(), (array)$this->getDi()->config->get('softsale.' . $this->plugin_id));
+application\softsale\views\softsale\_licenses.phtml
+        if ($this->getDi()->config->get('softsale.show_activation_details'))

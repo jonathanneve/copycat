@@ -1,0 +1,192 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!-- C++Builder XML Project -->
+<PROJECT>
+  <MACROS>
+    <VERSION value="BCB.06.00"/>
+    <PROJECT value="CopyCatXMLRPC_C6.bpl"/>
+    <OBJFILES value="CopyCatXMLRPC_C6.obj CcXMLRPCTransport.obj CcXmlRpcServer.obj 
+      CcXmlRpcTypes.obj CcDIMime.obj CcLibXmlParser.obj CcXmlRpcClient.obj 
+      CcXmlRpcCommon.obj"/>
+    <RESFILES value="CopyCatXMLRPC_C6.res"/>
+    <DEFFILE value=""/>
+    <RESDEPEN value="$(RESFILES)"/>
+    <LIBFILES value=""/>
+    <LIBRARIES value="IBO40WXRT_C6.lib IBO40WXDT_C6.lib IBO40WRT_C6.lib IBO40XRT_C6.lib 
+      IBO40FRT_C6.lib IBO40VRT_C6.lib IBO40RPL_C6.lib IBO40CRT_C6.lib 
+      IBO40TRT_C6.lib IBO40FTS_C6.lib FIBPlus_CB6.lib Rz30DBCtls60.lib 
+      Rz30Ctls60.lib bcb97axserver.lib dbxcds.lib dclocx.lib soaprtl.lib 
+      bcbie.lib nmfast.lib dbexpress.lib inetdbxpress.lib inetdb.lib 
+      inetdbbde.lib inet.lib xmlrtl.lib visualdbclx.lib ibxpress.lib teeqr.lib 
+      tee.lib teedb.lib teeui.lib bdecds.lib cds.lib dsnap.lib vcldbx.lib 
+      bdertl.lib qrpt.lib adortl.lib bcbsmp.lib CopyCat_C5.lib Indy50.lib"/>
+    <SPARELIBS value="rtl.lib vcl.lib Indy50.lib CopyCat_C5.lib bcbsmp.lib vcldb.lib dbrtl.lib 
+      adortl.lib qrpt.lib bdertl.lib vcldbx.lib dsnap.lib cds.lib bdecds.lib 
+      teeui.lib teedb.lib tee.lib teeqr.lib ibxpress.lib visualdbclx.lib 
+      xmlrtl.lib inet.lib inetdbbde.lib inetdb.lib inetdbxpress.lib 
+      dbexpress.lib nmfast.lib bcbie.lib soaprtl.lib dclocx.lib dbxcds.lib 
+      indy.lib bcb97axserver.lib Rz30Ctls60.lib Rz30DBCtls60.lib FIBPlus_CB6.lib 
+      IBO40FTS_C6.lib IBO40TRT_C6.lib IBO40CRT_C6.lib IBO40RPL_C6.lib 
+      IBO40VRT_C6.lib IBO40FRT_C6.lib IBO40XRT_C6.lib IBO40WRT_C6.lib 
+      IBO40WXDT_C6.lib IBO40WXRT_C6.lib CopyCat_C6.lib"/>
+    <PACKAGES value="rtl.bpi vcl.bpi dbrtl.bpi vcldb.bpi indy.bpi CopyCat_C6.bpi"/>
+    <PATHCPP value=".;"/>
+    <PATHPAS value=".;"/>
+    <PATHRC value=".;"/>
+    <PATHASM value=".;"/>
+    <DEBUGLIBPATH value="$(BCB)\lib\debug"/>
+    <RELEASELIBPATH value="$(BCB)\lib\release"/>
+    <LINKER value="ilink32"/>
+    <USERDEFINES value="_DEBUG"/>
+    <SYSDEFINES value="_RTLDLL;NO_STRICT;USEPACKAGES"/>
+    <MAINSOURCE value="CopyCatXMLRPC_C6.cpp"/>
+    <INCLUDEPATH value="..\;$(BCB)\include;$(BCB)\include\vcl;.."/>
+    <LIBPATH value="..\;$(BCB)\Projects\Lib;&quot;C:\Program Files\indy\c5\&quot;;$(BCB)\lib\obj;$(BCB)\lib;.."/>
+    <WARNINGS value="-w-par"/>
+    <OTHERFILES value=""/>
+  </MACROS>
+  <OPTIONS>
+    <CFLAG1 value="-Od -H=c:\PROGRA~1\borland\CB3B65~1\lib\vcl60.csm -Hc -Vx -Ve -X- -r- -a8 
+      -b- -k -y -v -vi- -c -tWM"/>
+    <PFLAGS value="-$YD -$W -$O- -$D- -$A8 -v -JPHNE -M"/>
+    <RFLAGS value=""/>
+    <AFLAGS value="/mx /w2 /zi"/>
+    <LFLAGS value="-D&quot;&quot; -aa -Tpp -x -Gn -Gl -Gi -v"/>
+    <OTHERFILES value=""/>
+  </OPTIONS>
+  <LINKER>
+    <ALLOBJ value="c0pkg32.obj $(PACKAGES) Memmgr.Lib sysinit.obj $(OBJFILES)"/>
+    <ALLRES value="$(RESFILES)"/>
+    <ALLLIB value="$(LIBFILES) $(LIBRARIES) import32.lib cp32mti.lib"/>
+    <OTHERFILES value=""/>
+  </LINKER>
+  <FILELIST>
+      <FILE FILENAME="CopyCatXMLRPC_C6.cpp" FORMNAME="" UNITNAME="CopyCatXMLRPC_C6" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="CopyCatXMLRPC_C6.res" FORMNAME="" UNITNAME="CopyCatXMLRPC_C6.res" CONTAINERID="ResTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="CcXMLRPCTransport.pas" FORMNAME="" UNITNAME="CcXMLRPCTransport" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="CcXmlRpcServer.pas" FORMNAME="" UNITNAME="CcXmlRpcServer" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="CcXmlRpcTypes.pas" FORMNAME="" UNITNAME="CcXmlRpcTypes" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="CcDIMime.pas" FORMNAME="" UNITNAME="CcDIMime" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="CcLibXmlParser.pas" FORMNAME="" UNITNAME="CcLibXmlParser" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="CcXmlRpcClient.pas" FORMNAME="" UNITNAME="CcXmlRpcClient" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="CcXmlRpcCommon.pas" FORMNAME="" UNITNAME="CcXmlRpcCommon" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\rtl.bpi" FORMNAME="" UNITNAME="rtl" CONTAINERID="BPITool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\vcl.bpi" FORMNAME="" UNITNAME="vcl" CONTAINERID="BPITool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\dbrtl.bpi" FORMNAME="" UNITNAME="dbrtl" CONTAINERID="BPITool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\vcldb.bpi" FORMNAME="" UNITNAME="vcldb" CONTAINERID="BPITool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="C:\Program Files\Borland\CBuilder6\Lib\Release\indy.bpi" FORMNAME="" UNITNAME="indy" CONTAINERID="BPITool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="C:\Program Files\Borland\CBuilder6\Projects\Lib\CopyCat_C6.bpi" FORMNAME="" UNITNAME="CopyCat_C6" CONTAINERID="BPITool" DESIGNCLASS="" LOCALCOMMAND=""/>
+  </FILELIST>
+  <BUILDTOOLS>
+  </BUILDTOOLS>
+
+  <IDEOPTIONS>
+[Version Info]
+IncludeVerInfo=1
+AutoIncBuild=0
+MajorVer=1
+MinorVer=0
+Release=0
+Build=0
+Debug=0
+PreRelease=0
+Special=0
+Private=0
+DLL=0
+Locale=1036
+CodePage=1252
+
+[Version Info Keys]
+CompanyName=
+FileDescription=
+FileVersion=1.0.0.0
+InternalName=
+LegalCopyright=
+LegalTrademarks=
+OriginalFilename=
+ProductName=
+ProductVersion=1.0.0.0
+Comments=
+
+[Excluded Packages]
+c:\program files\borland\cbuilder6\Projects\Bpl\CopyCatFIB_C5.bpl=CopyCat FIBPlus provider
+c:\program files\borland\cbuilder6\Projects\Bpl\IniDataSet_B5.bpl=IniDataSet_B5
+c:\program files\borland\cbuilder6\Projects\Bpl\mxNativeExcel_c5.bpl=mxNativeExcel_c5
+c:\program files\borland\cbuilder6\Projects\Bpl\o308bd51.bpl=Orpheus Data-Aware Components
+C:\PROGRA~1\Borland\CBUILDER5\Projects\Bpl\O308_D51.BPL=Orpheus Components
+c:\program files\borland\cbuilder6\Projects\Bpl\s204bd51.bpl=SysTools (db)
+c:\program files\borland\cbuilder6\Projects\Bpl\dclqrt50.bpl=QuickReport 3 Package
+c:\program files\borland\cbuilder6\Bin\QRExports.bpl=QuickReport Professional Export
+c:\program files\borland\cbuilder6\Projects\Bpl\DCLQRPP_B5.bpl=DCLQRPP_B5
+c:\program files\borland\cbuilder6\Projects\Bpl\JvGlobusC5D.bpl=JVCL Globus Components
+C:\Program Files\Jpeg5\mwajpgc5.bpl=MWA JPEG Component Library
+c:\program files\borland\cbuilder6\Projects\Bpl\G113_D51.bpl=TurboPower OnGuard 1.13 Designtime package - VCL51
+c:\program files\borland\cbuilder6\Projects\Bpl\TntUnicodeQR3_DC50.bpl=c:\program files\borland\cbuilder5\Projects\Bpl\TntUnicodeQR3_DC50
+C:\PROGRA~1\Borland\CBUILDER5\Projects\Bpl\TNTUNICODEQR3_RC50.BPL=c:\program files\borland\cbuilder5\Projects\Bpl\TntUnicodeQR3_RC50
+c:\program files\borland\cbuilder6\Projects\Bpl\regScr.bpl=c:\program files\borland\cbuilder5\Projects\Bpl\regScr
+c:\program files\borland\cbuilder6\Projects\Bpl\FIBAliasManager.bpl=FIBPlusEditors
+c:\program files\borland\cbuilder6\Bin\dclite50.bpl=Borland Integrated Translation Environment
+c:\program files\borland\cbuilder6\Projects\Bpl\IBO40CDT_C5.bpl=IB Objects Core Components
+c:\program files\borland\cbuilder6\Projects\Bpl\IBO40ADT_C5.bpl=IB Objects Native Data Access
+c:\program files\borland\cbuilder6\Projects\Bpl\IBO40TDT_C5.bpl=IB Objects Tools Components
+c:\program files\borland\cbuilder6\Projects\Bpl\IBO40WDT_C5.bpl=IB Objects Internet Extensions
+c:\program files\borland\cbuilder6\Projects\Bpl\IBO40WXDT_C5.bpl=IB Objects TDataset Internet Extensions
+C:\Program Files\Delos\XMLCLX\Source\dclXML50.dpl=XMLCLX
+c:\program files\borland\cbuilder6\Projects\Bpl\OQB50.bpl=Open QBuilder
+C:\Program Files\FastReports\FastReport 3\LibBCB5\frxibx5.bpl=FastReport 3.0 IBX Components
+c:\program files\borland\cbuilder6\Projects\Bpl\iFIBScript.bpl=c:\program files\borland\cbuilder5\Projects\Bpl\iFIBScript
+c:\program files\borland\cbuilder6\Projects\Bpl\AdobeActiveX.bpl=c:\program files\borland\cbuilder5\Projects\Bpl\AdobeActiveX
+C:\Program Files\FastReports\FastReport 3\LibBCB5\frxado5.bpl=FastReport 3.0 ADO Components
+C:\Program Files\FastReports\FastReport 3\LibBCB5\fsado5.bpl=FastScript 1.9 ADO Components
+C:\Program Files\FastReports\FastReport 3\LibBCB5\dclfstee5.bpl=FastScript Charts
+C:\Program Files\FastReports\FastReport 3\LibBCB5\dclfrxtee5.bpl=FastReport 3 Charts
+C:\Program Files\AidAim\MsgCommunicator\Lib\C++ Builder 5\dclMsgComB5.bpl=MsgCom - Design package
+
+[HistoryLists\hlIncludePath]
+Count=2
+Item0=$(BCB)\include;$(BCB)\include\vcl;..
+Item1=$(BCB)\include;$(BCB)\include\vcl
+
+[HistoryLists\hlLibraryPath]
+Count=2
+Item0=$(BCB)\Projects\Lib;C:\Program Files\indy\c5\;$(BCB)\lib\obj;$(BCB)\lib;..
+Item1=$(BCB)\Projects\Lib;C:\Program Files\indy\c5\;$(BCB)\lib\obj;$(BCB)\lib
+
+[HistoryLists\hlDebugSourcePath]
+Count=1
+Item0=$(BCB)\source\vcl
+
+[HistoryLists\hlConditionals]
+Count=1
+Item0=_DEBUG
+
+[Debugging]
+DebugSourceDirs=$(BCB)\source\vcl
+
+[Parameters]
+RunParams=
+Launcher=
+UseLauncher=0
+DebugCWD=
+HostApplication=
+RemoteHost=
+RemotePath=
+RemoteLauncher=
+RemoteCWD=
+RemoteDebug=0
+
+[Compiler]
+ShowInfoMsgs=0
+LinkDebugVcl=0
+LinkCGLIB=0
+
+[Language]
+ActiveLang=
+ProjectLang=
+RootDir=
+
+[Linker]
+LibPrefix=
+LibSuffix=
+LibVersion=
+  </IDEOPTIONS>
+</PROJECT>

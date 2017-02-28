@@ -1,0 +1,157 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!-- C++Builder XML Project -->
+<PROJECT>
+  <MACROS>
+    <VERSION value="BCB.05.03"/>
+    <PROJECT value="CopyCat_C5.bpl"/>
+    <OBJFILES value="CcProviders.obj CCat.obj CcConf.obj CcConflictMgr.obj CcLog.obj 
+      CcMemDS.obj CcReplicator.obj CcTransports.obj CcInterbase.obj CcKeys.obj 
+      CcEditors.obj CcInterbaseConn.obj CcDB.obj CcSQLServer.obj CcMySQL.obj 
+      CcOracle.obj CopyCat_C5.obj"/>
+    <RESFILES value="CopyCat_C5.res CopyCat.dcr"/>
+    <DEFFILE value=""/>
+    <RESDEPEN value="$(RESFILES)"/>
+    <LIBFILES value=""/>
+    <LIBRARIES value="RXCTL5.lib kbmMemC5Run.lib"/>
+    <SPARELIBS value="Vcl50.lib VCLDB50.lib kbmMemC5Run.lib RXCTL5.lib"/>
+    <PACKAGES value="vcl50.bpi VCLDB50.bpi"/>
+    <PATHCPP value=".;"/>
+    <PATHPAS value=".;"/>
+    <PATHRC value=".;"/>
+    <PATHASM value=".;"/>
+    <DEBUGLIBPATH value="$(BCB)\lib\debug"/>
+    <RELEASELIBPATH value="$(BCB)\lib\release"/>
+    <LINKER value="tlink32"/>
+    <USERDEFINES value=""/>
+    <SYSDEFINES value="_RTLDLL;NO_STRICT;USEPACKAGES"/>
+    <MAINSOURCE value="CopyCat_C5.cpp"/>
+    <INCLUDEPATH value="..;$(BCB)\include;$(BCB)\include\vcl"/>
+    <LIBPATH value="..;$(BCB)\projects\lib;$(BCB)\lib\obj;$(BCB)\lib"/>
+    <WARNINGS value="-w-par"/>
+  </MACROS>
+  <OPTIONS>
+    <CFLAG1 value="-O2 -H=$(BCB)\lib\vcl50.csm -Hc -Vx -Ve -X- -a8 -b- -k- -vi -c -tWM"/>
+    <PFLAGS value="-$Y- -$L- -v -JPHNE -M"/>
+    <RFLAGS value=""/>
+    <AFLAGS value="/mx /w2 /zn"/>
+    <LFLAGS value="-D&quot;CopyCat Replication Suite&quot; -aa -Tpp -GD -s -Gn -Gl -Gi"/>
+  </OPTIONS>
+  <LINKER>
+    <ALLOBJ value="c0pkg32.obj $(PACKAGES) Memmgr.Lib sysinit.obj $(OBJFILES)"/>
+    <ALLRES value="$(RESFILES)"/>
+    <ALLLIB value="$(LIBFILES) $(LIBRARIES) import32.lib cp32mti.lib"/>
+  </LINKER>
+  <IDEOPTIONS>
+[Version Info]
+IncludeVerInfo=1
+AutoIncBuild=0
+MajorVer=1
+MinorVer=0
+Release=0
+Build=0
+Debug=0
+PreRelease=0
+Special=0
+Private=0
+DLL=0
+Locale=1036
+CodePage=1252
+
+[Version Info Keys]
+CompanyName=
+FileDescription=
+FileVersion=1.0.0.0
+InternalName=
+LegalCopyright=
+LegalTrademarks=
+OriginalFilename=
+ProductName=
+ProductVersion=1.0.0.0
+
+[Excluded Packages]
+$(BCB)\Projects\Bpl\CopyCatFIB_C5.bpl=CopyCat FIBPlus provider
+$(BCB)\Projects\Bpl\CopyCatRTC_C5.bpl=CopyCatRTC_C5
+$(BCB)\Projects\Bpl\microtec_c5.bpl=Composant Microtec
+$(BCB)\Projects\Bpl\iFIBScript.bpl=c:\program files\borland\cbuilder5\Projects\Bpl\iFIBScript
+$(BCB)\Projects\Bpl\OQB50.bpl=Open QBuilder
+$(BCB)\Projects\Bpl\AdobeActiveX.bpl=c:\program files\borland\cbuilder5\Projects\Bpl\AdobeActiveX
+C:\Program Files\FastReports\FastReport 3\LibBCB5\fsibx5.bpl=FastScript 1.9 IBX Components
+C:\Program Files\FastReports\FastReport 3\LibBCB5\frxibx5.bpl=FastReport 3.0 IBX Components
+$(BCB)\Projects\Bpl\ThemeManagerC5D.bpl=Soft Gems Theme Manager
+$(BCB)\Projects\Bpl\regScr.bpl=c:\program files\borland\cbuilder5\Projects\Bpl\regScr
+$(BCB)\Bin\dcltqr50.bpl=TeeChart 5.0 for QuickReport Components Design Package
+$(BCB)\Projects\Bpl\E111_D51.bpl=TurboPower Essentials 1.11 Designtime package - VCL51
+$(BCB)\Projects\Bpl\G113_D51.bpl=TurboPower OnGuard 1.13 Designtime package - VCL51
+$(BCB)\Bin\dclite50.bpl=Borland Integrated Translation Environment
+$(BCB)\Projects\Bpl\E111BD51.bpl=TurboPower Essentials 1.11 (db) Designtime package - VCL51
+C:\Projects\MicroPackage\release\BCB5\Microtec.bpl=Microtec
+C:\Program Files\AidAim\MsgCommunicator\Lib\C++ Builder 5\dclMsgComB5.bpl=MsgCom - Design package
+C:\Documents and Settings\Microtec\Bureau\TurboSync_Full_v1_8\CB5\TurboSyncCB5Full.bpl=TurboSync components v1.7
+
+[HistoryLists\hlIncludePath]
+Count=9
+Item0=..\;$(BCB)\include;$(BCB)\include\vcl
+Item1=$(BCB)\include;$(BCB)\include\vcl
+Item2=..;$(BCB)\include;$(BCB)\include\vcl;
+Item3=C:\Program Files\GExperts\;$(BCB)\include;$(BCB)\include\vcl;c:\program files\fibplus\BCB5\
+Item4=C:\Program Files\GExperts;$(BCB)\include;$(BCB)\include\vcl;c:\program files\fibplus\BCB5\
+Item5=$(BCB)\include;$(BCB)\include\vcl;c:\program files\fibplus\BCB5\
+Item6=..\;$(BCB)\include;$(BCB)\include\vcl;c:\program files\fibplus\BCB5\
+Item7=$(BCB)\include;$(BCB)\include\vcl;c:\program files\fibplus\BCB5\
+Item8=$(BCB)\include;$(BCB)\include\vcl
+
+[HistoryLists\hlLibraryPath]
+Count=9
+Item0=..\;$(BCB)\projects\lib;$(BCB)\lib\obj;$(BCB)\lib
+Item1=..\;..;$(BCB)\projects\lib;$(BCB)\lib\obj;$(BCB)\lib
+Item2=..;$(BCB)\projects\lib;$(BCB)\lib\obj;$(BCB)\lib
+Item3=..\;C:\Program Files\GExperts\;..;$(BCB)\projects\lib;$(BCB)\lib\obj;$(BCB)\lib;c:\program files\fibplus\BCB5\
+Item4=C:\Program Files\GExperts;..\;..;$(BCB)\projects\lib;$(BCB)\lib\obj;$(BCB)\lib;c:\program files\fibplus\BCB5\
+Item5=..\;..;$(BCB)\projects\lib;$(BCB)\lib\obj;$(BCB)\lib;c:\program files\fibplus\BCB5\
+Item6=..\;$(BCB)\projects\lib;$(BCB)\lib\obj;$(BCB)\lib;c:\program files\fibplus\BCB5\
+Item7=$(BCB)\projects\lib;$(BCB)\lib\obj;$(BCB)\lib;c:\program files\fibplus\BCB5\
+Item8=$(BCB)\projects\lib;$(BCB)\lib\obj;$(BCB)\lib
+
+[HistoryLists\hlDebugSourcePath]
+Count=1
+Item0=$(BCB)\source\vcl
+
+[HistoryLists\hlConditionals]
+Count=1
+Item0=_DEBUG
+
+[HistoryLists\hlIntOutputDir]
+Count=3
+Item0=hpp
+Item1=.
+Item2=C:\Projects\Replicator\BCB5\
+
+[HistoryLists\hlFinalOutputDir]
+Count=4
+Item0=bpl\
+Item1=bpl
+Item2=C:\Projects\Replicator\BCB5\bpl\
+Item3=.\bpl\
+
+[HistoryLists\hIBPIOutputDir]
+Count=3
+Item0=C:\Projects\Replicator\BCB5\lib\
+Item1=lib
+Item2=.\lib\
+
+[Debugging]
+DebugSourceDirs=$(BCB)\source\vcl
+
+[Parameters]
+RunParams=
+HostApplication=C:\Program Files\Borland\CBuilder5\Projects\CopyCatTests\Project1.exe
+RemoteHost=
+RemotePath=
+RemoteDebug=0
+
+[Compiler]
+ShowInfoMsgs=0
+LinkDebugVcl=0
+LinkCGLIB=0
+  </IDEOPTIONS>
+</PROJECT>

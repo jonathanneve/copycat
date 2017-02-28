@@ -1,0 +1,191 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>TConflictRecord Record</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+    <meta name="generator" content="Doc-O-Matic" />
+    <meta name="save" content="history" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <link rel="STYLESHEET" href="default.css" type="text/css" />
+
+<script type="text/javascript" src="scripts.js"></script>
+</head>
+<body class="Element700" onload="onBodyLoad();" onmousedown="onBodyMouseDown();">
+<div id="persistenceDiv" style="display:none; behavior:url(#default#userData);"></div>
+
+<!-- Begin Popups -->
+<div class="Element801" id="popup00776">
+<div class="Element800">
+<div class="Element14">
+Links</div>
+<div class="Element11">
+<div class="Element10">
+<a href="CcReplicator_pas.html">CcReplicator</a></div>
+</div>
+</div>
+</div>
+
+<!-- End Popups -->
+
+<!-- Begin Page Header -->
+<div class="Element710" id="areafixed">
+<div class="Element92">
+<table width="100%" cellspacing="0" cellpadding="0">
+<tr><td width="33%">
+<div class="Element1">
+<a href="#" onmousedown="showPopup(this, 'popup00776');"><img src="seealsolink.png" border="0" alt=""></a> <a href="http://www.copycat.fr" target="new_page"><img src="copycat_70x70.png" border="0"><h3>CopyCat Developer Tools</h3></img></a></div>
+</td><td width="34%">
+<div class="Element2">
+<a href="contents.html">Contents</a> | <a href="idx.html">Index</a></div>
+</td><td width="33%">
+<div class="Element90">
+<a href="TCcValueType.html">Previous</a></div>
+</td></tr></table><div class="Element5">
+TConflictRecord Record</div>
+<div class="Element7">
+<a href="CcReplicator_pas.html">CcReplicator</a></div>
+<div class="Element730">
+<a href="#" onclick="showAllElements();">Show All</a></div>
+</div>
+</div>
+
+<!-- End Page Header -->
+
+<!-- Begin Client Area -->
+<div class="Element720" id="areascroll">
+<div class="Element721">
+
+<!-- Begin Page Content -->
+<div class="Element58">
+<div class="Element11">
+<div class="Element10">
+<p class="Element10">
+TConflictRecord is a record for holding information about a conflict that has occured.</p></div>
+</div>
+<div class="Element101"><div class="Element100"><pre class="Element100">TConflictRecord = <strong>record</strong>
+  Node1: <strong>string</strong>;
+  Node2: <strong>string</strong>;
+  ChangedFields1: TStringList;
+  ChangedFields2: TStringList;
+  ConflictingFields: TStringList;
+  FirstOperationDate1: TDateTime;
+  FirstOperationDate2: TDateTime;
+  LastOperationDate1: TDateTime;
+  LastOperationDate2: TDateTime;
+  NumChanges1: Integer;
+  NumChanges2: Integer;
+  ChosenNode: <strong>string</strong>;
+  <strong>end</strong>;</pre></div></div>
+<div class="Element101"><div class="Element100"><pre class="Element100"><strong>struct</strong> TConflictRecord {
+  string Node1;
+  string Node2;
+  TStringList ChangedFields1;
+  TStringList ChangedFields2;
+  TStringList ConflictingFields;
+  TDateTime FirstOperationDate1;
+  TDateTime FirstOperationDate2;
+  TDateTime LastOperationDate1;
+  TDateTime LastOperationDate2;
+  <strong>int</strong> NumChanges1;
+  <strong>int</strong> NumChanges2;
+  string ChosenNode;
+};</pre></div></div>
+<div class="Element14">
+<a onclick="toggleVisibilityStored('File');" class="a_Element14"><img src="sectionminus.png" border="0" alt="sectionminus.png" id="imgFile">File</a></div>
+<div id="divFile">
+<div class="Element11">
+<div class="Element10">
+<p class="Element10">
+<a href="CcReplicator_pas.html">CcReplicator</a></p></div>
+</div>
+</div>
+<div class="Element14">
+<a onclick="toggleVisibilityStored('Members');" class="a_Element14"><img src="sectionminus.png" border="0" alt="sectionminus.png" id="imgMembers">Members</a></div>
+<div id="divMembers">
+<div class="Element11">
+<div class="Element10">
+<div class="Element272">
+<div class="TableDiv">
+<table cellspacing="0" class="Table5">
+<tr>
+<td class="Element260" valign="top" width="50%">
+<div class="Element261">
+Members&nbsp;</div></td><td class="Element264" valign="top" width="50%">
+<div class="Element265">
+Description&nbsp;</div></td></tr><tr>
+<td class="Element262" valign="top" width="50%">
+<div class="Element263">
+Node1: string;&nbsp;</div></td><td class="Element266" valign="top" width="50%">
+<div class="Element267">
+Name of first replication node in the conflict&nbsp;</div></td></tr><tr>
+<td class="Element262" valign="top" width="50%">
+<div class="Element263">
+Node2: string;&nbsp;</div></td><td class="Element266" valign="top" width="50%">
+<div class="Element267">
+Name of second replication node in the conflict&nbsp;</div></td></tr><tr>
+<td class="Element262" valign="top" width="50%">
+<div class="Element263">
+FirstOperationDate2: TDateTime;&nbsp;</div></td><td class="Element266" valign="top" width="50%">
+<div class="Element267">
+Date and time of earliest change made in the first node to the conflicting record.&nbsp;</div></td></tr><tr>
+<td class="Element262" valign="top" width="50%">
+<div class="Element263">
+LastOperationDate1: TDateTime;&nbsp;</div></td><td class="Element266" valign="top" width="50%">
+<div class="Element267">
+Date and time of earliest change made in the second node to the conflicting record.&nbsp;</div></td></tr><tr>
+<td class="Element262" valign="top" width="50%">
+<div class="Element263">
+LastOperationDate2: TDateTime;&nbsp;</div></td><td class="Element266" valign="top" width="50%">
+<div class="Element267">
+Date and time of earliest change made in the second node to the conflicting record.&nbsp;</div></td></tr><tr>
+<td class="Element262" valign="top" width="50%">
+<div class="Element263">
+NumChanges1: Integer;&nbsp;</div></td><td class="Element266" valign="top" width="50%">
+<div class="Element267">
+Date and time of latest change made in the second node to the conflicting record.&nbsp;</div></td></tr><tr>
+<td class="Element262" valign="top" width="50%">
+<div class="Element263">
+NumChanges2: Integer;&nbsp;</div></td><td class="Element266" valign="top" width="50%">
+<div class="Element267">
+Date and time of latest change made in the second node to the conflicting record.&nbsp;</div></td></tr><tr>
+<td class="Element262" valign="top" width="50%">
+<div class="Element263">
+ChosenNode: string;&nbsp;</div></td><td class="Element266" valign="top" width="50%">
+<div class="Element267">
+Name of the node chosen to resolve the conflict.&nbsp;</div></td></tr></table></div></div>
+</div>
+</div>
+</div>
+<div class="Element14">
+<a onclick="toggleVisibilityStored('Links');" class="a_Element14"><img src="sectionminus.png" border="0" alt="sectionminus.png" id="imgLinks">Links</a></div>
+<div id="divLinks">
+<div class="Element11">
+<div class="Element10">
+<a href="CcReplicator_pas.html">CcReplicator</a></div>
+</div>
+</div>
+<div class="Element62">
+Created with a commercial version of <a href="http://www.doc-o-matic.com">Doc-O-Matic</a>. In order to make this message disappear you need to register this software. If you have problems registering this software please contact us at <a href="mailto:support@toolsfactory.com">support@toolsfactory.com</a>.</div>
+</div>
+<!-- End Page Content -->
+
+<!-- Begin Page Footer -->
+<div class="Element93">
+<table width="100%" cellspacing="0" cellpadding="0">
+<tr><td width="100%">
+<div class="Element3">
+Copyright (c) 2015. All rights reserved. http://www.copycat.fr</div>
+</td></tr><tr><td width="100%">
+<div class="Element4">
+<a href="contents.html">Contents</a> | <a href="idx.html">Index</a></div>
+</td></tr><tr><td width="100%">
+<div class="Element97">
+What do you think about this topic?  <a href="#" onclick="sendFeedback('jonathan@copycat.fr', 'Documentation Feedback', 'Project: CopyCat Developer Tools%0ATopic ID: TConflictRecord%0ATitle: TConflictRecord Record');"> Send feedback! </a></div>
+</td></tr></table></div>
+
+<!-- End Page Footer -->
+</div>
+</div>
+
+<!-- End Client Area -->
+</body></html>

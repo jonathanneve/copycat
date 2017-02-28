@@ -1,0 +1,45 @@
+object HeadDB: TCcConnectionFIB
+  UserLogin = 'SYSDBA'
+  UserPassword = 'masterkey'
+  SQLDialect = 3
+  DBType = 'Interbase'
+  DBVersion = 'FB2.5'
+  DBName = 'C:\Projects\CopyCat\FBConf2012\Finished sample\head_office.fdb'
+  TRParams.Strings = (
+    'write'
+    'nowait'
+    'concurrency')
+  ClientDLL = 'gds32.dll'
+  Left = 392
+  Top = 336
+end
+object BranchADB: TCcConnectionFIB
+  UserLogin = 'SYSDBA'
+  UserPassword = 'masterkey'
+  SQLDialect = 3
+  DBType = 'Interbase'
+  DBVersion = 'FB2.5'
+  DBName = 'C:\Projects\CopyCat\FBConf2012\Finished sample\branch a.fdb'
+  TRParams.Strings = (
+    'write'
+    'nowait'
+    'concurrency')
+  ClientDLL = 'gds32.dll'
+  Left = 424
+  Top = 336
+end
+object BranchBDB: TCcConnectionFIB
+  UserLogin = 'SYSDBA'
+  UserPassword = 'masterkey'
+  SQLDialect = 3
+  DBType = 'Interbase'
+  DBVersion = 'FB2.5'
+  DBName = 'C:\Projects\CopyCat\FBConf2012\Finished sample\branch b.fdb'
+  TRParams.Strings = (
+    'write'
+    'nowait'
+    'concurrency')
+  ClientDLL = 'gds32.dll'
+  Left = 456
+  Top = 336
+end

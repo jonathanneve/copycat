@@ -1,0 +1,340 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>TCcConfig Class</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+    <meta name="generator" content="Doc-O-Matic" />
+    <meta name="save" content="history" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <link rel="STYLESHEET" href="default.css" type="text/css" />
+
+<script type="text/javascript" src="scripts.js"></script>
+</head>
+<body class="Element700" onload="onBodyLoad();" onmousedown="onBodyMouseDown();">
+<div id="persistenceDiv" style="display:none; behavior:url(#default#userData);"></div>
+
+<!-- Begin Popups -->
+<div class="Element801" id="popup00044">
+<div class="Element800">
+<div class="Element14">
+Links</div>
+<div class="Element11">
+<div class="Element10">
+<a href="CcConf_pas.html">CcConf</a>, <a href="_TCcConfig_14_Properties.html">Properties</a>, <a href="_TCcConfig_14_Methods.html">Methods</a>, <a href="_TCcConfig_14_Events.html">Events</a>, <a href="_TCcConfig_14_Legend.html">Legend</a></div>
+</div>
+</div>
+</div>
+
+<!-- End Popups -->
+
+<!-- Begin Page Header -->
+<div class="Element710" id="areafixed">
+<div class="Element92">
+<table width="100%" cellspacing="0" cellpadding="0">
+<tr><td width="33%">
+<div class="Element1">
+<a href="#" onmousedown="showPopup(this, 'popup00044');"><img src="seealsolink.png" border="0" alt=""></a> <a href="http://www.copycat.fr" target="new_page"><img src="copycat_70x70.png" border="0"><h3>CopyCat Developer Tools</h3></img></a></div>
+</td><td width="34%">
+<div class="Element2">
+<a href="contents.html">Contents</a> | <a href="idx.html">Index</a></div>
+</td><td width="33%">
+<div class="Element90">
+<a href="TCcClientTransport.html">Previous</a> | <a href="TCcConfigTable.html">Next</a></div>
+</td></tr></table><div class="Element5">
+TCcConfig Class</div>
+<div class="Element7">
+<a href="CcConf_pas.html">CcConf</a> | <a href="_TCcConfig_14_Properties.html">Properties</a> | <a href="_TCcConfig_14_Methods.html">Methods</a> | <a href="_TCcConfig_14_Events.html">Events</a> | <a href="_TCcConfig_14_Legend.html">Legend</a></div>
+<div class="Element730">
+<a href="#" onclick="showAllElements();">Show All</a></div>
+</div>
+</div>
+
+<!-- End Page Header -->
+
+<!-- Begin Client Area -->
+<div class="Element720" id="areascroll">
+<div class="Element721">
+
+<!-- Begin Page Content -->
+<div class="Element58">
+<div class="Element11">
+<div class="Element10">
+<p class="Element10">
+Component for generating replication meta-data.</p></div>
+</div>
+<div class="Element14">
+<a onclick="toggleVisibilityStored('Class_Hierarchy');" class="a_Element14"><img src="sectionminus.png" border="0" alt="sectionminus.png" id="imgClass_Hierarchy">Class Hierarchy</a></div>
+<div id="divClass_Hierarchy">
+<div class="Element151"><div class="Element150"><pre class="Element150"><img src="TCcConfig.png" border="0" alt=""></pre></div></div>
+</div>
+<div class="Element101"><div class="Element100"><pre class="Element100">TCcConfig = <strong>class</strong>(TComponent);</pre></div></div>
+<div class="Element101"><div class="Element100"><pre class="Element100"><strong>class</strong> TCcConfig : <strong>public</strong> TComponent;</pre></div></div>
+<div class="Element14">
+<a onclick="toggleVisibilityStored('File');" class="a_Element14"><img src="sectionminus.png" border="0" alt="sectionminus.png" id="imgFile">File</a></div>
+<div id="divFile">
+<div class="Element11">
+<div class="Element10">
+<p class="Element10">
+<a href="CcConf_pas.html">CcConf</a></p></div>
+</div>
+</div>
+<div class="Element14">
+<a onclick="toggleVisibilityStored('Description');" class="a_Element14"><img src="sectionminus.png" border="0" alt="sectionminus.png" id="imgDescription">Description</a></div>
+<div id="divDescription">
+<div class="Element11">
+<div class="Element10">
+<p class="Element10">
+Before any replication can take place, the appropriate meta-data must be created in both databases. TCcConfig allows you to generate this meta-data (based on settings specific to each setup), and apply it to the database.&nbsp;</p>
+<p class="Element10">
+&nbsp;</p>
+<p class="Element10">
+Here's the simplest way to configure your databases :&nbsp;</p>
+<p class="Element10">
+&nbsp;</p>
+<ol class="Element630">
+<li value="1" class="Element600">Setup the list of tables that you want to replicate using the <a href="TCcConfig_Tables.html">Tables</a> property.&nbsp;</p>
+<p class="Element10">
+</li>
+<li value="2" class="Element600">Fill out the list of nodes in the <a href="TCcConfig_Nodes.html">Nodes</a> property. You need to set one node name </li>
+</ol><p class="Element10">
+for every replication node towards which you want to send the selected database's data.&nbsp;</p>
+<p class="Element10">
+&nbsp;</p>
+<ol class="Element630">
+<li value="3" class="Element600">Set <a href="TCcConfig_ConfigName.html">ConfigName</a> to a short, descriptive name. This allows you to have several different configurations, with different lists of tables and nodes, and different conditions and options. If you give each a different configuration name, they will be able to fit together seamlessly in the same database.&nbsp;</p>
+<p class="Element10">
+</li>
+<li value="4" class="Element600">Call <a href="TCcConfig_GenerateConfig.html">GenerateConfig</a> to apply the above setting to the database. The settings are also stored in the database, so they can be checked, and the triggers will only be recreated if the options have changed. </li>
+</ol></div>
+</div>
+</div>
+<div class="Element14">
+<a onclick="toggleVisibilityStored('Notes');" class="a_Element14"><img src="sectionminus.png" border="0" alt="sectionminus.png" id="imgNotes">Notes</a></div>
+<div id="divNotes">
+<div class="Element11">
+<div class="Element10">
+<p class="Element10">
+If you ever need to force CopyCat to recreate a trigger, for whatever reason, simply set the CREATED field of RPL$TABLES_CONFIG to 'N' for the row corresponding to the table and configuration that you need to update. This setting will force CopyCat to recreate the trigger next time you call <a href="TCcConfig_GenerateConfig.html">GenerateConfig</a>. [ComponentPlatformsAttribute( PidWin32 Or PidiOSDevice Or PidiOSSimulator )]</p></div>
+</div>
+</div>
+<div class="Element14">
+<a onclick="toggleVisibilityStored('Events');" class="a_Element14"><img src="sectionminus.png" border="0" alt="sectionminus.png" id="imgEvents">Events</a></div>
+<div id="divEvents">
+<div class="Element11">
+<div class="Element10">
+<div class="Element212">
+<div class="TableDiv">
+<table cellspacing="0" class="Table1">
+<tr>
+<td class="Element200" valign="top" width="50%">
+<div class="Element201">
+Event&nbsp;</div></td><td class="Element204" valign="top" width="50%">
+<div class="Element205">
+Description&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_event.png" border="0" alt=""> <a href="TCcConfig_OnQueryReady.html">OnQueryReady</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Fired for every individual meta-data query.&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_event.png" border="0" alt=""> <a href="TCcConfig_OnScriptReady.html">OnScriptReady</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Fired when an entire meta-data <a href="TCcConfig_Script.html">Script</a> has been prepared.&nbsp;</div></td></tr></table></div></div>
+</div>
+</div>
+</div>
+<div class="Element14">
+<a onclick="toggleVisibilityStored('Methods');" class="a_Element14"><img src="sectionminus.png" border="0" alt="sectionminus.png" id="imgMethods">Methods</a></div>
+<div id="divMethods">
+<div class="Element11">
+<div class="Element10">
+<div class="Element212">
+<div class="TableDiv">
+<table cellspacing="0" class="Table1">
+<tr>
+<td class="Element200" valign="top" width="50%">
+<div class="Element201">
+Method&nbsp;</div></td><td class="Element204" valign="top" width="50%">
+<div class="Element205">
+Description&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_method.png" border="0" alt=""> <a href="TCcConfig_Connect.html">Connect</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Connect to the database.&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_method.png" border="0" alt=""> <a href="TCcConfig_ConnectAndRemoveConfig.html">ConnectAndRemoveConfig</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_method.png" border="0" alt=""><img src="indicator_virtual.png" border="0" alt=""> <a href="TCcConfig_Create@TComponent.html">Create</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Remove the replication meta-data for the selected procedure.&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_method.png" border="0" alt=""><img src="indicator_virtual.png" border="0" alt=""> <a href="TCcConfig_Destroy.html">Destroy</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_method.png" border="0" alt=""> <a href="TCcConfig_Disconnect.html">Disconnect</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Disconnect from the database.&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_method.png" border="0" alt=""> <a href="TCcConfig_GenerateConfig.html">GenerateConfig</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Creates triggers and / or replication nodes according to the configuration&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_method.png" border="0" alt=""> <a href="TCcConfig_GenerateTriggers@String.html">GenerateTriggers</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Generate the replication triggers for the selected table.&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_method.png" border="0" alt=""> <a href="TCcConfig_GetGenerator@String@Integer.html">GetGenerator</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Build SQL statement for synchronizing a primary key or generator field, based on a generator.&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_method.png" border="0" alt=""> <a href="TCcConfig_PrepareBatchImport@String@String@String.html">PrepareBatchImport</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_method.png" border="0" alt=""> <a href="TCcConfig_RemoveTriggers@String.html">RemoveTriggers</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Generate the replication meta-data for the selected procedure.<br>Remove replication triggers from the selected table.&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_method.png" border="0" alt=""> <a href="TCcConfig_TableNameWithConfig@String.html">TableNameWithConfig</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+&nbsp;</div></td></tr></table></div></div>
+</div>
+</div>
+</div>
+<div class="Element14">
+<a onclick="toggleVisibilityStored('Properties');" class="a_Element14"><img src="sectionminus.png" border="0" alt="sectionminus.png" id="imgProperties">Properties</a></div>
+<div id="divProperties">
+<div class="Element11">
+<div class="Element10">
+<div class="Element212">
+<div class="TableDiv">
+<table cellspacing="0" class="Table1">
+<tr>
+<td class="Element200" valign="top" width="50%">
+<div class="Element201">
+Property&nbsp;</div></td><td class="Element204" valign="top" width="50%">
+<div class="Element205">
+Description&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_property.png" border="0" alt=""> <a href="TCcConfig_ConfigName.html">ConfigName</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Name of the current configuration.&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_property.png" border="0" alt=""> <a href="TCcConfig_Connection.html">Connection</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Database connection parameters.&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_property.png" border="0" alt=""> <a href="TCcConfig_FailIfNoPK.html">FailIfNoPK</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Indicates whether tables with no primary key are accepted or not If FailIfNoPK is true (the default value), then an error will be raised if a table is detected with no primary key.&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_property.png" border="0" alt=""> <a href="TCcConfig_Nodes.html">Nodes</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+The list of replication nodes (databases) towards which the data in the current database should be sent, for the specified configuration.&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_property.png" border="0" alt=""> <a href="TCcConfig_Script.html">Script</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Terminator character.<br>Last meta-data script generated.&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_property.png" border="0" alt=""> <a href="TCcConfig_Tables.html">Tables</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+The Tables property hold the list of to be replicated for the current configuration You can also set various options.&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_property.png" border="0" alt=""> <a href="TCcConfig_TrackFieldChanges.html">TrackFieldChanges</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Set TrackFieldChanges to true in order to track the values of fields changed to RPL$LOG_VALUES&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_property.png" border="0" alt=""> <a href="TCcConfig_Version.html">Version</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+&nbsp;</div></td></tr></table></div></div>
+</div>
+</div>
+</div>
+<div class="Element14">
+<a onclick="toggleVisibilityStored('Legend');" class="a_Element14"><img src="sectionminus.png" border="0" alt="sectionminus.png" id="imgLegend">Legend</a></div>
+<div id="divLegend">
+<div class="Element11">
+<div class="Element10">
+<div class="Element212">
+<div class="TableDiv">
+<table cellspacing="0" class="Table3">
+<tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_property.png" border="0" alt="">&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Property&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_event.png" border="0" alt="">&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Event&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_method.png" border="0" alt="">&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Method&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_virtual.png" border="0" alt="">&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+virtual&nbsp;</div></td></tr></table></div></div>
+</div>
+</div>
+</div>
+<div class="Element14">
+<a onclick="toggleVisibilityStored('Links');" class="a_Element14"><img src="sectionminus.png" border="0" alt="sectionminus.png" id="imgLinks">Links</a></div>
+<div id="divLinks">
+<div class="Element11">
+<div class="Element10">
+<a href="CcConf_pas.html">CcConf</a>, <a href="_TCcConfig_14_Properties.html">Properties</a>, <a href="_TCcConfig_14_Methods.html">Methods</a>, <a href="_TCcConfig_14_Events.html">Events</a>, <a href="_TCcConfig_14_Legend.html">Legend</a></div>
+</div>
+</div>
+<div class="Element62">
+Created with a commercial version of <a href="http://www.doc-o-matic.com">Doc-O-Matic</a>. In order to make this message disappear you need to register this software. If you have problems registering this software please contact us at <a href="mailto:support@toolsfactory.com">support@toolsfactory.com</a>.</div>
+</div>
+<!-- End Page Content -->
+
+<!-- Begin Page Footer -->
+<div class="Element93">
+<table width="100%" cellspacing="0" cellpadding="0">
+<tr><td width="100%">
+<div class="Element3">
+Copyright (c) 2015. All rights reserved. http://www.copycat.fr</div>
+</td></tr><tr><td width="100%">
+<div class="Element4">
+<a href="contents.html">Contents</a> | <a href="idx.html">Index</a></div>
+</td></tr><tr><td width="100%">
+<div class="Element97">
+What do you think about this topic?  <a href="#" onclick="sendFeedback('jonathan@copycat.fr', 'Documentation Feedback', 'Project: CopyCat Developer Tools%0ATopic ID: TCcConfig%0ATitle: TCcConfig Class');"> Send feedback! </a></div>
+</td></tr></table></div>
+
+<!-- End Page Footer -->
+</div>
+</div>
+
+<!-- End Client Area -->
+</body></html>

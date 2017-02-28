@@ -1,0 +1,214 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN">
+<html>
+<head>
+<title>RPL$LOG_VALUES</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+    <meta name="generator" content="Doc-O-Matic" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <link rel="STYLESHEET" href="default.css" type="text/css" />
+
+<script type="text/javascript" src="scripts.js"></script>
+</head>
+<body class="Element700" onload="onBodyLoadEx('frames.html', 'topic', 'RPL$LOG_VALUES.html');" onmousedown="onBodyMouseDown();">
+
+<!-- Begin Popups -->
+<div class="Element801" id="popup00011">
+<div class="Element800">
+<div class="Element14">
+Links</div>
+<div class="Element11">
+<div class="Element10">
+<a href="Database_tables.html" target="topic">Database tables</a>, <a href="_RPL$LOG_VALUES_5_See_Also.html" target="topic">See Also</a></div>
+</div>
+</div>
+</div>
+
+<!-- End Popups -->
+
+<!-- Begin Page Header -->
+<div class="Element710" id="areafixed">
+<div class="Element92">
+<table width="100%" cellspacing="0" cellpadding="0">
+<tr><td width="33%">
+<div class="Element1">
+<a href="#" onmousedown="showPopup(this, 'popup00011');"><img src="seealsolink.png" border="0" alt=""></a> <a href="http://www.copycat.fr" target="new_page"><img src="copycat_70x70.png"><h3>CopyCat Developer Tools</h3></img></a></div>
+</td><td width="34%">
+<div class="Element2">
+<a href="contents.html" target="tocidx">Contents</a> | <a href="idx.html" target="tocidx">Index</a></div>
+</td><td width="33%">
+<div class="Element90">
+<a href="Database_tables.html" target="topic">Up</a> | <a href="RPL$TRACE.html" target="topic">Previous</a></div>
+</td></tr></table><div class="Element5">
+RPL$LOG_VALUES</div>
+<div class="Element7">
+<a href="Database_tables.html" target="topic">Database tables</a> | <a href="_RPL$LOG_VALUES_5_See_Also.html" target="topic">See Also</a></div>
+<div class="Element730">
+<a href="#" onclick="showAllElements();">Show All</a></div>
+</div>
+</div>
+
+<!-- End Page Header -->
+
+<!-- Begin Client Area -->
+<div class="Element720" id="areascroll">
+<div class="Element721">
+
+<!-- Begin Page Content -->
+<div class="Element58">
+<div class="Element11">
+<div class="Element10">
+<p class="Element10">
+The RPL$LOG_VALUES table contains the list of all the fields changed, with their values. It has the following fields:&nbsp;</p>
+<p class="Element10">
+&nbsp;</p><div class="Element63">
+<div class="TableDiv">
+<table cellspacing="0" class="Table2">
+<tr>
+<td class="Element65" valign="top" width="25%">
+<div class="Element66">
+Field name&nbsp;</div></td><td class="Element65" valign="top" width="10%">
+<div class="Element66">
+Type&nbsp;</div></td><td class="Element65" valign="top" width="65%">
+<div class="Element66">
+Description&nbsp;</div></td></tr><tr>
+<td class="Element67" valign="top" width="25%">
+<div class="Element68">
+</p><p class="Element68" style="text-align: center">
+NODE_NAME</p><p class="Element68">
+&nbsp;</div></td><td class="Element67" valign="top" width="10%">
+<div class="Element68">
+</p><p class="Element68" style="text-align: center">
+String</p><p class="Element68">
+&nbsp;</div></td><td class="Element67" valign="top" width="65%">
+<div class="Element68">
+<a href="Replication_nodes.html" target="topic">Replication node</a> this change is logged for&nbsp;</div></td></tr><tr>
+<td class="Element67" valign="top" width="25%">
+<div class="Element68">
+</p><p class="Element68" style="text-align: center">
+CHANGE_NUMBER</p><p class="Element68">
+&nbsp;</div></td><td class="Element67" valign="top" width="10%">
+<div class="Element68">
+</p><p class="Element68" style="text-align: center">
+Integer</p><p class="Element68">
+&nbsp;</div></td><td class="Element67" valign="top" width="65%">
+<div class="Element68">
+Number of the change: corresponds to the CHANGE_NUMBER field of RPL$LOG&nbsp;</div></td></tr><tr>
+<td class="Element67" valign="top" width="25%">
+<div class="Element68">
+</p><p class="Element68" style="text-align: center">
+OLD_VALUE</p><p class="Element68">
+&nbsp;</div></td><td class="Element67" valign="top" width="10%">
+<div class="Element68">
+</p><p class="Element68" style="text-align: center">
+String</p><p class="Element68">
+&nbsp;</div></td><td class="Element67" valign="top" width="65%">
+<div class="Element68">
+Old value of the field, stored as a varchar(200), if it fits&nbsp;</div></td></tr><tr>
+<td class="Element67" valign="top" width="25%">
+<div class="Element68">
+</p><p class="Element68" style="text-align: center">
+OLD_VALUE_BLOB</p><p class="Element68">
+&nbsp;</div></td><td class="Element67" valign="top" width="10%">
+<div class="Element68">
+</p><p class="Element68" style="text-align: center">
+Blob</p><p class="Element68">
+&nbsp;</div></td><td class="Element67" valign="top" width="65%">
+<div class="Element68">
+Old value of the field, stored as a blob, for blob values and for values larger than 200 characters&nbsp;</div></td></tr><tr>
+<td class="Element67" valign="top" width="25%">
+<div class="Element68">
+</p><p class="Element68" style="text-align: center">
+NEW_VALUE</p><p class="Element68">
+&nbsp;</div></td><td class="Element67" valign="top" width="10%">
+<div class="Element68">
+</p><p class="Element68" style="text-align: center">
+String</p><p class="Element68">
+&nbsp;</div></td><td class="Element67" valign="top" width="65%">
+<div class="Element68">
+New value of the field, stored as a varchar(200), if it fits&nbsp;</div></td></tr><tr>
+<td class="Element67" valign="top" width="25%">
+<div class="Element68">
+</p><p class="Element68" style="text-align: center">
+NEW_VALUE_BLOB</p><p class="Element68">
+&nbsp;</div></td><td class="Element67" valign="top" width="10%">
+<div class="Element68">
+</p><p class="Element68" style="text-align: center">
+Blob</p><p class="Element68">
+&nbsp;</div></td><td class="Element67" valign="top" width="65%">
+<div class="Element68">
+New value of the field, stored as a blob, for blob values and for values larger than 200 characters&nbsp;</div></td></tr><tr>
+<td class="Element67" valign="top" width="25%">
+<div class="Element68">
+</p><p class="Element68" style="text-align: center">
+FIELD_NAME</p><p class="Element68">
+&nbsp;</div></td><td class="Element67" valign="top" width="10%">
+<div class="Element68">
+</p><p class="Element68" style="text-align: center">
+String</p><p class="Element68">
+&nbsp;</div></td><td class="Element67" valign="top" width="65%">
+<div class="Element68">
+Name of the field&nbsp;</div></td></tr><tr>
+<td class="Element67" valign="top" width="25%">
+<div class="Element68">
+</p><p class="Element68" style="text-align: center">
+FIELD_TYPE</p><p class="Element68">
+&nbsp;</div></td><td class="Element67" valign="top" width="10%">
+<div class="Element68">
+</p><p class="Element68" style="text-align: center">
+String</p><p class="Element68">
+&nbsp;</div></td><td class="Element67" valign="top" width="65%">
+<div class="Element68">
+Data type of the field&nbsp;</div></td></tr></table></div></div>
+</div>
+</div>
+<div class="Element14">
+<a onclick="toggleVisibilityStored('See_Also');" class="a_Element14"><img src="sectionminus.png" border="0" alt="sectionminus.png" id="imgSee_Also">See Also</a></div>
+<div id="divSee_Also">
+<div class="Element11">
+<div class="Element10">
+<p class="Element10">
+<a href="TCcLog.html" target="topic">TCcLog</a></p></div>
+</div>
+</div>
+<div class="Element14">
+<a onclick="toggleVisibilityStored('Group');" class="a_Element14"><img src="sectionminus.png" border="0" alt="sectionminus.png" id="imgGroup">Group</a></div>
+<div id="divGroup">
+<div class="Element11">
+<div class="Element10">
+<p class="Element10">
+<a href="Database_tables.html" target="topic">Database tables</a></p></div>
+</div>
+</div>
+<div class="Element14">
+<a onclick="toggleVisibilityStored('Links');" class="a_Element14"><img src="sectionminus.png" border="0" alt="sectionminus.png" id="imgLinks">Links</a></div>
+<div id="divLinks">
+<div class="Element11">
+<div class="Element10">
+<a href="Database_tables.html" target="topic">Database tables</a>, <a href="_RPL$LOG_VALUES_5_See_Also.html" target="topic">See Also</a></div>
+</div>
+</div>
+<div class="Element62">
+Created with a commercial version of <a href="http://www.doc-o-matic.com">Doc-O-Matic</a>. In order to make this message disappear you need to register this software. If you have problems registering this software please contact us at <a href="mailto:support@toolsfactory.com">support@toolsfactory.com</a>.</div>
+</div>
+<!-- End Page Content -->
+
+<!-- Begin Page Footer -->
+<div class="Element93">
+<table width="100%" cellspacing="0" cellpadding="0">
+<tr><td width="100%">
+<div class="Element3">
+Copyright (c) 2015. All rights reserved. http://www.copycat.fr</div>
+</td></tr><tr><td width="100%">
+<div class="Element4">
+<a href="contents.html" target="tocidx">Contents</a> | <a href="idx.html" target="tocidx">Index</a></div>
+</td></tr><tr><td width="100%">
+<div class="Element97">
+What do you think about this topic?  Send feedback through our <a href="http://copycat.fr/wordpress/contact-us/" target="new_page">contact form</a></div>
+</td></tr></table></div>
+
+<!-- End Page Footer -->
+</div>
+</div>
+
+<!-- End Client Area -->
+</body></html>

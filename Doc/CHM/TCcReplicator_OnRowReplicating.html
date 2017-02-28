@@ -1,0 +1,117 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>TCcReplicator.OnRowReplicating Event</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+    <meta name="generator" content="Doc-O-Matic" />
+    <meta name="save" content="history" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <link rel="STYLESHEET" href="default.css" type="text/css" />
+
+<script type="text/javascript" src="scripts.js"></script>
+</head>
+<body class="Element700" onload="onBodyLoad();" onmousedown="onBodyMouseDown();">
+<div id="persistenceDiv" style="display:none; behavior:url(#default#userData);"></div>
+
+<!-- Begin Popups -->
+<div class="Element801" id="popup00615">
+<div class="Element800">
+<div class="Element14">
+Links</div>
+<div class="Element11">
+<div class="Element10">
+<a href="TCcReplicator.html">TCcReplicator Class</a></div>
+</div>
+</div>
+</div>
+
+<!-- End Popups -->
+
+<!-- Begin Page Header -->
+<div class="Element710" id="areafixed">
+<div class="Element92">
+<table width="100%" cellspacing="0" cellpadding="0">
+<tr><td width="33%">
+<div class="Element1">
+<a href="#" onmousedown="showPopup(this, 'popup00615');"><img src="seealsolink.png" border="0" alt=""></a> <a href="http://www.copycat.fr" target="new_page"><img src="copycat_70x70.png" border="0"><h3>CopyCat Developer Tools</h3></img></a></div>
+</td><td width="34%">
+<div class="Element2">
+<a href="contents.html">Contents</a> | <a href="idx.html">Index</a></div>
+</td><td width="33%">
+<div class="Element90">
+<a href="TCcReplicator.html">Up</a> | <a href="TCcReplicator_OnRowReplicated.html">Previous</a> | <a href="TCcReplicator_OnRowReplicatingError.html">Next</a></div>
+</td></tr></table><div class="Element5">
+TCcReplicator.OnRowReplicating Event</div>
+<div class="Element7">
+<a href="TCcReplicator.html">TCcReplicator Class</a></div>
+<div class="Element730">
+<a href="#" onclick="showAllElements();">Show All</a></div>
+</div>
+</div>
+
+<!-- End Page Header -->
+
+<!-- Begin Client Area -->
+<div class="Element720" id="areascroll">
+<div class="Element721">
+
+<!-- Begin Page Content -->
+<div class="Element58">
+<div class="Element11">
+<div class="Element10">
+<p class="Element10">
+Fired during replication of each record</p></div>
+</div>
+<div class="Element101"><div class="Element100"><pre class="Element100"><strong>property</strong> OnRowReplicating: <a href="TCcReplicationEvent.html">TCcReplicationEvent</a>;</pre></div></div>
+<div class="Element101"><div class="Element100"><pre class="Element100"><strong>__property</strong> <a href="TCcReplicationEvent.html">TCcReplicationEvent</a> OnRowReplicating;</pre></div></div>
+<div class="Element14">
+<a onclick="toggleVisibilityStored('Description');" class="a_Element14"><img src="sectionminus.png" border="0" alt="sectionminus.png" id="imgDescription">Description</a></div>
+<div id="divDescription">
+<div class="Element11">
+<div class="Element10">
+<p class="Element10">
+The Fields property provides the values of all the fields of the current row from the source database. You can remove fields from the list if you don't want them to be replicated or you can change the field values that will be sent (note that in such a case, the changed value will not be sent back to the source database). If ReplicateRow is set to False and AbortAndTryLater is also false, the row will not be replicated to destination database, but replicationg will be considered to have proceeded correctly (and therefore, the row will be removed from RPL$LOG. If ReplicatERow is True and AbortAndTryLater is false, the row will be replicated normally. If AbortAndTryLater is True, replication of the row will be aborted (and <a href="TCcReplicator_OnReplicationAborted.html">OnReplicationAborted</a> will be called), and the row will be left in RPL$LOG and therefore retried at the next replication cycle.</p></div>
+</div>
+</div>
+<div class="Element14">
+<a onclick="toggleVisibilityStored('Class');" class="a_Element14"><img src="sectionminus.png" border="0" alt="sectionminus.png" id="imgClass">Class</a></div>
+<div id="divClass">
+<div class="Element11">
+<div class="Element10">
+<p class="Element10">
+<a href="TCcReplicator.html">TCcReplicator Class</a></p></div>
+</div>
+</div>
+<div class="Element14">
+<a onclick="toggleVisibilityStored('Links');" class="a_Element14"><img src="sectionminus.png" border="0" alt="sectionminus.png" id="imgLinks">Links</a></div>
+<div id="divLinks">
+<div class="Element11">
+<div class="Element10">
+<a href="TCcReplicator.html">TCcReplicator Class</a></div>
+</div>
+</div>
+<div class="Element62">
+Created with a commercial version of <a href="http://www.doc-o-matic.com">Doc-O-Matic</a>. In order to make this message disappear you need to register this software. If you have problems registering this software please contact us at <a href="mailto:support@toolsfactory.com">support@toolsfactory.com</a>.</div>
+</div>
+<!-- End Page Content -->
+
+<!-- Begin Page Footer -->
+<div class="Element93">
+<table width="100%" cellspacing="0" cellpadding="0">
+<tr><td width="100%">
+<div class="Element3">
+Copyright (c) 2015. All rights reserved. http://www.copycat.fr</div>
+</td></tr><tr><td width="100%">
+<div class="Element4">
+<a href="contents.html">Contents</a> | <a href="idx.html">Index</a></div>
+</td></tr><tr><td width="100%">
+<div class="Element97">
+What do you think about this topic?  <a href="#" onclick="sendFeedback('jonathan@copycat.fr', 'Documentation Feedback', 'Project: CopyCat Developer Tools%0ATopic ID: TCcReplicator.OnRowReplicating%0ATitle: TCcReplicator.OnRowReplicating Event');"> Send feedback! </a></div>
+</td></tr></table></div>
+
+<!-- End Page Footer -->
+</div>
+</div>
+
+<!-- End Client Area -->
+</body></html>

@@ -1,0 +1,5 @@
+object DaemonMapper1: TDaemonMapper1
+  DaemonDefs = <>
+  left = 301
+  top = 169
+end

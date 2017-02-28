@@ -1,0 +1,175 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN">
+<html>
+<head>
+<title>RPL$TRACE</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+    <meta name="generator" content="Doc-O-Matic" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <link rel="STYLESHEET" href="default.css" type="text/css" />
+
+<script type="text/javascript" src="scripts.js"></script>
+</head>
+<body class="Element700" onload="onBodyLoadEx('frames.html', 'topic', 'RPL$TRACE.html');" onmousedown="onBodyMouseDown();">
+
+<!-- Begin Popups -->
+<div class="Element801" id="popup00010">
+<div class="Element800">
+<div class="Element14">
+Links</div>
+<div class="Element11">
+<div class="Element10">
+<a href="Database_tables.html" target="topic">Database tables</a></div>
+</div>
+</div>
+</div>
+
+<!-- End Popups -->
+
+<!-- Begin Page Header -->
+<div class="Element710" id="areafixed">
+<div class="Element92">
+<table width="100%" cellspacing="0" cellpadding="0">
+<tr><td width="33%">
+<div class="Element1">
+<a href="#" onmousedown="showPopup(this, 'popup00010');"><img src="seealsolink.png" border="0" alt=""></a> <a href="http://www.copycat.fr" target="new_page"><img src="copycat_70x70.png"><h3>CopyCat Developer Tools</h3></img></a></div>
+</td><td width="34%">
+<div class="Element2">
+<a href="contents.html" target="tocidx">Contents</a> | <a href="idx.html" target="tocidx">Index</a></div>
+</td><td width="33%">
+<div class="Element90">
+<a href="Database_tables.html" target="topic">Up</a> | <a href="RPL$ERRORS.html" target="topic">Previous</a> | <a href="RPL$LOG_VALUES.html" target="topic">Next</a></div>
+</td></tr></table><div class="Element5">
+RPL$TRACE</div>
+<div class="Element7">
+<a href="Database_tables.html" target="topic">Database tables</a></div>
+<div class="Element730">
+<a href="#" onclick="showAllElements();">Show All</a></div>
+</div>
+</div>
+
+<!-- End Page Header -->
+
+<!-- Begin Client Area -->
+<div class="Element720" id="areascroll">
+<div class="Element721">
+
+<!-- Begin Page Content -->
+<div class="Element58">
+<div class="Element11">
+<div class="Element10">
+<p class="Element10">
+The RPL$TRACE table holds a trace of all the SQL statements that are applied databases. This log is activated by setting the TCcReplicator.TraceType property. Warning : this can take a lot of space, so tracing should either be used only occasionally, for debug purposes, or else care should be taken to empty RPL$TRACE regularly.&nbsp;</p>
+<p class="Element10">
+&nbsp;</p>
+<p class="Element10">
+RPL$TRACE has the following fields: </p><div class="Element63">
+<div class="TableDiv">
+<table cellspacing="0" class="Table2">
+<tr>
+<td class="Element65" valign="top" width="20%">
+<div class="Element66">
+Field Name&nbsp;</div></td><td class="Element65" valign="top" width="10%">
+<div class="Element66">
+Data type&nbsp;</div></td><td class="Element65" valign="top" width="70%">
+<div class="Element66">
+Description&nbsp;</div></td></tr><tr>
+<td class="Element67" valign="top" width="20%">
+<div class="Element68">
+TABLE_NAME&nbsp;</div></td><td class="Element67" valign="top" width="10%">
+<div class="Element68">
+String&nbsp;</div></td><td class="Element67" valign="top" width="70%">
+<div class="Element68">
+Name of the table.&nbsp;</div></td></tr><tr>
+<td class="Element67" valign="top" width="20%">
+<div class="Element68">
+CODE&nbsp;</div></td><td class="Element67" valign="top" width="10%">
+<div class="Element68">
+Integer&nbsp;</div></td><td class="Element67" valign="top" width="70%">
+<div class="Element68">
+Unique ID&nbsp;</div></td></tr><tr>
+<td class="Element67" valign="top" width="20%">
+<div class="Element68">
+PRIMARY_KEY_VALUES&nbsp;</div></td><td class="Element67" valign="top" width="10%">
+<div class="Element68">
+String&nbsp;</div></td><td class="Element67" valign="top" width="70%">
+<div class="Element68">
+Values of the primary key field(s).&nbsp;</div></td></tr><tr>
+<td class="Element67" valign="top" width="20%">
+<div class="Element68">
+FROM_NODE&nbsp;</div></td><td class="Element67" valign="top" width="10%">
+<div class="Element68">
+String&nbsp;</div></td><td class="Element67" valign="top" width="70%">
+<div class="Element68">
+Name of the node from which this row originated.&nbsp;</div></td></tr><tr>
+<td class="Element67" valign="top" width="20%">
+<div class="Element68">
+TO_NODE&nbsp;</div></td><td class="Element67" valign="top" width="10%">
+<div class="Element68">
+String&nbsp;</div></td><td class="Element67" valign="top" width="70%">
+<div class="Element68">
+Name of the node to which this row is to be replicated.&nbsp;</div></td></tr><tr>
+<td class="Element67" valign="top" width="20%">
+<div class="Element68">
+OPERATION_DATE&nbsp;</div></td><td class="Element67" valign="top" width="10%">
+<div class="Element68">
+Date&nbsp;</div></td><td class="Element67" valign="top" width="70%">
+<div class="Element68">
+Date at which the original operation occured in the originating database. This corresponds to the date recorded in RPL$LOG.OPERATION_DATE.&nbsp;</div></td></tr><tr>
+<td class="Element67" valign="top" width="20%">
+<div class="Element68">
+REPLICATION_DATE&nbsp;</div></td><td class="Element67" valign="top" width="10%">
+<div class="Element68">
+Date&nbsp;</div></td><td class="Element67" valign="top" width="70%">
+<div class="Element68">
+Date and time at which the row was replicated and the SQL executed.&nbsp;</div></td></tr><tr>
+<td class="Element67" valign="top" width="20%">
+<div class="Element68">
+SQL_STATEMENT&nbsp;</div></td><td class="Element67" valign="top" width="10%">
+<div class="Element68">
+Memo&nbsp;</div></td><td class="Element67" valign="top" width="70%">
+<div class="Element68">
+Full SQL executed, containing full values for all parameters.&nbsp;</div></td></tr></table></div></div>
+</div>
+</div>
+<div class="Element14">
+<a onclick="toggleVisibilityStored('Group');" class="a_Element14"><img src="sectionminus.png" border="0" alt="sectionminus.png" id="imgGroup">Group</a></div>
+<div id="divGroup">
+<div class="Element11">
+<div class="Element10">
+<p class="Element10">
+<a href="Database_tables.html" target="topic">Database tables</a></p></div>
+</div>
+</div>
+<div class="Element14">
+<a onclick="toggleVisibilityStored('Links');" class="a_Element14"><img src="sectionminus.png" border="0" alt="sectionminus.png" id="imgLinks">Links</a></div>
+<div id="divLinks">
+<div class="Element11">
+<div class="Element10">
+<a href="Database_tables.html" target="topic">Database tables</a></div>
+</div>
+</div>
+<div class="Element62">
+Created with a commercial version of <a href="http://www.doc-o-matic.com">Doc-O-Matic</a>. In order to make this message disappear you need to register this software. If you have problems registering this software please contact us at <a href="mailto:support@toolsfactory.com">support@toolsfactory.com</a>.</div>
+</div>
+<!-- End Page Content -->
+
+<!-- Begin Page Footer -->
+<div class="Element93">
+<table width="100%" cellspacing="0" cellpadding="0">
+<tr><td width="100%">
+<div class="Element3">
+Copyright (c) 2015. All rights reserved. http://www.copycat.fr</div>
+</td></tr><tr><td width="100%">
+<div class="Element4">
+<a href="contents.html" target="tocidx">Contents</a> | <a href="idx.html" target="tocidx">Index</a></div>
+</td></tr><tr><td width="100%">
+<div class="Element97">
+What do you think about this topic?  Send feedback through our <a href="http://copycat.fr/wordpress/contact-us/" target="new_page">contact form</a></div>
+</td></tr></table></div>
+
+<!-- End Page Footer -->
+</div>
+</div>
+
+<!-- End Client Area -->
+</body></html>

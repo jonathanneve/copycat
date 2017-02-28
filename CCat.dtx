@@ -1,0 +1,40 @@
+
+@@CCat.pas
+CopyCat replication suite                     
+                                              
+Copyright (c) 2005 Microtec Communications    
+                                              
+For any questions or technical support,       
+contact Jonathan Neve (jonathan@microtec.fr)
+
+@@TCcCommitType
+Summary:
+Type of commit to perform.
+Description:
+<table>
+Value         Meaning
+------------  ------------------------------------------
+ctNone        No commit
+ctCommit      Perform commit (closing transaction)
+ctRetaining   Commit Retaining (leave transaction open)
+</table>
+
+@@TCcLogState
+Description:
+Current state of the a record in the replication log.
+
+@@TCcLogState.lsConflict
+Description:
+Replication of the current record failed because of a conflict.<p/>
+
+@@TCcLogState.lsError
+Description:
+Replication of the current record failed with an error.
+
+@@TCcLogState.lsNone
+Description:
+Non-replicated record.
+
+@@TCcLogState.lsOk
+Description:
+Record replicated successfully.

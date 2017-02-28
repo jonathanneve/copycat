@@ -1,0 +1,108 @@
+
+@@CcProviders.pas
+CopyCat replication suite                     
+                                              
+Copyright (c) 2005 Microtec Communications    
+                                              
+For any questions or technical support,       
+contact Jonathan Neve (jonathan@microtec.fr)
+
+@@TCcDatabase
+Description:
+\Internal database connection object.
+
+@@TCcDatabase.OnConnectLost
+Summary:                                                     
+Fired upon database connection loss.                         
+Description:                                                 
+OnConnectLost gets called when the database connection gets  
+abruptly cut. It does not occur however if the connection is 
+closed explicitly with the Connected property.
+
+@@TCCField
+Description:
+\Internal query field or parameter object.
+
+@@TCCField.GetAsCurrency
+TCCField
+
+@@TCCField.IsParam
+IsParam indicates whether this TCcField is a field or a param
+
+@@TCcMacro
+Represents a query macro. This is an internal object, not needed by application
+developpers.
+
+@@TCcMacro.ApplyToSQL@String
+TCcMacro
+
+@@TCcMacro.Name
+Name of the macro.
+
+@@TCcMacro.Value
+Current value of the macro. Macros may only be set before the TCcQuery has been
+prepared.
+
+@@TCcProvider
+Summary:
+Database abstraction class.
+Description:
+TCcProvider is used by TCcReplicator and TCcConfig in order to acheive database
+access component independence. Descendants of TCcProvider override the
+NewDatabase, NewTransaction and NewQuery methods in order to provide database
+connectivity for CopyCat.<p/>
+<p/>
+Thus, CopyCat can be used interchangeably with any database access components for
+which a TCcProvider descendant has been written. Currently, FIBPlus, IBX and UIB
+have been implemented. Support for other component sets (such as IBO and possibly
+DBX) is also possible, and planned for future versions.
+
+@@TCcProvider.Create@TComponent
+TCcProvider
+
+@@TCcProvider.NewDatabase@TComponent
+Instantiates and returns a concrete TCcDatabase descendant.
+
+@@TCcProvider.NewQuery@TComponent
+Instantiates and returns a concrete TCcQuery descendant.
+
+@@TCcProvider.NewTransaction@TComponent
+Instantiates and returns a concrete TCcTransaction descendant.
+
+@@TCcProvider.ProviderName
+Name of the database access component set for which this provider is designed.
+
+@@TCcQuery
+Description:
+\Internal database query object.
+
+@@TCcQuery.Exec
+Execute the query (synchronously). If the database connection is inactive, or if
+it gets cut during execution, the OnConnectLost event of the database is called
+
+@@TCcQuery.FSQLPrepared
+This variable doesn't necessarily mean that the query has been prepared
+It merely means that a parameter has been accessed, and that the SQL
+therefore cannot be changed any more until the query is closed
+
+@@TCcQuery.InitFields
+InitFields is called after every Exec
+Descendants must fill FFields with TCCField descendants
+
+@@TCcQuery.InitParams
+InitParams is called upon the first access to the parameter list
+After parameters have been accessed, the SQL may no longer be modified
+Descendants must fill FParams with TCCField descendants
+If the underlying DAC handles macros, they must be excluded from the list,
+since Macros are handled here at a higher level
+
+@@TCcQuery.SetSQL@String
+After accessing the parameters, the SQL can no longer be modified. This is
+a lowest common denominator approach, some DACs support it while others don't
+
+@@TCcTransaction
+Description:
+\Internal database transaction object.
+
+@@TCcTransaction.Commit
+TCcTransaction

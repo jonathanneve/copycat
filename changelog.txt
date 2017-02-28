@@ -1,0 +1,41 @@
+*************************************************************
+* Version 3.08.0 - 2015-04-03 *
+
+
+* [FB only] Tracking of changed fields. This feature will be added to other database types in future versions.
+
+  - Added intelligence to the triggers in order to detect and log the full list of changed fields and their values, rather than merely the primary key. This new option is activated by the TCcConfig.TrackFieldChanges property (the old mode can still be used.
+
+  - An associated option was added to TCcReplicator, OnlyReplicateChangedFields. If this option is set to true, then the changes will be replicated exactly as they occured, with no bunching of records, and replicating every time only the fields that were changed. In terms of performance, the new mode will be better for some situations (particularly tables with many fields or with blob fields, as those fields will only be sent over the wire when they actually change, rather than every time the row was touched.
+
+  - This new mode also allows improved consistency, as there should never be any foreign key violations (sometimes inevitable with the old system, due to record bunching), which means that it becomes possible (and recommended) to run the whole replication cycle within a single transaction, and to rollback if an error occurs.
+
+* [FB only] Improved conflict management. This feature will be added to other database types in future versions.
+
+  - Thanks to the new field change tracking, finer conflict management is now possible. A new property TCcReplicator.MergeChangedFieldsOnConflict allows many conflicts to be automatically resolved by merging the changes from both nodes, in cases where none of the same fields were changed on both sides. In cases that are still conflictual, the OnResolveConflict event and the RPL$CONFLICTS table provide the list of fields changed on each side as well as the list of fields changed on both sides, and it is also possible to find out for each field the value that it was changed from and to on each side, making conflict resolution much easier.
+
+  - If the TCcReplicator.MergeChangedFieldsOnConflict property is set to True and a conflict is detected, the fields that were changed on only one of the nodes will be merged. For instance, if the first node changed fields A, B and C while the seconde node changed fields C and D, if the conflict is resolved in favor of the second node, the values of A and B from the first node will be kept, as they were not conflictual with the change from the second node. Thus, conflict resolution can be much finer-grained.
+
+  - This option depends on the TCcReplicator.OnlyReplicateChangedFields property being set to True, as it doesn't make any sense without it.
+
+-  Added support for FreePascal/Lazarus
+
+- New Direction property added to TCcReplicator enabling various performance optimizations when replicating only one way.
+
+- Fixed bug in NexusDB support causing replication to fail on tables with multi-segment primary keys.
+
+- Fixed bug causing MS SQL Server replication to fail on newer versions in tables containing an identity field.
+
+- Added conditional replication support to SQL Server
+
+- Fixed bug causing conflict management to fail under SQL Server
+
+- Added SQL server support to UniDAC.
+
+- Fixed bug causing TCcLog.LineCount property to increment twice for every row
+
+- Fixed bug causing replication over transport layers to fail with error "Invalid parameters for call to function 10"
+
+- Fixed bug in FIBPlus connector causing an access violation upon destroying the connector 
+
+- Various other minor bug fixes

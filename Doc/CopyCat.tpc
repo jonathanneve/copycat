@@ -1,0 +1,3732 @@
+%FILE_VERSION%
+3
+%RICH_TEXT%
+%WINHELPTEMPLATE%
+Normal
+%MANUALTEMPLATE%
+Manual
+%HTMLHELPTEMPLATE%
+Normal
+%HTMLTEMPLATE%
+Web Export
+%WIN_HELP_FILE_TYPE%
+1,1,1,0
+%HTML_HELP_FILE_TYPE%
+1,0,1,0
+%HTML_FILE_TYPE%
+1,1,1,0
+%MAN_FILE_TYPE%
+1,0,1,0
+%VCL_VERSION_MASK%
+192
+%DOT_NET_VERSION_MASK%
+0
+%HELP_LANG%
+2057
+%FONTS%
+Arial
+Symbol
+Helv
+Courier
+Courier New
+%IMPORTED_FILES%
+..\BCB5\CCat.hpp
+..\BCB5\CcConf.hpp
+..\BCB5\CcConflictMgr.hpp
+..\BCB5\CcConfStorage.hpp
+..\BCB5\CcDBParams.hpp
+..\BCB5\CcLog.hpp
+..\BCB5\CcMemDS.hpp
+..\BCB5\CcProviders.hpp
+..\BCB5\CcReplicator.hpp
+..\CCat.pas
+..\CcConf.pas
+..\CcConflictMgr.pas
+..\CcConfStorage.pas
+..\CcDBParams.pas
+..\CcLog.pas
+..\CcMemDS.pas
+..\CcProviders.pas
+..\CcReplicator.pas
+%COMPONENT%
+EReplError
+%UNIT%
+CcReplicator
+%NAMESPACE%
+CcReplicator
+%DERIVED_FROM%
+Exception
+%METHOD%
+~EReplError
+%BCB_SYNTAX%
+\f4 inline __fastcall \b virtual\b0  ~EReplError(\b void\b0 ) \par
+%OVERVIEW%
+Destructor\par
+%METHOD%
+EReplError
+%BCB_SYNTAX%
+\f4 inline __fastcall EReplError(\b const\b0  AnsiString Msg) \f0\par
+\f4 inline __fastcall EReplError(\b const\b0  AnsiString Msg, \b const\b0  System::TVarRec *Args, \b const\b0  \b int\b0  Args_Size) \f0\par
+\f4 inline __fastcall EReplError(\b int\b0  Ident) \f0\par
+\f4 inline __fastcall EReplError(\b int\b0  Ident, \b const\b0  System::TVarRec *Args, \b const\b0  \b int\b0  Args_Size) \f0\par
+\f4 inline __fastcall EReplError(\b const\b0  AnsiString Msg, \b int\b0  AHelpContext) \f0\par
+\f4 inline __fastcall EReplError(\b const\b0  AnsiString Msg, \b const\b0  System::TVarRec *Args, \b const\b0  \b int\b0  Args_Size, \b int\b0  AHelpContext) \f0\par
+\f4 inline __fastcall EReplError(\b int\b0  Ident, \b int\b0  AHelpContext) \f0\par
+\f4 inline __fastcall EReplError(System::PResStringRec ResStringRec, \b const\b0  System::TVarRec *Args, \b const\b0  \b int\b0  Args_Size, \b int\b0  AHelpContext) \par
+%OVERVIEW%
+Constructor\par
+%COMPONENT%
+Globals
+%METHOD%
+LoadDBParams
+%DELPHI_SYNTAX%
+\f4 procedure LoadDBParams(Params: TCcDBParams; Database: TCcDatabase); \par
+%BCB_SYNTAX%
+\f4 PACKAGE \b void\b0  __fastcall LoadDBParams(TCcDBParams *Params, Ccproviders::TCCDatabase *Database); \par
+%UNIT%
+CCDBParams
+%NAMESPACE%
+CCDBParams
+%METHOD%
+Min
+%DELPHI_SYNTAX%
+\f4 function Min(A, B: Longint): Longint; \par
+%BCB_SYNTAX%
+\f4 PACKAGE \b int\b0  __fastcall Min(\b int\b0  A, \b int\b0  B); \par
+%UNIT%
+CcMemDS
+%NAMESPACE%
+CcMemDS
+%METHOD%
+ReplaceString
+%DELPHI_SYNTAX%
+\f4 function ReplaceString(S: \b String\b0 ; sub1: \b String\b0 ; sub2: \b String\b0 ): \b String\b0 ; \par
+%BCB_SYNTAX%
+\f4 PACKAGE AnsiString __fastcall ReplaceString(AnsiString S, AnsiString sub1, AnsiString sub2); \par
+%UNIT%
+CCat
+%NAMESPACE%
+CCat
+%METHOD%
+SQLFormatValue
+%DELPHI_SYNTAX%
+\f4 function SQLFormatValue(Data: Variant; FieldType: TFieldType): \b String\b0 ; \par
+%BCB_SYNTAX%
+\f4 PACKAGE AnsiString __fastcall SQLFormatValue(\b const\b0  Variant &Data, Db::TFieldType FieldType); \par
+%UNIT%
+CCat
+%NAMESPACE%
+CCat
+%COMPONENT%
+TAutoRepl
+%UNIT%
+CCDBParams
+%NAMESPACE%
+CCDBParams
+%DERIVED_FROM%
+TPeriodicity
+%METHOD%
+~TAutoRepl
+%BCB_SYNTAX%
+\f4\s2 inline __fastcall \b virtual\b0  ~TAutoRepl(\b void\b0 ) \par
+%OVERVIEW%
+Destructor\par
+%METHOD%
+TAutoRepl
+%BCB_SYNTAX%
+\f4\s2 inline __fastcall TAutoRepl(Classes::TComponent *Owner) \par
+%OVERVIEW%
+Constructor\par
+%PROPERTY%
+Enabled
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  Enabled: Boolean \b read\b0  FEnabled \b write\b0  FEnabled; \par
+%BCB_SYNTAX%
+\f4\s2 __property \b bool\b0  Enabled=\{ read=FEnabled, write=FEnabled, \b nodefault\b0  \} \par
+%PUBLISHED%
+%COMPONENT%
+TCcAutoCommit
+%UNIT%
+CCDBParams
+%NAMESPACE%
+CCDBParams
+%DERIVED_FROM%
+TPeriodicity
+%METHOD%
+~TCcAutoCommit
+%BCB_SYNTAX%
+\f4\s2 inline __fastcall \b virtual\b0  ~TCcAutoCommit(\b void\b0 ) \par
+%OVERVIEW%
+Destructor\par
+%METHOD%
+TCcAutoCommit
+%BCB_SYNTAX%
+\f4\s2 inline __fastcall TCcAutoCommit(Classes::TComponent *Owner) \par
+%OVERVIEW%
+Constructor\par
+%PROPERTY%
+CommitType
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  CommitType: TCcCommitType \b read\b0  FCommitType \b write\b0  SetCommitType; \par
+%BCB_SYNTAX%
+\f4\s2 __property Ccat::TCcCommitType CommitType=\{ read=FCommitType, write=SetCommitType, \b nodefault\b0  \} \par
+%PUBLISHED%
+%COMPONENT%
+TCcCommitType
+%DELPHI_SYNTAX%
+\f4 TCcCommitType=(ctNone, ctCommit, ctRetaining); \f0\par
+%BCB_SYNTAX%
+\b\f4 enum\b0  TCcCommitType \{ ctNone, ctCommit, ctRetaining \}; \f0\par
+%DESCRIPTION%
+\tx1400\b\f0 Value\tab\tab Meaning\b0\par
+%UNIT%
+CCat
+%NAMESPACE%
+CCat
+%COMPONENT%
+TCcComponent
+%UNIT%
+CcConfStorage
+%NAMESPACE%
+CcConfStorage
+%DERIVED_FROM%
+TComponent
+%METHOD%
+~TCcComponent
+%BCB_SYNTAX%
+\f4\s2 inline __fastcall \b virtual\b0  ~TCcComponent(\b void\b0 ) \par
+%OVERVIEW%
+Destructor\par
+%METHOD%
+DestroyQueries
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  DestroyQueries; \b abstract\b0 ; \b virtual\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  \b void\b0  __fastcall DestroyQueries(\b void\b0 )=0 \par
+%OVERVIEW%
+DestroyQueries is called just before changing the provider\par
+%PROTECTED%
+%METHOD%
+InitQueries
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  InitQueries; \b abstract\b0 ; \b virtual\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  \b void\b0  __fastcall InitQueries(\b void\b0 )=0 \par
+%OVERVIEW%
+InitQueries is called when the provider is loaded, to enable the queries to be created\par
+%PROTECTED%
+%METHOD%
+LoadConfig
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  LoadConfig; \b abstract\b0 ; \b virtual\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  \b void\b0  __fastcall LoadConfig(\b void\b0 )=0 \par
+%PROTECTED%
+%METHOD%
+Loaded
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  Loaded; \b override\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  \b void\b0  __fastcall Loaded(\b void\b0 ) \par
+%PROTECTED%
+%METHOD%
+SaveConfig
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  SaveConfig; \b abstract\b0 ; \b virtual\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  \b void\b0  __fastcall SaveConfig(\b void\b0 )=0 \par
+%PROTECTED%
+%METHOD%
+SetConfigStorage
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  SetConfigStorage(\b const\b0  Value: TCcConfigStorage); \b virtual\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  \b void\b0  __fastcall SetConfigStorage(\b const\b0  TCcConfigStorage *Value) \par
+%PROTECTED%
+%METHOD%
+SetDBProvider
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  SetDBProvider(\b const\b0  Value: TCcProvider); \par
+%BCB_SYNTAX%
+\f4\s2 \b void\b0  __fastcall SetDBProvider(\b const\b0  Ccproviders::TCcProvider *Value) \par
+%OVERVIEW%
+TCcComponent\par
+%PROTECTED%
+%METHOD%
+TCcComponent
+%BCB_SYNTAX%
+\f4\s2 inline __fastcall \b virtual\b0  TCcComponent(Classes::TComponent *AOwner) \par
+%OVERVIEW%
+Constructor\par
+%PROPERTY%
+ConfigStorage
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  ConfigStorage: TCcConfigStorage \b read\b0  FConfigStorage \b write\b0  SetConfigStorage; \par
+%BCB_SYNTAX%
+\f4\s2 __property TCcConfigStorage *ConfigStorage=\{ read=FConfigStorage, write=SetConfigStorage \} \par
+%PUBLISHED%
+%PROPERTY%
+DBProvider
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  DBProvider: TCcProvider \b read\b0  FDBProvider \b write\b0  SetDBProvider; \par
+%BCB_SYNTAX%
+\f4\s2 __property Ccproviders::TCcProvider *DBProvider=\{ read=FDBProvider, write=SetDBProvider \} \par
+%PUBLISHED%
+%COMPONENT%
+TCcConfig
+%OVERVIEW%
+Component for generating replication meta-data.\par
+%DESCRIPTION%
+Before any replication can take place, the appropriate meta-data must be created in both databases. TCcConfig allows you to generate this meta-data (based on settings specific to each setup), and apply it to the database. \par
+%UNIT%
+CcConf
+%NAMESPACE%
+CcConf
+%DERIVED_FROM%
+TCcComponent
+%EVENT%
+OnCreateMetadata
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  OnCreateMetadata: TConfirmEvent \b read\b0  FOnCreateMetadata \b write\b0  FOnCreateMetadata; \par
+%BCB_SYNTAX%
+\f4\s2 __property TConfirmEvent OnCreateMetadata=\{ read=FOnCreateMetadata, write=FOnCreateMetadata \} \par
+%PUBLISHED%
+%EVENT%
+OnQueryReady
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  OnQueryReady: TCcScriptEvent \b read\b0  FOnQueryReady \b write\b0  FOnQueryReady; \par
+%BCB_SYNTAX%
+\f4\s2 __property TCcScriptEvent OnQueryReady=\{ read=FOnQueryReady, write=FOnQueryReady \} \par
+%PUBLISHED%
+%EVENT%
+OnScriptReady
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  OnScriptReady: TNotifyEvent \b read\b0  FOnScriptReady \b write\b0  FOnScriptReady; \par
+%BCB_SYNTAX%
+\f4\s2 __property Classes::TNotifyEvent OnScriptReady=\{ read=FOnScriptReady, write=FOnScriptReady \} \par
+%PUBLISHED%
+%METHOD%
+~TCcConfig
+%BCB_SYNTAX%
+\f4\s2 __fastcall \b virtual\b0  ~TCcConfig(\b void\b0 ) \par
+%OVERVIEW%
+Destructor\par
+%METHOD%
+Connect
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  Connect; \par
+%BCB_SYNTAX%
+\f4\s2 \b void\b0  __fastcall Connect(\b void\b0 ) \par
+%METHOD%
+Create
+%DELPHI_SYNTAX%
+\f4\s2 \b constructor\b0  Create(AOwner: TComponent); \b override\b0 ; \par
+%OVERVIEW%
+constructor TCcProcParams.Create; begin inherited; Define(PARAM_VALUE, _); end;\par
+%METHOD%
+Destroy
+%DELPHI_SYNTAX%
+\f4\s2 \b destructor\b0  Destroy; \b override\b0 ; \par
+%METHOD%
+DestroyQueries
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  DestroyQueries; \b override\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  \b void\b0  __fastcall DestroyQueries(\b void\b0 ) \par
+%PROTECTED%
+%METHOD%
+Disconnect
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  Disconnect; \par
+%BCB_SYNTAX%
+\f4\s2 \b void\b0  __fastcall Disconnect(\b void\b0 ) \par
+%METHOD%
+FillProcedures
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  FillProcedures; \b virtual\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  \b void\b0  __fastcall FillProcedures(\b void\b0 ) \par
+%PROTECTED%
+%METHOD%
+FillTables
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  FillTables; \b virtual\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  \b void\b0  __fastcall FillTables(\b void\b0 ) \par
+%PROTECTED%
+%METHOD%
+GenerateProcedure
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  GenerateProcedure(ProcName: \b String\b0 ); \b overload\b0 ; \f0\s0 \par \f4\s2 \b procedure\b0  GenerateProcedure; \b overload\b0 ; \f0\s0 \par
+%BCB_SYNTAX%
+\f4\s2 \b void\b0  __fastcall GenerateProcedure(\b void\b0 ) \f0\s0 \par\f0 \f4\s2 \b void\b0  __fastcall GenerateProcedure(AnsiString ProcName) \par
+%METHOD%
+GenerateTriggers
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  GenerateTriggers(TableName: \b String\b0 ); \b overload\b0 ; \f0\s0 \par \f4\s2 \b procedure\b0  GenerateTriggers; \b overload\b0 ; \f0\s0 \par
+%BCB_SYNTAX%
+\f4\s2 \b void\b0  __fastcall GenerateTriggers(\b void\b0 ) \f0\s0 \par\f0 \f4\s2 \b void\b0  __fastcall GenerateTriggers(AnsiString TableName) \par
+%METHOD%
+GetGenerator
+%DELPHI_SYNTAX%
+\f4\s2 \b function\b0  GetGenerator(GenName: \b String\b0 ; Increment: Integer): \b String\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 AnsiString __fastcall GetGenerator(AnsiString GenName, \b int\b0  Increment) \par
+%METHOD%
+GetProcGenerator
+%DELPHI_SYNTAX%
+\f4\s2 \b function\b0  GetProcGenerator(ProcName: \b String\b0 ; Params: TCcProcParams; OutputParam: \b String\b0 ): \b String\b0 ; \b overload\b0 ; \f0\s0 \par \f4\s2 \b function\b0  GetProcGenerator(TableName, ProcName: \b String\b0 ; Params: TCcProcParams; OutputParam: \b String\b0 ): \b String\b0 ; \b overload\b0 ; \f0\s0 \par
+%BCB_SYNTAX%
+\f4\s2 AnsiString __fastcall GetProcGenerator(AnsiString TableName, AnsiString ProcName, TCcProcParams *Params, AnsiString OutputParam) \f0\s0 \par\f0 \f4\s2 AnsiString __fastcall GetProcGenerator(AnsiString ProcName, TCcProcParams *Params, AnsiString OutputParam) \par
+%METHOD%
+GetProcParams
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  GetProcParams(ProcName: \b String\b0 ; Params: TCcProcParams; InputParam: Boolean=True); \par
+%BCB_SYNTAX%
+\f4\s2 \b void\b0  __fastcall GetProcParams(AnsiString ProcName, TCcProcParams *Params, \b bool\b0  InputParam) \par
+%METHOD%
+InitQueries
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  InitQueries; \b override\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  \b void\b0  __fastcall InitQueries(\b void\b0 ) \par
+%PROTECTED%
+%METHOD%
+LoadConfig
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  LoadConfig; \b override\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  \b void\b0  __fastcall LoadConfig(\b void\b0 ) \par
+%PROTECTED%
+%METHOD%
+Loaded
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  Loaded; \b override\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  \b void\b0  __fastcall Loaded(\b void\b0 ) \par
+%PROTECTED%
+%METHOD%
+RemoveProcedure
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  RemoveProcedure(ProcName: \b String\b0 ); \b overload\b0 ; \f0\s0 \par \f4\s2 \b procedure\b0  RemoveProcedure; \b overload\b0 ; \f0\s0 \par
+%BCB_SYNTAX%
+\f4\s2 \b void\b0  __fastcall RemoveProcedure(\b void\b0 ) \f0\s0 \par\f0 \f4\s2 \b void\b0  __fastcall RemoveProcedure(AnsiString ProcName) \par
+%METHOD%
+RemoveTriggers
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  RemoveTriggers(TableName: \b String\b0 ); \b overload\b0 ; \f0\s0 \par \f4\s2 \b procedure\b0  RemoveTriggers; \b overload\b0 ; \f0\s0 \par
+%BCB_SYNTAX%
+\f4\s2 \b void\b0  __fastcall RemoveTriggers(\b void\b0 ) \f0\s0 \par\f0 \f4\s2 \b void\b0  __fastcall RemoveTriggers(AnsiString TableName) \par
+%METHOD%
+SaveConfig
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  SaveConfig; \b override\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  \b void\b0  __fastcall SaveConfig(\b void\b0 ) \par
+%PROTECTED%
+%METHOD%
+SetConfigStorage
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  SetConfigStorage(\b const\b0  Value: TCcConfigStorage); \b override\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  \b void\b0  __fastcall SetConfigStorage(\b const\b0  Ccconfstorage::TCcConfigStorage *Value) \par
+%PROTECTED%
+%METHOD%
+TCcConfig
+%BCB_SYNTAX%
+\f4\s2 __fastcall \b virtual\b0  TCcConfig(Classes::TComponent *AOwner) \par
+%OVERVIEW%
+Constructor\par
+%PROPERTY%
+ConnectParams
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  ConnectParams: TCcConnectParams \b read\b0  FConnectParams \b write\b0  FConnectParams; \par
+%BCB_SYNTAX%
+\f4\s2 __property TCcConnectParams *ConnectParams=\{ read=FConnectParams, write=FConnectParams \} \par
+%PUBLISHED%
+%PROPERTY%
+DB
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  DB: TCcDatabase \b read\b0  FDatabase; \par
+%BCB_SYNTAX%
+\f4\s2 __property Ccproviders::TCCDatabase *DB=\{ read=FDatabase \} \par
+%READONLY%
+%PROPERTY%
+FieldNames
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  FieldNames: TStrings \b read\b0  FFieldNames; \par
+%BCB_SYNTAX%
+\f4\s2 __property Classes::TStrings *FieldNames=\{ read=FFieldNames \} \par
+%READONLY%
+%PROPERTY%
+Procedures
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  Procedures: TCcProcedures \b read\b0  FProcedures \b write\b0  SetProcedures; \par
+%BCB_SYNTAX%
+\f4\s2 __property Ccconfstorage::TCcProcedures *Procedures=\{ read=FProcedures, write=SetProcedures \} \par
+%PUBLISHED%
+%PROPERTY%
+Script
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  Script: TStrings \b read\b0  FScript \b write\b0  SetScript; \par
+%BCB_SYNTAX%
+\f4\s2 __property Classes::TStrings *Script=\{ read=FScript, write=SetScript \} \par
+%PUBLISHED%
+%PROPERTY%
+Tables
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  Tables: TCcTables \b read\b0  FTables \b write\b0  SetTables; \par
+%BCB_SYNTAX%
+\f4\s2 __property Ccconfstorage::TCcTables *Tables=\{ read=FTables, write=SetTables \} \par
+%PUBLISHED%
+%PROPERTY%
+Terminator
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  Terminator: \b String\b0  \b read\b0  FTerminator \b write\b0  FTerminator; \par
+%BCB_SYNTAX%
+\f4\s2 __property AnsiString Terminator=\{ read=FTerminator, write=FTerminator \} \par
+%PUBLISHED%
+%PROPERTY%
+TR
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  TR: TCcTransaction \b read\b0  FTransaction; \par
+%BCB_SYNTAX%
+\f4\s2 __property Ccproviders::TCCTransaction *TR=\{ read=FTransaction \} \par
+%READONLY%
+%COMPONENT%
+TCcConfigConfirmEvent
+%DELPHI_SYNTAX%
+\f4 TCcConfigConfirmEvent=\b procedure\b0 (Sender: TCcCustomStorage; \b var\b0  CanContinue: Boolean) \b of\b0  \b object\b0 ; \f0\par
+%BCB_SYNTAX%
+\b\f4 typedef\b0  \b void\b0  __fastcall(__closure *TCcConfigConfirmEvent)(TCcCustomStorage *Sender, \b bool\b0  &CanContinue); \f0\par
+%UNIT%
+CcConfStorage
+%NAMESPACE%
+CcConfStorage
+%COMPONENT%
+TCcConflictMgr
+%OVERVIEW%
+CopyCat conflict management component\par
+%DESCRIPTION%
+The TCcConflictMgr component handles conflicts that occur during replication. It isn't currently registered on the component palette (it's used interally by TCcReplicator), because there are no options for the developer to set. In future versions however, other alternative conflict management stratgies will probably be devised, and TCcConflictMgr will then be registered. \par
+\par
+Before replication of two databases starts, both local and remote replication logs are loaded, and if the same record is present in both, it is considered a conflict. This conflict management scheme has been carefully designed so as to work seemlessly even in setups containing multiple replication nodes.\par
+%UNIT%
+CcConflictMgr
+%NAMESPACE%
+CcConflictMgr
+%DERIVED_FROM%
+TCcCustomConflictMgr
+%METHOD%
+~TCcConflictMgr
+%BCB_SYNTAX%
+\f4\s2 inline __fastcall \b virtual\b0  ~TCcConflictMgr(\b void\b0 ) \par
+%OVERVIEW%
+Destructor\par
+%METHOD%
+CheckConflicts
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  CheckConflicts; \b override\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  \b void\b0  __fastcall CheckConflicts(\b void\b0 ) \par
+%OVERVIEW%
+uses DbugIntf; TCcConflictMgr\par
+%PROTECTED%
+%METHOD%
+DestroyQueries
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  DestroyQueries; \b override\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  \b void\b0  __fastcall DestroyQueries(\b void\b0 ) \par
+%PROTECTED%
+%METHOD%
+InitQueries
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  InitQueries; \b override\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  \b void\b0  __fastcall InitQueries(\b void\b0 ) \par
+%PROTECTED%
+%METHOD%
+LogConflict
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  LogConflict; \b override\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  \b void\b0  __fastcall LogConflict(\b void\b0 ) \par
+%PROTECTED%
+%METHOD%
+TCcConflictMgr
+%BCB_SYNTAX%
+\f4\s2 inline __fastcall \b virtual\b0  TCcConflictMgr(Classes::TComponent *AOwner) \par
+%OVERVIEW%
+Constructor\par
+%COMPONENT%
+TCcConnectParams
+%UNIT%
+CcConf
+%NAMESPACE%
+CcConf
+%DERIVED_FROM%
+TPersistent
+%METHOD%
+~TCcConnectParams
+%BCB_SYNTAX%
+\f4\s2 inline __fastcall \b virtual\b0  ~TCcConnectParams(\b void\b0 ) \par
+%OVERVIEW%
+Destructor\par
+%METHOD%
+Clear
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  Clear; \par
+%BCB_SYNTAX%
+\f4\s2 \b void\b0  __fastcall Clear(\b void\b0 ) \par
+%OVERVIEW%
+TCcConnectParams\par
+%PROTECTED%
+%METHOD%
+Create
+%DELPHI_SYNTAX%
+\f4\s2 \b constructor\b0  Create(AOwner: TCcConfig); \par
+%METHOD%
+LoadDBParams
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  LoadDBParams(DB: TCcDatabase); \par
+%BCB_SYNTAX%
+\f4\s2 \b void\b0  __fastcall LoadDBParams(Ccproviders::TCCDatabase *DB) \par
+%PROTECTED%
+%METHOD%
+TCcConnectParams
+%BCB_SYNTAX%
+\f4\s2 __fastcall TCcConnectParams(TCcConfig *AOwner) \par
+%OVERVIEW%
+Constructor\par
+%PROPERTY%
+CharSet
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  CharSet: \b String\b0  \b read\b0  FCharSet \b write\b0  SetCharSet; \par
+%BCB_SYNTAX%
+\f4\s2 __property AnsiString CharSet=\{ read=FCharSet, write=SetCharSet \} \par
+%PUBLISHED%
+%PROPERTY%
+ConfigStorage
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  ConfigStorage: TCcConfigStorage \b read\b0  FConfigStorage \b write\b0  FConfigStorage \b stored\b0  False; \par
+%BCB_SYNTAX%
+\f4\s2 __property Ccconfstorage::TCcConfigStorage *ConfigStorage=\{ read=FConfigStorage, write=FConfigStorage, stored=\b false\b0  \} \par
+%PROPERTY%
+DBName
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  DBName: \b String\b0  \b read\b0  FDBName \b write\b0  SetDBName; \par
+%BCB_SYNTAX%
+\f4\s2 __property AnsiString DBName=\{ read=FDBName, write=SetDBName \} \par
+%PUBLISHED%
+%PROPERTY%
+Password
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  Password: \b String\b0  \b read\b0  FPassword \b write\b0  SetPassword; \par
+%BCB_SYNTAX%
+\f4\s2 __property AnsiString Password=\{ read=FPassword, write=SetPassword \} \par
+%PUBLISHED%
+%PROPERTY%
+RoleName
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  RoleName: \b String\b0  \b read\b0  FRoleName \b write\b0  SetRoleName; \par
+%BCB_SYNTAX%
+\f4\s2 __property AnsiString RoleName=\{ read=FRoleName, write=SetRoleName \} \par
+%PUBLISHED%
+%PROPERTY%
+SQLDialect
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  SQLDialect: Integer \b read\b0  FSQLDialect \b write\b0  SetSQLDialect; \par
+%BCB_SYNTAX%
+\f4\s2 __property \b int\b0  SQLDialect=\{ read=FSQLDialect, write=SetSQLDialect, \b nodefault\b0  \} \par
+%PUBLISHED%
+%PROPERTY%
+UserName
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  UserName: \b String\b0  \b read\b0  FUserName \b write\b0  SetUserName; \par
+%BCB_SYNTAX%
+\f4\s2 __property AnsiString UserName=\{ read=FUserName, write=SetUserName \} \par
+%PUBLISHED%
+%COMPONENT%
+TCcCustomConflictMgr
+%UNIT%
+CcReplicator
+%NAMESPACE%
+CcReplicator
+%DERIVED_FROM%
+TComponent
+%METHOD%
+~TCcCustomConflictMgr
+%BCB_SYNTAX%
+\f4\s2 inline __fastcall \b virtual\b0  ~TCcCustomConflictMgr(\b void\b0 ) \par
+%OVERVIEW%
+Destructor\par
+%METHOD%
+CheckConflicts
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  CheckConflicts; \b abstract\b0 ; \b virtual\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  \b void\b0  __fastcall CheckConflicts(\b void\b0 )=0 \par
+%PROTECTED%
+%METHOD%
+DestroyQueries
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  DestroyQueries; \b abstract\b0 ; \b virtual\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  \b void\b0  __fastcall DestroyQueries(\b void\b0 )=0 \par
+%PROTECTED%
+%METHOD%
+InitQueries
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  InitQueries; \b abstract\b0 ; \b virtual\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  \b void\b0  __fastcall InitQueries(\b void\b0 )=0 \par
+%PROTECTED%
+%METHOD%
+LogConflict
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  LogConflict; \b abstract\b0 ; \b virtual\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  \b void\b0  __fastcall LogConflict(\b void\b0 )=0 \par
+%PROTECTED%
+%METHOD%
+TCcCustomConflictMgr
+%BCB_SYNTAX%
+\f4\s2 inline __fastcall \b virtual\b0  TCcCustomConflictMgr(Classes::TComponent *AOwner) \par
+%OVERVIEW%
+Constructor\par
+%COMPONENT%
+TCcCustomLog
+%UNIT%
+CcReplicator
+%NAMESPACE%
+CcReplicator
+%DERIVED_FROM%
+TComponent
+%METHOD%
+~TCcCustomLog
+%BCB_SYNTAX%
+\f4\s2 inline __fastcall \b virtual\b0  ~TCcCustomLog(\b void\b0 ) \par
+%OVERVIEW%
+Destructor\par
+%METHOD%
+BuildLogSQL
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  BuildLogSQL; \b abstract\b0 ; \b virtual\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  \b void\b0  __fastcall BuildLogSQL(\b void\b0 )=0 \par
+%PROTECTED%
+%METHOD%
+DestroyQueries
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  DestroyQueries; \b abstract\b0 ; \b virtual\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  \b void\b0  __fastcall DestroyQueries(\b void\b0 )=0 \par
+%PROTECTED%
+%METHOD%
+Edit
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  Edit; \b abstract\b0 ; \b virtual\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  \b void\b0  __fastcall Edit(\b void\b0 )=0 \par
+%METHOD%
+FBN
+%DELPHI_SYNTAX%
+\f4\s2 \b function\b0  FBN(cFieldName: \b String\b0 ): \b String\b0 ; \b abstract\b0 ; \b virtual\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  AnsiString __fastcall FBN(AnsiString cFieldName)=0 \par
+%METHOD%
+FieldByName
+%DELPHI_SYNTAX%
+\f4\s2 \b function\b0  FieldByName(cFieldName: \b String\b0 ): TField; \b abstract\b0 ; \b virtual\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  Db::TField *__fastcall FieldByName(AnsiString cFieldName)=0 \par
+%METHOD%
+First
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  First; \b abstract\b0 ; \b virtual\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  \b void\b0  __fastcall First(\b void\b0 )=0 \par
+%METHOD%
+GetBof
+%DELPHI_SYNTAX%
+\f4\s2 \b function\b0  GetBof: Boolean; \b abstract\b0 ; \b virtual\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  \b bool\b0  __fastcall GetBof(\b void\b0 )=0 \par
+%PROTECTED%
+%METHOD%
+GetCurrentLine
+%DELPHI_SYNTAX%
+\f4\s2 \b function\b0  GetCurrentLine: Integer; \b abstract\b0 ; \b virtual\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  \b int\b0  __fastcall GetCurrentLine(\b void\b0 )=0 \par
+%PROTECTED%
+%METHOD%
+GetdpDest
+%DELPHI_SYNTAX%
+\f4\s2 \b function\b0  GetdpDest: TCcDBParams; \b abstract\b0 ; \b virtual\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  Ccdbparams::TCcDBParams *__fastcall GetdpDest(\b void\b0 )=0 \par
+%PROTECTED%
+%METHOD%
+GetdpOrigine
+%DELPHI_SYNTAX%
+\f4\s2 \b function\b0  GetdpOrigine: TCcDBParams; \b abstract\b0 ; \b virtual\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  Ccdbparams::TCcDBParams *__fastcall GetdpOrigine(\b void\b0 )=0 \par
+%PROTECTED%
+%METHOD%
+GetEof
+%DELPHI_SYNTAX%
+\f4\s2 \b function\b0  GetEof: Boolean; \b abstract\b0 ; \b virtual\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  \b bool\b0  __fastcall GetEof(\b void\b0 )=0 \par
+%PROTECTED%
+%METHOD%
+GetLineCount
+%DELPHI_SYNTAX%
+\f4\s2 \b function\b0  GetLineCount: Integer; \b abstract\b0 ; \b virtual\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  \b int\b0  __fastcall GetLineCount(\b void\b0 )=0 \par
+%PROTECTED%
+%METHOD%
+GetLocalMode
+%DELPHI_SYNTAX%
+\f4\s2 \b function\b0  GetLocalMode: Boolean; \b abstract\b0 ; \b virtual\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  \b bool\b0  __fastcall GetLocalMode(\b void\b0 )=0 \par
+%PROTECTED%
+%METHOD%
+GetReplState
+%DELPHI_SYNTAX%
+\f4\s2 \b function\b0  GetReplState: TCcLogState; \b abstract\b0 ; \b virtual\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  Ccat::TCcLogState __fastcall GetReplState(\b void\b0 )=0 \par
+%PROTECTED%
+%METHOD%
+Init
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  Init; \b abstract\b0 ; \b virtual\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  \b void\b0  __fastcall Init(\b void\b0 )=0 \par
+%METHOD%
+InitQueries
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  InitQueries; \b abstract\b0 ; \b virtual\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  \b void\b0  __fastcall InitQueries(\b void\b0 )=0 \par
+%PROTECTED%
+%METHOD%
+Last
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  Last; \b abstract\b0 ; \b virtual\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  \b void\b0  __fastcall Last(\b void\b0 )=0 \par
+%METHOD%
+LoadLog
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  LoadLog; \b abstract\b0 ; \b virtual\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  \b void\b0  __fastcall LoadLog(\b void\b0 )=0 \par
+%PROTECTED%
+%METHOD%
+LogConflict
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  LogConflict; \par
+%BCB_SYNTAX%
+\f4\s2 \b void\b0  __fastcall LogConflict(\b void\b0 ) \par
+%OVERVIEW%
+TCcReplicator\par
+%PROTECTED%
+%METHOD%
+Next
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  Next; \b abstract\b0 ; \b virtual\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  \b void\b0  __fastcall Next(\b void\b0 )=0 \par
+%METHOD%
+Post
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  Post; \b abstract\b0 ; \b virtual\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  \b void\b0  __fastcall Post(\b void\b0 )=0 \par
+%METHOD%
+Prior
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  Prior; \b abstract\b0 ; \b virtual\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  \b void\b0  __fastcall Prior(\b void\b0 )=0 \par
+%METHOD%
+SetReplicator
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  SetReplicator(Repl: TCcReplicator); \b abstract\b0 ; \b virtual\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  \b void\b0  __fastcall SetReplicator(TCcReplicator *Repl)=0 \par
+%PROTECTED%
+%METHOD%
+TCcCustomLog
+%BCB_SYNTAX%
+\f4\s2 inline __fastcall \b virtual\b0  TCcCustomLog(Classes::TComponent *AOwner) \par
+%OVERVIEW%
+Constructor\par
+%PROPERTY%
+Bof
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  Bof: Boolean \b read\b0  GetBof; \par
+%BCB_SYNTAX%
+\f4\s2 __property \b bool\b0  Bof=\{ read=GetBof, \b nodefault\b0  \} \par
+%READONLY%
+%PROPERTY%
+CurrentLine
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  CurrentLine: Integer \b read\b0  GetCurrentLine; \par
+%BCB_SYNTAX%
+\f4\s2 __property \b int\b0  CurrentLine=\{ read=GetCurrentLine, \b nodefault\b0  \} \par
+%READONLY%
+%PROPERTY%
+dpDest
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  dpDest: TCcDBParams \b read\b0  GetdpDest; \par
+%BCB_SYNTAX%
+\f4\s2 __property Ccdbparams::TCcDBParams *dpDest=\{ read=GetdpDest \} \par
+%READONLY%
+%PROPERTY%
+dpOrigine
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  dpOrigine: TCcDBParams \b read\b0  GetdpOrigine; \par
+%BCB_SYNTAX%
+\f4\s2 __property Ccdbparams::TCcDBParams *dpOrigine=\{ read=GetdpOrigine \} \par
+%READONLY%
+%PROPERTY%
+Eof
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  Eof: Boolean \b read\b0  GetEof; \par
+%BCB_SYNTAX%
+\f4\s2 __property \b bool\b0  Eof=\{ read=GetEof, \b nodefault\b0  \} \par
+%READONLY%
+%PROPERTY%
+LineCount
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  LineCount: Integer \b read\b0  GetLineCount; \par
+%BCB_SYNTAX%
+\f4\s2 __property \b int\b0  LineCount=\{ read=GetLineCount, \b nodefault\b0  \} \par
+%READONLY%
+%PROPERTY%
+LocalMode
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  LocalMode: Boolean \b read\b0  GetLocalMode; \par
+%BCB_SYNTAX%
+\f4\s2 __property \b bool\b0  LocalMode=\{ read=GetLocalMode, \b nodefault\b0  \} \par
+%READONLY%
+%PROPERTY%
+Replicator
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  Replicator: TCcReplicator \b read\b0  FReplicator \b write\b0  SetReplicator; \par
+%BCB_SYNTAX%
+\f4\s2 __property TCcReplicator *Replicator=\{ read=FReplicator, write=SetReplicator \} \par
+%PUBLISHED%
+%PROPERTY%
+ReplState
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  ReplState: TCcLogState \b read\b0  GetReplState; \par
+%BCB_SYNTAX%
+\f4\s2 __property Ccat::TCcLogState ReplState=\{ read=GetReplState, \b nodefault\b0  \} \par
+%READONLY%
+%COMPONENT%
+TCcCustomReplicator
+%UNIT%
+CCDBParams
+%NAMESPACE%
+CCDBParams
+%DERIVED_FROM%
+TCcComponent
+%METHOD%
+~TCcCustomReplicator
+%BCB_SYNTAX%
+\f4\s2 __fastcall \b virtual\b0  ~TCcCustomReplicator(\b void\b0 ) \par
+%OVERVIEW%
+Destructor\par
+%METHOD%
+ConnectionLost
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  ConnectionLost(Sender: TObject); \b abstract\b0 ; \b virtual\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  \b void\b0  __fastcall ConnectionLost(System::TObject *Sender)=0 \par
+%PROTECTED%
+%METHOD%
+Create
+%DELPHI_SYNTAX%
+\f4\s2 \b constructor\b0  Create(Owner: TComponent); \b override\b0 ; \par
+%OVERVIEW%
+TCcCustomReplicator\par
+%METHOD%
+Destroy
+%DELPHI_SYNTAX%
+\f4\s2 \b destructor\b0  Destroy; \b override\b0 ; \par
+%METHOD%
+DestroyQueries
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  DestroyQueries; \b override\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  \b void\b0  __fastcall DestroyQueries(\b void\b0 ) \par
+%PROTECTED%
+%METHOD%
+InitQueries
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  InitQueries; \b override\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  \b void\b0  __fastcall InitQueries(\b void\b0 ) \par
+%PROTECTED%
+%METHOD%
+TCcCustomReplicator
+%BCB_SYNTAX%
+\f4\s2 __fastcall \b virtual\b0  TCcCustomReplicator(Classes::TComponent *Owner) \par
+%OVERVIEW%
+Constructor\par
+%PROPERTY%
+LocalDB
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  LocalDB: TCcDBParams \b read\b0  FLocalDB \b write\b0  FLocalDB; \par
+%BCB_SYNTAX%
+\f4\s2 __property TCcDBParams *LocalDB=\{ read=FLocalDB, write=FLocalDB \} \par
+%PUBLISHED%
+%PROPERTY%
+RemoteDB
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  RemoteDB: TCcDBParams \b read\b0  FRemoteDB \b write\b0  FRemoteDB; \par
+%BCB_SYNTAX%
+\f4\s2 __property TCcDBParams *RemoteDB=\{ read=FRemoteDB, write=FRemoteDB \} \par
+%PUBLISHED%
+%COMPONENT%
+TCCDatabase
+%UNIT%
+CcProviders
+%NAMESPACE%
+CcProviders
+%DERIVED_FROM%
+TComponent
+%EVENT%
+OnConnectLost
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  OnConnectLost: TNotifyEvent \b read\b0  FOnConnectLost \b write\b0  FOnConnectLost; \par
+%BCB_SYNTAX%
+\f4\s2 __property Classes::TNotifyEvent OnConnectLost=\{ read=FOnConnectLost, write=FOnConnectLost \} \par
+%OVERVIEW%
+OnConnectLost gets called when the database connection gets abruptly cut. It does not occur however if the connection is closed explicitly with the Connected property.\par
+%METHOD%
+~TCCDatabase
+%BCB_SYNTAX%
+\f4\s2 inline __fastcall \b virtual\b0  ~TCCDatabase(\b void\b0 ) \par
+%OVERVIEW%
+Destructor\par
+%METHOD%
+Create
+%DELPHI_SYNTAX%
+\f4\s2 \b constructor\b0  Create(AOwner: TComponent); \b override\b0 ; \par
+%OVERVIEW%
+TCcDatabase\par
+%METHOD%
+DatabaseClass
+%DELPHI_SYNTAX%
+\f4\s2 \b function\b0  DatabaseClass: TClass; \b virtual\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  TMetaClass *__fastcall DatabaseClass(\b void\b0 ) \par
+%METHOD%
+DoSetTransaction
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  DoSetTransaction(\b const\b0  Value: TCcTransaction); \b virtual\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  \b void\b0  __fastcall DoSetTransaction(\b const\b0  TCCTransaction *Value) \par
+%PROTECTED%
+%METHOD%
+Gen_Id
+%DELPHI_SYNTAX%
+\f4\s2 \b function\b0  Gen_Id(GenName: \b String\b0 ; Increment: Integer): Integer; \b virtual\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  \b int\b0  __fastcall Gen_Id(AnsiString GenName, \b int\b0  Increment) \par
+%METHOD%
+GetCharSet
+%DELPHI_SYNTAX%
+\f4\s2 \b function\b0  GetCharSet: \b String\b0 ; \b virtual\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  AnsiString __fastcall GetCharSet() \par
+%PROTECTED%
+%METHOD%
+GetConnected
+%DELPHI_SYNTAX%
+\f4\s2 \b function\b0  GetConnected: Boolean; \b virtual\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  \b bool\b0  __fastcall GetConnected(\b void\b0 ) \par
+%PROTECTED%
+%METHOD%
+GetDBName
+%DELPHI_SYNTAX%
+\f4\s2 \b function\b0  GetDBName: \b String\b0 ; \b virtual\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  AnsiString __fastcall GetDBName() \par
+%PROTECTED%
+%METHOD%
+GetPassword
+%DELPHI_SYNTAX%
+\f4\s2 \b function\b0  GetPassword: \b String\b0 ; \b virtual\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  AnsiString __fastcall GetPassword() \par
+%PROTECTED%
+%METHOD%
+GetRoleName
+%DELPHI_SYNTAX%
+\f4\s2 \b function\b0  GetRoleName: \b String\b0 ; \b virtual\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  AnsiString __fastcall GetRoleName() \par
+%PROTECTED%
+%METHOD%
+GetSQLDialect
+%DELPHI_SYNTAX%
+\f4\s2 \b function\b0  GetSQLDialect: Integer; \b virtual\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  \b int\b0  __fastcall GetSQLDialect(\b void\b0 ) \par
+%PROTECTED%
+%METHOD%
+GetUserName
+%DELPHI_SYNTAX%
+\f4\s2 \b function\b0  GetUserName: \b String\b0 ; \b virtual\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  AnsiString __fastcall GetUserName() \par
+%PROTECTED%
+%METHOD%
+SetCharSet
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  SetCharSet(Value: \b String\b0 ); \b virtual\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  \b void\b0  __fastcall SetCharSet(AnsiString Value) \par
+%PROTECTED%
+%METHOD%
+SetConnected
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  SetConnected(\b const\b0  Value: Boolean); \b virtual\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  \b void\b0  __fastcall SetConnected(\b const\b0  \b bool\b0  Value) \par
+%PROTECTED%
+%METHOD%
+SetDBName
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  SetDBName(Value: \b String\b0 ); \b virtual\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  \b void\b0  __fastcall SetDBName(AnsiString Value) \par
+%PROTECTED%
+%METHOD%
+SetPassword
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  SetPassword(\b const\b0  Value: \b String\b0 ); \b virtual\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  \b void\b0  __fastcall SetPassword(\b const\b0  AnsiString Value) \par
+%PROTECTED%
+%METHOD%
+SetRoleName
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  SetRoleName(\b const\b0  Value: \b String\b0 ); \b virtual\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  \b void\b0  __fastcall SetRoleName(\b const\b0  AnsiString Value) \par
+%PROTECTED%
+%METHOD%
+SetSQLDialect
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  SetSQLDialect(Value: Integer); \b virtual\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  \b void\b0  __fastcall SetSQLDialect(\b int\b0  Value) \par
+%PROTECTED%
+%METHOD%
+SetTransaction
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  SetTransaction(\b const\b0  Value: TCcTransaction); \par
+%BCB_SYNTAX%
+\f4\s2 \b void\b0  __fastcall SetTransaction(\b const\b0  TCCTransaction *Value) \par
+%PROTECTED%
+%METHOD%
+SetUserName
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  SetUserName(Value: \b String\b0 ); \b virtual\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  \b void\b0  __fastcall SetUserName(AnsiString Value) \par
+%PROTECTED%
+%METHOD%
+SignalConnectLost
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  SignalConnectLost; \par
+%BCB_SYNTAX%
+\f4\s2 \b void\b0  __fastcall SignalConnectLost(\b void\b0 ) \par
+%PROTECTED%
+%METHOD%
+TCCDatabase
+%BCB_SYNTAX%
+\f4\s2 __fastcall \b virtual\b0  TCCDatabase(Classes::TComponent *AOwner) \par
+%OVERVIEW%
+Constructor\par
+%PROPERTY%
+CharSet
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  CharSet: \b String\b0  \b read\b0  GetCharSet \b write\b0  SetCharSet; \par
+%BCB_SYNTAX%
+\f4\s2 __property AnsiString CharSet=\{ read=GetCharSet, write=SetCharSet \} \par
+%PROPERTY%
+Connected
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  Connected: Boolean \b read\b0  GetConnected \b write\b0  SetConnected; \par
+%BCB_SYNTAX%
+\f4\s2 __property \b bool\b0  Connected=\{ read=GetConnected, write=SetConnected, \b nodefault\b0  \} \par
+%PROPERTY%
+DBName
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  DBName: \b String\b0  \b read\b0  GetDBName \b write\b0  SetDBName; \par
+%BCB_SYNTAX%
+\f4\s2 __property AnsiString DBName=\{ read=GetDBName, write=SetDBName \} \par
+%PROPERTY%
+Password
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  Password: \b String\b0  \b read\b0  GetPassword \b write\b0  SetPassword; \par
+%BCB_SYNTAX%
+\f4\s2 __property AnsiString Password=\{ read=GetPassword, write=SetPassword \} \par
+%PROPERTY%
+RoleName
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  RoleName: \b String\b0  \b read\b0  GetRoleName \b write\b0  SetRoleName; \par
+%BCB_SYNTAX%
+\f4\s2 __property AnsiString RoleName=\{ read=GetRoleName, write=SetRoleName \} \par
+%PROPERTY%
+SQLDialect
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  SQLDialect: Integer \b read\b0  GetSQLDialect \b write\b0  SetSQLDialect; \par
+%BCB_SYNTAX%
+\f4\s2 __property \b int\b0  SQLDialect=\{ read=GetSQLDialect, write=SetSQLDialect, \b nodefault\b0  \} \par
+%PROPERTY%
+Transaction
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  Transaction: TCcTransaction \b read\b0  FTransaction \b write\b0  SetTransaction; \par
+%BCB_SYNTAX%
+\f4\s2 __property TCCTransaction *Transaction=\{ read=FTransaction, write=SetTransaction \} \par
+%PROPERTY%
+UserName
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  UserName: \b String\b0  \b read\b0  GetUserName \b write\b0  SetUserName; \par
+%BCB_SYNTAX%
+\f4\s2 __property AnsiString UserName=\{ read=GetUserName, write=SetUserName \} \par
+%COMPONENT%
+TCcDBParams
+%UNIT%
+CCDBParams
+%NAMESPACE%
+CCDBParams
+%DERIVED_FROM%
+TPersistent
+%METHOD%
+~TCcDBParams
+%BCB_SYNTAX%
+\f4\s2 __fastcall \b virtual\b0  ~TCcDBParams(\b void\b0 ) \par
+%OVERVIEW%
+Destructor\par
+%METHOD%
+Commit
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  Commit; \par
+%BCB_SYNTAX%
+\f4\s2 \b void\b0  __fastcall Commit(\b void\b0 ) \par
+%OVERVIEW%
+TCcDBParams\par
+%METHOD%
+CommitRetaining
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  CommitRetaining; \par
+%BCB_SYNTAX%
+\f4\s2 \b void\b0  __fastcall CommitRetaining(\b void\b0 ) \par
+%METHOD%
+Connect
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  Connect(User: TCcUser); \par
+%BCB_SYNTAX%
+\f4\s2 \b void\b0  __fastcall Connect(TCcUser *User) \par
+%METHOD%
+ConnectionLost
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  ConnectionLost(Sender: TObject); \par
+%BCB_SYNTAX%
+\f4\s2 \b void\b0  __fastcall ConnectionLost(System::TObject *Sender) \par
+%PROTECTED%
+%METHOD%
+Create
+%DELPHI_SYNTAX%
+\f4\s2 \b constructor\b0  Create(Owner: TCcCustomReplicator); \par
+%OVERVIEW%
+SQLLogger :TFIBSQLLogger;\par
+%METHOD%
+Destroy
+%DELPHI_SYNTAX%
+\f4\s2 \b destructor\b0  Destroy; \b override\b0 ; \par
+%METHOD%
+DestroyQueries
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  DestroyQueries; \par
+%BCB_SYNTAX%
+\f4\s2 \b void\b0  __fastcall DestroyQueries(\b void\b0 ) \par
+%PROTECTED%
+%METHOD%
+Disconnect
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  Disconnect; \par
+%BCB_SYNTAX%
+\f4\s2 \b void\b0  __fastcall Disconnect(\b void\b0 ) \par
+%METHOD%
+InitQueries
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  InitQueries; \par
+%BCB_SYNTAX%
+\f4\s2 \b void\b0  __fastcall InitQueries(\b void\b0 ) \par
+%PROTECTED%
+%METHOD%
+Rollback
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  Rollback; \par
+%BCB_SYNTAX%
+\f4\s2 \b void\b0  __fastcall Rollback(\b void\b0 ) \par
+%METHOD%
+RollbackRetaining
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  RollbackRetaining; \par
+%BCB_SYNTAX%
+\f4\s2 \b void\b0  __fastcall RollbackRetaining(\b void\b0 ) \par
+%METHOD%
+TCcDBParams
+%BCB_SYNTAX%
+\f4\s2 __fastcall TCcDBParams(TCcCustomReplicator *Owner) \par
+%OVERVIEW%
+Constructor\par
+%PROPERTY%
+CharSet
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  CharSet: AnsiString \b read\b0  FCharSet \b write\b0  FCharSet; \par
+%BCB_SYNTAX%
+\f4\s2 __property AnsiString CharSet=\{ read=FCharSet, write=FCharSet \} \par
+%PUBLISHED%
+%PROPERTY%
+DB
+%DELPHI_SYNTAX%
+\f4\s2 DB: TCcDatabase; \par
+%BCB_SYNTAX%
+\f4\s2 Ccproviders::TCCDatabase *DB \par
+%PROPERTY%
+DBName
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  DBName: \b String\b0  \b read\b0  FDBName \b write\b0  FDBName; \par
+%BCB_SYNTAX%
+\f4\s2 __property AnsiString DBName=\{ read=FDBName, write=FDBName \} \par
+%PUBLISHED%
+%PROPERTY%
+Login
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  Login: AnsiString \b read\b0  FLogin; \par
+%BCB_SYNTAX%
+\f4\s2 __property AnsiString Login=\{ read=FLogin \} \par
+%READONLY%
+%PROPERTY%
+SQLDialect
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  SQLDialect: Integer \b read\b0  FSQLDialect \b write\b0  FSQLDialect; \par
+%BCB_SYNTAX%
+\f4\s2 __property \b int\b0  SQLDialect=\{ read=FSQLDialect, write=FSQLDialect, \b nodefault\b0  \} \par
+%PUBLISHED%
+%PROPERTY%
+TR
+%DELPHI_SYNTAX%
+\f4\s2 TR: TCcTransaction; \par
+%BCB_SYNTAX%
+\f4\s2 Ccproviders::TCCTransaction *TR \par
+%COMPONENT%
+TCcErrorEvent
+%DELPHI_SYNTAX%
+\f4 TCcErrorEvent=\b procedure\b0 (Sender: TObject; e: Exception; \b var\b0  CanContinue: Boolean) \b of\b0  \b object\b0 ; \f0\par
+%BCB_SYNTAX%
+\b\f4 typedef\b0  \b void\b0  __fastcall(__closure *TCcErrorEvent)(System::TObject *Sender, Sysutils::Exception *e, \b bool\b0  &CanContinue); \f0\par
+%UNIT%
+CCat
+%NAMESPACE%
+CCat
+%COMPONENT%
+TCcExceptionEvent
+%DELPHI_SYNTAX%
+\f4 TCcExceptionEvent=\b procedure\b0 (Sender: TObject; e: Exception) \b of\b0  \b object\b0 ; \f0\par
+%BCB_SYNTAX%
+\b\f4 typedef\b0  \b void\b0  __fastcall(__closure *TCcExceptionEvent)(System::TObject *Sender, Sysutils::Exception *e); \f0\par
+%UNIT%
+CCat
+%NAMESPACE%
+CCat
+%COMPONENT%
+TCCField
+%UNIT%
+CcProviders
+%NAMESPACE%
+CcProviders
+%DERIVED_FROM%
+TObject
+%METHOD%
+~TCCField
+%BCB_SYNTAX%
+\f4\s2 inline __fastcall \b virtual\b0  ~TCCField(\b void\b0 ) \par
+%OVERVIEW%
+Destructor\par
+%METHOD%
+GetAsCurrency
+%DELPHI_SYNTAX%
+\f4\s2 \b function\b0  GetAsCurrency: Currency; \b virtual\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  System::Currency __fastcall GetAsCurrency(\b void\b0 ) \par
+%OVERVIEW%
+TCCField\par
+%PROTECTED%
+%METHOD%
+GetAsDateTime
+%DELPHI_SYNTAX%
+\f4\s2 \b function\b0  GetAsDateTime: TDateTime; \b virtual\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  System::TDateTime __fastcall GetAsDateTime(\b void\b0 ) \par
+%PROTECTED%
+%METHOD%
+GetAsFloat
+%DELPHI_SYNTAX%
+\f4\s2 \b function\b0  GetAsFloat: Double; \b virtual\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  \b double\b0  __fastcall GetAsFloat(\b void\b0 ) \par
+%PROTECTED%
+%METHOD%
+GetAsInteger
+%DELPHI_SYNTAX%
+\f4\s2 \b function\b0  GetAsInteger: Integer; \b virtual\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  \b int\b0  __fastcall GetAsInteger(\b void\b0 ) \par
+%PROTECTED%
+%METHOD%
+GetAsString
+%DELPHI_SYNTAX%
+\f4\s2 \b function\b0  GetAsString: \b String\b0 ; \b virtual\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  AnsiString __fastcall GetAsString() \par
+%PROTECTED%
+%METHOD%
+GetDataType
+%DELPHI_SYNTAX%
+\f4\s2 \b function\b0  GetDataType: TFieldType; \b virtual\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  Db::TFieldType __fastcall GetDataType(\b void\b0 ) \par
+%PROTECTED%
+%METHOD%
+GetSize
+%DELPHI_SYNTAX%
+\f4\s2 \b function\b0  GetSize: Integer; \b virtual\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  \b int\b0  __fastcall GetSize(\b void\b0 ) \par
+%PROTECTED%
+%METHOD%
+GetValue
+%DELPHI_SYNTAX%
+\f4\s2 \b function\b0  GetValue: Variant; \b virtual\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  Variant __fastcall GetValue() \par
+%PROTECTED%
+%METHOD%
+SetAsCurrency
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  SetAsCurrency(Val: Currency); \b virtual\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  \b void\b0  __fastcall SetAsCurrency(System::Currency Val) \par
+%PROTECTED%
+%METHOD%
+SetAsDateTime
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  SetAsDateTime(Val: TDateTime); \b virtual\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  \b void\b0  __fastcall SetAsDateTime(System::TDateTime Val) \par
+%PROTECTED%
+%METHOD%
+SetAsFloat
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  SetAsFloat(Val: Double); \b virtual\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  \b void\b0  __fastcall SetAsFloat(\b double\b0  Val) \par
+%PROTECTED%
+%METHOD%
+SetAsInteger
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  SetAsInteger(Val: Integer); \b virtual\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  \b void\b0  __fastcall SetAsInteger(\b int\b0  Val) \par
+%PROTECTED%
+%METHOD%
+SetAsString
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  SetAsString(Val: \b String\b0 ); \b virtual\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  \b void\b0  __fastcall SetAsString(AnsiString Val) \par
+%PROTECTED%
+%METHOD%
+SetValue
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  SetValue(Val: Variant); \b virtual\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  \b void\b0  __fastcall SetValue(\b const\b0  Variant &Val) \par
+%PROTECTED%
+%METHOD%
+TCCField
+%BCB_SYNTAX%
+\f4\s2 inline __fastcall TCCField(\b void\b0 ) \par
+%OVERVIEW%
+Constructor\par
+%PROPERTY%
+AsCurrency
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  AsCurrency: Currency \b read\b0  GetAsCurrency \b write\b0  SetAsCurrency; \par
+%BCB_SYNTAX%
+\f4\s2 __property System::Currency AsCurrency=\{ read=GetAsCurrency, write=SetAsCurrency \} \par
+%PROPERTY%
+AsDateTime
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  AsDateTime: TDateTime \b read\b0  GetAsDateTime \b write\b0  SetAsDateTime; \par
+%BCB_SYNTAX%
+\f4\s2 __property System::TDateTime AsDateTime=\{ read=GetAsDateTime, write=SetAsDateTime \} \par
+%PROPERTY%
+AsFloat
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  AsFloat: Double \b read\b0  GetAsFloat \b write\b0  SetAsFloat; \par
+%BCB_SYNTAX%
+\f4\s2 __property \b double\b0  AsFloat=\{ read=GetAsFloat, write=SetAsFloat \} \par
+%PROPERTY%
+AsInteger
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  AsInteger: Integer \b read\b0  GetAsInteger \b write\b0  SetAsInteger; \par
+%BCB_SYNTAX%
+\f4\s2 __property \b int\b0  AsInteger=\{ read=GetAsInteger, write=SetAsInteger, \b nodefault\b0  \} \par
+%PROPERTY%
+AsString
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  AsString: \b String\b0  \b read\b0  GetAsString \b write\b0  SetAsString; \par
+%BCB_SYNTAX%
+\f4\s2 __property AnsiString AsString=\{ read=GetAsString, write=SetAsString \} \par
+%PROPERTY%
+DataType
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  DataType: TFieldType \b read\b0  GetDataType; \par
+%BCB_SYNTAX%
+\f4\s2 __property Db::TFieldType DataType=\{ read=GetDataType, \b nodefault\b0  \} \par
+%READONLY%
+%PROPERTY%
+FieldName
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  FieldName: \b String\b0  \b read\b0  FFieldName; \par
+%BCB_SYNTAX%
+\f4\s2 __property AnsiString FieldName=\{ read=FFieldName \} \par
+%READONLY%
+%PROPERTY%
+IsNull
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  IsNull: Boolean \b read\b0  GetIsNull; \par
+%BCB_SYNTAX%
+\f4\s2 __property \b bool\b0  IsNull=\{ read=GetIsNull, \b nodefault\b0  \} \par
+%READONLY%
+%PROPERTY%
+Size
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  Size: Integer \b read\b0  GetSize; \par
+%BCB_SYNTAX%
+\f4\s2 __property \b int\b0  Size=\{ read=GetSize, \b nodefault\b0  \} \par
+%READONLY%
+%PROPERTY%
+Value
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  Value: Variant \b read\b0  GetValue \b write\b0  SetValue; \par
+%BCB_SYNTAX%
+\f4\s2 __property Variant Value=\{ read=GetValue, write=SetValue \} \par
+%COMPONENT%
+TCcGetFieldsEvent
+%DELPHI_SYNTAX%
+\f4 TCcGetFieldsEvent=\b procedure\b0 (Sender: TObject; Table: \b String\b0 ; Fields: TStringList) \b of\b0  \b object\b0 ; \f0\par
+%BCB_SYNTAX%
+\b\f4 typedef\b0  \b void\b0  __fastcall(__closure *TCcGetFieldsEvent)(System::TObject *Sender, AnsiString Table, Classes::TStringList *Fields); \f0\par
+%UNIT%
+CCat
+%NAMESPACE%
+CCat
+%COMPONENT%
+TCcLog
+%UNIT%
+CcLog
+%NAMESPACE%
+CcLog
+%DERIVED_FROM%
+TCcCustomLog
+%METHOD%
+~TCcLog
+%BCB_SYNTAX%
+\f4\s2 __fastcall \b virtual\b0  ~TCcLog(\b void\b0 ) \par
+%OVERVIEW%
+Destructor\par
+%METHOD%
+BuildLogSQL
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  BuildLogSQL; \b override\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  \b void\b0  __fastcall BuildLogSQL(\b void\b0 ) \par
+%PROTECTED%
+%METHOD%
+Create
+%DELPHI_SYNTAX%
+\f4\s2 \b constructor\b0  Create(Owner: TComponent); \b override\b0 ; \par
+%METHOD%
+Destroy
+%DELPHI_SYNTAX%
+\f4\s2 \b destructor\b0  Destroy; \b override\b0 ; \par
+%METHOD%
+DestroyQueries
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  DestroyQueries; \b override\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  \b void\b0  __fastcall DestroyQueries(\b void\b0 ) \par
+%PROTECTED%
+%METHOD%
+Edit
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  Edit; \b override\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  \b void\b0  __fastcall Edit(\b void\b0 ) \par
+%OVERVIEW%
+TReplLog\par
+%METHOD%
+FBN
+%DELPHI_SYNTAX%
+\f4\s2 \b function\b0  FBN(cFieldName: \b String\b0 ): \b String\b0 ; \b override\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  AnsiString __fastcall FBN(AnsiString cFieldName) \par
+%METHOD%
+FieldByName
+%DELPHI_SYNTAX%
+\f4\s2 \b function\b0  FieldByName(cFieldName: \b String\b0 ): TField; \b override\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  Db::TField *__fastcall FieldByName(AnsiString cFieldName) \par
+%OVERVIEW%
+(Sender: TObject; var Handled: Boolean);\par
+%METHOD%
+First
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  First; \b override\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  \b void\b0  __fastcall First(\b void\b0 ) \par
+%METHOD%
+GetBof
+%DELPHI_SYNTAX%
+\f4\s2 \b function\b0  GetBof: Boolean; \b override\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  \b bool\b0  __fastcall GetBof(\b void\b0 ) \par
+%PROTECTED%
+%METHOD%
+GetCurrentLine
+%DELPHI_SYNTAX%
+\f4\s2 \b function\b0  GetCurrentLine: Integer; \b override\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  \b int\b0  __fastcall GetCurrentLine(\b void\b0 ) \par
+%PROTECTED%
+%METHOD%
+GetdpDest
+%DELPHI_SYNTAX%
+\f4\s2 \b function\b0  GetdpDest: TCcDBParams; \b override\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  Ccdbparams::TCcDBParams *__fastcall GetdpDest(\b void\b0 ) \par
+%PROTECTED%
+%METHOD%
+GetdpOrigine
+%DELPHI_SYNTAX%
+\f4\s2 \b function\b0  GetdpOrigine: TCcDBParams; \b override\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  Ccdbparams::TCcDBParams *__fastcall GetdpOrigine(\b void\b0 ) \par
+%PROTECTED%
+%METHOD%
+GetEof
+%DELPHI_SYNTAX%
+\f4\s2 \b function\b0  GetEof: Boolean; \b override\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  \b bool\b0  __fastcall GetEof(\b void\b0 ) \par
+%PROTECTED%
+%METHOD%
+GetLineCount
+%DELPHI_SYNTAX%
+\f4\s2 \b function\b0  GetLineCount: Integer; \b override\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  \b int\b0  __fastcall GetLineCount(\b void\b0 ) \par
+%PROTECTED%
+%METHOD%
+GetLocalMode
+%DELPHI_SYNTAX%
+\f4\s2 \b function\b0  GetLocalMode: Boolean; \b override\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  \b bool\b0  __fastcall GetLocalMode(\b void\b0 ) \par
+%PROTECTED%
+%METHOD%
+GetReplState
+%DELPHI_SYNTAX%
+\f4\s2 \b function\b0  GetReplState: TCcLogState; \b override\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  Ccat::TCcLogState __fastcall GetReplState(\b void\b0 ) \par
+%PROTECTED%
+%METHOD%
+Init
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  Init; \b override\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  \b void\b0  __fastcall Init(\b void\b0 ) \par
+%METHOD%
+InitQueries
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  InitQueries; \b override\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  \b void\b0  __fastcall InitQueries(\b void\b0 ) \par
+%PROTECTED%
+%METHOD%
+Last
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  Last; \b override\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  \b void\b0  __fastcall Last(\b void\b0 ) \par
+%METHOD%
+LoadLog
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  LoadLog; \b override\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  \b void\b0  __fastcall LoadLog(\b void\b0 ) \par
+%OVERVIEW%
+procedure LoadLog(Sender :TObject; var Handled :Boolean);\par
+%PROTECTED%
+%METHOD%
+Next
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  Next; \b override\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  \b void\b0  __fastcall Next(\b void\b0 ) \par
+%METHOD%
+Post
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  Post; \b override\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  \b void\b0  __fastcall Post(\b void\b0 ) \par
+%METHOD%
+Prior
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  Prior; \b override\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  \b void\b0  __fastcall Prior(\b void\b0 ) \par
+%METHOD%
+RecordReplicated
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  RecordReplicated(Sender: TObject); \par
+%BCB_SYNTAX%
+\f4\s2 \b void\b0  __fastcall RecordReplicated(System::TObject *Sender) \par
+%PROTECTED%
+%METHOD%
+SetReplicator
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  SetReplicator(Repl: TCcReplicator); \b override\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  \b void\b0  __fastcall SetReplicator(Ccreplicator::TCcReplicator *Repl) \par
+%PROTECTED%
+%METHOD%
+SignalError
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  SignalError(Sender: TObject; e: Exception; \b var\b0  CanContinue: Boolean); \par
+%BCB_SYNTAX%
+\f4\s2 \b void\b0  __fastcall SignalError(System::TObject *Sender, Sysutils::Exception *e, \b bool\b0  &CanContinue) \par
+%PROTECTED%
+%METHOD%
+TCcLog
+%BCB_SYNTAX%
+\f4\s2 __fastcall \b virtual\b0  TCcLog(Classes::TComponent *Owner) \par
+%OVERVIEW%
+Constructor\par
+%METHOD%
+UpdateState
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  UpdateState(State: TCcLogState); \par
+%BCB_SYNTAX%
+\f4\s2 \b void\b0  __fastcall UpdateState(Ccat::TCcLogState State) \par
+%PROTECTED%
+%COMPONENT%
+TCcLogState
+%DELPHI_SYNTAX%
+\f4 TCcLogState=(lsNone, lsOk, lsError, lsConflict); \f0\par
+%BCB_SYNTAX%
+\b\f4 enum\b0  TCcLogState \{ lsNone, lsOk, lsError, lsConflict \}; \f0\par
+%DESCRIPTION%
+\tx1400\b\f0 Value\tab\tab Meaning\b0\par
+%UNIT%
+CCat
+%NAMESPACE%
+CCat
+%COMPONENT%
+TCcLostConnectEvent
+%DELPHI_SYNTAX%
+\f4 TCcLostConnectEvent=\b procedure\b0 (Sender: TObject; Database: TCcDatabase) \b of\b0  \b object\b0 ; \f0\par
+%BCB_SYNTAX%
+\b\f4 typedef\b0  \b void\b0  __fastcall(__closure *TCcLostConnectEvent)(System::TObject *Sender, Ccproviders::TCCDatabase *Database); \f0\par
+%UNIT%
+CCat
+%NAMESPACE%
+CCat
+%COMPONENT%
+TCcMacro
+%UNIT%
+CcProviders
+%NAMESPACE%
+CcProviders
+%DERIVED_FROM%
+TObject
+%METHOD%
+~TCcMacro
+%BCB_SYNTAX%
+\f4\s2 inline __fastcall \b virtual\b0  ~TCcMacro(\b void\b0 ) \par
+%OVERVIEW%
+Destructor\par
+%METHOD%
+ApplyToSQL
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  ApplyToSQL(\b var\b0  SQLText: \b String\b0 ); \par
+%BCB_SYNTAX%
+\f4\s2 \b void\b0  __fastcall ApplyToSQL(AnsiString &SQLText) \par
+%OVERVIEW%
+TCcMacro\par
+%PROTECTED%
+%METHOD%
+Create
+%DELPHI_SYNTAX%
+\f4\s2 \b constructor\b0  Create(Query: TCcQuery; \b Name\b0 : \b String\b0 ); \par
+%PROTECTED%
+%METHOD%
+TCcMacro
+%BCB_SYNTAX%
+\f4\s2 __fastcall TCcMacro(TCcQuery *Query, AnsiString Name) \par
+%OVERVIEW%
+Constructor\par
+%PROTECTED%
+%PROPERTY%
+Name
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  Name: \b String\b0  \b read\b0  FName; \par
+%BCB_SYNTAX%
+\f4\s2 __property AnsiString Name=\{ read=FName \} \par
+%READONLY%
+%PROPERTY%
+Value
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  Value: \b String\b0  \b read\b0  FValue \b write\b0  SetValue; \par
+%BCB_SYNTAX%
+\f4\s2 __property AnsiString Value=\{ read=FValue, write=SetValue \} \par
+%COMPONENT%
+TCcNameEvent
+%DELPHI_SYNTAX%
+\f4 TCcNameEvent=\b procedure\b0 (Sender: TObject; \b Name\b0 : \b String\b0 ) \b of\b0  \b object\b0 ; \f0\par
+%BCB_SYNTAX%
+\b\f4 typedef\b0  \b void\b0  __fastcall(__closure *TCcNameEvent)(System::TObject *Sender, AnsiString Name); \f0\par
+%UNIT%
+CCat
+%NAMESPACE%
+CCat
+%COMPONENT%
+TCcOperationEvent
+%DELPHI_SYNTAX%
+\f4 TCcOperationEvent=\b procedure\b0 (Sender: TObject; \b var\b0  Handled: Boolean) \b of\b0  \b object\b0 ; \f0\par
+%BCB_SYNTAX%
+\b\f4 typedef\b0  \b void\b0  __fastcall(__closure *TCcOperationEvent)(System::TObject *Sender, \b bool\b0  &Handled); \f0\par
+%UNIT%
+CCat
+%NAMESPACE%
+CCat
+%COMPONENT%
+TCcProvider
+%UNIT%
+CcProviders
+%NAMESPACE%
+CcProviders
+%DERIVED_FROM%
+TComponent
+%METHOD%
+~TCcProvider
+%BCB_SYNTAX%
+\f4\s2 inline __fastcall \b virtual\b0  ~TCcProvider(\b void\b0 ) \par
+%OVERVIEW%
+Destructor\par
+%METHOD%
+Create
+%DELPHI_SYNTAX%
+\f4\s2 \b constructor\b0  Create(AOwner: TComponent); \b override\b0 ; \par
+%OVERVIEW%
+TCcProvider\par
+%PUBLISHED%
+%METHOD%
+NewDatabase
+%DELPHI_SYNTAX%
+\f4\s2 \b function\b0  NewDatabase(AOwner: TComponent): TCcDatabase; \b virtual\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  TCCDatabase *__fastcall NewDatabase(Classes::TComponent *AOwner) \par
+%PUBLISHED%
+%METHOD%
+NewQuery
+%DELPHI_SYNTAX%
+\f4\s2 \b function\b0  NewQuery(AOwner: TComponent): TCcQuery; \b virtual\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  TCcQuery *__fastcall NewQuery(Classes::TComponent *AOwner) \par
+%PUBLISHED%
+%METHOD%
+NewTransaction
+%DELPHI_SYNTAX%
+\f4\s2 \b function\b0  NewTransaction(AOwner: TComponent): TCcTransaction; \b virtual\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  TCCTransaction *__fastcall NewTransaction(Classes::TComponent *AOwner) \par
+%PUBLISHED%
+%METHOD%
+ProviderName
+%DELPHI_SYNTAX%
+\f4\s2 \b function\b0  ProviderName: \b String\b0 ; \b virtual\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  AnsiString __fastcall ProviderName() \par
+%PUBLISHED%
+%METHOD%
+TCcProvider
+%BCB_SYNTAX%
+\f4\s2 __fastcall \b virtual\b0  TCcProvider(Classes::TComponent *AOwner) \par
+%OVERVIEW%
+Constructor\par
+%PUBLISHED%
+%COMPONENT%
+TCcQuery
+%UNIT%
+CcProviders
+%NAMESPACE%
+CcProviders
+%DERIVED_FROM%
+TComponent
+%METHOD%
+~TCcQuery
+%BCB_SYNTAX%
+\f4\s2 __fastcall \b virtual\b0  ~TCcQuery(\b void\b0 ) \par
+%OVERVIEW%
+Destructor\par
+%METHOD%
+CheckMacros
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  CheckMacros(SQLText: \b String\b0 ); \par
+%BCB_SYNTAX%
+\f4\s2 \b void\b0  __fastcall CheckMacros(AnsiString SQLText) \par
+%PROTECTED%
+%METHOD%
+Close
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  Close; \par
+%BCB_SYNTAX%
+\f4\s2 \b void\b0  __fastcall Close(\b void\b0 ) \par
+%OVERVIEW%
+TCcQuery\par
+%METHOD%
+Create
+%DELPHI_SYNTAX%
+\f4\s2 \b constructor\b0  Create(AOwner: TComponent); \b override\b0 ; \par
+%METHOD%
+Destroy
+%DELPHI_SYNTAX%
+\f4\s2 \b destructor\b0  Destroy; \b override\b0 ; \par
+%METHOD%
+DoClose
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  DoClose; \b virtual\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  \b void\b0  __fastcall DoClose(\b void\b0 ) \par
+%PROTECTED%
+%METHOD%
+DoExec
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  DoExec; \b virtual\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  \b void\b0  __fastcall DoExec(\b void\b0 ) \par
+%PROTECTED%
+%METHOD%
+DoGetSQL
+%DELPHI_SYNTAX%
+\f4\s2 \b function\b0  DoGetSQL: \b String\b0 ; \b virtual\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  AnsiString __fastcall DoGetSQL() \par
+%PROTECTED%
+%METHOD%
+DoNext
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  DoNext; \b virtual\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  \b void\b0  __fastcall DoNext(\b void\b0 ) \par
+%PROTECTED%
+%METHOD%
+DoSetDatabase
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  DoSetDatabase(DB: TCcDatabase); \b virtual\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  \b void\b0  __fastcall DoSetDatabase(TCCDatabase *DB) \par
+%PROTECTED%
+%METHOD%
+DoSetSQL
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  DoSetSQL(SQLText: \b String\b0 ); \b virtual\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  \b void\b0  __fastcall DoSetSQL(AnsiString SQLText) \par
+%PROTECTED%
+%METHOD%
+DoSetTransaction
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  DoSetTransaction(TR: TCcTransaction); \b virtual\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  \b void\b0  __fastcall DoSetTransaction(TCCTransaction *TR) \par
+%PROTECTED%
+%METHOD%
+DoUnPrepare
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  DoUnPrepare; \b virtual\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  \b void\b0  __fastcall DoUnPrepare(\b void\b0 ) \par
+%PROTECTED%
+%METHOD%
+Exec
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  Exec; \par
+%BCB_SYNTAX%
+\f4\s2 \b void\b0  __fastcall Exec(\b void\b0 ) \par
+%OVERVIEW%
+Execute the query (synchronously) If the database connection is inactive, or if it gets cut during execution, the OnConnectLost event of the database is called\par
+%METHOD%
+FieldExists
+%DELPHI_SYNTAX%
+\f4\s2 \b function\b0  FieldExists(FieldName: \b String\b0 ): Boolean; \par
+%BCB_SYNTAX%
+\f4\s2 \b bool\b0  __fastcall FieldExists(AnsiString FieldName) \par
+%METHOD%
+FindField
+%DELPHI_SYNTAX%
+\f4\s2 \b function\b0  FindField(FieldName: \b String\b0 ): TCCField; \par
+%BCB_SYNTAX%
+\f4\s2 TCCField *__fastcall FindField(AnsiString FieldName) \par
+%METHOD%
+FindMacro
+%DELPHI_SYNTAX%
+\f4\s2 \b function\b0  FindMacro(MacroName: \b String\b0 ): TCcMacro; \par
+%BCB_SYNTAX%
+\f4\s2 TCcMacro *__fastcall FindMacro(AnsiString MacroName) \par
+%METHOD%
+FindParam
+%DELPHI_SYNTAX%
+\f4\s2 \b function\b0  FindParam(Param: \b String\b0 ): TCCField; \par
+%BCB_SYNTAX%
+\f4\s2 TCCField *__fastcall FindParam(AnsiString Param) \par
+%METHOD%
+FreeFields
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  FreeFields; \par
+%BCB_SYNTAX%
+\f4\s2 \b void\b0  __fastcall FreeFields(\b void\b0 ) \par
+%PROTECTED%
+%METHOD%
+FreeMacros
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  FreeMacros; \par
+%BCB_SYNTAX%
+\f4\s2 \b void\b0  __fastcall FreeMacros(\b void\b0 ) \par
+%PROTECTED%
+%METHOD%
+FreeParams
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  FreeParams; \par
+%BCB_SYNTAX%
+\f4\s2 \b void\b0  __fastcall FreeParams(\b void\b0 ) \par
+%PROTECTED%
+%METHOD%
+GetActive
+%DELPHI_SYNTAX%
+\f4\s2 \b function\b0  GetActive: Boolean; \b virtual\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  \b bool\b0  __fastcall GetActive(\b void\b0 ) \par
+%PROTECTED%
+%METHOD%
+GetEof
+%DELPHI_SYNTAX%
+\f4\s2 \b function\b0  GetEof: Boolean; \b virtual\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  \b bool\b0  __fastcall GetEof(\b void\b0 ) \par
+%PROTECTED%
+%METHOD%
+GetRecordCount
+%DELPHI_SYNTAX%
+\f4\s2 \b function\b0  GetRecordCount: Integer; \b virtual\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  \b int\b0  __fastcall GetRecordCount(\b void\b0 ) \par
+%PROTECTED%
+%METHOD%
+GetRowsAffected
+%DELPHI_SYNTAX%
+\f4\s2 \b function\b0  GetRowsAffected: Integer; \b virtual\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  \b int\b0  __fastcall GetRowsAffected(\b void\b0 ) \par
+%PROTECTED%
+%METHOD%
+GetSQL
+%DELPHI_SYNTAX%
+\f4\s2 \b function\b0  GetSQL: \b String\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 AnsiString __fastcall GetSQL() \par
+%PROTECTED%
+%METHOD%
+InitFields
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  InitFields; \b virtual\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  \b void\b0  __fastcall InitFields(\b void\b0 ) \par
+%OVERVIEW%
+InitFields is called after every Exec Descendants must fill FFields with TCCField descendants\par
+%PROTECTED%
+%METHOD%
+InitParams
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  InitParams; \b virtual\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  \b void\b0  __fastcall InitParams(\b void\b0 ) \par
+%OVERVIEW%
+InitParams is called upon the first access to the parameter list After parameters have been accessed, the SQL may no longer be modified Descendants must fill FParams with TCCField descendants If the underlying DAC handles macros, they must be excluded from the list, since Macros are handled here at a higher level\par
+%PROTECTED%
+%METHOD%
+MacroExists
+%DELPHI_SYNTAX%
+\f4\s2 \b function\b0  MacroExists(MacroName: \b String\b0 ): Boolean; \par
+%BCB_SYNTAX%
+\f4\s2 \b bool\b0  __fastcall MacroExists(AnsiString MacroName) \par
+%METHOD%
+Next
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  Next; \par
+%BCB_SYNTAX%
+\f4\s2 \b void\b0  __fastcall Next(\b void\b0 ) \par
+%METHOD%
+ParamExists
+%DELPHI_SYNTAX%
+\f4\s2 \b function\b0  ParamExists(ParamName: \b String\b0 ): Boolean; \par
+%BCB_SYNTAX%
+\f4\s2 \b bool\b0  __fastcall ParamExists(AnsiString ParamName) \par
+%METHOD%
+Prepare
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  Prepare; \par
+%BCB_SYNTAX%
+\f4\s2 \b void\b0  __fastcall Prepare(\b void\b0 ) \par
+%METHOD%
+SetDatabase
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  SetDatabase(DB: TCcDatabase); \par
+%BCB_SYNTAX%
+\f4\s2 \b void\b0  __fastcall SetDatabase(TCCDatabase *DB) \par
+%PROTECTED%
+%METHOD%
+SetSQL
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  SetSQL(SQLText: \b String\b0 ); \par
+%BCB_SYNTAX%
+\f4\s2 \b void\b0  __fastcall SetSQL(AnsiString SQLText) \par
+%OVERVIEW%
+After accessing the parameters, the SQL can no longer be modified. This is a lowest common denominator approach, some DACs support it while others don't\par
+%PROTECTED%
+%METHOD%
+SetTransaction
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  SetTransaction(TR: TCcTransaction); \par
+%BCB_SYNTAX%
+\f4\s2 \b void\b0  __fastcall SetTransaction(TCCTransaction *TR) \par
+%PROTECTED%
+%METHOD%
+TCcQuery
+%BCB_SYNTAX%
+\f4\s2 __fastcall \b virtual\b0  TCcQuery(Classes::TComponent *AOwner) \par
+%OVERVIEW%
+Constructor\par
+%METHOD%
+UnPrepare
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  UnPrepare; \par
+%BCB_SYNTAX%
+\f4\s2 \b void\b0  __fastcall UnPrepare(\b void\b0 ) \par
+%PROPERTY%
+Active
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  Active: Boolean \b read\b0  GetActive; \par
+%BCB_SYNTAX%
+\f4\s2 __property \b bool\b0  Active=\{ read=GetActive, \b nodefault\b0  \} \par
+%READONLY%
+%PROPERTY%
+Database
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  Database: TCcDatabase \b read\b0  FDatabase \b write\b0  SetDatabase; \par
+%BCB_SYNTAX%
+\f4\s2 __property TCCDatabase *Database=\{ read=FDatabase, write=SetDatabase \} \par
+%PUBLISHED%
+%PROPERTY%
+Eof
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  Eof: Boolean \b read\b0  GetEof; \par
+%BCB_SYNTAX%
+\f4\s2 __property \b bool\b0  Eof=\{ read=GetEof, \b nodefault\b0  \} \par
+%READONLY%
+%PROPERTY%
+Field
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  Field[FieldName: \b String\b0 ]: TCCField \b read\b0  GetField; \par
+%BCB_SYNTAX%
+\f4\s2 __property TCCField *Field[AnsiString FieldName]=\{ read=GetField \} \par
+%READONLY%
+%PROPERTY%
+FieldByIndex
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  FieldByIndex[\b Index\b0 : Integer]: TCCField \b read\b0  GetFieldByIndex; \par
+%BCB_SYNTAX%
+\f4\s2 __property TCCField *FieldByIndex[\b int\b0  Index]=\{ read=GetFieldByIndex \} \par
+%READONLY%
+%PROPERTY%
+FieldCount
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  FieldCount: Integer \b read\b0  GetFieldCount; \par
+%BCB_SYNTAX%
+\f4\s2 __property \b int\b0  FieldCount=\{ read=GetFieldCount, \b nodefault\b0  \} \par
+%READONLY%
+%PROPERTY%
+Macro
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  Macro[ParamName: \b String\b0 ]: TCcMacro \b read\b0  GetMacro; \par
+%BCB_SYNTAX%
+\f4\s2 __property TCcMacro *Macro[AnsiString ParamName]=\{ read=GetMacro \} \par
+%READONLY%
+%PROPERTY%
+MacroCount
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  MacroCount: Integer \b read\b0  GetMacroCount; \par
+%BCB_SYNTAX%
+\f4\s2 __property \b int\b0  MacroCount=\{ read=GetMacroCount, \b nodefault\b0  \} \par
+%READONLY%
+%PROPERTY%
+Param
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  Param[ParamName: \b String\b0 ]: TCCField \b read\b0  GetParam; \par
+%BCB_SYNTAX%
+\f4\s2 __property TCCField *Param[AnsiString ParamName]=\{ read=GetParam \} \par
+%READONLY%
+%PROPERTY%
+ParamCount
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  ParamCount: Integer \b read\b0  GetParamCount; \par
+%BCB_SYNTAX%
+\f4\s2 __property \b int\b0  ParamCount=\{ read=GetParamCount, \b nodefault\b0  \} \par
+%READONLY%
+%PROPERTY%
+Prepared
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  Prepared: Boolean \b read\b0  FSQLPrepared; \par
+%BCB_SYNTAX%
+\f4\s2 __property \b bool\b0  Prepared=\{ read=FSQLPrepared, \b nodefault\b0  \} \par
+%READONLY%
+%PROPERTY%
+RecordCount
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  RecordCount: Integer \b read\b0  GetRecordCount; \par
+%BCB_SYNTAX%
+\f4\s2 __property \b int\b0  RecordCount=\{ read=GetRecordCount, \b nodefault\b0  \} \par
+%READONLY%
+%PROPERTY%
+RowsAffected
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  RowsAffected: Integer \b read\b0  GetRowsAffected; \par
+%BCB_SYNTAX%
+\f4\s2 __property \b int\b0  RowsAffected=\{ read=GetRowsAffected, \b nodefault\b0  \} \par
+%READONLY%
+%PROPERTY%
+SQL
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  SQL: \b String\b0  \b read\b0  GetSQL \b write\b0  SetSQL; \par
+%BCB_SYNTAX%
+\f4\s2 __property AnsiString SQL=\{ read=GetSQL, write=SetSQL \} \par
+%PUBLISHED%
+%PROPERTY%
+Transaction
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  Transaction: TCcTransaction \b read\b0  FTransaction \b write\b0  SetTransaction; \par
+%BCB_SYNTAX%
+\f4\s2 __property TCCTransaction *Transaction=\{ read=FTransaction, write=SetTransaction \} \par
+%PUBLISHED%
+%COMPONENT%
+TCcQueryEvent
+%DELPHI_SYNTAX%
+\f4 TCcQueryEvent=\b procedure\b0 (Sender: TObject; QueryType: TCcQueryType; Rows: Integer) \b of\b0  \b object\b0 ; \f0\par
+%BCB_SYNTAX%
+\b\f4 typedef\b0  \b void\b0  __fastcall(__closure *TCcQueryEvent)(System::TObject *Sender, TCcQueryType QueryType, \b int\b0  Rows); \f0\par
+%UNIT%
+CcReplicator
+%NAMESPACE%
+CcReplicator
+%COMPONENT%
+TCcQueryType
+%DELPHI_SYNTAX%
+\f4 TCcQueryType=(qtSelect, qtDelete, qtUpdate, qtInsert); \f0\par
+%BCB_SYNTAX%
+\b\f4 enum\b0  TCcQueryType \{ qtSelect, qtDelete, qtUpdate, qtInsert \}; \f0\par
+%DESCRIPTION%
+\tx1400\b\f0 Value\tab\tab Meaning\b0\par
+%UNIT%
+CcReplicator
+%NAMESPACE%
+CcReplicator
+%COMPONENT%
+TCcReplicator
+%SEE_ALSO%
+TCcReplicator.AbortOnError
+TCcReplicator.OnProgress
+%OVERVIEW%
+TCcReplicator provides the core replication functionality of CopyCat.\par
+%DESCRIPTION%
+\b\f0 How to use TCcReplicator:\b0\par
+\par
+1. Set the DBProvider property to the data access component set of your choice.\par
+2. Fill in the LocalDB and RemoteDB properties with the connection parameters for each database.\par
+3. Provide the LocalSYSDBA, LocalDB, and RemoteDB usernames and passwords. LocalSYSDBA corresponds\par
+to the SYSDBA of the local server, while LocalDB and RemoteDB users correspond to the names attibuted to the replication sites. See Users for more information. 4. Call the Replicate method.\par
+5. Optionnaly, implement a few of the events, in order to provide user feedback at every stage of the replication process.\par
+6. Optionnaly, you may set up automatic timer-based replication, using the AutoReplicate property. \par
+\par
+Alternatively, the configuration of the replicator can be held in an INI-file, using the ConfigStorage property to link to the TCcConfigStorage component managing the configuration. \par
+\par
+If an exception occurs during replication, an OnReplicationError event is fired, where you can choose to either abort the whole replication process, or to continue trying to replicate the next record. The default behaviour depends on the AbortOnError property. \par
+\par
+If an exception occurs at any other point (e.g. during database connection), an OnException event is fired, and replication is aborted. \par
+\par
+TCcReplicator frequently fires the OnProgress event, in order to allow the application to refresh user interface, process any pending user messages, and possibly, update a progress bar. It is also possible to abort the replication at any time, using the AbortReplication method. Refer to the provided example projects for an illustration of the use of most of the events and properties. \par
+%UNIT%
+CcReplicator
+%NAMESPACE%
+CcReplicator
+%DERIVED_FROM%
+TCcCustomReplicator
+%EVENT%
+OnAbort
+%SEE_ALSO%
+TCcReplicator.OnReplicationError
+TCcReplicator.Replicate
+%DELPHI_SYNTAX%
+\b\f4 property\b0  OnAbort: TNotifyEvent \b read\b0  FOnAbort \b write\b0  FOnAbort; \par
+%BCB_SYNTAX%
+\f4 __property Classes::TNotifyEvent OnAbort=\{ read=FOnAbort, write=FOnAbort \} \par
+%OVERVIEW%
+Fired when the replication is aborted\par
+%DESCRIPTION%
+OnAbort is fired whenever replication is aborted. This may be because: \par
+\par
+1. The application called the AbortReplication method.\par
+2. A replication error occured, and the application chose to abort (using the OnReplicationError event and/or the AbortOnError property).\par
+\pard\sa80 3. The database connection was lost during processing.\par
+%PUBLISHED%
+%EVENT%
+OnAutoCommit
+%SEE_ALSO%
+TCcReplicator.AutoCommit
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  OnAutoCommit: TNotifyEvent \b read\b0  FOnAutoCommit \b write\b0  FOnAutoCommit; \par
+%BCB_SYNTAX%
+\f4\s2 __property Classes::TNotifyEvent OnAutoCommit=\{ read=FOnAutoCommit, write=FOnAutoCommit \} \par
+%OVERVIEW%
+Fired whenever the replication transactions are auto-committed.\par
+%DESCRIPTION%
+This event occurs when the AutoCommit property is enabled, and the replication transactions are automatically committed. See AutoCommit for more information.\par
+%PUBLISHED%
+%EVENT%
+OnCommit
+%SEE_ALSO%
+TCcReplicator.CommitOnFinished
+TCcReplicator.OnAutoCommit
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  OnCommit: TNotifyEvent \b read\b0  FOnCommit \b write\b0  FOnCommit; \par
+%BCB_SYNTAX%
+\f4\s2 __property Classes::TNotifyEvent OnCommit=\{ read=FOnCommit, write=FOnCommit \} \par
+%OVERVIEW%
+Fired just before the transaction is commited at the end of the replication process.\par
+%DESCRIPTION%
+This event occurs at the end of the replication, when the CommitOnFinished property is set to something other than ctNone (that is, ctCommit or ctRetaining). \par
+\pard\sa80 \par
+\pard\sa80 Note that this is different from the OnAutoCommit event: OnCommit only occurs when replication is finished, not when performing automatic, timer-based commits.\par
+%PUBLISHED%
+%EVENT%
+OnConflict
+%SEE_ALSO%
+TCcConflictMgr
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  OnConflict: TNotifyEvent \b read\b0  FOnConflict \b write\b0  FOnConflict; \par
+%BCB_SYNTAX%
+\f4\s2 __property Classes::TNotifyEvent OnConflict=\{ read=FOnConflict, write=FOnConflict \} \par
+%OVERVIEW%
+Fired when a conflict is detected.\par
+%DESCRIPTION%
+OnConflict is called as soon as a conflict is detected. This does not stop replication of the other records from continuing, it simply means that the conflictual record will not be replicated.\par
+%PUBLISHED%
+%EVENT%
+OnConnectionLost
+%SEE_ALSO%
+TCcReplicator.OnAbort
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  OnConnectionLost: TCcLostConnectEvent \b read\b0  FOnConnectionLost \b write\b0  FOnConnectionLost; \par
+%BCB_SYNTAX%
+\f4\s2 __property Ccat::TCcLostConnectEvent OnConnectionLost=\{ read=FOnConnectionLost, write=FOnConnectionLost \} \par
+%OVERVIEW%
+Fired when a database connection is lost.\par
+%DESCRIPTION%
+When CopyCat detects that a database connection has been dropped, an OnConnectionLost event is fired. All remaning database connections are then cut, and replication is aborted (firing an OnAbort event). This means that if the remote database becomes temporarily unavailable while replication is in progress, the application will abort the replication gracefully without throwing any exceptions (only events). As soon as the remote database is back online, replication will be able to resume.\par
+%PUBLISHED%
+%EVENT%
+OnConnectLocal
+%SEE_ALSO%
+TCcReplicator.Connect
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  OnConnectLocal: TNotifyEvent \b read\b0  FOnConnectLocal \b write\b0  FOnConnectLocal; \par
+%BCB_SYNTAX%
+\f4 __property Classes::TNotifyEvent OnConnectLocal=\{ read=FOnConnectLocal, write=FOnConnectLocal \} \par
+%OVERVIEW%
+Fired before connecting to the local database.\par
+%PUBLISHED%
+%EVENT%
+OnConnectRemote
+%SEE_ALSO%
+TCcReplicator.Connect
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  OnConnectRemote: TNotifyEvent \b read\b0  FOnConnectRemote \b write\b0  FOnConnectRemote; \par
+%BCB_SYNTAX%
+\f4 __property Classes::TNotifyEvent OnConnectRemote=\{ read=FOnConnectRemote, write=FOnConnectRemote \} \par
+%OVERVIEW%
+Fired before connecting to the remote database.\par
+%PUBLISHED%
+%EVENT%
+OnDisconnect
+%SEE_ALSO%
+TCcReplicator.Disconnect
+TCcReplicator.KeepConnection
+TCcReplicator.OnConnectionLost
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  OnDisconnect: TNotifyEvent \b read\b0  FOnDisconnect \b write\b0  FOnDisconnect; \par
+%BCB_SYNTAX%
+\f4 __property Classes::TNotifyEvent OnDisconnect=\{ read=FOnDisconnect, write=FOnDisconnect \} \par
+%OVERVIEW%
+Fired before disconnecting from both local and remote database.\par
+%DESCRIPTION%
+Note that this event is not fired when the connection is unintentionnaly lost, but only if the application calls the Disconnect method, or if KeepConnection is set to False.\par
+%PUBLISHED%
+%EVENT%
+OnEmptyLog
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  OnEmptyLog: TNotifyEvent \b read\b0  FOnEmptyLog \b write\b0  FOnEmptyLog; \par
+%BCB_SYNTAX%
+\f4 __property Classes::TNotifyEvent OnEmptyLog=\{ read=FOnEmptyLog, write=FOnEmptyLog \} \par
+%OVERVIEW%
+Fired when neither local nor remote replication logs contain any records.\par
+%PUBLISHED%
+%EVENT%
+OnException
+%SEE_ALSO%
+TCcReplicator.OnReplicationError
+TCcReplicator.Replicate
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  OnException: TCcExceptionEvent \b read\b0  FOnException \b write\b0  FOnException; \par
+%BCB_SYNTAX%
+\f4\s2 __property Ccat::TCcExceptionEvent OnException=\{ read=FOnException, write=FOnException \} \par
+%OVERVIEW%
+Fired when an error occurs while no records are being replicated.\par
+%DESCRIPTION%
+When an error occurs outside the scope of any replication (e.g. when checking for resolved conflicts, or when loading the log), the OnException event is fired. In such cases, it's of course impossible to resume replication (as with the OnReplicationError event), it is simply aborted.\par
+%PUBLISHED%
+%EVENT%
+OnFinished
+%SEE_ALSO%
+TCcReplicator.OnLogLoaded
+TCcReplicator.OnEmptyLog
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  OnFinished: TNotifyEvent \b read\b0  FOnFinished \b write\b0  FOnFinished; \par
+%BCB_SYNTAX%
+\f4\s2 __property Classes::TNotifyEvent OnFinished=\{ read=FOnFinished, write=FOnFinished \} \par
+%OVERVIEW%
+Fired when the replication process is finished.\par
+%DESCRIPTION%
+If the log was not empty, an OnFinished event is fired after replicating the records, even if an error occured and replication was aborted. OnFinished merely indicates that the replication process is no longer in progress, and can be used for such things as refreshing the user display and status labels (for example).\par
+%PUBLISHED%
+%EVENT%
+OnGenReplError
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  OnGenReplError: TCcErrorEvent \b read\b0  FOnGenReplError \b write\b0  FOnGenReplError; \par
+%BCB_SYNTAX%
+\f4\s2 __property Ccat::TCcErrorEvent OnGenReplError=\{ read=FOnGenReplError, write=FOnGenReplError \} \par
+%PUBLISHED%
+%EVENT%
+OnGenReplicated
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  OnGenReplicated: TGenReplEvent \b read\b0  FOnGenReplicated \b write\b0  FOnGenReplicated; \par
+%BCB_SYNTAX%
+\f4\s2 __property TGenReplEvent OnGenReplicated=\{ read=FOnGenReplicated, write=FOnGenReplicated \} \par
+%PUBLISHED%
+%EVENT%
+OnGenReplicating
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  OnGenReplicating: TNotifyEvent \b read\b0  FOnGenReplicating \b write\b0  FOnGenReplicating; \par
+%BCB_SYNTAX%
+\f4\s2 __property Classes::TNotifyEvent OnGenReplicating=\{ read=FOnGenReplicating, write=FOnGenReplicating \} \par
+%PUBLISHED%
+%EVENT%
+OnGetFields
+%SEE_ALSO%
+TCcReplicator.HarmonizeFields
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  OnGetFields: TCcGetFieldsEvent \b read\b0  FOnGetFields \b write\b0  FOnGetFields; \par
+%BCB_SYNTAX%
+\f4\s2 __property Ccat::TCcGetFieldsEvent OnGetFields=\{ read=FOnGetFields, write=FOnGetFields \} \par
+%OVERVIEW%
+Fired after creating the list of fields to be replicated for a table\par
+%DESCRIPTION%
+This event is called in order to let the developer access, and possibly alter, the list of fields that are to be replicated for a certain table. \par
+\pard\sa80 \par
+\pard\sa80 Every time a new table is encountered in the replication log, the list of existing fields is loaded from the local database, and (if necessary) from the remote database also. If Harmonize fields is true, the field list is harmonized, and then OnGetFields is fired. Thus, the developer can override field list created by CopyCat.\par
+%PUBLISHED%
+%EVENT%
+OnLogLoaded
+%SEE_ALSO%
+TCcReplicator.Replicate
+TCcLog
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  OnLogLoaded: TNotifyEvent \b read\b0  FOnLogLoaded \b write\b0  FOnLogLoaded; \par
+%BCB_SYNTAX%
+\f4\s2 __property Classes::TNotifyEvent OnLogLoaded=\{ read=FOnLogLoaded, write=FOnLogLoaded \} \par
+%OVERVIEW%
+Fired after a non-empty replication log has been loaded\par
+%DESCRIPTION%
+This event occurs immediately after the log has been loaded, and only if there is something to replicate. It can therefore be used (for example) for displaying how many records there are to replicate, and for initializing a progress bar. Before this point, the log is empty.\par
+%PUBLISHED%
+%EVENT%
+OnProgress
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  OnProgress: TNotifyEvent \b read\b0  FOnProgress \b write\b0  FOnProgress; \par
+%BCB_SYNTAX%
+\f4\s2 __property Classes::TNotifyEvent OnProgress=\{ read=FOnProgress, write=FOnProgress \} \par
+%OVERVIEW%
+Frequently fired to give the application a chance to refresh the display.\par
+%DESCRIPTION%
+This event is primarily designed to avoid the application freezing while replication is in progress. OnProgress is fired after every potentially slow operation (that is, mainly, remote database operations), and it is therefore a perfect place to process user-interface messages (using Application.ProcessMessages for instance), or to otherwise refresh the display. \par
+\pard\sa80 \par
+\pard\sa80 It is also called every time the current record changes, during replication, so it can be used for refreshing a progress bar.\par
+%BCB_EXAMPLE%
+void __fastcall TForm1::ReplicatorProgress(TObject *Sender)\par \{\par if (Replicator->Busy) \{\par ProgressBar->Max = Replicator->Log->LineCount;\par ProgressBar->Position = Replicator->Log->CurrentLine;\par \}\par else\par ProgressBar->Position = 0;\par Application->ProcessMessages();\par \par
+\pard\sa80 \par
+%DELPHI_EXAMPLE%
+procedure TForm1.ReplicatorProgress(Sender: TObject);\par begin\par if Replicator.Busy then\par begin\par ProgressBar.Max := Replicator.Log.LineCount;\par ProgressBar.Position := Replicator.Log.CurrentLine;\par end else\par ProgressBar.Position := 0;\par Application.ProcessMessages;\par end;\par
+%PUBLISHED%
+%EVENT%
+OnQueryDone
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  OnQueryDone: TCcQueryEvent \b read\b0  FOnQueryDone \b write\b0  FOnQueryDone; \par
+%BCB_SYNTAX%
+\f4\s2 __property TCcQueryEvent OnQueryDone=\{ read=FOnQueryDone, write=FOnQueryDone \} \par
+%OVERVIEW%
+Fired for every query that is executing while replicating a record.\par
+%DESCRIPTION%
+The OnQueryDone event provides the type of query that was executed (SELECT, UPDATE, INSERT or DELETE), as well as number of rows affected or retrieved. \par
+\pard\sa80 \par
+\pard\sa80 This allows you to know exactly what database operations were performed, which is helpful for diagnosing problems, or simply understanding how CopyCat works.\par
+%PUBLISHED%
+%EVENT%
+OnReplicateProc
+%SEE_ALSO%
+TCcLog
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  OnReplicateProc: TCcNameEvent \b read\b0  FOnReplicateProc \b write\b0  FOnReplicateProc; \par
+%BCB_SYNTAX%
+\f4\s2 __property Ccat::TCcNameEvent OnReplicateProc=\{ read=FOnReplicateProc, write=FOnReplicateProc \} \par
+%OVERVIEW%
+Fired every time a stored procedure is replicated.\par
+%DESCRIPTION%
+The OnReplicateProc event occurs every time a stored procedure is replicated, providing the name of the procedure. The complete SQL text of the EXECUTE PROCEDURE query is available using the PROCEDURE_STATEMENT field of the Log property.\par
+%PUBLISHED%
+%EVENT%
+OnReplicationError
+%SEE_ALSO%
+TCcReplicator.AbortOnError
+TCcReplicator.OnException
+TCcReplicator.Replicate
+%DELPHI_SYNTAX%
+\b\f4 property\b0  OnReplicationError: TCcErrorEvent \b read\b0  FOnReplicationError \b write\b0  FOnReplicationError; \par
+%BCB_SYNTAX%
+\f4 __property Ccat::TCcErrorEvent OnReplicationError=\{ read=FOnReplicationError, write=FOnReplicationError \} \par
+%OVERVIEW%
+Fired when an error occurs while records are being replicated.\par
+%DESCRIPTION%
+When an error occurs during replication, the OnReplicationError event is fired, to determine whether replication may resume (i.e. skip the current record, and and continue with the subsequent ones), or must be aborted. AbortOnError is used as a default behaviour in case this event is not implemented.\par
+%PUBLISHED%
+%EVENT%
+OnRowReplicated
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  OnRowReplicated: TNotifyEvent \b read\b0  FOnRowReplicated \b write\b0  FOnRowReplicated; \par
+%BCB_SYNTAX%
+\f4 __property Classes::TNotifyEvent OnRowReplicated=\{ read=FOnRowReplicated, write=FOnRowReplicated \} \par
+%OVERVIEW%
+Fired after a record has been replicated.\par
+%PUBLISHED%
+%EVENT%
+OnRowReplicating
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  OnRowReplicating: TNotifyEvent \b read\b0  FOnRowReplicating \b write\b0  FOnRowReplicating; \par
+%BCB_SYNTAX%
+\f4 __property Classes::TNotifyEvent OnRowReplicating=\{ read=FOnRowReplicating, write=FOnRowReplicating \} \par
+%OVERVIEW%
+Fired upon starting to replicate a new record.\par
+%PUBLISHED%
+%EVENT%
+OnTableBegin
+%SEE_ALSO%
+TCcReplicator.OnTableEnd
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  OnTableBegin: TCcNameEvent \b read\b0  FOnTableBegin \b write\b0  FOnTableBegin; \par
+%BCB_SYNTAX%
+\f4\s2 __property Ccat::TCcNameEvent OnTableBegin=\{ read=FOnTableBegin, write=FOnTableBegin \} \par
+%OVERVIEW%
+Fired upon beginning a new table.\par
+%DESCRIPTION%
+The lines in the replication log are grouped up by table (due to dependancies between tables). Therefore, this event is called every time records from a new table start replicating.\par
+%PUBLISHED%
+%EVENT%
+OnTableEnd
+%SEE_ALSO%
+TCcReplicator.OnTableBegin
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  OnTableEnd: TCcNameEvent \b read\b0  FOnTableEnd \b write\b0  FOnTableEnd; \par
+%BCB_SYNTAX%
+\f4\s2 __property Ccat::TCcNameEvent OnTableEnd=\{ read=FOnTableEnd, write=FOnTableEnd \} \par
+%OVERVIEW%
+Fired upon finishing a table.\par
+%DESCRIPTION%
+The lines in the replication log are grouped up by table (due to dependancies between tables). Therefore, this event is called whenever all the records from a table have finished replicating.\par
+%PUBLISHED%
+%METHOD%
+~TCcReplicator
+%BCB_SYNTAX%
+\f4 __fastcall \b virtual\b0  ~TCcReplicator(\b void\b0 ) \par
+%OVERVIEW%
+Destructor\par
+%METHOD%
+AbortReplication
+%SEE_ALSO%
+TCcReplicator.OnAbort
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  AbortReplication; \par
+%BCB_SYNTAX%
+\b\f4 void\b0  __fastcall AbortReplication(\b void\b0 ) \par
+%OVERVIEW%
+Call AbortReplication to stop the current replication process.\par
+%DESCRIPTION%
+Once replication has started, you may abort it at any time using the AbortReplication method. AbortReplication doesn't actually stop replicating immediately (because the database component will in most cases be busy, with no way of interrupting them). As soon as the replication process has been aborted, the OnAbort event is called.\par
+%METHOD%
+Connect
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  Connect; \par
+%BCB_SYNTAX%
+\b\f4 void\b0  __fastcall Connect(\b void\b0 ) \par
+%OVERVIEW%
+Connect to both local and remote databases.\par
+%DESCRIPTION%
+Connect establishes a connection with both the remote and the local databases, if there was no existing connection, and starts both transactions. If the database connections and/or transactions were already active, no error is produced. \par
+\pard\sa80 \par
+\pard\sa80 Before establishing the connection, the OnConnectLocal or the OnConnectRemote events are fired.\par
+%METHOD%
+ConnectionLost
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  ConnectionLost(Sender: TObject); \b override\b0 ; \par
+%BCB_SYNTAX%
+\b\f4 virtual\b0  \b void\b0  __fastcall ConnectionLost(System::TObject *Sender) \par
+%PROTECTED%
+%METHOD%
+Create
+%DELPHI_SYNTAX%
+\f4\s2 \b constructor\b0  Create(Owner: TComponent); \b override\b0 ; \par
+%METHOD%
+Destroy
+%DELPHI_SYNTAX%
+\f4\s2 \b destructor\b0  Destroy; \b override\b0 ; \par
+%METHOD%
+DestroyQueries
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  DestroyQueries; \b override\b0 ; \par
+%BCB_SYNTAX%
+\b\f4 virtual\b0  \b void\b0  __fastcall DestroyQueries(\b void\b0 ) \par
+%PROTECTED%
+%METHOD%
+Disconnect
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  Disconnect; \par
+%BCB_SYNTAX%
+\b\f4 void\b0  __fastcall Disconnect(\b void\b0 ) \par
+%OVERVIEW%
+Disconnect local and remote databases.\par
+%DESCRIPTION%
+Call Disconnect to cut the connection to both local and remote databases. \par
+\pard\sa80 \par
+\pard\sa80 If the transactions are active, Disconnect first commits them. After this, the OnDisconnect event is fired, and the database connections are cut.\par
+%METHOD%
+InitQueries
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  InitQueries; \b override\b0 ; \par
+%BCB_SYNTAX%
+\b\f4 virtual\b0  \b void\b0  __fastcall InitQueries(\b void\b0 ) \par
+%PROTECTED%
+%METHOD%
+LoadConfig
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  LoadConfig; \b override\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  \b void\b0  __fastcall LoadConfig(\b void\b0 ) \par
+%PROTECTED%
+%METHOD%
+Loaded
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  Loaded; \b override\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  \b void\b0  __fastcall Loaded(\b void\b0 ) \par
+%PROTECTED%
+%METHOD%
+LogConflict
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  LogConflict; \par
+%BCB_SYNTAX%
+\f4\s2 \b void\b0  __fastcall LogConflict(\b void\b0 ) \par
+%PROTECTED%
+%METHOD%
+Replicate
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  Replicate; \par
+%BCB_SYNTAX%
+\b\f4 void\b0  __fastcall Replicate(\b void\b0 ) \par
+%OVERVIEW%
+Call Replicate to start replicating the two databases.\par
+%DESCRIPTION%
+If no replication process is already in progress, calling the Replicate method initiates the replication. \par
+\pard\sa80 \par
+\pard\sa80 First a BeforeReplicate event is fired, after which, the database connections are established, and the replication log is loaded. If the same record is found in both the remote and the local logs, a conflict is detected, and the OnConflict event occurs. This does not stop the other records from replicating, it merely means that the conflictual record will be put "in hold" until the user resolves the conflict. See TCcConflictMgr for more information about conflict management. \par
+\pard\sa80 \par
+\pard\sa80 If the log is empty, an OnEmptyLog event is fired. If not, an OnLogLoaded event is fired, and replication begins. The records to be replicated are grouped up by table priority, so all the records of the same table replicate together (whether they from the local or remote databases). Each table is enclosed by the OnTableBegin and OnTableEnd events, and the OnRowReplicating and OnRowReplicated events are fired before and after each record. For further detail, the OnQueryDone event is fired after every query (SELECT, UPDATE, INSERT or DELETE) that is performed during the replication of one record. \par
+\pard\sa80 \par
+\pard\sa80 Once replication has started, you may abort it at any time using the AbortReplication method. If you choose to do so, an OnAbort event will be fired as soon as the replication process is actually stopped. \par
+\pard\sa80 \par
+\pard\sa80 If an exception occurs during the replication of a record, the OnReplicationError event is fired, allowing to either resume replication, or to abort. If an exception occurs at any other point, an OnException event is fired, and replication is stopped. \par
+\pard\sa80 \par
+\pard\sa80 If the log was not empty, an OnFinished event is fired after replicating the records, even if an error occured and replication was aborted. OnFinished merely indicates that the replication process is no longer in progress, and can be used for such things as refreshing the user display and status labels (for example). \par
+\pard\sa80 \par
+%METHOD%
+SaveConfig
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  SaveConfig; \b override\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  \b void\b0  __fastcall SaveConfig(\b void\b0 ) \par
+%PROTECTED%
+%METHOD%
+TCcReplicator
+%BCB_SYNTAX%
+\f4 __fastcall \b virtual\b0  TCcReplicator(Classes::TComponent *Owner) \par
+%OVERVIEW%
+Constructor\par
+%PROPERTY%
+AbortOnError
+%SEE_ALSO%
+TCcReplicator.OnReplicationError
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  AbortOnError: Boolean \b read\b0  FAbortOnError \b write\b0  FAbortOnError; \par
+%BCB_SYNTAX%
+\f4 __property \b bool\b0  AbortOnError=\{ read=FAbortOnError, write=FAbortOnError, \b nodefault\b0  \} \par
+%OVERVIEW%
+Determines whether or not to abort replication when an error occurs.\par
+%DESCRIPTION%
+When an error occurs during replication, the OnReplicationError event is fired, to determine whether replication may resume (i.e. skip the current record, and and continue with the subsequent ones), or must be aborted. AbortOnError is used as a default behaviour in case this event is not implemented.\par
+%PUBLISHED%
+%PROPERTY%
+AutoCommit
+%SEE_ALSO%
+TCcReplicator.Replicate
+TCcAutoCommit
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  AutoCommit: TCcAutoCommit \b read\b0  FAutoCommit \b write\b0  FAutoCommit; \par
+%BCB_SYNTAX%
+\f4\s2 __property Ccdbparams::TCcAutoCommit *AutoCommit=\{ read=FAutoCommit, write=FAutoCommit \} \par
+%OVERVIEW%
+Handles automatic, timer-based committing during replication.\par
+%DESCRIPTION%
+AutoCommit allows you to enable/disable automatic committing. If CommitType <> ctNone, the transactions will automatically be committed every Frequency seconds, using the commit type specified in CommitType. \par
+\pard\sa80 \par
+\pard\sa80 If the commit timer fires during replication of a record, the commit will only actually be performed once the record has been fully replicated. This timer is reset every time the Replicate method is called.\par
+%PUBLISHED%
+%PROPERTY%
+AutoReplicate
+%SEE_ALSO%
+TCcReplicator.Busy
+TAutoRepl
+TAutoRepl.Start
+TAutoRepl.Stop
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  AutoReplicate: TAutoRepl \b read\b0  FAutoReplicate \b write\b0  FAutoReplicate; \par
+%BCB_SYNTAX%
+\f4 __property Ccdbparams::TAutoRepl *AutoReplicate=\{ read=FAutoReplicate, write=FAutoReplicate \} \par
+%OVERVIEW%
+Handles automatic, timer-based replication.\par
+%DESCRIPTION%
+AutoReplicate allows you to enable/disable automatic replication. If Enabled is true, the replication process will automatically be launched every Frequency seconds, unless another process is already in progress. \par
+\pard\sa80 \par
+\pard\sa80 In order to start the auto-replication timer, you must call the Start method. Thus, Enabled should be set to true to enable auto-replication is a general way, and Start must be called when the application is ready to start auto-replicating. Use Stop to end the auto-replication timer.\par
+%PUBLISHED%
+%PROPERTY%
+BeforeReplicate
+%SEE_ALSO%
+TCcReplicator.Replicate
+TCcReplicator.AutoReplicate
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  BeforeReplicate: TNotifyEvent \b read\b0  FBeforeReplicate \b write\b0  FBeforeReplicate; \par
+%BCB_SYNTAX%
+\f4\s2 __property Classes::TNotifyEvent BeforeReplicate=\{ read=FBeforeReplicate, write=FBeforeReplicate \} \par
+%OVERVIEW%
+Fired just before replication begins.\par
+%DESCRIPTION%
+BeforeReplicate occurs as soon as the Replicate method is called or the auto-replicate timer is fired, before any replication takes place.\par
+%PUBLISHED%
+%PROPERTY%
+Busy
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  Busy: Boolean \b read\b0  FBusy; \par
+%BCB_SYNTAX%
+\f4\s2 __property \b bool\b0  Busy=\{ read=FBusy, \b nodefault\b0  \} \par
+%OVERVIEW%
+Indicates whether the replicator component is available or not.\par
+%DESCRIPTION%
+Busy is true from the moment the Replicate procedure is called, until replication is either finished or aborted.\par
+%READONLY%
+%PROPERTY%
+Closing
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  Closing: Boolean \b read\b0  FClosing; \par
+%BCB_SYNTAX%
+\f4 __property \b bool\b0  Closing=\{ read=FClosing, \b nodefault\b0  \} \par
+%OVERVIEW%
+Indicates that the replication in the process of closing.\par
+%DESCRIPTION%
+Closing is set to true whenever the user chooses to abort the replication process (whether by the AbortReplication method, or in response to an OnReplicationError event). As soon as an appropriate moment is found, replication then stops, and Closing is set back to false.\par
+%READONLY%
+%PROPERTY%
+CommitOnFinished
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  CommitOnFinished: TCcCommitType \b read\b0  FCommitOnFinished \b write\b0  SetCommitOnFinished; \par
+%BCB_SYNTAX%
+\f4\s2 __property Ccat::TCcCommitType CommitOnFinished=\{ read=FCommitOnFinished, write=SetCommitOnFinished, \b nodefault\b0  \} \par
+%OVERVIEW%
+Determines how the transaction is ended after replication.\par
+%DESCRIPTION%
+Possible options are Commit, CommitRetaining, or none.\par
+%PUBLISHED%
+%PROPERTY%
+Finished
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  Finished: Boolean \b read\b0  FFinished; \par
+%BCB_SYNTAX%
+\f4 __property \b bool\b0  Finished=\{ read=FFinished, \b nodefault\b0  \} \par
+%READONLY%
+%PROPERTY%
+HarmonizeFields
+%SEE_ALSO%
+TCcReplicator.OnGetFields
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  HarmonizeFields: Boolean \b read\b0  FHarmonizeFields \b write\b0  FHarmonizeFields; \par
+%BCB_SYNTAX%
+\f4\s2 __property \b bool\b0  HarmonizeFields=\{ read=FHarmonizeFields, write=FHarmonizeFields, \b nodefault\b0  \} \par
+%OVERVIEW%
+Harmonize field list between local and remote databases.\par
+%DESCRIPTION%
+If HarmonizeFields is true, only the fields that exist in both local and remote databases will be replicated. In order to find the list of fields, the local database is queried and (if necessary) the remote database also. The OnGetFields event is then fired, in order to let the developer change the list of fields. \par
+\pard\sa80 \par
+\pard\sa80 This implies that in certain cases, CopyCat will issue an additionnal query against the remote database to find the list of fields for each table. Therefore, setting HarmonizeFields to false will slightly improve performance, but will produce an exception if ever a field is missing. \par
+\pard\sa80 \par
+\pard\sa80 Actually, if there are lines in the log coming from the remote database, there is no need to explicitly fetch the list of fields from the remote database, since the data will be SELECTed from it. This optimizes performance by avoiding (part of the time) an extra query against the remote database, and it also means that in such cases, the field list is always harmonized, regardless of the value of the HarmonizeFields property.\par
+%PUBLISHED%
+%PROPERTY%
+KeepConnection
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  KeepConnection: Boolean \b read\b0  FKeepConnection \b write\b0  SetKeepConnection; \par
+%BCB_SYNTAX%
+\f4 __property \b bool\b0  KeepConnection=\{ read=FKeepConnection, write=SetKeepConnection, \b nodefault\b0  \} \par
+%OVERVIEW%
+Keep the database connections open after replication ends.\par
+%DESCRIPTION%
+If KeepConnection is false, the connections will be closed after every call to Replicate, and reopened upon the next replication. If KeepConnection is true, the database connections will be kept open. This is especially useful when performing automatic, periodic replication.\par
+%PUBLISHED%
+%PROPERTY%
+LegacyRplTables
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  LegacyRplTables: Boolean \b read\b0  FLegacyRplTables \b write\b0  SetLegacyRplTables; \par
+%BCB_SYNTAX%
+\f4 __property \b bool\b0  LegacyRplTables=\{ read=FLegacyRplTables, write=SetLegacyRplTables, \b nodefault\b0  \} \par
+%OVERVIEW%
+Used only for backwards compatability.\par
+%DESCRIPTION%
+Deprecated. Should always be set to False.\par
+%PROPERTY%
+LocalSYSDBA
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  LocalSYSDBA: TCcUser \b read\b0  GetLocalSYSDBA; \par
+%BCB_SYNTAX%
+\f4 __property Ccdbparams::TCcUser *LocalSYSDBA=\{ read=GetLocalSYSDBA \} \par
+%OVERVIEW%
+Username and password of the local SYSDBA.\par
+%DESCRIPTION%
+This is only needed for local primary key updates.\par
+%READONLY%
+%PROPERTY%
+LocalUser
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  LocalUser: TCcUser \b read\b0  GetLocalUser; \par
+%BCB_SYNTAX%
+\f4\s2 __property Ccdbparams::TCcUser *LocalUser=\{ read=GetLocalUser \} \par
+%OVERVIEW%
+Username and password corresponding to the local replication site.\par
+%DESCRIPTION%
+This is the name of the local replication site. When the replicator logs in to the remote database, it uses the LocalUser name and password, in order to fetch all changes applying to the specified user. \par
+\pard\sa80 \par
+\pard\sa80 The name specified must correspond to a database user on the remote server\par
+%READONLY%
+%PROPERTY%
+Log
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  Log: TCcCustomLog \b read\b0  FLog; \par
+%BCB_SYNTAX%
+\f4 __property TCcCustomLog *Log=\{ read=FLog \} \par
+%OVERVIEW%
+Underlying TCcLog component\par
+%DESCRIPTION%
+Use the Log property to access the TCcLog component used by the replicator. \par
+\pard\sa80 \par
+\pard\sa80 This component encapsulates the replication log, and provides properties for accessing its data and manipulating its data. Until the OnLogLoaded event, the log will be empty.\par
+%READONLY%
+%PROPERTY%
+RemoteUser
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  RemoteUser: TCcUser \b read\b0  GetRemoteUser; \par
+%BCB_SYNTAX%
+\f4 __property Ccdbparams::TCcUser *RemoteUser=\{ read=GetRemoteUser \} \par
+%OVERVIEW%
+Username and password corresponding to the remote replication site.\par
+%DESCRIPTION%
+This is the name of the remote replication site. When the replicator logs in to the local database, it uses the RemoteUser name and password, in order to fetch all changes applying to the specified user. \par
+\pard\sa80 \par
+\pard\sa80 The name specified must correspond to a database user on the local server\par
+%READONLY%
+%PROPERTY%
+Users
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  Users: TCcUsers \b read\b0  FUsers \b write\b0  FUsers; \par
+%BCB_SYNTAX%
+\f4 __property Ccdbparams::TCcUsers *Users=\{ read=FUsers, write=FUsers \} \par
+%OVERVIEW%
+User-names and passwords for local, remote and local SYSDBA users.\par
+%DESCRIPTION%
+The Users property holds the LocalUser, RemoteUser and LocalSYSDBA sub-properties.\par
+%PUBLISHED%
+%COMPONENT%
+TCcScriptEvent
+%DELPHI_SYNTAX%
+\f4 TCcScriptEvent=\b procedure\b0 (Sender: TObject; Script: TStrings) \b of\b0  \b object\b0 ; \f0\par
+%BCB_SYNTAX%
+\b\f4 typedef\b0  \b void\b0  __fastcall(__closure *TCcScriptEvent)(System::TObject *Sender, Classes::TStrings *Script); \f0\par
+%UNIT%
+CcConf
+%NAMESPACE%
+CcConf
+%COMPONENT%
+TCCTransaction
+%UNIT%
+CcProviders
+%NAMESPACE%
+CcProviders
+%DERIVED_FROM%
+TComponent
+%METHOD%
+~TCCTransaction
+%BCB_SYNTAX%
+\f4\s2 inline __fastcall \b virtual\b0  ~TCCTransaction(\b void\b0 ) \par
+%OVERVIEW%
+Destructor\par
+%METHOD%
+Commit
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  Commit; \par
+%BCB_SYNTAX%
+\f4\s2 \b void\b0  __fastcall Commit(\b void\b0 ) \par
+%OVERVIEW%
+TCcTransaction\par
+%METHOD%
+CommitRetaining
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  CommitRetaining; \par
+%BCB_SYNTAX%
+\f4\s2 \b void\b0  __fastcall CommitRetaining(\b void\b0 ) \par
+%METHOD%
+Create
+%DELPHI_SYNTAX%
+\f4\s2 \b constructor\b0  Create(AOwner: TComponent); \b override\b0 ; \par
+%METHOD%
+DoCommit
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  DoCommit; \b virtual\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  \b void\b0  __fastcall DoCommit(\b void\b0 ) \par
+%PROTECTED%
+%METHOD%
+DoCommitRetaining
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  DoCommitRetaining; \b virtual\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  \b void\b0  __fastcall DoCommitRetaining(\b void\b0 ) \par
+%PROTECTED%
+%METHOD%
+DoRollback
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  DoRollback; \b virtual\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  \b void\b0  __fastcall DoRollback(\b void\b0 ) \par
+%PROTECTED%
+%METHOD%
+DoRollbackRetaining
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  DoRollbackRetaining; \b virtual\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  \b void\b0  __fastcall DoRollbackRetaining(\b void\b0 ) \par
+%PROTECTED%
+%METHOD%
+DoSetDatabase
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  DoSetDatabase(\b const\b0  Value: TCcDatabase); \b virtual\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  \b void\b0  __fastcall DoSetDatabase(\b const\b0  TCCDatabase *Value) \par
+%PROTECTED%
+%METHOD%
+DoStartTransaction
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  DoStartTransaction; \b virtual\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  \b void\b0  __fastcall DoStartTransaction(\b void\b0 ) \par
+%PROTECTED%
+%METHOD%
+GetActive
+%DELPHI_SYNTAX%
+\f4\s2 \b function\b0  GetActive: Boolean; \b virtual\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  \b bool\b0  __fastcall GetActive(\b void\b0 ) \par
+%PROTECTED%
+%METHOD%
+Rollback
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  Rollback; \par
+%BCB_SYNTAX%
+\f4\s2 \b void\b0  __fastcall Rollback(\b void\b0 ) \par
+%METHOD%
+RollbackRetaining
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  RollbackRetaining; \par
+%BCB_SYNTAX%
+\f4\s2 \b void\b0  __fastcall RollbackRetaining(\b void\b0 ) \par
+%METHOD%
+SetActive
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  SetActive(Value: Boolean); \b virtual\b0 ; \par
+%BCB_SYNTAX%
+\f4\s2 \b virtual\b0  \b void\b0  __fastcall SetActive(\b bool\b0  Value) \par
+%PROTECTED%
+%METHOD%
+SetDatabase
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  SetDatabase(\b const\b0  Value: TCcDatabase); \par
+%BCB_SYNTAX%
+\f4\s2 \b void\b0  __fastcall SetDatabase(\b const\b0  TCCDatabase *Value) \par
+%PROTECTED%
+%METHOD%
+StartTransaction
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  StartTransaction; \par
+%BCB_SYNTAX%
+\f4\s2 \b void\b0  __fastcall StartTransaction(\b void\b0 ) \par
+%METHOD%
+TCCTransaction
+%BCB_SYNTAX%
+\f4\s2 __fastcall \b virtual\b0  TCCTransaction(Classes::TComponent *AOwner) \par
+%OVERVIEW%
+Constructor\par
+%METHOD%
+TransactionClass
+%DELPHI_SYNTAX%
+\b\f4 function\b0  TransactionClass: TClass; \b virtual\b0 ; \par
+%BCB_SYNTAX%
+\b\f4 virtual\b0  TMetaClass *__fastcall TransactionClass(\b void\b0 ) \par
+%PROPERTY%
+Active
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  Active: Boolean \b read\b0  GetActive \b write\b0  SetActive; \par
+%BCB_SYNTAX%
+\f4\s2 __property \b bool\b0  Active=\{ read=GetActive, write=SetActive, \b nodefault\b0  \} \par
+%PROPERTY%
+Database
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  Database: TCcDatabase \b read\b0  FDatabase \b write\b0  SetDatabase; \par
+%BCB_SYNTAX%
+\f4\s2 __property TCCDatabase *Database=\{ read=FDatabase, write=SetDatabase \} \par
+%COMPONENT%
+TCcUser
+%UNIT%
+CCDBParams
+%NAMESPACE%
+CCDBParams
+%DERIVED_FROM%
+TPersistent
+%METHOD%
+~TCcUser
+%BCB_SYNTAX%
+\f4\s2 inline __fastcall \b virtual\b0  ~TCcUser(\b void\b0 ) \par
+%OVERVIEW%
+Destructor\par
+%METHOD%
+TCcUser
+%BCB_SYNTAX%
+\f4\s2 inline __fastcall TCcUser(\b void\b0 ) \par
+%OVERVIEW%
+Constructor\par
+%PROPERTY%
+Name
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  Name: \b String\b0  \b read\b0  FName \b write\b0  FName; \par
+%BCB_SYNTAX%
+\f4\s2 __property AnsiString Name=\{ read=FName, write=FName \} \par
+%PUBLISHED%
+%PROPERTY%
+Password
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  Password: \b String\b0  \b read\b0  FPassword \b write\b0  FPassword; \par
+%BCB_SYNTAX%
+\f4\s2 __property AnsiString Password=\{ read=FPassword, write=FPassword \} \par
+%PUBLISHED%
+%COMPONENT%
+TCcUsers
+%UNIT%
+CCDBParams
+%NAMESPACE%
+CCDBParams
+%DERIVED_FROM%
+TPersistent
+%METHOD%
+~TCcUsers
+%BCB_SYNTAX%
+\f4\s2 __fastcall \b virtual\b0  ~TCcUsers(\b void\b0 ) \par
+%OVERVIEW%
+Destructor\par
+%METHOD%
+Create
+%DELPHI_SYNTAX%
+\f4\s2 \b constructor\b0  Create; \par
+%OVERVIEW%
+TCcUsers\par
+%METHOD%
+Destroy
+%DELPHI_SYNTAX%
+\f4\s2 \b destructor\b0  Destroy; \b override\b0 ; \par
+%METHOD%
+TCcUsers
+%BCB_SYNTAX%
+\f4\s2 __fastcall TCcUsers(\b void\b0 ) \par
+%OVERVIEW%
+Constructor\par
+%PROPERTY%
+LocalSYSDBA
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  LocalSYSDBA: TCcUser \b read\b0  FLocalSYSDBA \b write\b0  FLocalSYSDBA; \par
+%BCB_SYNTAX%
+\f4\s2 __property TCcUser *LocalSYSDBA=\{ read=FLocalSYSDBA, write=FLocalSYSDBA \} \par
+%PUBLISHED%
+%PROPERTY%
+LocalUser
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  LocalUser: TCcUser \b read\b0  FLocalUser \b write\b0  FLocalUser; \par
+%BCB_SYNTAX%
+\f4\s2 __property TCcUser *LocalUser=\{ read=FLocalUser, write=FLocalUser \} \par
+%PUBLISHED%
+%PROPERTY%
+RemoteUser
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  RemoteUser: TCcUser \b read\b0  FRemoteUser \b write\b0  FRemoteUser; \par
+%BCB_SYNTAX%
+\f4\s2 __property TCcUser *RemoteUser=\{ read=FRemoteUser, write=FRemoteUser \} \par
+%PUBLISHED%
+%COMPONENT%
+TConfirmEvent
+%DELPHI_SYNTAX%
+\f4 TConfirmEvent=\b procedure\b0 (Sender: TObject; \b var\b0  CanContinue: Boolean) \b of\b0  \b object\b0 ; \f0\par
+%BCB_SYNTAX%
+\b\f4 typedef\b0  \b void\b0  __fastcall(__closure *TConfirmEvent)(System::TObject *Sender, \b bool\b0  &CanContinue); \f0\par
+%UNIT%
+CcConf
+%NAMESPACE%
+CcConf
+%COMPONENT%
+TGenReplEvent
+%DELPHI_SYNTAX%
+\f4 TGenReplEvent=\b procedure\b0 (Sender: TObject; \b Name\b0 , NewValue: \b String\b0 ) \b of\b0  \b object\b0 ; \f0\par
+%BCB_SYNTAX%
+\b\f4 typedef\b0  \b void\b0  __fastcall(__closure *TGenReplEvent)(System::TObject *Sender, AnsiString Name, AnsiString NewValue); \f0\par
+%UNIT%
+CcReplicator
+%NAMESPACE%
+CcReplicator
+%COMPONENT%
+TPeriodicity
+%UNIT%
+CCDBParams
+%NAMESPACE%
+CCDBParams
+%DERIVED_FROM%
+TPersistent
+%EVENT%
+OnPeriod
+%BCB_SYNTAX%
+\f4\s2 Classes::TNotifyEvent OnPeriod \par
+%METHOD%
+~TPeriodicity
+%BCB_SYNTAX%
+\f4\s2 __fastcall \b virtual\b0  ~TPeriodicity(\b void\b0 ) \par
+%OVERVIEW%
+Destructor\par
+%METHOD%
+Create
+%DELPHI_SYNTAX%
+\f4\s2 \b constructor\b0  Create(Owner: TComponent); \par
+%METHOD%
+Destroy
+%DELPHI_SYNTAX%
+\f4\s2 \b destructor\b0  Destroy; \b override\b0 ; \par
+%METHOD%
+Start
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  Start; \par
+%BCB_SYNTAX%
+\f4\s2 \b void\b0  __fastcall Start(\b void\b0 ) \par
+%METHOD%
+Stop
+%DELPHI_SYNTAX%
+\f4\s2 \b procedure\b0  Stop; \par
+%BCB_SYNTAX%
+\f4\s2 \b void\b0  __fastcall Stop(\b void\b0 ) \par
+%METHOD%
+TPeriodicity
+%BCB_SYNTAX%
+\f4\s2 __fastcall TPeriodicity(Classes::TComponent *Owner) \par
+%OVERVIEW%
+Constructor\par
+%PROPERTY%
+Frequency
+%DELPHI_SYNTAX%
+\f4\s2 \b property\b0  Frequency: Integer \b read\b0  FFrequency \b write\b0  FFrequency; \par
+%BCB_SYNTAX%
+\f4\s2 __property \b int\b0  Frequency=\{ read=FFrequency, write=FFrequency, \b nodefault\b0  \} \par
+%PUBLISHED%
+%PROPERTY%
+OnPeriod
+%DELPHI_SYNTAX%
+\f4\s2 OnPeriod: TNotifyEvent; \par
+%DELETED%
+Globals._DBError
+Globals.DataSetLocateThrough
+PMemBlobArray
+PMemBlobArray.AssignRecord
+TCcGenerator
+TCcMemoryData
+TCompareRecords
+TLoadMode
+TMemBlobArray
+TMemBlobData
+TMemBlobStream
+TMemoryRecord
+%CONTENTS%
+0,Types
+1,TGenReplEvent	TGenReplEvent
+1,TCcQueryEvent	TCcQueryEvent
+1,TCcQueryType	TCcQueryType
+1,TCcConfigConfirmEvent	TCcConfigConfirmEvent
+1,TCcScriptEvent	TCcScriptEvent
+1,TConfirmEvent	TConfirmEvent
+1,TCcLostConnectEvent	TCcLostConnectEvent
+1,TCcGetFieldsEvent	TCcGetFieldsEvent
+1,TCcOperationEvent	TCcOperationEvent
+1,TCcNameEvent	TCcNameEvent
+1,TCcExceptionEvent	TCcExceptionEvent
+1,TCcErrorEvent	TCcErrorEvent
+1,TCcLogState	TCcLogState
+1,TCcCommitType	TCcCommitType
+0,Globals	Globals
+1,Methods	Globals.Methods
+2,SQLFormatValue	Globals.Methods.SQLFormatValue
+2,ReplaceString	Globals.Methods.ReplaceString
+2,LoadDBParams	Globals.Methods.LoadDBParams
+2,Min	Globals.Methods.Min
+0,TCcConfig	TCcConfig
+1,Methods	TCcConfig.Methods
+2,LoadConfig	TCcConfig.Methods.LoadConfig
+2,SetConfigStorage	TCcConfig.Methods.SetConfigStorage
+2,SaveConfig	TCcConfig.Methods.SaveConfig
+2,FillTables	TCcConfig.Methods.FillTables
+2,FillProcedures	TCcConfig.Methods.FillProcedures
+2,Loaded	TCcConfig.Methods.Loaded
+2,InitQueries	TCcConfig.Methods.InitQueries
+2,DestroyQueries	TCcConfig.Methods.DestroyQueries
+2,Connect	TCcConfig.Methods.Connect
+2,Disconnect	TCcConfig.Methods.Disconnect
+2,GetGenerator	TCcConfig.Methods.GetGenerator
+2,GetProcParams	TCcConfig.Methods.GetProcParams
+2,GetProcGenerator	TCcConfig.Methods.GetProcGenerator
+2,GenerateTriggers	TCcConfig.Methods.GenerateTriggers
+2,GenerateProcedure	TCcConfig.Methods.GenerateProcedure
+2,RemoveTriggers	TCcConfig.Methods.RemoveTriggers
+2,RemoveProcedure	TCcConfig.Methods.RemoveProcedure
+2,TCcConfig	TCcConfig.Methods.TCcConfig
+2,~TCcConfig	TCcConfig.Methods.~TCcConfig
+2,Create	TCcConfig.Methods.Create
+2,Destroy	TCcConfig.Methods.Destroy
+1,Properties	TCcConfig.Properties
+2,FieldNames	TCcConfig.Properties.FieldNames
+2,DB	TCcConfig.Properties.DB
+2,TR	TCcConfig.Properties.TR
+2,Tables	TCcConfig.Properties.Tables
+2,Procedures	TCcConfig.Properties.Procedures
+2,Terminator	TCcConfig.Properties.Terminator
+2,Script	TCcConfig.Properties.Script
+2,ConnectParams	TCcConfig.Properties.ConnectParams
+1,Events	TCcConfig.Events
+2,OnScriptReady	TCcConfig.Events.OnScriptReady
+2,OnQueryReady	TCcConfig.Events.OnQueryReady
+2,OnCreateMetadata	TCcConfig.Events.OnCreateMetadata
+0,TCcConnectParams	TCcConnectParams
+1,Methods	TCcConnectParams.Methods
+2,LoadDBParams	TCcConnectParams.Methods.LoadDBParams
+2,Clear	TCcConnectParams.Methods.Clear
+2,TCcConnectParams	TCcConnectParams.Methods.TCcConnectParams
+2,~TCcConnectParams	TCcConnectParams.Methods.~TCcConnectParams
+2,Create	TCcConnectParams.Methods.Create
+1,Properties	TCcConnectParams.Properties
+2,ConfigStorage	TCcConnectParams.Properties.ConfigStorage
+2,UserName	TCcConnectParams.Properties.UserName
+2,RoleName	TCcConnectParams.Properties.RoleName
+2,Password	TCcConnectParams.Properties.Password
+2,CharSet	TCcConnectParams.Properties.CharSet
+2,DBName	TCcConnectParams.Properties.DBName
+2,SQLDialect	TCcConnectParams.Properties.SQLDialect
+0,TCcConflictMgr	TCcConflictMgr
+1,Methods	TCcConflictMgr.Methods
+2,InitQueries	TCcConflictMgr.Methods.InitQueries
+2,DestroyQueries	TCcConflictMgr.Methods.DestroyQueries
+2,LogConflict	TCcConflictMgr.Methods.LogConflict
+2,CheckConflicts	TCcConflictMgr.Methods.CheckConflicts
+2,TCcConflictMgr	TCcConflictMgr.Methods.TCcConflictMgr
+2,~TCcConflictMgr	TCcConflictMgr.Methods.~TCcConflictMgr
+0,TCcComponent	TCcComponent
+1,Methods	TCcComponent.Methods
+2,SetDBProvider	TCcComponent.Methods.SetDBProvider
+2,SetConfigStorage	TCcComponent.Methods.SetConfigStorage
+2,LoadConfig	TCcComponent.Methods.LoadConfig
+2,SaveConfig	TCcComponent.Methods.SaveConfig
+2,InitQueries	TCcComponent.Methods.InitQueries
+2,DestroyQueries	TCcComponent.Methods.DestroyQueries
+2,Loaded	TCcComponent.Methods.Loaded
+2,TCcComponent	TCcComponent.Methods.TCcComponent
+2,~TCcComponent	TCcComponent.Methods.~TCcComponent
+1,Properties	TCcComponent.Properties
+2,DBProvider	TCcComponent.Properties.DBProvider
+2,ConfigStorage	TCcComponent.Properties.ConfigStorage
+0,TCcUser	TCcUser
+1,Properties	TCcUser.Properties
+2,Name	TCcUser.Properties.Name
+2,Password	TCcUser.Properties.Password
+1,Methods	TCcUser.Methods
+2,~TCcUser	TCcUser.Methods.~TCcUser
+2,TCcUser	TCcUser.Methods.TCcUser
+0,TCcUsers	TCcUsers
+1,Methods	TCcUsers.Methods
+2,TCcUsers	TCcUsers.Methods.TCcUsers
+2,~TCcUsers	TCcUsers.Methods.~TCcUsers
+2,Create	TCcUsers.Methods.Create
+2,Destroy	TCcUsers.Methods.Destroy
+1,Properties	TCcUsers.Properties
+2,LocalUser	TCcUsers.Properties.LocalUser
+2,LocalSYSDBA	TCcUsers.Properties.LocalSYSDBA
+2,RemoteUser	TCcUsers.Properties.RemoteUser
+0,TPeriodicity	TPeriodicity
+1,Events	TPeriodicity.Events
+2,OnPeriod	TPeriodicity.Events.OnPeriod
+1,Methods	TPeriodicity.Methods
+2,TPeriodicity	TPeriodicity.Methods.TPeriodicity
+2,~TPeriodicity	TPeriodicity.Methods.~TPeriodicity
+2,Start	TPeriodicity.Methods.Start
+2,Stop	TPeriodicity.Methods.Stop
+2,Create	TPeriodicity.Methods.Create
+2,Destroy	TPeriodicity.Methods.Destroy
+1,Properties	TPeriodicity.Properties
+2,Frequency	TPeriodicity.Properties.Frequency
+2,OnPeriod	TPeriodicity.Properties.OnPeriod
+0,TAutoRepl	TAutoRepl
+1,Properties	TAutoRepl.Properties
+2,Enabled	TAutoRepl.Properties.Enabled
+1,Methods	TAutoRepl.Methods
+2,TAutoRepl	TAutoRepl.Methods.TAutoRepl
+2,~TAutoRepl	TAutoRepl.Methods.~TAutoRepl
+0,TCcAutoCommit	TCcAutoCommit
+1,Properties	TCcAutoCommit.Properties
+2,CommitType	TCcAutoCommit.Properties.CommitType
+1,Methods	TCcAutoCommit.Methods
+2,TCcAutoCommit	TCcAutoCommit.Methods.TCcAutoCommit
+2,~TCcAutoCommit	TCcAutoCommit.Methods.~TCcAutoCommit
+0,TCcDBParams	TCcDBParams
+1,Methods	TCcDBParams.Methods
+2,ConnectionLost	TCcDBParams.Methods.ConnectionLost
+2,DestroyQueries	TCcDBParams.Methods.DestroyQueries
+2,InitQueries	TCcDBParams.Methods.InitQueries
+2,TCcDBParams	TCcDBParams.Methods.TCcDBParams
+2,~TCcDBParams	TCcDBParams.Methods.~TCcDBParams
+2,Disconnect	TCcDBParams.Methods.Disconnect
+2,Connect	TCcDBParams.Methods.Connect
+2,Rollback	TCcDBParams.Methods.Rollback
+2,RollbackRetaining	TCcDBParams.Methods.RollbackRetaining
+2,Commit	TCcDBParams.Methods.Commit
+2,CommitRetaining	TCcDBParams.Methods.CommitRetaining
+2,Create	TCcDBParams.Methods.Create
+2,Destroy	TCcDBParams.Methods.Destroy
+1,Properties	TCcDBParams.Properties
+2,DB	TCcDBParams.Properties.DB
+2,TR	TCcDBParams.Properties.TR
+2,Login	TCcDBParams.Properties.Login
+2,CharSet	TCcDBParams.Properties.CharSet
+2,DBName	TCcDBParams.Properties.DBName
+2,SQLDialect	TCcDBParams.Properties.SQLDialect
+0,TCcCustomReplicator	TCcCustomReplicator
+1,Methods	TCcCustomReplicator.Methods
+2,ConnectionLost	TCcCustomReplicator.Methods.ConnectionLost
+2,InitQueries	TCcCustomReplicator.Methods.InitQueries
+2,DestroyQueries	TCcCustomReplicator.Methods.DestroyQueries
+2,TCcCustomReplicator	TCcCustomReplicator.Methods.TCcCustomReplicator
+2,~TCcCustomReplicator	TCcCustomReplicator.Methods.~TCcCustomReplicator
+2,Create	TCcCustomReplicator.Methods.Create
+2,Destroy	TCcCustomReplicator.Methods.Destroy
+1,Properties	TCcCustomReplicator.Properties
+2,LocalDB	TCcCustomReplicator.Properties.LocalDB
+2,RemoteDB	TCcCustomReplicator.Properties.RemoteDB
+0,TCcLog	TCcLog
+1,Methods	TCcLog.Methods
+2,GetdpDest	TCcLog.Methods.GetdpDest
+2,GetdpOrigine	TCcLog.Methods.GetdpOrigine
+2,SetReplicator	TCcLog.Methods.SetReplicator
+2,GetReplState	TCcLog.Methods.GetReplState
+2,GetLocalMode	TCcLog.Methods.GetLocalMode
+2,GetEof	TCcLog.Methods.GetEof
+2,GetBof	TCcLog.Methods.GetBof
+2,GetCurrentLine	TCcLog.Methods.GetCurrentLine
+2,GetLineCount	TCcLog.Methods.GetLineCount
+2,SignalError	TCcLog.Methods.SignalError
+2,RecordReplicated	TCcLog.Methods.RecordReplicated
+2,UpdateState	TCcLog.Methods.UpdateState
+2,LoadLog	TCcLog.Methods.LoadLog
+2,InitQueries	TCcLog.Methods.InitQueries
+2,DestroyQueries	TCcLog.Methods.DestroyQueries
+2,BuildLogSQL	TCcLog.Methods.BuildLogSQL
+2,FBN	TCcLog.Methods.FBN
+2,FieldByName	TCcLog.Methods.FieldByName
+2,Edit	TCcLog.Methods.Edit
+2,Post	TCcLog.Methods.Post
+2,Next	TCcLog.Methods.Next
+2,Prior	TCcLog.Methods.Prior
+2,First	TCcLog.Methods.First
+2,Last	TCcLog.Methods.Last
+2,TCcLog	TCcLog.Methods.TCcLog
+2,~TCcLog	TCcLog.Methods.~TCcLog
+2,Init	TCcLog.Methods.Init
+2,Create	TCcLog.Methods.Create
+2,Destroy	TCcLog.Methods.Destroy
+0,TCCField	TCCField
+1,Methods	TCCField.Methods
+2,GetValue	TCCField.Methods.GetValue
+2,SetValue	TCCField.Methods.SetValue
+2,GetAsString	TCCField.Methods.GetAsString
+2,SetAsString	TCCField.Methods.SetAsString
+2,GetAsInteger	TCCField.Methods.GetAsInteger
+2,SetAsInteger	TCCField.Methods.SetAsInteger
+2,GetAsFloat	TCCField.Methods.GetAsFloat
+2,SetAsFloat	TCCField.Methods.SetAsFloat
+2,GetAsDateTime	TCCField.Methods.GetAsDateTime
+2,SetAsDateTime	TCCField.Methods.SetAsDateTime
+2,GetAsCurrency	TCCField.Methods.GetAsCurrency
+2,SetAsCurrency	TCCField.Methods.SetAsCurrency
+2,GetDataType	TCCField.Methods.GetDataType
+2,GetSize	TCCField.Methods.GetSize
+2,TCCField	TCCField.Methods.TCCField
+2,~TCCField	TCCField.Methods.~TCCField
+1,Properties	TCCField.Properties
+2,IsNull	TCCField.Properties.IsNull
+2,Value	TCCField.Properties.Value
+2,AsString	TCCField.Properties.AsString
+2,AsInteger	TCCField.Properties.AsInteger
+2,AsFloat	TCCField.Properties.AsFloat
+2,AsDateTime	TCCField.Properties.AsDateTime
+2,AsCurrency	TCCField.Properties.AsCurrency
+2,DataType	TCCField.Properties.DataType
+2,Size	TCCField.Properties.Size
+2,FieldName	TCCField.Properties.FieldName
+0,TCCTransaction	TCCTransaction
+1,Methods	TCCTransaction.Methods
+2,DoSetDatabase	TCCTransaction.Methods.DoSetDatabase
+2,SetDatabase	TCCTransaction.Methods.SetDatabase
+2,DoCommit	TCCTransaction.Methods.DoCommit
+2,DoCommitRetaining	TCCTransaction.Methods.DoCommitRetaining
+2,DoRollback	TCCTransaction.Methods.DoRollback
+2,DoRollbackRetaining	TCCTransaction.Methods.DoRollbackRetaining
+2,DoStartTransaction	TCCTransaction.Methods.DoStartTransaction
+2,GetActive	TCCTransaction.Methods.GetActive
+2,SetActive	TCCTransaction.Methods.SetActive
+2,TransactionClass	TCCTransaction.Methods.TransactionClass
+2,Commit	TCCTransaction.Methods.Commit
+2,CommitRetaining	TCCTransaction.Methods.CommitRetaining
+2,Rollback	TCCTransaction.Methods.Rollback
+2,RollbackRetaining	TCCTransaction.Methods.RollbackRetaining
+2,StartTransaction	TCCTransaction.Methods.StartTransaction
+2,TCCTransaction	TCCTransaction.Methods.TCCTransaction
+2,~TCCTransaction	TCCTransaction.Methods.~TCCTransaction
+2,Create	TCCTransaction.Methods.Create
+1,Properties	TCCTransaction.Properties
+2,Database	TCCTransaction.Properties.Database
+2,Active	TCCTransaction.Properties.Active
+0,TCCDatabase	TCCDatabase
+1,Methods	TCCDatabase.Methods
+2,DoSetTransaction	TCCDatabase.Methods.DoSetTransaction
+2,SetTransaction	TCCDatabase.Methods.SetTransaction
+2,GetRoleName	TCCDatabase.Methods.GetRoleName
+2,SetRoleName	TCCDatabase.Methods.SetRoleName
+2,GetUserName	TCCDatabase.Methods.GetUserName
+2,SetUserName	TCCDatabase.Methods.SetUserName
+2,GetPassword	TCCDatabase.Methods.GetPassword
+2,SetPassword	TCCDatabase.Methods.SetPassword
+2,GetCharSet	TCCDatabase.Methods.GetCharSet
+2,SetCharSet	TCCDatabase.Methods.SetCharSet
+2,GetDBName	TCCDatabase.Methods.GetDBName
+2,SetDBName	TCCDatabase.Methods.SetDBName
+2,GetSQLDialect	TCCDatabase.Methods.GetSQLDialect
+2,SetSQLDialect	TCCDatabase.Methods.SetSQLDialect
+2,GetConnected	TCCDatabase.Methods.GetConnected
+2,SetConnected	TCCDatabase.Methods.SetConnected
+2,SignalConnectLost	TCCDatabase.Methods.SignalConnectLost
+2,Gen_Id	TCCDatabase.Methods.Gen_Id
+2,DatabaseClass	TCCDatabase.Methods.DatabaseClass
+2,TCCDatabase	TCCDatabase.Methods.TCCDatabase
+2,~TCCDatabase	TCCDatabase.Methods.~TCCDatabase
+2,Create	TCCDatabase.Methods.Create
+1,Properties	TCCDatabase.Properties
+2,UserName	TCCDatabase.Properties.UserName
+2,RoleName	TCCDatabase.Properties.RoleName
+2,Password	TCCDatabase.Properties.Password
+2,CharSet	TCCDatabase.Properties.CharSet
+2,DBName	TCCDatabase.Properties.DBName
+2,SQLDialect	TCCDatabase.Properties.SQLDialect
+2,Transaction	TCCDatabase.Properties.Transaction
+2,Connected	TCCDatabase.Properties.Connected
+1,Events	TCCDatabase.Events
+2,OnConnectLost	TCCDatabase.Events.OnConnectLost
+0,TCcQuery	TCcQuery
+1,Methods	TCcQuery.Methods
+2,CheckMacros	TCcQuery.Methods.CheckMacros
+2,FreeMacros	TCcQuery.Methods.FreeMacros
+2,FreeParams	TCcQuery.Methods.FreeParams
+2,FreeFields	TCcQuery.Methods.FreeFields
+2,SetSQL	TCcQuery.Methods.SetSQL
+2,DoSetSQL	TCcQuery.Methods.DoSetSQL
+2,GetSQL	TCcQuery.Methods.GetSQL
+2,DoGetSQL	TCcQuery.Methods.DoGetSQL
+2,GetActive	TCcQuery.Methods.GetActive
+2,DoSetDatabase	TCcQuery.Methods.DoSetDatabase
+2,DoSetTransaction	TCcQuery.Methods.DoSetTransaction
+2,SetDatabase	TCcQuery.Methods.SetDatabase
+2,SetTransaction	TCcQuery.Methods.SetTransaction
+2,GetRecordCount	TCcQuery.Methods.GetRecordCount
+2,GetRowsAffected	TCcQuery.Methods.GetRowsAffected
+2,GetEof	TCcQuery.Methods.GetEof
+2,InitFields	TCcQuery.Methods.InitFields
+2,InitParams	TCcQuery.Methods.InitParams
+2,DoExec	TCcQuery.Methods.DoExec
+2,DoClose	TCcQuery.Methods.DoClose
+2,DoNext	TCcQuery.Methods.DoNext
+2,DoUnPrepare	TCcQuery.Methods.DoUnPrepare
+2,Close	TCcQuery.Methods.Close
+2,Next	TCcQuery.Methods.Next
+2,Prepare	TCcQuery.Methods.Prepare
+2,UnPrepare	TCcQuery.Methods.UnPrepare
+2,Exec	TCcQuery.Methods.Exec
+2,MacroExists	TCcQuery.Methods.MacroExists
+2,FindMacro	TCcQuery.Methods.FindMacro
+2,ParamExists	TCcQuery.Methods.ParamExists
+2,FindParam	TCcQuery.Methods.FindParam
+2,FieldExists	TCcQuery.Methods.FieldExists
+2,FindField	TCcQuery.Methods.FindField
+2,TCcQuery	TCcQuery.Methods.TCcQuery
+2,~TCcQuery	TCcQuery.Methods.~TCcQuery
+2,Create	TCcQuery.Methods.Create
+2,Destroy	TCcQuery.Methods.Destroy
+1,Properties	TCcQuery.Properties
+2,Macro	TCcQuery.Properties.Macro
+2,MacroCount	TCcQuery.Properties.MacroCount
+2,Param	TCcQuery.Properties.Param
+2,ParamCount	TCcQuery.Properties.ParamCount
+2,FieldByIndex	TCcQuery.Properties.FieldByIndex
+2,Field	TCcQuery.Properties.Field
+2,FieldCount	TCcQuery.Properties.FieldCount
+2,RowsAffected	TCcQuery.Properties.RowsAffected
+2,RecordCount	TCcQuery.Properties.RecordCount
+2,Active	TCcQuery.Properties.Active
+2,Eof	TCcQuery.Properties.Eof
+2,Prepared	TCcQuery.Properties.Prepared
+2,Database	TCcQuery.Properties.Database
+2,Transaction	TCcQuery.Properties.Transaction
+2,SQL	TCcQuery.Properties.SQL
+0,TCcMacro	TCcMacro
+1,Methods	TCcMacro.Methods
+2,ApplyToSQL	TCcMacro.Methods.ApplyToSQL
+2,TCcMacro	TCcMacro.Methods.TCcMacro
+2,~TCcMacro	TCcMacro.Methods.~TCcMacro
+2,Create	TCcMacro.Methods.Create
+1,Properties	TCcMacro.Properties
+2,Name	TCcMacro.Properties.Name
+2,Value	TCcMacro.Properties.Value
+0,TCcProvider	TCcProvider
+1,Methods	TCcProvider.Methods
+2,ProviderName	TCcProvider.Methods.ProviderName
+2,NewQuery	TCcProvider.Methods.NewQuery
+2,NewDatabase	TCcProvider.Methods.NewDatabase
+2,NewTransaction	TCcProvider.Methods.NewTransaction
+2,TCcProvider	TCcProvider.Methods.TCcProvider
+2,~TCcProvider	TCcProvider.Methods.~TCcProvider
+2,Create	TCcProvider.Methods.Create
+0,TCcCustomLog	TCcCustomLog
+1,Methods	TCcCustomLog.Methods
+2,GetdpDest	TCcCustomLog.Methods.GetdpDest
+2,GetdpOrigine	TCcCustomLog.Methods.GetdpOrigine
+2,GetReplState	TCcCustomLog.Methods.GetReplState
+2,GetLocalMode	TCcCustomLog.Methods.GetLocalMode
+2,GetEof	TCcCustomLog.Methods.GetEof
+2,GetBof	TCcCustomLog.Methods.GetBof
+2,GetCurrentLine	TCcCustomLog.Methods.GetCurrentLine
+2,GetLineCount	TCcCustomLog.Methods.GetLineCount
+2,SetReplicator	TCcCustomLog.Methods.SetReplicator
+2,LoadLog	TCcCustomLog.Methods.LoadLog
+2,LogConflict	TCcCustomLog.Methods.LogConflict
+2,InitQueries	TCcCustomLog.Methods.InitQueries
+2,DestroyQueries	TCcCustomLog.Methods.DestroyQueries
+2,BuildLogSQL	TCcCustomLog.Methods.BuildLogSQL
+2,FBN	TCcCustomLog.Methods.FBN
+2,FieldByName	TCcCustomLog.Methods.FieldByName
+2,Edit	TCcCustomLog.Methods.Edit
+2,Post	TCcCustomLog.Methods.Post
+2,Next	TCcCustomLog.Methods.Next
+2,Prior	TCcCustomLog.Methods.Prior
+2,First	TCcCustomLog.Methods.First
+2,Last	TCcCustomLog.Methods.Last
+2,Init	TCcCustomLog.Methods.Init
+2,TCcCustomLog	TCcCustomLog.Methods.TCcCustomLog
+2,~TCcCustomLog	TCcCustomLog.Methods.~TCcCustomLog
+1,Properties	TCcCustomLog.Properties
+2,Eof	TCcCustomLog.Properties.Eof
+2,Bof	TCcCustomLog.Properties.Bof
+2,LineCount	TCcCustomLog.Properties.LineCount
+2,CurrentLine	TCcCustomLog.Properties.CurrentLine
+2,dpOrigine	TCcCustomLog.Properties.dpOrigine
+2,dpDest	TCcCustomLog.Properties.dpDest
+2,ReplState	TCcCustomLog.Properties.ReplState
+2,LocalMode	TCcCustomLog.Properties.LocalMode
+2,Replicator	TCcCustomLog.Properties.Replicator
+0,TCcReplicator	TCcReplicator
+1,Methods	TCcReplicator.Methods
+2,Loaded	TCcReplicator.Methods.Loaded
+2,LoadConfig	TCcReplicator.Methods.LoadConfig
+2,SaveConfig	TCcReplicator.Methods.SaveConfig
+2,LogConflict	TCcReplicator.Methods.LogConflict
+2,ConnectionLost	TCcReplicator.Methods.ConnectionLost
+2,InitQueries	TCcReplicator.Methods.InitQueries
+2,DestroyQueries	TCcReplicator.Methods.DestroyQueries
+2,Connect	TCcReplicator.Methods.Connect
+2,Replicate	TCcReplicator.Methods.Replicate
+2,AbortReplication	TCcReplicator.Methods.AbortReplication
+2,Disconnect	TCcReplicator.Methods.Disconnect
+2,TCcReplicator	TCcReplicator.Methods.TCcReplicator
+2,~TCcReplicator	TCcReplicator.Methods.~TCcReplicator
+2,Create	TCcReplicator.Methods.Create
+2,Destroy	TCcReplicator.Methods.Destroy
+1,Properties	TCcReplicator.Properties
+2,LegacyRplTables	TCcReplicator.Properties.LegacyRplTables
+2,Log	TCcReplicator.Properties.Log
+2,LocalUser	TCcReplicator.Properties.LocalUser
+2,LocalSYSDBA	TCcReplicator.Properties.LocalSYSDBA
+2,RemoteUser	TCcReplicator.Properties.RemoteUser
+2,Finished	TCcReplicator.Properties.Finished
+2,Busy	TCcReplicator.Properties.Busy
+2,Closing	TCcReplicator.Properties.Closing
+2,HarmonizeFields	TCcReplicator.Properties.HarmonizeFields
+2,KeepConnection	TCcReplicator.Properties.KeepConnection
+2,Users	TCcReplicator.Properties.Users
+2,AutoReplicate	TCcReplicator.Properties.AutoReplicate
+2,AutoCommit	TCcReplicator.Properties.AutoCommit
+2,CommitOnFinished	TCcReplicator.Properties.CommitOnFinished
+2,AbortOnError	TCcReplicator.Properties.AbortOnError
+2,BeforeReplicate	TCcReplicator.Properties.BeforeReplicate
+1,Events	TCcReplicator.Events
+2,OnFinished	TCcReplicator.Events.OnFinished
+2,OnRowReplicated	TCcReplicator.Events.OnRowReplicated
+2,OnRowReplicating	TCcReplicator.Events.OnRowReplicating
+2,OnConflict	TCcReplicator.Events.OnConflict
+2,OnReplicationError	TCcReplicator.Events.OnReplicationError
+2,OnException	TCcReplicator.Events.OnException
+2,OnAbort	TCcReplicator.Events.OnAbort
+2,OnEmptyLog	TCcReplicator.Events.OnEmptyLog
+2,OnGetFields	TCcReplicator.Events.OnGetFields
+2,OnTableBegin	TCcReplicator.Events.OnTableBegin
+2,OnTableEnd	TCcReplicator.Events.OnTableEnd
+2,OnGenReplError	TCcReplicator.Events.OnGenReplError
+2,OnGenReplicating	TCcReplicator.Events.OnGenReplicating
+2,OnGenReplicated	TCcReplicator.Events.OnGenReplicated
+2,OnAutoCommit	TCcReplicator.Events.OnAutoCommit
+2,OnConnectLocal	TCcReplicator.Events.OnConnectLocal
+2,OnConnectRemote	TCcReplicator.Events.OnConnectRemote
+2,OnDisconnect	TCcReplicator.Events.OnDisconnect
+2,OnCommit	TCcReplicator.Events.OnCommit
+2,OnProgress	TCcReplicator.Events.OnProgress
+2,OnReplicateProc	TCcReplicator.Events.OnReplicateProc
+2,OnQueryDone	TCcReplicator.Events.OnQueryDone
+2,OnLogLoaded	TCcReplicator.Events.OnLogLoaded
+2,OnConnectionLost	TCcReplicator.Events.OnConnectionLost
+0,TCcCustomConflictMgr	TCcCustomConflictMgr
+1,Methods	TCcCustomConflictMgr.Methods
+2,LogConflict	TCcCustomConflictMgr.Methods.LogConflict
+2,CheckConflicts	TCcCustomConflictMgr.Methods.CheckConflicts
+2,InitQueries	TCcCustomConflictMgr.Methods.InitQueries
+2,DestroyQueries	TCcCustomConflictMgr.Methods.DestroyQueries
+2,TCcCustomConflictMgr	TCcCustomConflictMgr.Methods.TCcCustomConflictMgr
+2,~TCcCustomConflictMgr	TCcCustomConflictMgr.Methods.~TCcCustomConflictMgr
+0,EReplError	EReplError
+1,Methods	EReplError.Methods
+2,EReplError	EReplError.Methods.EReplError
+2,~EReplError	EReplError.Methods.~EReplError

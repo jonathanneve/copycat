@@ -1,0 +1,159 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN">
+<html>
+<head>
+<title>Getting started</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+    <meta name="generator" content="Doc-O-Matic" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <link rel="STYLESHEET" href="default.css" type="text/css" />
+
+<script type="text/javascript" src="scripts.js"></script>
+</head>
+<body class="Element700" onload="onBodyLoadEx('frames.html', 'topic', 'Getting_started.html');" onmousedown="onBodyMouseDown();">
+
+<!-- Begin Popups -->
+
+<!-- End Popups -->
+
+<!-- Begin Page Header -->
+<div class="Element710" id="areafixed">
+<div class="Element92">
+<table width="100%" cellspacing="0" cellpadding="0">
+<tr><td width="33%">
+<div class="Element1">
+<a href="http://www.copycat.fr" target="new_page"><img src="copycat_70x70.png"><h3>CopyCat Developer Tools</h3></img></a></div>
+</td><td width="34%">
+<div class="Element2">
+<a href="contents.html" target="tocidx">Contents</a> | <a href="idx.html" target="tocidx">Index</a></div>
+</td><td width="33%">
+<div class="Element90">
+<a href="Introduction.html" target="topic">Previous</a> | <a href="Replication_nodes.html" target="topic">Next</a></div>
+</td></tr></table><div class="Element5">
+Getting started</div>
+<div class="Element730">
+<a href="#" onclick="showAllElements();">Show All</a></div>
+</div>
+</div>
+
+<!-- End Page Header -->
+
+<!-- Begin Client Area -->
+<div class="Element720" id="areascroll">
+<div class="Element721">
+
+<!-- Begin Page Content -->
+<div class="Element58">
+<div class="Element11">
+<div class="Element10">
+<p class="Element10">
+<strong>Getting started with CopyCat</strong>&nbsp;</p>
+<p class="Element10">
+&nbsp;</p>
+<p class="Element10">
+CopyCat supports two different replication modes that can be used, depending on the situation.&nbsp;</p>
+<p class="Element10">
+&nbsp;</p>
+<p class="Element10">
+<strong>Standard</strong>&nbsp;</p>
+<p class="Element10">
+&nbsp;</p>
+<p class="Element10">
+This is the default mode, and it versions prior to 3.08.0, it was the only mode.&nbsp;</p>
+<p class="Element10">
+&nbsp;</p>
+<p class="Element10">
+In this mode, CopyCat creates triggers that simply log a row in RPL$LOG every time a change occurs in one of the tables being replicated. The type of operation (INSERT, UPDATE or DELETE) is not recorded, because it is determined at replication time. The values of the fields are also not recorded, only the primary key, and therefore, there is no way of knowing which field has changed, if any.&nbsp;</p>
+<p class="Element10">
+&nbsp;</p>
+<p class="Element10">
+At replication time, the row is then selected from the source DB. If it can't be found, it is deleted from the destination DB. If it is found, then an update is attempted. If the update finds no row, then it is inserted.&nbsp;</p>
+<p class="Element10">
+&nbsp;</p>
+<p class="Element10">
+This mechanism is robust and fault-tolerant, because even if the databases get out of sync for whatever reason, it will still work (for example, if a row in the source DB gets updated, that update can be turned into an insert if it turns out that the row doesn't exist in the destination DB at replication time).&nbsp;</p>
+<p class="Element10">
+&nbsp;</p>
+<p class="Element10">
+It also has the advantage that if the same row modified several times, the rows can be bunched up and replicated only once.&nbsp;</p>
+<p class="Element10">
+&nbsp;</p>
+<p class="Element10">
+This mode doesn't make it possible to guarantee consistency however, because the exact order of events cannot always be reproduced: if you insert a row into table A, setting only a few fields, then insert a row into table B, and then update table A again, giving a value to a field with a foreign key pointing to table B, then the insert into table A will fail at replication time, because it will try to execute the full insert of all the fields, including the field with the primary key, before the insert into table B, so there will be a foreign key violation.&nbsp;</p>
+<p class="Element10">
+&nbsp;</p>
+<p class="Element10">
+The result of that is that there can be an inconsistent view of the data, it will not be replicated atomically. For some uses, that doesn't really matter, but for reporting or other such situations where it's more important for the data to be consistent than fully up-to-date, that can be a problem.&nbsp;</p>
+<p class="Element10">
+&nbsp;</p>
+<p class="Element10">
+The other problem with this mode is that since all fields of the table are replicated every time there is a change, there can be a performance hit for tables that have large numbers of fields and/or big blob fields, as the values of these fields will be sent over the wire every time the row changes, even if those fields didn't change.&nbsp;</p>
+<p class="Element10">
+&nbsp;</p>
+<p class="Element10">
+<strong>High-consistency with field change tracking</strong>&nbsp;</p>
+<p class="Element10">
+&nbsp;</p>
+<p class="Element10">
+This is a new feature of CopyCat 3.08.0, and is currently available only for Firebird and Interbase, though it will be implemented for all other supported databases in the upcoming releases.&nbsp;</p>
+<p class="Element10">
+&nbsp;</p>
+<p class="Element10">
+This mode enables a full tracking of the values of the fields that were changed with every change to the database. That way, when it comes time to replicate, we can know exactly which fields were changed and what values were given, and thus, we can play back precisely the changes that took place in the source database, in exactly the same order, and therefore, the foreign key issues mentioned above no longer apply.&nbsp;</p>
+<p class="Element10">
+&nbsp;</p>
+<p class="Element10">
+The drawback is that it is entirely incremental, and will not work at all if the two databases become out of sync for whatever reason. To fix such a situation would require a pumping of the entire table or database to ensure that they are identical.&nbsp;</p>
+<p class="Element10">
+&nbsp;</p>
+<p class="Element10">
+The major advantage however is better consistency and therefore improved reliability. It is HIGHLY RECOMMENDED that you run the entire replication cycle using a single transaction, and that you rollback all the changes if ever there is an error on any row: this is important because some of the later changes in the list may fail and it could lead to a situation where there are subtle differences between the two databases. The only reliable way to use this feature is to replicate atomically.&nbsp;</p>
+<p class="Element10">
+&nbsp;</p>
+<p class="Element10">
+Consistency is a huge advantage in many situations, because it means that either the replication failed, in which case you will see none of the changes, or it succeeded, in which case they will all be visible, but you can count on there never being anything missing, and you can also be sure that there is no incoherent data in the database (an invoice header with no lines for example).&nbsp;</p>
+<p class="Element10">
+&nbsp;</p>
+<p class="Element10">
+<strong>Conflict resolution</strong>&nbsp;</p>
+<p class="Element10">
+&nbsp;</p>
+<p class="Element10">
+The other big advantage to this mode is finer grained and easier to manage conflict resolution.&nbsp;</p>
+<p class="Element10">
+&nbsp;</p>
+<p class="Element10">
+Since we know which fields changed, many conflicts can be automatically resolved by merging the changes from both nodes, in cases where none of the same fields were changed on both sides. In cases that are still conflictual, you are provided the list of fields changed on each side as well as the list of fields changed on both sides, and it is also possible to find out for each field the value that it was changed from and to on each side, making conflict resolution much easier.&nbsp;</p>
+<p class="Element10">
+&nbsp;</p>
+<p class="Element10">
+If a conflict is detected, the fields that were changed on only one of the nodes can be merged. For instance, if the first node changed fields A, B and C while the seconde node changed fields C and D, if the conflict is resolved in favor of the second node, the values of A and B from the first node will be kept, as they were not conflictual with the change from the second node. Thus, conflict resolution can be much finer-grained.&nbsp;</p>
+<p class="Element10">
+&nbsp;</p>
+<p class="Element10">
+For more information about conflict management, see:</p></div>
+</div>
+<div class="Element62">
+Created with a commercial version of <a href="http://www.doc-o-matic.com">Doc-O-Matic</a>. In order to make this message disappear you need to register this software. If you have problems registering this software please contact us at <a href="mailto:support@toolsfactory.com">support@toolsfactory.com</a>.</div>
+</div>
+<!-- End Page Content -->
+
+<!-- Begin Page Footer -->
+<div class="Element93">
+<table width="100%" cellspacing="0" cellpadding="0">
+<tr><td width="100%">
+<div class="Element3">
+Copyright (c) 2015. All rights reserved. http://www.copycat.fr</div>
+</td></tr><tr><td width="100%">
+<div class="Element4">
+<a href="contents.html" target="tocidx">Contents</a> | <a href="idx.html" target="tocidx">Index</a></div>
+</td></tr><tr><td width="100%">
+<div class="Element97">
+What do you think about this topic?  Send feedback through our <a href="http://copycat.fr/wordpress/contact-us/" target="new_page">contact form</a></div>
+</td></tr></table></div>
+
+<!-- End Page Footer -->
+</div>
+</div>
+
+<!-- End Client Area -->
+</body></html>

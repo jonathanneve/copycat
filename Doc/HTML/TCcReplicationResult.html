@@ -1,0 +1,145 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN">
+<html>
+<head>
+<title>TCcReplicationResult Record</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+    <meta name="generator" content="Doc-O-Matic" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <link rel="STYLESHEET" href="default.css" type="text/css" />
+
+<script type="text/javascript" src="scripts.js"></script>
+</head>
+<body class="Element700" onload="onBodyLoadEx('frames.html', 'topic', 'TCcReplicationResult.html');" onmousedown="onBodyMouseDown();">
+
+<!-- Begin Popups -->
+<div class="Element801" id="popup00770">
+<div class="Element800">
+<div class="Element14">
+Links</div>
+<div class="Element11">
+<div class="Element10">
+<a href="CcReplicator_pas.html" target="topic">CcReplicator</a></div>
+</div>
+</div>
+</div>
+
+<!-- End Popups -->
+
+<!-- Begin Page Header -->
+<div class="Element710" id="areafixed">
+<div class="Element92">
+<table width="100%" cellspacing="0" cellpadding="0">
+<tr><td width="33%">
+<div class="Element1">
+<a href="#" onmousedown="showPopup(this, 'popup00770');"><img src="seealsolink.png" border="0" alt=""></a> <a href="http://www.copycat.fr" target="new_page"><img src="copycat_70x70.png"><h3>CopyCat Developer Tools</h3></img></a></div>
+</td><td width="34%">
+<div class="Element2">
+<a href="contents.html" target="tocidx">Contents</a> | <a href="idx.html" target="tocidx">Index</a></div>
+</td><td width="33%">
+<div class="Element90">
+<a href="TCcRemoteFunction.html" target="topic">Previous</a> | <a href="TCcReplicationResultType.html" target="topic">Next</a></div>
+</td></tr></table><div class="Element5">
+TCcReplicationResult Record</div>
+<div class="Element7">
+<a href="CcReplicator_pas.html" target="topic">CcReplicator</a></div>
+<div class="Element730">
+<a href="#" onclick="showAllElements();">Show All</a></div>
+</div>
+</div>
+
+<!-- End Page Header -->
+
+<!-- Begin Client Area -->
+<div class="Element720" id="areascroll">
+<div class="Element721">
+
+<!-- Begin Page Content -->
+<div class="Element58">
+<div class="Element101"><div class="Element100"><pre class="Element100">TCcReplicationResult = <strong>record</strong>
+  ResultType: <a href="TCcReplicationResultType.html" target="topic">TCcReplicationResultType</a>;
+  ExceptionMessage: <strong>string</strong>;
+  RowsReplicated: Integer;
+  RowsConflicted: Integer;
+  RowsErrors: Integer;
+  <strong>end</strong>;</pre></div></div>
+<div class="Element101"><div class="Element100"><pre class="Element100"><strong>struct</strong> TCcReplicationResult {
+  <a href="TCcReplicationResultType.html" target="topic">TCcReplicationResultType</a> ResultType;
+  string ExceptionMessage;
+  <strong>int</strong> RowsReplicated;
+  <strong>int</strong> RowsConflicted;
+  <strong>int</strong> RowsErrors;
+};</pre></div></div>
+<div class="Element14">
+<a onclick="toggleVisibilityStored('File');" class="a_Element14"><img src="sectionminus.png" border="0" alt="sectionminus.png" id="imgFile">File</a></div>
+<div id="divFile">
+<div class="Element11">
+<div class="Element10">
+<p class="Element10">
+<a href="CcReplicator_pas.html" target="topic">CcReplicator</a></p></div>
+</div>
+</div>
+<div class="Element14">
+<a onclick="toggleVisibilityStored('Members');" class="a_Element14"><img src="sectionminus.png" border="0" alt="sectionminus.png" id="imgMembers">Members</a></div>
+<div id="divMembers">
+<div class="Element11">
+<div class="Element10">
+<div class="Element272">
+<div class="TableDiv">
+<table cellspacing="0" class="Table5">
+<tr>
+<td class="Element260" valign="top" width="50%">
+<div class="Element261">
+Members&nbsp;</div></td><td class="Element264" valign="top" width="50%">
+<div class="Element265">
+Description&nbsp;</div></td></tr><tr>
+<td class="Element262" valign="top" width="50%">
+<div class="Element263">
+ExceptionMessage: string;&nbsp;</div></td><td class="Element266" valign="top" width="50%">
+<div class="Element267">
+Error message, if applicable&nbsp;</div></td></tr><tr>
+<td class="Element262" valign="top" width="50%">
+<div class="Element263">
+RowsReplicated: Integer;&nbsp;</div></td><td class="Element266" valign="top" width="50%">
+<div class="Element267">
+Number of rows successfully replicated&nbsp;</div></td></tr><tr>
+<td class="Element262" valign="top" width="50%">
+<div class="Element263">
+RowsConflicted: Integer;&nbsp;</div></td><td class="Element266" valign="top" width="50%">
+<div class="Element267">
+Number of conflictual rows detected&nbsp;</div></td></tr></table></div></div>
+</div>
+</div>
+</div>
+<div class="Element14">
+<a onclick="toggleVisibilityStored('Links');" class="a_Element14"><img src="sectionminus.png" border="0" alt="sectionminus.png" id="imgLinks">Links</a></div>
+<div id="divLinks">
+<div class="Element11">
+<div class="Element10">
+<a href="CcReplicator_pas.html" target="topic">CcReplicator</a></div>
+</div>
+</div>
+<div class="Element62">
+Created with a commercial version of <a href="http://www.doc-o-matic.com">Doc-O-Matic</a>. In order to make this message disappear you need to register this software. If you have problems registering this software please contact us at <a href="mailto:support@toolsfactory.com">support@toolsfactory.com</a>.</div>
+</div>
+<!-- End Page Content -->
+
+<!-- Begin Page Footer -->
+<div class="Element93">
+<table width="100%" cellspacing="0" cellpadding="0">
+<tr><td width="100%">
+<div class="Element3">
+Copyright (c) 2015. All rights reserved. http://www.copycat.fr</div>
+</td></tr><tr><td width="100%">
+<div class="Element4">
+<a href="contents.html" target="tocidx">Contents</a> | <a href="idx.html" target="tocidx">Index</a></div>
+</td></tr><tr><td width="100%">
+<div class="Element97">
+What do you think about this topic?  Send feedback through our <a href="http://copycat.fr/wordpress/contact-us/" target="new_page">contact form</a></div>
+</td></tr></table></div>
+
+<!-- End Page Footer -->
+</div>
+</div>
+
+<!-- End Client Area -->
+</body></html>

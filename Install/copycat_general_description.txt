@@ -1,0 +1,4 @@
+CopyCat Developer is a set of Delphi / C++Builder components providing customizable replication for Firebird, Interbase, Microsoft SQL Server, MySQL, NexusDB, SQLite, PostgreSQL and Oracle, including heteogenous replication between different database types.
+
+Have a look at our site for more information : http://www.copycat.fr
+

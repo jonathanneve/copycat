@@ -1,0 +1,228 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>RPL$TABLES</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+    <meta name="generator" content="Doc-O-Matic" />
+    <meta name="save" content="history" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <link rel="STYLESHEET" href="default.css" type="text/css" />
+
+<script type="text/javascript" src="scripts.js"></script>
+</head>
+<body class="Element700" onload="onBodyLoad();" onmousedown="onBodyMouseDown();">
+<div id="persistenceDiv" style="display:none; behavior:url(#default#userData);"></div>
+
+<!-- Begin Popups -->
+<div class="Element801" id="popup00007">
+<div class="Element800">
+<div class="Element14">
+Links</div>
+<div class="Element11">
+<div class="Element10">
+<a href="Database_tables.html">Database tables</a></div>
+</div>
+</div>
+</div>
+
+<!-- End Popups -->
+
+<!-- Begin Page Header -->
+<div class="Element710" id="areafixed">
+<div class="Element92">
+<table width="100%" cellspacing="0" cellpadding="0">
+<tr><td width="33%">
+<div class="Element1">
+<a href="#" onmousedown="showPopup(this, 'popup00007');"><img src="seealsolink.png" border="0" alt=""></a> <a href="http://www.copycat.fr" target="new_page"><img src="copycat_70x70.png" border="0"><h3>CopyCat Developer Tools</h3></img></a></div>
+</td><td width="34%">
+<div class="Element2">
+<a href="contents.html">Contents</a> | <a href="idx.html">Index</a></div>
+</td><td width="33%">
+<div class="Element90">
+<a href="Database_tables.html">Up</a> | <a href="RPL$CONFLICTS.html">Previous</a> | <a href="RPL$PROCEDURES.html">Next</a></div>
+</td></tr></table><div class="Element5">
+RPL$TABLES</div>
+<div class="Element7">
+<a href="Database_tables.html">Database tables</a></div>
+<div class="Element730">
+<a href="#" onclick="showAllElements();">Show All</a></div>
+</div>
+</div>
+
+<!-- End Page Header -->
+
+<!-- Begin Client Area -->
+<div class="Element720" id="areascroll">
+<div class="Element721">
+
+<!-- Begin Page Content -->
+<div class="Element58">
+<div class="Element11">
+<div class="Element10">
+<p class="Element10">
+The RPL$TABLES table holds the list of all the non-system tables in the database, with the replication configuration options for each one.&nbsp;</p>
+<p class="Element10">
+&nbsp;</p>
+<p class="Element10">
+RPL$TABLES has the following fields:&nbsp;</p>
+<p class="Element10">
+&nbsp;</p><div class="Element63">
+<div class="TableDiv">
+<table cellspacing="0" class="Table2">
+<tr>
+<td class="Element65" valign="top" width="17%">
+<div class="Element66">
+Field name&nbsp;</div></td><td class="Element65" valign="top" width="15%">
+<div class="Element66">
+Data type&nbsp;</div></td><td class="Element65" valign="top" width="68%">
+<div class="Element66">
+Description&nbsp;</div></td></tr><tr>
+<td class="Element67" valign="top" width="17%">
+<div class="Element68">
+TABLE_NAME&nbsp;</div></td><td class="Element67" valign="top" width="15%">
+<div class="Element68">
+String&nbsp;</div></td><td class="Element67" valign="top" width="68%">
+<div class="Element68">
+Name of the table.&nbsp;</div></td></tr><tr>
+<td class="Element67" valign="top" width="17%">
+<div class="Element68">
+TRIG_BASE_NAME&nbsp;</div></td><td class="Element67" valign="top" width="15%">
+<div class="Element68">
+String&nbsp;</div></td><td class="Element67" valign="top" width="68%">
+<div class="Element68">
+Base name for the triggers. To this will be added '_I', '_U' or '_D' depending on the type of trigger. By default, the base name is 'RPL$', followed by as much of the table name as will fit. This might need to be changed for long table names, in order to have unique trigger names.&nbsp;</div></td></tr><tr>
+<td class="Element67" valign="top" width="17%">
+<div class="Element68">
+PRIMARY_KEY_SYNC&nbsp;</div></td><td class="Element67" valign="top" width="15%">
+<div class="Element68">
+String&nbsp;</div></td><td class="Element67" valign="top" width="68%">
+<div class="Element68">
+Synchronization statements for the each primary key field. These are SQL statements that can be used for fetching unique primary key values from the remote server.&nbsp;</div></td></tr><tr>
+<td class="Element67" valign="top" width="17%">
+<div class="Element68">
+UNIQUE_KEY_NAMES&nbsp;</div></td><td class="Element67" valign="top" width="15%">
+<div class="Element68">
+String&nbsp;</div></td><td class="Element67" valign="top" width="68%">
+<div class="Element68">
+Names of any other fields for which global unicity is to be maintained.&nbsp;</div></td></tr><tr>
+<td class="Element67" valign="top" width="17%">
+<div class="Element68">
+UNIQUE_KEY_SYNC&nbsp;</div></td><td class="Element67" valign="top" width="15%">
+<div class="Element68">
+String&nbsp;</div></td><td class="Element67" valign="top" width="68%">
+<div class="Element68">
+Synchronization statements for each of the unique key fields. These are SQL statements that will be used for fetching unique field values from the remote server.&nbsp;</div></td></tr><tr>
+<td class="Element67" valign="top" width="17%">
+<div class="Element68">
+REPL_UPDATES&nbsp;</div></td><td class="Element67" valign="top" width="15%">
+<div class="Element68">
+String (Y/N)&nbsp;</div></td><td class="Element67" valign="top" width="68%">
+<div class="Element68">
+Determines whether updates should be replicated or not.&nbsp;</div></td></tr><tr>
+<td class="Element67" valign="top" width="17%">
+<div class="Element68">
+REPL_INSERTS&nbsp;</div></td><td class="Element67" valign="top" width="15%">
+<div class="Element68">
+String (Y/N)&nbsp;</div></td><td class="Element67" valign="top" width="68%">
+<div class="Element68">
+Determines whether inserts should be replicated or not.&nbsp;</div></td></tr><tr>
+<td class="Element67" valign="top" width="17%">
+<div class="Element68">
+REPL_DELETES&nbsp;</div></td><td class="Element67" valign="top" width="15%">
+<div class="Element68">
+String (Y/N)&nbsp;</div></td><td class="Element67" valign="top" width="68%">
+<div class="Element68">
+Determines whether deletes should be replicated or not.&nbsp;</div></td></tr><tr>
+<td class="Element67" valign="top" width="17%">
+<div class="Element68">
+CONDITION&nbsp;</div></td><td class="Element67" valign="top" width="15%">
+<div class="Element68">
+String&nbsp;</div></td><td class="Element67" valign="top" width="68%">
+<div class="Element68">
+SQL condition determining in which cases and to which nodes a row is to be replicated. This condition will be placed as is in the trigger SQL. To access the table fields from within this condition, use the &quot;new.&quot; prefix, and to access the RPL$USERS table (in order to determine which nodes will receive changes from this table), use the &quot;u.&quot; prefix.<br><br>For example, setting the condition &quot;new.a_field &gt; 4&quot; means that no changes will be replicated until the value of a_field is greater than 4. Setting the condition to &quot;new.dest_user = u.login&quot; means that only the node with login equal to the dest_user field will receive the changes from this table.&nbsp;</div></td></tr><tr>
+<td class="Element67" valign="top" width="17%">
+<div class="Element68">
+CONDITION_FIELD&nbsp;</div></td><td class="Element67" valign="top" width="15%">
+<div class="Element68">
+String&nbsp;</div></td><td class="Element67" valign="top" width="68%">
+<div class="Element68">
+Name of a field in the table to be matched against RPL$USERS.CONDITION_VALUE. Setting CONDITION_FIELD to &quot;field_name&quot; is equivalent to setting the CONDITION field to &quot;u.condition_value = new.field_name&quot;.&nbsp;</div></td></tr><tr>
+<td class="Element67" valign="top" width="17%">
+<div class="Element68">
+PRIORITY&nbsp;</div></td><td class="Element67" valign="top" width="15%">
+<div class="Element68">
+Integer&nbsp;</div></td><td class="Element67" valign="top" width="68%">
+<div class="Element68">
+Priority of the table. This value is designed to avoid problems arising from inter-table dependencies. Each table should have a higher priority than any of the other tables it depends on, so as to ensure that it is replicated after them.&nbsp;</div></td></tr><tr>
+<td class="Element67" valign="top" width="17%">
+<div class="Element68">
+CREATED&nbsp;</div></td><td class="Element67" valign="top" width="15%">
+<div class="Element68">
+String (Y/N)&nbsp;</div></td><td class="Element67" valign="top" width="68%">
+<div class="Element68">
+Indicates whether of not the table's replication triggers have been generated (either 'Y' or 'N').&nbsp;</div></td></tr><tr>
+<td class="Element67" valign="top" width="17%">
+<div class="Element68">
+REF_FIELD&nbsp;</div></td><td class="Element67" valign="top" width="15%">
+<div class="Element68">
+String&nbsp;</div></td><td class="Element67" valign="top" width="68%">
+<div class="Element68">
+Deprecated, don't use for now.&nbsp;</div></td></tr><tr>
+<td class="Element67" valign="top" width="17%">
+<div class="Element68">
+REF_TABLE&nbsp;</div></td><td class="Element67" valign="top" width="15%">
+<div class="Element68">
+String&nbsp;</div></td><td class="Element67" valign="top" width="68%">
+<div class="Element68">
+Deprecated, don't use for now.&nbsp;</div></td></tr><tr>
+<td class="Element67" valign="top" width="17%">
+<div class="Element68">
+REF_TABLE_KEY&nbsp;</div></td><td class="Element67" valign="top" width="15%">
+<div class="Element68">
+String&nbsp;</div></td><td class="Element67" valign="top" width="68%">
+<div class="Element68">
+Deprecated, don't use for now.&nbsp;</div></td></tr></table></div></div>
+</div>
+</div>
+<div class="Element14">
+<a onclick="toggleVisibilityStored('Group');" class="a_Element14"><img src="sectionminus.png" border="0" alt="sectionminus.png" id="imgGroup">Group</a></div>
+<div id="divGroup">
+<div class="Element11">
+<div class="Element10">
+<p class="Element10">
+<a href="Database_tables.html">Database tables</a></p></div>
+</div>
+</div>
+<div class="Element14">
+<a onclick="toggleVisibilityStored('Links');" class="a_Element14"><img src="sectionminus.png" border="0" alt="sectionminus.png" id="imgLinks">Links</a></div>
+<div id="divLinks">
+<div class="Element11">
+<div class="Element10">
+<a href="Database_tables.html">Database tables</a></div>
+</div>
+</div>
+<div class="Element62">
+Created with a commercial version of <a href="http://www.doc-o-matic.com">Doc-O-Matic</a>. In order to make this message disappear you need to register this software. If you have problems registering this software please contact us at <a href="mailto:support@toolsfactory.com">support@toolsfactory.com</a>.</div>
+</div>
+<!-- End Page Content -->
+
+<!-- Begin Page Footer -->
+<div class="Element93">
+<table width="100%" cellspacing="0" cellpadding="0">
+<tr><td width="100%">
+<div class="Element3">
+Copyright (c) 2015. All rights reserved. http://www.copycat.fr</div>
+</td></tr><tr><td width="100%">
+<div class="Element4">
+<a href="contents.html">Contents</a> | <a href="idx.html">Index</a></div>
+</td></tr><tr><td width="100%">
+<div class="Element97">
+What do you think about this topic?  <a href="#" onclick="sendFeedback('jonathan@copycat.fr', 'Documentation Feedback', 'Project: CopyCat Developer Tools%0ATopic ID: RPL$TABLES%0ATitle: RPL$TABLES');"> Send feedback! </a></div>
+</td></tr></table></div>
+
+<!-- End Page Footer -->
+</div>
+</div>
+
+<!-- End Client Area -->
+</body></html>

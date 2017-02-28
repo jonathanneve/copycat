@@ -1,0 +1,74 @@
+
+@@CcLog.pas
+CopyCat replication suite                     
+                                              
+Copyright (c) 2005 Microtec Communications    
+                                              
+For any questions or technical support,       
+contact Jonathan Neve (jonathan@microtec.fr)
+
+@@TCcLog
+Summary:
+Component for accessing the replication log.
+Description:
+TCcLog is used by TCcReplicator to hold and manage the replication log.
+Applications can access the replication log by using the Log property of
+TCcReplicator. TCcLog reflects the merged content of both local and remote
+RPL$LOG tables, grouping duplicate record logs, so as to optimize performance.<p/>
+<p/>
+Internally, TCcLog holds a dataset with the following fields, which are made
+accessible by using the FieldByName or FBN methods:
+ 
+<table 25c%, 10c%, 65c%>
+Field name                Type          \Description
+========================  ============  ----------------------------------------------------
+TABLE_NAME<p/>            String        Table name
+PK1_NAME<p/>              String<p/>    Names of up to three primary key fields
+PK2_NAME<p/>              String<p/>    
+PK3_NAME<p/>              String<p/>    
+PK1_VALUE<p/>             String<p/>    Value of each primary key field
+PK2_VALUE<p/>             String<p/>    
+PK3_VALUE<p/>             String<p/>    
+PK1_GEN<p/>               String<p/>    Generator values for the each primary key field.
+                                         These are SQL statements that can be used for
+                                         fetching unique primary key values from the remote
+                                         server.
+PK2_GEN<p/>               String<p/>    
+PK3_GEN<p/>               String<p/>    
+GEN1_NAME<p/>             String<p/>    Names of up to 3 other fields for which global
+                                         unicity is to be maintained.
+GEN2_NAME<p/>             String<p/>    
+GEN3_NAME<p/>             String<p/>    
+GEN1_VALUE<p/>            String<p/>    Generator values for each of the generator fields.
+                                         These are SQL statements that can be used for
+                                         fetching unique field values from the remote
+                                         server.
+GEN2_VALUE<p/>            String<p/>    
+GEN3_VALUE<p/>            String<p/>    
+PROCEDURE_STATEMENT<p/>   String<p/>    SQL of the EXECUTE PROCEDURE statement that is to
+                                         be executed in order to replicate a stored
+                                         procedure.
+PRIORITY<p/>              Integer       Priority of the table. This value is designed to
+                                         avoid problems arising from inter-table
+                                         dependencies, and is used for sorting the rows in
+                                         the log.
+ORIGINE<p/>               String        User-name of the replication site that the current
+                                         record originates from.
+LOCAL<p/>                 Integer       1 if the record comes from the local database, 0 if
+                                         it's from the remote.
+STATE<p/>                 Integer<p/>   Current state of the record. See ReplState for more
+                                         information.
+REF_FIELD<p/>             String<p/>    Deprecated - don't use for now.
+REF_VALUE<p/>             String<p/>    Deprecated - don't use for now.
+REF_TABLE<p/>             String<p/>    Deprecated - don't use for now.
+REF_TABLE_KEY<p/>         String<p/>    Deprecated - don't use for now.
+OLD_PK1_VALUE<p/>         String<p/>    Deprecated - don't use for now.
+OLD_PK2_VALUE<p/>         String<p/>    Deprecated - don't use for now.
+OLD_PK3_VALUE<p/>         String<p/>    Deprecated - don't use for now.
+</table>
+ 
+Most of these fields take their value from the corresponding fields in the
+RPL$LOG table of the database, and are filled in by the replication triggers.
+These triggers are generated using the TCcConfig component.
+See Also:
+TCcReplicator.Log, TCcConfig.Tables, <link RPL$LOG>

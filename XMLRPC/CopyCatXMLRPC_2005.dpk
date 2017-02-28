@@ -1,0 +1,50 @@
+package CopyCatXMLRPC_2005;
+
+{$R *.res}
+{$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES ON}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST ON}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DEFINE DEBUG}
+{$ENDIF IMPLICITBUILDING}
+{$DESCRIPTION 'CopyCat XMLRPC provider'}
+{$IMPLICITBUILD OFF}
+
+requires
+  rtl,
+  vcl,
+  dbrtl,
+  CopyCat_2005,
+  IndyCore,
+  IndySystem,
+  IndyProtocols;
+
+contains
+  CcXMLRPCTransport in 'CcXMLRPCTransport.pas',
+  CcDIMime in 'CcDIMime.pas',
+  CcLibXmlParser in 'CcLibXmlParser.pas',
+  CcXmlRpcClient in 'CcXmlRpcClient.pas',
+  CcXmlRpcCommon in 'CcXmlRpcCommon.pas',
+  CcXmlRpcServer in 'CcXmlRpcServer.pas',
+  CcXmlRpcTypes in 'CcXmlRpcTypes.pas',
+  htmlentities in 'htmlentities.pas';
+
+end.

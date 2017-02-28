@@ -1,0 +1,470 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!-- C++Builder XML Project -->
+<PROJECT>
+  <MACROS>
+    <VERSION value="BCB.05.03"/>
+    <PROJECT value="replicator.exe"/>
+    <OBJFILES value="&quot;C:\Program Files\GExperts\DbugIntf.obj&quot; replicator.obj Unit1.obj"/>
+    <RESFILES value="replicator.res"/>
+    <DEFFILE value=""/>
+    <RESDEPEN value="$(RESFILES) Unit1.dfm"/>
+    <LIBFILES value=""/>
+    <LIBRARIES value="CopyCatFIB_C5.lib FIBPlus625_CB5.lib CopyCat_C5.lib regScr.lib 
+      Rz30DBCtls50.lib Rz30Ctls50.lib EHLIBB50.lib DBReplicator_C5.lib 
+      FIBPlus_CB5.lib E110_R51.lib TeeUI50.lib TeeQR50.lib TeeDB50.lib Tee50.lib 
+      O308_R51.lib E108BR51.lib QRPT50.lib VCLBDE50.lib S204_R51.lib VCLIB50.lib 
+      VCLDB50.lib VCLX50.lib E108_R51.lib Vcl50.lib"/>
+    <SPARELIBS value="Vcl50.lib E108_R51.lib VCLX50.lib VCLDB50.lib VCLIB50.lib S204_R51.lib 
+      VCLBDE50.lib QRPT50.lib E108BR51.lib O308_R51.lib Tee50.lib TeeDB50.lib 
+      TeeQR50.lib TeeUI50.lib E110_R51.lib FIBPlus_CB5.lib DBReplicator_C5.lib 
+      EHLIBB50.lib Rz30Ctls50.lib Rz30DBCtls50.lib regScr.lib CopyCat_C5.lib 
+      FIBPlus625_CB5.lib CopyCatFIB_C5.lib"/>
+    <PACKAGES value="Vcl50.bpi Vclx50.bpi bcbsmp50.bpi VCLDB50.bpi QRPT50.bpi VCLBDE50.bpi 
+      ibsmp50.bpi vcldbx50.bpi TeeUI50.bpi TeeDB50.bpi Tee50.bpi TeeQR50.bpi 
+      VCLIB50.bpi bcbie50.bpi vclie50.bpi Inetdb50.bpi Inet50.bpi NMFast50.bpi 
+      dclocx50.bpi bcb97axserver50.bpi P160_R51.bpi S204_R51.bpi S204BR51.bpi 
+      O308_R51.bpi O308BR51.bpi A405_R51.bpi S402BR51.bpi S402_R51.bpi 
+      FoxBurnerSDK.bpi"/>
+    <PATHCPP value=".;"/>
+    <PATHPAS value=".;C:\Program Files\GExperts\"/>
+    <PATHRC value=".;"/>
+    <PATHASM value=".;"/>
+    <DEBUGLIBPATH value="$(BCB)\lib\debug"/>
+    <RELEASELIBPATH value="$(BCB)\lib\release"/>
+    <LINKER value="tlink32"/>
+    <USERDEFINES value="_DEBUG;"/>
+    <SYSDEFINES value="_RTLDLL;NO_STRICT"/>
+    <MAINSOURCE value="replicator.cpp"/>
+    <INCLUDEPATH value="&quot;C:\Program Files\GExperts\&quot;;&quot;C:\Program Files\Raize\RC3\LibBCB5\&quot;;&quot;C:\Program Files\EhLib\BCB5\&quot;;&quot;C:\Program Files\EurekaLog 5\CBuilder5\&quot;;&quot;C:\Program Files\Borland\CBuilder5\Bin\&quot;;$(BCB)\include;$(BCB)\include\vcl;&quot;C:\Program Files\Fibplus\bcb5\&quot;;..\..;&quot;C:\Program Files\Fibplus\FibScript\&quot;"/>
+    <LIBPATH value="..\..\..\FIBPlus\BCB5;&quot;C:\Program Files\GExperts\&quot;;&quot;C:\Program Files\Raize\RC3\LibBCB5\&quot;;&quot;C:\Program Files\EhLib\BCB5\&quot;;&quot;C:\Program Files\EurekaLog 5\CBuilder5\&quot;;&quot;C:\Program Files\Borland\CBuilder5\Bin\&quot;;$(BCB)\lib\obj;$(BCB)\lib;&quot;C:\Program Files\Fibplus\bcb5\&quot;;..\..;&quot;C:\Program Files\Fibplus\FibScript\&quot;;$(BCB)\Projects\lib"/>
+    <WARNINGS value="-w-par"/>
+  </MACROS>
+  <OPTIONS>
+    <CFLAG1 value="-Od -Vx -Ve -X- -r- -a8 -b- -k -y -v -vi- -c -tW -tWM"/>
+    <PFLAGS value="-$Y+ -$W -$O- -v -JPHNE -M"/>
+    <RFLAGS value=""/>
+    <AFLAGS value="/mx /w2 /zi"/>
+    <LFLAGS value="-D&quot;&quot; -aa -Tpe -GD -s -Gn -v"/>
+  </OPTIONS>
+  <LINKER>
+    <ALLOBJ value="c0w32.obj Memmgr.Lib sysinit.obj $(OBJFILES)"/>
+    <ALLRES value="$(RESFILES)"/>
+    <ALLLIB value="$(LIBFILES) $(LIBRARIES) import32.lib cp32mti.lib"/>
+  </LINKER>
+  <IDEOPTIONS>
+[Version Info]
+IncludeVerInfo=1
+AutoIncBuild=0
+MajorVer=1
+MinorVer=9
+Release=0
+Build=0
+Debug=0
+PreRelease=0
+Special=0
+Private=0
+DLL=0
+Locale=1036
+CodePage=1252
+
+[Version Info Keys]
+CompanyName=Microtec Informatique
+FileDescription=Arma Préfa - Gestion temps de travail
+FileVersion=1.9.0.0
+InternalName=
+LegalCopyright=Microtec Informatique
+LegalTrademarks=
+OriginalFilename=
+ProductName=
+ProductVersion=1.09.0
+Comments=
+
+[Excluded Packages]
+$(BCB)\Projects\Bpl\FIBAliasManager.bpl=FIBPlusEditors
+$(BCB)\Bin\dclite50.bpl=Borland Integrated Translation Environment
+
+[HistoryLists\hlIncludePath]
+Count=18
+Item0=C:\Program Files\GExperts\;C:\Program Files\Raize\RC3\LibBCB5\;C:\Program Files\EhLib\BCB5\;C:\Program Files\EurekaLog 5\CBuilder5\;C:\Program Files\Borland\CBuilder5\Bin\;$(BCB)\include;$(BCB)\include\vcl;C:\Program Files\Fibplus\bcb5\;..\..;C:\Program Files\Fibplus\FibScript\
+Item1=C:\Program Files\GExperts\;C:\Program Files\Raize\RC3\LibBCB5\;C:\Program Files\EhLib\BCB5\;C:\Program Files\EurekaLog 5\CBuilder5\;C:\Program Files\Borland\CBuilder5\Bin\;$(BCB)\include;$(BCB)\include\vcl;C:\Program Files\Fibplus\bcb5\;..\..;C:\Program Files\Fibplus\FibScript
+Item2=C:\Program Files\GExperts\;C:\Program Files\Raize\RC3\LibBCB5\;C:\Program Files\EhLib\BCB5\;C:\Program Files\EurekaLog 5\CBuilder5\;C:\Program Files\Borland\CBuilder5\Bin\;$(BCB)\include;$(BCB)\include\vcl;C:\Program Files\Fibplus\bcb5\;..\..
+Item3=C:\Program Files\GExperts\;C:\Program Files\Raize\RC3\LibBCB5\;C:\Program Files\EhLib\BCB5\;C:\Program Files\EurekaLog 5\CBuilder5\;C:\Program Files\Borland\CBuilder5\Bin\;$(BCB)\include;$(BCB)\include\vcl;C:\Program Files\Fibplus\bcb5\;..\..\..
+Item4=C:\Program Files\GExperts\;C:\Program Files\Raize\RC3\LibBCB5\;C:\Program Files\EhLib\BCB5\;C:\Program Files\EurekaLog 5\CBuilder5\;C:\Program Files\Borland\CBuilder5\Bin\;$(BCB)\include;$(BCB)\include\vcl;C:\Program Files\Fibplus\bcb5\;c:\projects\replicator
+Item5=C:\Program Files\GExperts\;C:\Program Files\Raize\RC3\LibBCB5\;C:\Program Files\EhLib\BCB5\;C:\Program Files\EurekaLog 5\CBuilder5\;C:\Program Files\Borland\CBuilder5\Bin\;$(BCB)\include;$(BCB)\include\vcl;C:\Program Files\Fibplus\bcb5\;projects\replicator
+Item6=C:\Program Files\GExperts;C:\Program Files\Raize\RC3\LibBCB5;C:\Program Files\EhLib\BCB5;C:\Program Files\EurekaLog 5\CBuilder5\;C:\Program Files\Borland\CBuilder5\Bin\;$(BCB)\include;$(BCB)\include\vcl;C:\Program Files\Fibplus\bcb5\;\projects\replicator
+Item7=C:\Program Files\GExperts;C:\Program Files\Raize\RC3\LibBCB5;C:\Program Files\EhLib\BCB5;C:\Program Files\EurekaLog 5\CBuilder5\;C:\Program Files\Borland\CBuilder5\Bin\;$(BCB)\include;$(BCB)\include\vcl;C:\Program Files\Fibplus\bcb5\;..\..
+Item8=C:\Program Files\EurekaLog 5\CBuilder5\;C:\Program Files\Borland\CBuilder5\Bin\;$(BCB)\include;$(BCB)\include\vcl;C:\Program Files\Fibplus\bcb5\;..\..
+Item9=C:\Program Files\EurekaLog 5\CBuilder5\;C:\Program Files\Borland\CBuilder5\Bin\;$(BCB)\include;$(BCB)\include\vcl;C:\Program Files\Fibplus\bcb5\;..\..\
+Item10=C:\Program Files\EurekaLog 5\CBuilder5\;C:\Program Files\Borland\CBuilder5\Bin\;$(BCB)\include;$(BCB)\include\vcl;C:\Program Files\Fibplus\bcb5\;..\..\..\..
+Item11=C:\Program Files\EurekaLog 5\CBuilder5;C:\Program Files\Borland\CBuilder5\Bin\;$(BCB)\include;$(BCB)\include\vcl;C:\Program Files\Fibplus\bcb5\;C:\Projects\Replicator
+Item12=C:\Program Files\EurekaLog 5\CBuilder5;C:\Program Files\Borland\CBuilder5\Bin\;$(BCB)\include;$(BCB)\include\vcl;C:\Program Files\Fibplus\bcb5\
+Item13=C:\Program Files\Borland\CBuilder5\Bin\;$(BCB)\include;$(BCB)\include\vcl;C:\Program Files\Fibplus\bcb5\
+Item14=C:\Program Files\EurekaLog 5\CBuilder5;..\..\..\BCB6\Examples\Replicator;C:\Program Files\Borland\CBuilder5\Bin\;C:\PROGRA~1\TURBOP~1\Orpheus5\;C:\PROGRA~1\TURBOP~1\Essence5\;$(BCB)\include;$(BCB)\include\vcl;C:\Program Files\RX\Units5\;C:\PROGRA~1\TURBOP~1\Systools5\
+Item15=..\Bin;C:\PROGRA~1\TURBOP~1\Orpheus5\;C:\PROGRA~1\TURBOP~1\Essence5\;$(BCB)\include;$(BCB)\include\vcl;..\..\..\RX\Units5;C:\PROGRA~1\TURBOP~1\Systools5\
+Item16=C:\Program Files\Borland\CBuilder5\Bin\;C:\Program Files\Borland\CBuilder5\Projects\;C:\PROGRA~1\TURBOP~1\Orpheus5\;C:\PROGRA~1\TURBOP~1\Essence5\;$(BCB)\include;$(BCB)\include\vcl;C:\Program Files\RX\Units5\;C:\PROGRA~1\TURBOP~1\Systools5\
+Item17=C:\Program Files\Borland\CBuilder5\Bin;$(BCB)\include;$(BCB)\include\vcl
+
+[HistoryLists\hlLibraryPath]
+Count=19
+Item0=C:\Program Files\GExperts\;C:\Program Files\Raize\RC3\LibBCB5\;C:\Program Files\EhLib\BCB5\;C:\Program Files\EurekaLog 5\CBuilder5\;C:\Program Files\Borland\CBuilder5\Bin\;$(BCB)\lib\obj;$(BCB)\lib;C:\Program Files\Fibplus\bcb5\;..\..;C:\Program Files\Fibplus\FibScript\;$(BCB)\Projects\lib
+Item1=C:\Program Files\GExperts\;C:\Program Files\Raize\RC3\LibBCB5\;C:\Program Files\EhLib\BCB5\;C:\Program Files\EurekaLog 5\CBuilder5\;C:\Program Files\Borland\CBuilder5\Bin\;$(BCB)\lib\obj;$(BCB)\lib;C:\Program Files\Fibplus\bcb5\;..\..;C:\Program Files\Fibplus\FibScript\
+Item2=C:\Program Files\GExperts\;C:\Program Files\Raize\RC3\LibBCB5\;C:\Program Files\EhLib\BCB5\;C:\Program Files\EurekaLog 5\CBuilder5\;C:\Program Files\Borland\CBuilder5\Bin\;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;C:\Program Files\Fibplus\bcb5\;..\..;C:\Program Files\Fibplus\FibScript\
+Item3=C:\Program Files\GExperts\;C:\Program Files\Raize\RC3\LibBCB5\;C:\Program Files\EhLib\BCB5\;C:\Program Files\EurekaLog 5\CBuilder5\;C:\Program Files\Borland\CBuilder5\Bin\;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;C:\Program Files\Fibplus\bcb5\;..\..;C:\Program Files\Fibplus\FibScript
+Item4=C:\Program Files\GExperts\;C:\Program Files\Raize\RC3\LibBCB5\;C:\Program Files\EhLib\BCB5\;C:\Program Files\EurekaLog 5\CBuilder5\;C:\Program Files\Borland\CBuilder5\Bin\;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;C:\Program Files\Fibplus\bcb5\;..\..
+Item5=C:\Program Files\GExperts\;C:\Program Files\Raize\RC3\LibBCB5\;C:\Program Files\EhLib\BCB5\;C:\Program Files\EurekaLog 5\CBuilder5\;C:\Program Files\Borland\CBuilder5\Bin\;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;C:\Program Files\Fibplus\bcb5\;..\..\..
+Item6=C:\Program Files\GExperts;C:\Program Files\Raize\RC3\LibBCB5;C:\Program Files\EhLib\BCB5;C:\Program Files\EurekaLog 5\CBuilder5\;C:\Program Files\Borland\CBuilder5\Bin\;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;C:\Program Files\Fibplus\bcb5\;c:\projects\replicator
+Item7=C:\Program Files\GExperts;C:\Program Files\Raize\RC3\LibBCB5;C:\Program Files\EhLib\BCB5;C:\Program Files\EurekaLog 5\CBuilder5\;C:\Program Files\Borland\CBuilder5\Bin\;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;C:\Program Files\Fibplus\bcb5\;..\..
+Item8=C:\Program Files\EurekaLog 5\CBuilder5\;C:\Program Files\Borland\CBuilder5\Bin\;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;C:\Program Files\Fibplus\bcb5\;..\..
+Item9=C:\Program Files\EurekaLog 5\CBuilder5\;C:\Program Files\Borland\CBuilder5\Bin\;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;C:\Program Files\Fibplus\bcb5\;..\..\
+Item10=C:\Program Files\EurekaLog 5\CBuilder5\;C:\Program Files\Borland\CBuilder5\Bin\;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;C:\Program Files\Fibplus\bcb5\;..\..\..\..
+Item11=C:\Program Files\EurekaLog 5\CBuilder5;C:\Program Files\Borland\CBuilder5\Bin\;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;C:\Program Files\Fibplus\bcb5\;C:\Projects\Replicator
+Item12=C:\Program Files\EurekaLog 5\CBuilder5;C:\Program Files\Borland\CBuilder5\Bin\;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;C:\Program Files\Fibplus\bcb5\
+Item13=C:\Program Files\Borland\CBuilder5\Bin\;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;C:\Program Files\Fibplus\bcb5\
+Item14=C:\Program Files\EurekaLog 5\CBuilder5;..\..\..\BCB6\Examples\Replicator;C:\Program Files\Borland\CBuilder5\Bin\;$(BCB)\Projects\Lib;C:\PROGRA~1\TURBOP~1\Orpheus5\;C:\PROGRA~1\TURBOP~1\Essence5\;$(BCB)\lib\obj;$(BCB)\lib;C:\Program Files\RX\Units5\;C:\PROGRA~1\TURBOP~1\Systools5\
+Item15=..\Bin;$(BCB)\Projects\Lib;C:\PROGRA~1\TURBOP~1\Orpheus5\;C:\PROGRA~1\TURBOP~1\Essence5\;$(BCB)\lib\obj;$(BCB)\lib;..\..\..\RX\Units5;C:\PROGRA~1\TURBOP~1\Systools5\
+Item16=C:\Program Files\Borland\CBuilder5\Bin\;C:\Program Files\Borland\CBuilder5\Projects\;$(BCB)\Projects\Lib;C:\PROGRA~1\TURBOP~1\Orpheus5\;C:\PROGRA~1\TURBOP~1\Essence5\;$(BCB)\lib\obj;$(BCB)\lib;C:\Program Files\RX\Units5\;C:\PROGRA~1\TURBOP~1\Systools5\
+Item17=C:\Program Files\Borland\CBuilder5\Bin\;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib
+Item18=C:\Program Files\Borland\CBuilder5\Bin;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib
+
+[HistoryLists\hlDebugSourcePath]
+Count=1
+Item0=$(BCB)\source\vcl
+
+[HistoryLists\hlConditionals]
+Count=3
+Item0=_DEBUG;
+Item1=_DEBUG;EUREKALOG;EUREKALOG_VER5
+Item2=_DEBUG
+
+[Debugging]
+DebugSourceDirs=$(BCB)\source\vcl
+
+[Parameters]
+RunParams=
+HostApplication=
+RemoteHost=
+RemotePath=
+RemoteDebug=0
+
+[Compiler]
+ShowInfoMsgs=0
+LinkDebugVcl=0
+LinkCGLIB=0
+  <!-- EurekaLog First Line
+[Exception Log]
+EurekaLog Version=502
+Activate=0
+Activate Handle=1
+Save Log File=1
+Foreground Tab=0
+Freeze Activate=0
+Freeze Timeout=60
+Freeze Message=The application seems to be frozen.
+SMTP From=info@penngar.fr
+SMTP Host=mail.microtec.fr
+SMTP Port=25
+SMTP UserID=
+SMTP Password=
+Append to Log=1
+Show TerminateBtn=1
+TerminateBtn Operation=1
+Errors Number=32
+Errors Terminate=3
+Email Address=bugs@microtec.fr
+Email Object=ERR 001 Penngar : Mona
+Email Send Options=2
+Output Path=
+Encrypt Password=
+AutoCloseDialogSecs=0
+WebSendMode=0
+SupportULR=
+HTMLLayout Count=15
+HTMLLine0="%3Chtml%3E"
+HTMLLine1="  %3Chead%3E"
+HTMLLine2="  %3C/head%3E"
+HTMLLine3="  %3Cbody TopMargin=10 LeftMargin=10%3E"
+HTMLLine4="    %3Ctable width="100%%" border="0"%3E"
+HTMLLine5="      %3Ctr%3E"
+HTMLLine6="        %3Ctd nowrap%3E"
+HTMLLine7="          %3Cfont face="Lucida Console, Courier" size="2"%3E"
+HTMLLine8="            %3C%%HTML_TAG%%%3E"
+HTMLLine9="          %3C/font%3E"
+HTMLLine10="        %3C/td%3E"
+HTMLLine11="      %3C/tr%3E"
+HTMLLine12="    %3C/table%3E"
+HTMLLine13="  %3C/body%3E"
+HTMLLine14="%3C/html%3E"
+AutoCrashOperation=1
+AutoCrashNumber=10
+AutoCrashMinutes=1
+WebURL=
+WebUserID=
+WebPassword=
+WebPort=0
+AttachedFiles=
+Count=0
+EMail Message Line Count=0
+loNoDuplicateErrors=1
+loAppendReproduceText=1
+loDeleteLogAtVersionChange=0
+loAddComputerNameInLogFileName=0
+loSaveModulesSection=1
+loSaveCPUSection=1
+soAppStartDate=1
+soAppName=1
+soAppVersionNumber=1
+soAppParameters=1
+soAppCompilationDate=1
+soExcDate=1
+soExcAddress=1
+soExcModule=1
+soExcType=1
+soExcMessage=1
+soActCtlsFormClass=1
+soActCtlsFormText=1
+soActCtlsControlClass=1
+soActCtlsControlText=1
+soCmpName=1
+soCmpUser=1
+soCmpTotalMemory=1
+soCmpFreeMemory=1
+soCmpTotalDisk=1
+soCmpFreeDisk=1
+soCmpSysUpTime=1
+soCmpProcessor=1
+soCmpDisplayMode=1
+soOSType=1
+soOSBuildN=1
+soOSUpdate=1
+soOSLanguage=1
+soNetIP=1
+soNetSubmask=1
+soNetGateway=1
+soNetDNS1=1
+soNetDNS2=1
+soNetDHCP=1
+sndShowSendDialog=0
+sndShowSuccessFailureMsg=1
+sndSendEntireLog=0
+sndSendXMLLogCopy=1
+sndSendScreenshot=1
+sndUseOnlyActiveWindow=0
+sndSendLastHTMLPage=1
+sndSendInSeparatedThread=1
+sndAddDateInFileName=0
+sndCompressAllFiles=1
+edoShowExceptionDialog=1
+edoSendEmailChecked=1
+edoAttachScreenshotChecked=1
+edoShowCopyToClipOption=1
+edoShowDetailsButton=1
+edoShowInDetailedMode=0
+edoShowInTopMostMode=0
+edoUseEurekaLogLookAndFeel=1
+csoShowDLLs=1
+csoShowBPLs=1
+csoShowBorlandThreads=1
+csoShowWindowsThreads=1
+csoShowProcedureOffset=0
+boActivateCrashDetection=0
+boPauseBorlandThreads=0
+boDoNotPauseMainThread=0
+boPauseWindowsThreads=0
+boUseMainModuleOptions=1
+boCopyLogInCaseOfError=1
+boSaveCompressedCopyInCaseOfError=0
+Count mtInformationMsgCaption=1
+mtInformationMsgCaption0="Information."
+Count mtQuestionMsgCaption=1
+mtQuestionMsgCaption0="Question."
+Count mtDialog_Caption=1
+mtDialog_Caption0="Erreur"
+Count mtDialog_ErrorMsgCaption=1
+mtDialog_ErrorMsgCaption0="Une erreur s'est produite %E0 l'int%E9rieur du logiciel."
+Count mtDialog_GeneralCaption=1
+mtDialog_GeneralCaption0="G%E9n%E9ral"
+Count mtDialog_GeneralHeader=1
+mtDialog_GeneralHeader0="Information g%E9n%E9rale"
+Count mtDialog_CallStackCaption=1
+mtDialog_CallStackCaption0="Call Stack"
+Count mtDialog_CallStackHeader=1
+mtDialog_CallStackHeader0="Call Stack Information"
+Count mtDialog_ModulesCaption=1
+mtDialog_ModulesCaption0="Modules"
+Count mtDialog_ModulesHeader=1
+mtDialog_ModulesHeader0="Modules Information"
+Count mtDialog_CPUCaption=1
+mtDialog_CPUCaption0="CPU"
+Count mtDialog_CPUHeader=1
+mtDialog_CPUHeader0="CPU Information"
+Count mtDialog_CustomDataCaption=1
+mtDialog_CustomDataCaption0="Other"
+Count mtDialog_CustomDataHeader=1
+mtDialog_CustomDataHeader0="Other Information"
+Count mtDialog_OKButtonCaption=1
+mtDialog_OKButtonCaption0="&OK"
+Count mtDialog_TerminateButtonCaption=1
+mtDialog_TerminateButtonCaption0="&Fermer le logiciel"
+Count mtDialog_RestartButtonCaption=1
+mtDialog_RestartButtonCaption0="&Red%E9marrer le logiciel"
+Count mtDialog_DetailsButtonCaption=1
+mtDialog_DetailsButtonCaption0="&D%E9tails"
+Count mtDialog_SendMessage=1
+mtDialog_SendMessage0="&Send this error via Internet"
+Count mtDialog_ScreenshotMessage=1
+mtDialog_ScreenshotMessage0="&Inclure une capture d'%E9cran"
+Count mtDialog_CopyMessage=1
+mtDialog_CopyMessage0="&Copier vers le presse%2Dpapiers"
+Count mtDialog_SupportMessage=1
+mtDialog_SupportMessage0="Go to the Support Page"
+Count mtLog_AppHeader=1
+mtLog_AppHeader0="Application"
+Count mtLog_AppStartDate=1
+mtLog_AppStartDate0="Start Date"
+Count mtLog_AppName=1
+mtLog_AppName0="Name/Description"
+Count mtLog_AppVersionNumber=1
+mtLog_AppVersionNumber0="Version Number"
+Count mtLog_AppParameters=1
+mtLog_AppParameters0="Parameters"
+Count mtLog_AppCompilationDate=1
+mtLog_AppCompilationDate0="Compilation Date"
+Count mtLog_ExcHeader=1
+mtLog_ExcHeader0="Exception"
+Count mtLog_ExcDate=1
+mtLog_ExcDate0="Date"
+Count mtLog_ExcAddress=1
+mtLog_ExcAddress0="Address"
+Count mtLog_ExcModule=1
+mtLog_ExcModule0="Module"
+Count mtLog_ExcType=1
+mtLog_ExcType0="Type"
+Count mtLog_ExcMessage=1
+mtLog_ExcMessage0="Message"
+Count mtLog_ActCtrlsHeader=1
+mtLog_ActCtrlsHeader0="Active Controls"
+Count mtLog_ActCtrlsFormClass=1
+mtLog_ActCtrlsFormClass0="Form Class"
+Count mtLog_ActCtrlsFormText=1
+mtLog_ActCtrlsFormText0="Form Text"
+Count mtLog_ActCtrlsControlClass=1
+mtLog_ActCtrlsControlClass0="Control Class"
+Count mtLog_ActCtrlsControlText=1
+mtLog_ActCtrlsControlText0="Control Text"
+Count mtLog_CmpHeader=1
+mtLog_CmpHeader0="Computer"
+Count mtLog_CmpName=1
+mtLog_CmpName0="Name"
+Count mtLog_CmpUser=1
+mtLog_CmpUser0="User"
+Count mtLog_CmpTotalMemory=1
+mtLog_CmpTotalMemory0="Total Memory"
+Count mtLog_CmpFreeMemory=1
+mtLog_CmpFreeMemory0="Free Memory"
+Count mtLog_CmpTotalDisk=1
+mtLog_CmpTotalDisk0="Total Disk"
+Count mtLog_CmpFreeDisk=1
+mtLog_CmpFreeDisk0="Free Disk"
+Count mtLog_CmpSystemUpTime=1
+mtLog_CmpSystemUpTime0="System Up Time"
+Count mtLog_CmpProcessor=1
+mtLog_CmpProcessor0="Processor"
+Count mtLog_CmpDisplayMode=1
+mtLog_CmpDisplayMode0="Display Mode"
+Count mtLog_OSHeader=1
+mtLog_OSHeader0="Operating System"
+Count mtLog_OSType=1
+mtLog_OSType0="Type"
+Count mtLog_OSBuildN=1
+mtLog_OSBuildN0="Build #"
+Count mtLog_OSUpdate=1
+mtLog_OSUpdate0="Update"
+Count mtLog_OSLanguage=1
+mtLog_OSLanguage0="Language"
+Count mtLog_NetHeader=1
+mtLog_NetHeader0="Network"
+Count mtLog_NetIP=1
+mtLog_NetIP0="IP Address"
+Count mtLog_NetSubmask=1
+mtLog_NetSubmask0="Submask"
+Count mtLog_NetGateway=1
+mtLog_NetGateway0="Gateway"
+Count mtLog_NetDNS1=1
+mtLog_NetDNS10="DNS 1"
+Count mtLog_NetDNS2=1
+mtLog_NetDNS20="DNS 2"
+Count mtLog_NetDHCP=1
+mtLog_NetDHCP0="DHCP"
+Count mtLog_CustInfoHeader=1
+mtLog_CustInfoHeader0="Custom Information"
+Count mtCallStack_Address=1
+mtCallStack_Address0="Address"
+Count mtCallStack_Name=1
+mtCallStack_Name0="Module"
+Count mtCallStack_Unit=1
+mtCallStack_Unit0="Unit"
+Count mtCallStack_Class=1
+mtCallStack_Class0="Class"
+Count mtCallStack_Procedure=1
+mtCallStack_Procedure0="Procedure/Method"
+Count mtCallStack_Line=1
+mtCallStack_Line0="Line"
+Count mtCallStack_MainThread=1
+mtCallStack_MainThread0="Main"
+Count mtCallStack_ExceptionThread=1
+mtCallStack_ExceptionThread0="Exception Thread"
+Count mtCallStack_RunningThread=1
+mtCallStack_RunningThread0="Running Thread"
+Count mtCallStack_CallingThread=1
+mtCallStack_CallingThread0="Calling Thread"
+Count mtCallStack_ThreadID=1
+mtCallStack_ThreadID0="ID"
+Count mtCallStack_ThreadPriority=1
+mtCallStack_ThreadPriority0="Priority"
+Count mtCallStack_ThreadClass=1
+mtCallStack_ThreadClass0="Class"
+Count mtSendDialog_Caption=1
+mtSendDialog_Caption0="SMTP."
+Count mtSendDialog_Message=1
+mtSendDialog_Message0="Message"
+Count mtSendDialog_Resolving=1
+mtSendDialog_Resolving0="R%E9cup%E9ration record MX...."
+Count mtSendDialog_Connecting=1
+mtSendDialog_Connecting0="Connexion serveur SMTP..."
+Count mtSendDialog_Connected=1
+mtSendDialog_Connected0="Connexion %E9tablie avec le serveur."
+Count mtSendDialog_Sending=1
+mtSendDialog_Sending0="Envoi du message..."
+Count mtReproduceDialog_Caption=1
+mtReproduceDialog_Caption0="Information"
+Count mtReproduceDialog_Request=1
+mtReproduceDialog_Request0="Merci de nous indiquer les circonstances qui ont donn%E9 lieu %E0 cette erreur :"
+Count mtReproduceDialog_OKButtonCaption=1
+mtReproduceDialog_OKButtonCaption0="&OK"
+Count mtModules_Handle=1
+mtModules_Handle0="Handle"
+Count mtModules_Name=1
+mtModules_Name0="Name"
+Count mtModules_Description=1
+mtModules_Description0="Description"
+Count mtModules_Version=1
+mtModules_Version0="Version"
+Count mtModules_Size=1
+mtModules_Size0="Size"
+Count mtModules_LastModified=1
+mtModules_LastModified0="Modified"
+Count mtModules_Path=1
+mtModules_Path0="Path"
+Count mtCPU_Registers=1
+mtCPU_Registers0="Registers"
+Count mtCPU_Stack=1
+mtCPU_Stack0="Stack"
+Count mtCPU_MemoryDump=1
+mtCPU_MemoryDump0="Memory Dump"
+Count mtSend_SuccessMsg=1
+mtSend_SuccessMsg0="The message was sent successfully."
+Count mtSend_FailureMsg=1
+mtSend_FailureMsg0="Sorry, sending the message didn't work."
+EurekaLog Last Line -->
+</IDEOPTIONS>
+</PROJECT>

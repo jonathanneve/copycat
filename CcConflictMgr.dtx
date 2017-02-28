@@ -1,0 +1,32 @@
+
+@@CcConflictMgr.pas
+CopyCat replication suite                     
+                                              
+Copyright (c) 2005 Microtec Communications    
+                                              
+For any questions or technical support,       
+contact Jonathan Neve (jonathan@microtec.fr)
+
+@@TCcConflictMgr
+Summary:                                                      
+CopyCat conflict management component                         
+Description:                                                  
+The TCcConflictMgr component handles conflicts that occur     
+during replication. It isn't currently registered on the      
+component palette (it's used internally by TCcReplicator),    
+because there are no options for the developer to set. In     
+future versions however, other alternative conflict           
+management strategies will probably be devised, and           
+TCcConflictMgr will then be registered.                       
+                                                              
+                                                              
+                                                              
+Before replication of two databases starts, both local and    
+remote replication logs are loaded, and if the same record is 
+present in both, it is considered a conflict. This conflict   
+management scheme has been carefully designed so as to work   
+seamlessly even in setups containing multiple replication     
+nodes.
+
+@@TCcConflictMgr.CheckConflicts
+TCcConflictMgr

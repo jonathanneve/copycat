@@ -1,0 +1,31 @@
+LICENCE AGREEMENT
+
+This is the license agreement for COPYCAT COMPONENTS ("Software"). BY INSTALLING, COPYING, OR OTHERWISE USING THE SOFTWARE, YOU AGREE TO BE BOUND BY ALL OF THE TERMS AND CONDITIONS OF THE LICENSE AGREEMENT.
+ 
+The Software is owned by Microtec Informatique SARL ("Microtec") and is protected by copyright law and international copyright treaty. Therefore, you must treat this Software like any other copyrighted material (e.g., a book), except that you may either make one copy of the Software solely for backup or archival purposes or transfer the Software to a single hard disk provided you keep the original solely for backup or archival purposes.
+ 
+You may not alter any of the programs or accompanying files without Microtec’s written permission. Any resale or commercial distribution of the Software is strictly prohibited, unless Microtec has given explicit written permission.
+ 
+You have the right to use the Software as set forth in this licensing agreement. You are not obtaining title to the Software or any copyrights. You may not sublicense, rent, lease, convey, modify, translate, convert to another programming language, decompile, or disassemble the Software for any purpose.
+ 
+TRIAL VERSION RESTRICTIONS
+ 
+The restrictions of this section ("DEMO VERSION RESTRICTIONS") apply only if you are using a demo version of the Software.
+ 
+This version of the Software is a demonstration version. This means that you may use the Software for evaluation purposes only. You may use the Software to test whether it meets you demands. You must not distribute materials produced by the Software to computer systems different from the computer on which the Software is installed, regardless of how such a distribution takes place. You must not modify any material produced by the Software, including but not limited to computer files which where created as a result of the usage of the Software. You are not allowed to sell, rent, lease or otherwise use commercially files or parts of files which where created by the Software. 
+
+ 
+PROFESSIONAL COMMERCIAL LICENSE (with source code)
+
+The terms of this section ("PROFESSIONAL COMMERCIAL LICENSE") apply only if you own a Professional Commercial license of the Software (including source code).
+
+The same restrictions and limitations apply as with the Standard Commercial license (described above), as well as the following: 
+
+MICROTEC having granted your company or organisation the use of the source code, MICROTEC's copyright and ownership of the source code is not infringed upon. You are of course strictly prohibited from redistributing the source code or parts of the source code to any third party for any reason whether commercial or not. The source code can be modified by you for use within your custom applications and solutions, provided they are on no account redistributed either for free or commercially to any third party, and that they are not the basis of any new commercial product whose functionalities would make it compete directly with MICROTEC's sale of the Software (ie: you can't take our source code to build your own set of database replication components).
+
+ 
+DISCLAIMER
+ 
+THIS SOFTWARE IS PROVIDED TO YOU "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR IMPLIED INCLUDING BUT NOT LIMITED TO THE APPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A PARTICULAR PURPOSE. YOU ASSUME THE ENTIRE RISK AS TO THE ACCURACY AND THE USE OF THE SOFTWARE AND ALL OTHER RISK ARISING OUT OF THE USE OR PERFORMANCE OF THIS SOFTWARE AND DOCUMENTATION. MICROTEC SHALL NOT BE LIABLE FOR ANY DAMAGES WHATSOEVER ARISING OUT OF THE USE OF OR INABILITY TO USE THIS SOFTWARE, EVEN IF MICROTEC HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL MICROTEC BE LIABLE FOR ANY CONSEQUENTIAL, INCIDENTAL, DIRECT, INDIRECT, SPECIAL, PUNITIVE, OR OTHER DAMAGES WHATSOEVER, INCLUDING BUT
+NOT LIMITED TO DAMAGES OR LOSS OF BUSINESS PROFITS, BUSINESS INTERRUPTION, LOSS OF BUSINESS INFORMATION, OR OTHER PECUNIARY LOSS, EVEN IF MICROTEC HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. BECAUSE SOME STATES/JURISDICTIONS DO NOT ALLOW THE EXCLUSION OR LIMITATION OF LIABILITY FOR CONSEQUENTIAL OR INCIDENTAL DAMAGES, THE ABOVE LIMITATION MAY NOT APPLY.
+        

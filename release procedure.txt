@@ -1,0 +1,13 @@
+COPYCAT RELEASE PROCEDURE
+
+- Compile and package installers
+- Upload eval and registered installers
+- Add release to software downloads section
+- Update link for evaluation version
+- Add to bugtracker
+- Post to WordPress in Releases category with full description
+- Send email to active customers
+- Send email to expired customers
+- Send email to all non-customer contacts
+- Post to Twitter
+- Post to newsgroups

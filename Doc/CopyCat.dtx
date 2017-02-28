@@ -1,0 +1,576 @@
+
+@@Replication nodes
+<autolink ON>
+
+A replication node is simply a database that is involved in the replication. If,
+for instance, you set up replication between one central server and two branch
+offices, there will be three nodes, one for each database involved.<p/>
+<p/>
+Each of these nodes must be given a name that will be used within CopyCat to
+identify which database the changes come from, so that the changes that are
+replicated to one node are not bounced back to the originating node.<p/>
+<p/>
+So, in each database involved in the replication, you have to fill the <link RPL$USERS>
+table with the list of nodes towards which this database is to send its changes.
+Every change that is made to a replicated table, triggers one new line in <link RPL$LOG>
+for each of these nodes.<p/>
+<p/>
+Then, in TCcReplicator, you have to set the names of the two nodes you are
+replicating between. Typically, the local node would be the branch office, and
+the remote node would be the central server (and it must be this way if you want
+to use CopyCat's primary key synchronization), but it could be the other way
+around.<p/>
+<p/>
+TCcReplicator uses the node names that you give it (via the LocalNode.Name and
+RemoteNode.Name properties) when connecting to the databases. The remote node is
+queried to see if there are any new changes to replicate for the local node, and
+vice-versa.<p/>
+<p/>
+This means that if you want bi-directional replication, you need to make sure the
+name of the local node is present in the RPL$USERS table of the remote node, and
+vice versa. If on the other hand you only want the changes from the remote
+database to be sent to the local database, you should put the local node name in
+the remote node's RPL$USERS, but exclude the remote node from the local node's
+RPL$USERS.<p/>
+<p/>
+For example, suppose a replication setup had one main server (called user 'S'),
+and two branch offices (called users 'A' and 'B'). For full two-way replication,
+S would need to have both A and B in its <link RPL$USERS> table, while A and B
+would each have S in their's. When a data change occurs in S, it triggers two
+lines in <link RPL$USERS, RPL>$<link RPL$USERS, USERS>, one for A, and one for B.<p/>
+<p/>
+The next time you replicate between A and S, TCcReplicator will fetch from <link RPL$LOG>
+all the records that concern node A, without interfering with node B in any way.
+B may replicate before, after, or simultaneously, without it making any
+difference whatsoever.<p/>
+<p/>
+Suppose on the other hand, that a data change takes place in database A. This
+will trigger a line in A's <link RPL$LOG> table, addressed to node S. When you
+replicate between A and S, TCcReplicator fetches from the local database (A) all
+the records in <link RPL$LOG> that concern the node S. It then replicates the
+change to database S.<p/>
+<p/>
+This data change in S triggers a new line in S's <link RPL$LOG> table, addressed
+to node B. When B then connects to S, it gets A's data change. Since (from B's
+viewpoint) the data change came from S, it does not replicate back to S.
+See Also:
+<link RPL$USERS>, TCcReplicator.Nodes
+
+@@Introduction
+* Welcome to Microtec CopyCat ! *
+
+CopyCat is designed to provide Delphi, C++Builder and FreePascal developers an
+all-in-one solution for database replication needs. It is comprised of the
+following components:<p/>
+
+
+<table noborder, c%, 70c%>
+<image TCCREPLICATORimg>   Core replication component – TCcReplicator handles full two-way
+ <b>TCcReplicator</b>       replication between two databases.
+<image TCcConfigimg>       Configuration component – Use TCcConfig to create in each database
+ <b>TCcConfig</b>           the meta-data necessary for replication.
+<image TCCQUERYimg>        Use TCcQuery to execute queries using CopyCat's connection system.
+ <b>TCcQuery</b>            A TCcQuery can be hooked up to any type of TCcConnection, and can
+                            therefore execute queries through any direct connector (FIBPlus,
+                            IBX, ADO, etc...) or through any transport (RTC, XMLRPC, ...).
+<image TCCDATASETimg>      TCcDataSet provides an abstract TDataSet descendent, which can be
+ <b>TCcDataSet</b>          linked up to data-aware controls for display and/or editing data.<p/>Like
+                            TCcQuery, TCcDataSet can be used with any TCcConnection.<p/>The
+                            TCcDataSet is not available on the mobile platforms nor on
+                            FreePascal.
+<image TCCMEMORYDATAImg>   TCcMemoryData is the memory dataset that is used internally in
+ <b>TCcMemoryData</b>       CopyCat, as a basis for TCcDataSet. It is registered on the palette
+                            merely for convenience. Internally, it is based on a TRxMemoryData.
+                            It is not available on the mobile platforms nor on FreePascal.
+</table>
+
+CopyCat also registers a palette called "CopyCat connectors", which contains
+\links to third-party connection components which CopyCat can use to establish a
+database connection for replication.<p/>
+<p/>
+The first thing you need to do after installing CopyCat is to choose which
+connectors you would like to use, and compile and install them into your IDE.
+Each connector supported by CopyCat provides a bridge with a third-party database
+connectivity library (IBX, IBObjects, FireDAC, UniDAC, ADO, etc.). There are also
+transport connectors (RTC and XMLRPC), that enable CopyCat to replicate over a
+middleware, which allows for improved security and performance.<p/>
+
+Version:
+<b>%PROJECTVERSION%</b>
+Author:
+%AUTHOR%. Feel free to <extlink http://copycat.fr/wordpress/contact-us>contact us</extlink>
+if you have any feedback or questions.<p/>
+<i>%COPYRIGHT%</i><p/>
+
+@@Key design aspects
+Below are a few core aspects of CopyCat, with a brief explanation of how it works
+internally.
+
+* 1.Fault-tolerance *
+
+CopyCat creates for each table that need to be replicated a set of triggers,
+which insert a line into the <link RPL$LOG> table every time a change occurs.
+Contrary to some replicators, CopyCat does not indicate in the log the type of
+operation (INSERT, UPDATE or DELETE), nor the actual data of the record. Rather,
+it simply provides the primary key value(s) (up to a maximum of 3), so as to
+indicate that the record has been "touched" in some way. This provides for much
+flexibility.<p/>
+<p/>
+When replication starts, CopyCat reads in the list of changes from <link RPL$LOG>.
+For each change in the log, it checks in the local and remote databases to see if
+the record still exists. Based on this information, it can then issue an INSERT,
+UPDATE or DELETE statement, as appropriate. Since CopyCat takes the current state
+of the record into consideration, rather than the actual changes that took place,
+it is highly fault-tolerant.<p/>
+<p/>
+For example, suppose a record was inserted into the local database, and, for
+whatever reason, it wasn't initially replicated to the remote database (this
+could only happen if the meta-data wasn't configured properly, or if the node
+wasn't in <link RPL$USERS>). Once the configuration problem has been resolved, if
+another change is made to the record (an UPDATE statement), it will get correctly
+INSERTed into the remote database. Thus, in reality, on the local database, an
+UPDATE statement was issued, but when the change gets replicated, an INSERT
+statement is issued to the remote database, since the record doesn't exist yet.
+
+* 2.Scalability *
+
+Each database holds a list of nodes it's replicating for, and can thus be
+configured to replicate its changes to one or several remote databases. The
+simplest form of database replication would involve both local and remote
+databases simply replicating to each other. But it is easy to create more complex
+replication structures than that.<p/>
+<p/>
+A simple example would be a central server, replicating for several remote
+clients. Every change made on the server would be replicated to each remote
+client, and the changes made on the remote clients would be replicated towards
+the server, and, indirectly, towards all the other remote clients as well.<p/>
+<p/>
+For larger scale deployments, it would be easy to have several servers, each with
+its set of clients replicating to and from it, and each replicating all the
+changes to another central server, or even one of several redundant replication
+servers (if the load is too high to allow having one central server).
+
+* 3.Ease of setup *
+
+CopyCat has been designed to require very little initial setup, and, most
+importantly, requires no architectural changes to your databases nor to your
+applications. Even very complex databases can be replicated using CopyCat,
+usually in a completely transparent fashion. This is made possible in particular
+by the use of two of CopyCat's most unique features: primary key synchronization
+(using either a generator, a stored procedure, or any other custom SQL
+expression), and stored procedure "replication" (allowing to simply echo all
+calls to a stored procedure directly to the remote database).
+
+* 4.Meta-data changes *
+
+The CopyCat triggers only need to be regenerated if the primary key(s) of a table
+change, or if a new table needs to be replicated. Adding or removing fields can
+be done without needing any reconfiguration.<p/>
+<p/>
+CopyCat can also be configured to be harmonize the list of field for each table
+before replicating. That means that if a field is present in one database but not
+in the other, it will be omitted from the replication process, rather than
+produce an error.
+See Also:
+TCcReplicator, TCcConfig
+
+@@Conflict management
+CopyCat features a set of advanced conflict management techniques.<p/>
+<p/>
+Before replication starts, both the local and the remote replication logs (that
+is, database table <link RPL$LOG>) are checked for conflicts. If a conflict is
+found, that is, if a certain record has been modified in both databases since the
+last replication, the conflict is reported, and the record is not replicated in
+either direction until it is resolved. The record will remain unsynchronized
+until the conflict is resolved: <b>thus, there can never be any data loss.</b><p/>
+<p/>
+There are two levels of conflict management:
+
+  1. First, the TCcReplicator.OnResolveConflict event is fired, allowing the
+     developer to implement customized conflict resolution policies as applicable. A
+     TConflictRecord containing all the information about the conflict is passed as a
+     parameter to this event, so that you have all the information you need for
+     resolving the conflict at your fingertips. To resolve the conflicte, set
+     TConflictRecord.ChosenNode to the name of the node whose changes you would like
+     to keep, and the record will directly be replicated accordingly.
+  2. If The OnResolveConflict is not implemented or if no node is chosen, the
+     conflict is logged to <link RPL$CONFLICTS>. The <link RPL$CONFLICTS> table copies
+     the main fields of <link RPL$LOG> (so as to be able to identify the conflictual
+     record), and adds a few of its own, namely CONFLICT_DATE (date when the conflict
+     was first logged), USER1 and USER2 (the two <link Replication nodes, replication nodes>
+     the conflict is between), and CHOSEN_USER (the user whose version of the record
+     should be kept). CHOSEN_USER is blank by default, it's up to the application user
+     to resolve the conflict by choosing either USER1 or USER2 as having the correct
+     \version of the record, and putting the chosen user's name into the CHOSEN_USER
+     field. Upon the next replication, TCcReplicator will check the conflict log: if a
+     conflict has been resolved (that is, if CHOSEN_USER is not blank), the correct
+     \version of the record will be replicated to the other side, and the log of the
+     conflict will be removed.
+See Also:
+<link RPL$CONFLICTS>, TCcConflictMgr
+
+@@RPL$USERS
+The RPL$USERS table holds the list of all the nodes the database is to replicate
+towards. Until this table is filled, no data changes will be logged in <link RPL$LOG>.
+It has the following fields:
+
+<table 25c%, 15c%>
+Field name        Data type   \Description
+================  ==========  -----------------------------------------------------------------
+LOGIN             String      Name of the replication node
+LIBELLE           String      Label describing the node. Not used internally by CopyCat, it is
+                               merely supplied for convinence.
+CONDITION_VALUE   String      Spare field for putting user-defined data or ID. Used for
+                               matching with RPL$TABLES.CONDITION_FIELD.
+CONFIG_NAME       String      Name of the configuration this node is attached to. Corresponds
+                               to TCcConfig.ConfigName.
+PASSWRD           String      Password, used only for logging into CopyCat transport servers
+</table>
+See Also:
+<link Replication users>
+
+@@RPL$CONFLICTS
+The RPL$CONFLICTS table is a log of all the currently conflicting data changes in
+the database. It has the following fields:
+
+<table 25c%, 15c%>
+Field name               Data type    \Description
+=======================  ===========  ----------------------------------------------------
+CODE<p/>                 Integer      Integer code uniquely identifying each conflict.
+USER1<p/>                String<p/>   Replication nodes involved in the conflict.
+USER2<p/>                String<p/>   
+CHOSEN_USER<p/>          String<p/>   Replication node chosen as having the correct
+                                       \version of the record. By default, this field is
+                                       blank.
+CONFLICT_DATE<p/>        Date/Time    Date and time when the conflict was first recorded.
+TABLE_NAME<p/>           String<p/>   Name of the table.
+REMOTE_TABLE_NAME        String       Name of the table in the remote database
+PRIMARY_KEY_VALUES<p/>   String<p/>   Primary key values.
+REF_VALUE<p/>            String       Deprecated -- don't use for now.
+SQL1                     Memo         Names and values of the fields on node 1
+SQL2                     Memo         Names and values of the fields on node 2
+CHANGED_FIELDS1          Memo         List of fields changed by node 1
+CHANGED_FIELDS2          Memo         List of fields changed by node 2
+</table>
+See Also:
+<link Conflict management>
+
+@@Database tables
+CopyCat requires and creates the following database tables:
+
+  1. <link RPL$LOG> – A log of every data change that takes place in the
+     database.
+  1. <link RPL$LOG_VALUES> – The values of each field changed – only used if
+     TCcConfig.TrackChangedFields option is set.
+  2. <link RPL$USERS> – The list of all the nodes the database is to replicate
+     towards.
+  3. <link RPL$CONFLICTS> – All the currently conflicting data changes.
+  4. <link RPL$TABLES> – The list of all tables in the database, with replication
+     options for each one.
+  5. <link RPL$PROCEDURES> – The list of all non-selectable procedures in the
+     database, with replication options for each one.
+
+@@RPL$LOG
+The RPL$LOG table is a log of every data change that takes place in the database.
+One line is created per user in <link RPL$USERS>. It has the following fields:
+
+<table 25c%, c%, 65c%>
+Field name            Type             \Description
+====================  ===============  -----------------------------------------------------------------------
+<align center>        <align center>   Table name
+ TABLE_NAME            String           
+ </align>              </align>         
+<align center>        <align center>   Values of the primary key fields
+ PRIMARY_KEY_VALUES    String           
+ </align>              </align>         
+<align center>        <align center>   Synchronization statements for each of the
+ PRIMARY_KEY_SYNC      String           primary key fields These are SQL statements
+ </align>              </align>         that can be used for fetching unique primary
+                                        key values from the remote server.
+<align center>        <align center>   Synchronization statements for each of the
+ UNIQUE_KEY_SYNC       String           unique key fields. These are SQL statements
+ </align>              </align>         that can be used for fetching unique field
+                                        values from the remote server.
+<align center>        <align center>   SQL of the EXECUTE PROCEDURE statement that is
+ PROCEDURE_STATEMENT   String           to be executed in order to replicate a stored
+ </align>              </align>         procedure.
+<align center>        <align center>   <link Replication nodes, Replication node>
+ LOGIN                 String           that this line is addressed to.
+ </align>              </align>         
+<align center>        <align center>   Date and time of the data change. This field
+ OPERATION_DATE        Date/Time        is merely informational, and is not used
+ </align>              </align>         internally by CopyCat.
+<align center>        <align center>   'Y' or 'N', to indicate whether a <link Conflict management, conflict>
+ CONFLICT              String           has been logged for this line or not.
+ </align>              </align>         
+<align center>        <align center>   Integer code uniquely identifying the log
+ CODE                  Integer          line.
+ </align>              </align>         
+SENT_FROM             String           <link Replication nodes, Replication node>
+                                        that this line originates from.
+OPERATION_TYPE        String           I, U or D to indicate whether it was an
+                                        insert, an update or a delete
+CHANGE_NUMBER         Integer          Unique number identifying the change
+</table>
+See Also:
+TCcLog
+
+@@RPL$TABLES
+The RPL$TABLES table holds the list of all the non-system tables in the database,
+with the replication configuration options for each one.<p/>
+<p/>
+RPL$TABLES has the following fields:
+
+<table 17c%, 15c%>
+Field name         Data type   \Description
+-----------------  ----------  -----------------------------------------------------------------------
+TABLE_NAME         String      Name of the table.
+TRIG_BASE_NAME     String      Base name for the triggers. To this will be added '_I', '_U' or '_D'
+                                depending on the type of trigger. By default, the base name is 'RPL$',
+                                followed by as much of the table name as will fit. This might need to
+                                be changed for long table names, in order to have unique trigger
+                                names.
+PRIMARY_KEY_SYNC   String      Synchronization statements for the each primary key field. These are
+                                SQL statements that can be used for fetching unique primary key values
+                                from the remote server.
+UNIQUE_KEY_NAMES   String      Names of any other fields for which global unicity is to be
+                                maintained.
+UNIQUE_KEY_SYNC    String      Synchronization statements for each of the unique key fields. These
+                                are SQL statements that will be used for fetching unique field values
+                                from the remote server.
+REPL_UPDATES       String      Determines whether updates should be replicated or not.
+                    (Y/N)       
+REPL_INSERTS       String      Determines whether inserts should be replicated or not.
+                    (Y/N)       
+REPL_DELETES       String      Determines whether deletes should be replicated or not.
+                    (Y/N)       
+CONDITION          String      SQL condition determining in which cases and to which nodes a row is
+                                to be replicated. This condition will be placed as is in the trigger
+                                SQL. To access the table fields from within this condition, use the
+                                "new." prefix, and to access the RPL$USERS table (in order to
+                                determine which nodes will receive changes from this table), use the
+                                "u." prefix.<p/><p/>For example, setting the condition "new.a_field \>
+                                4" means that no changes will be replicated until the value of a_field
+                                is greater than 4. Setting the condition to "new.dest_user = u.login"
+                                means that only the node with login equal to the dest_user field will
+                                receive the changes from this table.
+CONDITION_FIELD    String      Name of a field in the table to be matched against
+                                RPL$USERS.CONDITION_VALUE. Setting CONDITION_FIELD to "field_name" is
+                                equivalent to setting the CONDITION field to "u.condition_value =
+                                new.field_name".
+PRIORITY           Integer     Priority of the table. This value is designed to avoid problems
+                                arising from inter-table dependencies. Each table should have a higher
+                                priority than any of the other tables it depends on, so as to ensure
+                                that it is replicated after them.
+CREATED            String      Indicates whether of not the table's replication triggers have been
+                    (Y/N)       generated (either 'Y' or 'N').
+REF_FIELD          String      Deprecated, don't use for now.
+REF_TABLE          String      Deprecated, don't use for now.
+REF_TABLE_KEY      String      Deprecated, don't use for now.
+</table>
+
+@@RPL$PROCEDURES
+The RPL$PROCEDURES table holds the list of all the executable (that is,
+non-selectable) procedures in the database, with the replication configuration
+options for each one.<p/>
+<p/>
+RPL$PROCEDURES has the following fields:
+<table 20c%, 10c%>
+Field Name           Data type   \Description
+-------------------  ----------  ----------------------------------------------------------------------
+PROCEDURE_NAME       String      Name of the procedure.
+NEW_PROCEDURE_NAME   String      Base name for the replication procedure. By default, the base name is
+                                  'RPL$', followed by as much of the procedure name as will fit. This
+                                  might need to be changed for long procedure names, in order to keep
+                                  unicity.
+PRIORITY             Integer     Priority of the procedure. This value is designed to avoid problems
+                                  arising from dependencies upon tables or other procedures. Each
+                                  procedure should have a higher priority than any of the tables or
+                                  procedures it depends on, so as to ensure that it is replicated after
+                                  them.
+CREATED              String      String Indicates whether of not the procedure's replication procedure
+                                  has been generated (either 'Y' or 'N').
+</table>
+
+
+@@RPL$ERRORS
+The RPL$ERRORS table holds the list of rows that failed to replicate last
+replication session, and stores the error message and context information. This
+table is emptied at every replication, meaning that only errors that are not
+resolved during the next replication will appear in this table.<p/>
+<p/>
+RPL$ERRORS has the following fields:
+<table 20c%, 10c%>
+Field Name           Data type   \Description
+-------------------  ----------  ------------------------------------------------------------
+TABLE_NAME           String      Name of the table.
+CODE                 Integer     Unique ID
+PRIMARY_KEY_VALUES   String      Values of the primary key field(s).
+ERROR_MESSAGE        Memo        Full error message, including offending SQL statement and
+                                  its parameter values.
+ERROR_CONTEXT        String      String describing which operation was taking place when the
+                                  failure occured (SELECT, UPDATE, INSERT, DELETE,
+                                  CHECKRECORDEXISTS)
+</table>
+
+@@RPL$TRACE
+The RPL$TRACE table holds a trace of all the SQL statements that are applied
+databases. This log is activated by setting the TCcReplicator.TraceType property.
+Warning : this can take a lot of space, so tracing should either be used only
+occasionally, for debug purposes, or else care should be taken to empty RPL$TRACE
+regularly.<p/>
+<p/>
+RPL$TRACE has the following fields:
+<table 20c%, 10c%>
+Field Name           Data type   \Description
+-------------------  ----------  ------------------------------------------------------------
+TABLE_NAME           String      Name of the table.
+CODE                 Integer     Unique ID
+PRIMARY_KEY_VALUES   String      Values of the primary key field(s).
+FROM_NODE            String      Name of the node from which this row originated.
+TO_NODE              String      Name of the node to which this row is to be replicated.
+OPERATION_DATE       Date        Date at which the original operation occured in the
+                                  originating database. This corresponds to the date recorded
+                                  in RPL$LOG.OPERATION_DATE.
+REPLICATION_DATE     Date        Date and time at which the row was replicated and the SQL
+                                  executed.
+SQL_STATEMENT        Memo        Full SQL executed, containing full values for all
+                                  \parameters.
+</table>
+
+@@Getting started
+<b>Getting started with CopyCat</b><p/>
+<p/>
+CopyCat supports two different replication modes that can be used, depending on
+the situation.<p/>
+<p/>
+<b>Standard</b><p/>
+<p/>
+This is the default mode, and it versions prior to 3.08.0, it was the only mode.<p/>
+<p/>
+In this mode, CopyCat creates triggers that simply log a row in RPL$LOG every
+time a change occurs in one of the tables being replicated. The type of operation
+(INSERT, UPDATE or DELETE) is not recorded, because it is determined at
+replication time. The values of the fields are also not recorded, only the
+primary key, and therefore, there is no way of knowing which field has changed,
+if any.<p/>
+<p/>
+At replication time, the row is then selected from the source DB. If it can't be
+found, it is deleted from the destination DB. If it is found, then an update is
+attempted. If the update finds no row, then it is inserted.<p/>
+<p/>
+This mechanism is robust and fault-tolerant, because even if the databases get
+out of sync for whatever reason, it will still work (for example, if a row in the
+source DB gets updated, that update can be turned into an insert if it turns out
+that the row doesn't exist in the destination DB at replication time).<p/>
+<p/>
+It also has the advantage that if the same row modified several times, the rows
+can be bunched up and replicated only once.<p/>
+<p/>
+This mode doesn't make it possible to guarantee consistency however, because the
+exact order of events cannot always be reproduced: if you insert a row into table
+A, setting only a few fields, then insert a row into table B, and then update
+table A again, giving a value to a field with a foreign key pointing to table B,
+then the insert into table A will fail at replication time, because it will try
+to execute the full insert of all the fields, including the field with the
+primary key, before the insert into table B, so there will be a foreign key
+violation.<p/>
+<p/>
+The result of that is that there can be an inconsistent view of the data, it will
+not be replicated atomically. For some uses, that doesn't really matter, but for
+reporting or other such situations where it's more important for the data to be
+consistent than fully up-to-date, that can be a problem.<p/>
+<p/>
+The other problem with this mode is that since all fields of the table are
+replicated every time there is a change, there can be a performance hit for
+tables that have large numbers of fields and/or big blob fields, as the values of
+these fields will be sent over the wire every time the row changes, even if those
+fields didn't change.<p/>
+<p/>
+<b>High-consistency with field change tracking</b><p/>
+<p/>
+This is a new feature of CopyCat 3.08.0, and is currently available only for
+Firebird and Interbase, though it will be implemented for all other supported
+databases in the upcoming releases.<p/>
+<p/>
+This mode enables a full tracking of the values of the fields that were changed
+with every change to the database. That way, when it comes time to replicate, we
+can know exactly which fields were changed and what values were given, and thus,
+we can play back precisely the changes that took place in the source database, in
+exactly the same order, and therefore, the foreign key issues mentioned above no
+longer apply.<p/>
+<p/>
+The drawback is that it is entirely incremental, and will not work at all if the
+two databases become out of sync for whatever reason. To fix such a situation
+would require a pumping of the entire table or database to ensure that they are
+identical.<p/>
+<p/>
+The major advantage however is better consistency and therefore improved
+reliability. It is HIGHLY RECOMMENDED that you run the entire replication cycle
+using a single transaction, and that you rollback all the changes if ever there
+is an error on any row: this is important because some of the later changes in
+the list may fail and it could lead to a situation where there are subtle
+differences between the two databases. The only reliable way to use this feature
+is to replicate atomically.<p/>
+<p/>
+Consistency is a huge advantage in many situations, because it means that either
+the replication failed, in which case you will see none of the changes, or it
+succeeded, in which case they will all be visible, but you can count on there
+never being anything missing, and you can also be sure that there is no
+incoherent data in the database (an invoice header with no lines for example).<p/>
+<p/>
+<b>Conflict resolution</b><p/>
+<p/>
+The other big advantage to this mode is finer grained and easier to manage
+conflict resolution.<p/>
+<p/>
+Since we know which fields changed, many conflicts can be automatically resolved
+by merging the changes from both nodes, in cases where none of the same fields
+were changed on both sides. In cases that are still conflictual, you are provided
+the list of fields changed on each side as well as the list of fields changed on
+both sides, and it is also possible to find out for each field the value that it
+was changed from and to on each side, making conflict resolution much easier.<p/>
+<p/>
+If a conflict is detected, the fields that were changed on only one of the nodes
+can be merged. For instance, if the first node changed fields A, B and C while
+the seconde node changed fields C and D, if the conflict is resolved in favor of
+the second node, the values of A and B from the first node will be kept, as they
+were not conflictual with the change from the second node. Thus, conflict
+resolution can be much finer-grained.<p/>
+<p/>
+For more information about conflict management, see: 
+
+@@RPL$LOG_VALUES
+The RPL$LOG_VALUES table contains the list of all the fields changed, with their
+values. It has the following fields:
+
+<table 25c%, c%, 65c%>
+Field name       Type             \Description
+---------------  ---------------  -------------------------------------------
+<align center>   <align center>   <link Replication nodes, Replication node>
+ NODE_NAME        String           this change is logged for
+ </align>         </align>         
+<align center>   <align center>   Number of the change: corresponds to
+ CHANGE_NUMBER    Integer          the CHANGE_NUMBER field of RPL$LOG
+ </align>         </align>         
+<align center>   <align center>   Old value of the field, stored as a
+ OLD_VALUE        String           varchar(200), if it fits
+ </align>         </align>         
+<align center>   <align center>   Old value of the field, stored as a
+ OLD_VALUE_BLOB   Blob             blob, for blob values and for values
+ </align>         </align>         larger than 200 characters
+<align center>   <align center>   New value of the field, stored as a
+ NEW_VALUE        String           varchar(200), if it fits
+ </align>         </align>         
+<align center>   <align center>   New value of the field, stored as a
+ NEW_VALUE_BLOB   Blob             blob, for blob values and for values
+ </align>         </align>         larger than 200 characters
+<align center>   <align center>   Name of the field
+ FIELD_NAME       String           
+ </align>         </align>         
+<align center>   <align center>   Data type of the field
+ FIELD_TYPE       String           
+ </align>         </align>         
+</table>
+See Also:
+TCcLog

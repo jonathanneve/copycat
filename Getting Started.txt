@@ -1,0 +1,32 @@
+COPYCAT DEVELOPER TOOLS - http://www.copycat.fr
+
+If you are new to CopyCat, here are a few tips for getting started : 
+
+***************DELPHI*****************
+1) The installer should have registered the components into your IDE, but if you need to recompile them, you can go to the directory of your IDE version (D7, D2006, D2007... DXE6, etc) and open the CopyCat_XXX.dpk package file (where XXX is the IDE version you are using). 
+
+2) The installer does not install the binaries for iOS / Android, so if you need to use those, you will need to compile the package as explained above.
+
+3) You will then need to install at least one connector to provide a link with the database access component library of your choice. For recent IDE versions, we highly recommend using FireDAC, but we support many others as well. You can find the supported connectors in the Connectors subdirectory of the install directory of your IDE version. You need to open, compile and install the packages named CopyCatXXX_YYY.dpk, where XXX is the name of your connector, and YYY is your IDE version.
+
+4) Once you have at least one connector installed, open one of the example projects. Examples\Demo is the simplest one to start with, and it has lots of explanations to help you get started.
+
+***************FreePascal/Lazarus*****************
+The components are not precompiled for FreePascal
+
+1) Open Lazarus and compile and install package copycat.lpk. The SQLDB connector is installed by default as part of the main package. 
+
+2) If you plan on using any other connectors, you can install them now.
+
+3) You can now open the example project in Examples\FPC\Demo to see a hands-on demo.
+
+******************************************
+If at any time you get stuck or find things confusing, you can use any of the following resources : 
+
+- The component documentation, available in the Doc subdirectory (if you installed it), or online, here : http://copycat.fr/doc/CC
+
+- Our support forum : http://copycat.fr/wordpress/discussions/. You need to register on our site in order to use it, but registration is totally free.
+
+- If all else fails, please contact us through our contact form : http://copycat.fr/wordpress/contact-us/
+
+Please note that we provide various services, and in particular training for CopyCat, which can be very helpful for getting you started and helping you make full use of the product as quickly as possible. See here for more information : http://copycat.fr/wordpress/training/

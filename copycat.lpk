@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Package Version="4">
+    <PathDelim Value="\"/>
+    <Name Value="copycat"/>
+    <Type Value="RunAndDesignTime"/>
+    <CompilerOptions>
+      <Version Value="11"/>
+      <PathDelim Value="\"/>
+      <SearchPaths>
+        <IncludeFiles Value=".;C:\lazarus\components\sqldb\"/>
+        <Libraries Value="."/>
+        <OtherUnitFiles Value=".;C:\lazarus\components\sqldb\"/>
+        <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
+      </SearchPaths>
+    </CompilerOptions>
+    <Version Major="3" Minor="8"/>
+    <Files Count="18">
+      <Item1>
+        <Filename Value="CCat.pas"/>
+        <HasRegisterProc Value="True"/>
+        <UnitName Value="CCat"/>
+      </Item1>
+      <Item2>
+        <Filename Value="CcConf.pas"/>
+        <UnitName Value="CcConf"/>
+      </Item2>
+      <Item3>
+        <Filename Value="CcConflictMgr.pas"/>
+        <UnitName Value="CcConflictMgr"/>
+      </Item3>
+      <Item4>
+        <Filename Value="CcDB.pas"/>
+        <UnitName Value="CcDB"/>
+      </Item4>
+      <Item5>
+        <Filename Value="CcEditors.pas"/>
+        <UnitName Value="CcEditors"/>
+      </Item5>
+      <Item6>
+        <Filename Value="CcInterbase.pas"/>
+        <UnitName Value="CcInterbase"/>
+      </Item6>
+      <Item7>
+        <Filename Value="CcKeys.pas"/>
+        <UnitName Value="CcKeys"/>
+      </Item7>
+      <Item8>
+        <Filename Value="CcLog.pas"/>
+        <UnitName Value="CcLog"/>
+      </Item8>
+      <Item9>
+        <Filename Value="CcMySQL.pas"/>
+        <UnitName Value="CcMySQL"/>
+      </Item9>
+      <Item10>
+        <Filename Value="CcNexusDB.pas"/>
+        <UnitName Value="CcNexusDB"/>
+      </Item10>
+      <Item11>
+        <Filename Value="CcOracle.pas"/>
+        <UnitName Value="CcOracle"/>
+      </Item11>
+      <Item12>
+        <Filename Value="CcPostgres.pas"/>
+        <UnitName Value="CcPostgres"/>
+      </Item12>
+      <Item13>
+        <Filename Value="CcProviders.pas"/>
+        <UnitName Value="CcProviders"/>
+      </Item13>
+      <Item14>
+        <Filename Value="CcReplicator.pas"/>
+        <UnitName Value="CcReplicator"/>
+      </Item14>
+      <Item15>
+        <Filename Value="CcSQLite.pas"/>
+        <UnitName Value="CcSQLite"/>
+      </Item15>
+      <Item16>
+        <Filename Value="CcSQLServer.pas"/>
+        <UnitName Value="CcSQLServer"/>
+      </Item16>
+      <Item17>
+        <Filename Value="CcTransports.pas"/>
+        <UnitName Value="CcTransports"/>
+      </Item17>
+      <Item18>
+        <Filename Value="CcProvLazSQLDB.pas"/>
+        <UnitName Value="CcProvLazSQLDB"/>
+      </Item18>
+    </Files>
+    <RequiredPkgs Count="1">
+      <Item1>
+        <PackageName Value="SQLDBLaz"/>
+      </Item1>
+    </RequiredPkgs>
+    <UsageOptions>
+      <UnitPath Value="$(PkgOutDir)"/>
+    </UsageOptions>
+    <PublishOptions>
+      <Version Value="2"/>
+    </PublishOptions>
+    <CustomOptions Items="ExternHelp" Version="2">
+      <_ExternHelp Items="Count"/>
+    </CustomOptions>
+  </Package>
+</CONFIG>

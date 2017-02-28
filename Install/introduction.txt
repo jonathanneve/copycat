@@ -1,0 +1,2 @@
+We are pleased to announce a new release of our database replication engine, CopyCat Developer !
+

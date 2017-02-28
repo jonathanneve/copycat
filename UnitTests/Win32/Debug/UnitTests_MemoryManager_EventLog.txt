@@ -1,0 +1,578 @@
+
+--------------------------------2013/11/4 11:01:59--------------------------------
+FastMM has detected an attempt to call a virtual method on a freed object. An access violation will now be raised in order to abort the current operation.
+
+Freed object class: TdmtConnectorIBX
+
+Virtual method: Offset +16
+
+Virtual method address: 462C40
+
+The allocation number was: 33541
+
+The object was allocated by thread 0x2590, and the stack trace (return addresses) at the time was:
+404CC2 [System.pas][System][@GetMem][3448]
+4068AB [System.pas][System][TObject.NewInstance][12921]
+406F4E [System.pas][System][@ClassCreate][14085]
+46422B [System.Classes][Classes.TDataModule.$bctr]
+404CDE [System.pas][System][@FreeMem][3496]
+4086B1 [System.pas][System][@UStrClr][19140]
+45382D [System.Classes.pas][System.Classes][Classes.TList.Add][3805]
+9A06C0 [dtConnectorIBX.pas][dtConnectorIBX][TdmtConnectorIBX.CreateTestsByVersion][52]
+9A0B61 [CctConnectors.pas][CctConnectors][CreateArrayOfConnectors][28]
+9A15C2 [CctConnection.pas][CctConnection][TCcTestCase.ExecuteTestForAllConnections][75]
+40C616 [System.pas][System][_AddRef][30038]
+
+The object was subsequently freed by thread 0x2590, and the stack trace (return addresses) at the time was:
+404CDE [System.pas][System][@FreeMem][3496]
+4068C9 [System.pas][System][TObject.FreeInstance][12927]
+406F99 [System.pas][System][@ClassDestroy][14127]
+9A0768 [dtConnectorIBX.pas][dtConnectorIBX][TdmtConnectorIBX.$bdtr][62]
+40690F [System.pas][System][TObject.Free][12946]
+9A1703 [CctConnection.pas][CctConnection][TCcTestCase.ExecuteTestForAllConnections][95]
+9A1B67 [CctConnection.pas][CctConnection][TCctConnection.TestConnect][107]
+6025DD [TestFramework.pas][TestFramework][TTestCase.Invoke][2510]
+60269C [TestFramework.pas][TestFramework][TTestCase.RunTest][2540]
+5FE60B [TestFramework.pas][TestFramework][TTestResult.RunTestRun][1309]
+5FE88B [TestFramework.pas][TestFramework][TTestResult.Run][1386]
+
+The current thread ID is 0x2590, and the stack trace (return addresses) leading to this error is:
+462AE7 [System.Classes][Classes.TComponent.InsertComponent]
+462884 [System.Classes][Classes.TComponent.$bctr]
+46436E [System.Classes][Classes.TDataModule.$bctr]
+464267 [System.Classes][Classes.TDataModule.$bctr]
+4068E9 [System.pas][System][TObject.$bctr][12937]
+9A0630 [dtConnectorIBX.pas][dtConnectorIBX][TdmtConnectorIBX.CreateTestsByVersion][40]
+9A0B61 [CctConnectors.pas][CctConnectors][CreateArrayOfConnectors][28]
+9A15C2 [CctConnection.pas][CctConnection][TCcTestCase.ExecuteTestForAllConnections][75]
+40C616 [System.pas][System][_AddRef][30038]
+40C558 [System.pas][System][@IntfCopy][29907]
+9A2A3F [CctConnection.pas][CctConnection][TCctConnection.TestWriteAndReadBack][134]
+
+Current memory dump of 256 bytes starting at pointer address 7FF3DBA0:
+84 12 9D 00 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80
+80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80
+80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80
+80 80 80 80 80 80 80 80 80 80 80 80 1F 0E 45 77 80 80 80 80 80 80 80 80 00 00 00 00 00 94 F3 7F
+00 00 00 00 00 00 00 00 18 3C 41 00 00 00 00 00 30 84 00 00 C2 4C 40 00 F7 85 40 00 5A 9A 40 00
+A0 09 9A 00 D5 06 9A 00 61 0B 9A 00 C2 15 9A 00 16 C6 40 00 58 C5 40 00 67 1B 9A 00 DD 25 60 00
+90 25 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 72 00 00 00 00 00 00 00 C7 2D DB 84
+Ñ  .  ù  .  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä
+Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä
+Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä
+Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  .  .  E  w  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  .  .  .  .  .  î  Û  
+.  .  .  .  .  .  .  .  .  <  A  .  .  .  .  .  0  Ñ  .  .  ¬  L  @  .  ˜  Ö  @  .  Z  ö  @  .
+†  .  ö  .  ’  .  ö  .  a  .  ö  .  ¬  .  ö  .  .  ∆  @  .  X  ≈  @  .  g  .  ö  .  ›  %  `  .
+ê  %  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  r  .  .  .  .  .  .  .  «  -  €  Ñ
+
+--------------------------------2013/11/4 11:04:59--------------------------------
+FastMM has detected an attempt to call a virtual method on a freed object. An access violation will now be raised in order to abort the current operation.
+
+Freed object class: TdmtConnectorIBX
+
+Virtual method: Offset +16
+
+Virtual method address: 462C40
+
+The allocation number was: 33541
+
+The object was allocated by thread 0x2590, and the stack trace (return addresses) at the time was:
+404CC2 [System.pas][System][@GetMem][3448]
+4068AB [System.pas][System][TObject.NewInstance][12921]
+406F4E [System.pas][System][@ClassCreate][14085]
+46422B [System.Classes][Classes.TDataModule.$bctr]
+404CDE [System.pas][System][@FreeMem][3496]
+4086B1 [System.pas][System][@UStrClr][19140]
+45382D [System.Classes.pas][System.Classes][Classes.TList.Add][3805]
+9A06C0 [dtConnectorIBX.pas][dtConnectorIBX][TdmtConnectorIBX.CreateTestsByVersion][52]
+9A0B61 [CctConnectors.pas][CctConnectors][CreateArrayOfConnectors][28]
+9A15C2 [CctConnection.pas][CctConnection][TCcTestCase.ExecuteTestForAllConnections][75]
+40C616 [System.pas][System][_AddRef][30038]
+
+The object was subsequently freed by thread 0x2590, and the stack trace (return addresses) at the time was:
+404CDE [System.pas][System][@FreeMem][3496]
+4068C9 [System.pas][System][TObject.FreeInstance][12927]
+406F99 [System.pas][System][@ClassDestroy][14127]
+9A0768 [dtConnectorIBX.pas][dtConnectorIBX][TdmtConnectorIBX.$bdtr][62]
+40690F [System.pas][System][TObject.Free][12946]
+9A1703 [CctConnection.pas][CctConnection][TCcTestCase.ExecuteTestForAllConnections][95]
+9A1B67 [CctConnection.pas][CctConnection][TCctConnection.TestConnect][107]
+6025DD [TestFramework.pas][TestFramework][TTestCase.Invoke][2510]
+60269C [TestFramework.pas][TestFramework][TTestCase.RunTest][2540]
+5FE60B [TestFramework.pas][TestFramework][TTestResult.RunTestRun][1309]
+5FE88B [TestFramework.pas][TestFramework][TTestResult.Run][1386]
+
+The current thread ID is 0x2590, and the stack trace (return addresses) leading to this error is:
+462AE7 [System.Classes][Classes.TComponent.InsertComponent]
+462884 [System.Classes][Classes.TComponent.$bctr]
+5B63E0 [CcConfStorage.pas][CcConfStorage][TCcComponent.$bctr][753]
+5C8F68 [CcReplicator.pas][CcReplicator][TCcReplicator.$bctr][1234]
+9AD92B [CctReplicator.pas][CctReplicator][TCctReplicator.SetUp][38]
+5FE472 [TestFramework.pas][TestFramework][TTestResult.RunTestSetup][1277]
+40C558 [System.pas][System][@IntfCopy][29907]
+5FE859 [TestFramework.pas][TestFramework][TTestResult.Run][1375]
+5FED74 [TestFramework.pas][TestFramework][TTestResult.ShouldRunTest][1526]
+5FF80C [TestFramework.pas][TestFramework][TAbstractTest.RunWithFixture][1846]
+602622 [TestFramework.pas][TestFramework][TTestCase.RunWithFixture][2523]
+
+Current memory dump of 256 bytes starting at pointer address 7FF3DBA0:
+84 12 9D 00 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80
+80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80
+80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80
+80 80 80 80 80 80 80 80 80 80 80 80 1F 0E 45 77 80 80 80 80 80 80 80 80 00 00 00 00 00 94 F3 7F
+00 00 00 00 00 00 00 00 18 3C 41 00 00 00 00 00 30 84 00 00 C2 4C 40 00 F7 85 40 00 5A 9A 40 00
+A0 09 9A 00 D5 06 9A 00 61 0B 9A 00 C2 15 9A 00 16 C6 40 00 58 C5 40 00 67 1B 9A 00 DD 25 60 00
+90 25 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 72 00 00 00 00 00 00 00 C7 2D DB 84
+Ñ  .  ù  .  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä
+Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä
+Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä
+Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  .  .  E  w  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  .  .  .  .  .  î  Û  
+.  .  .  .  .  .  .  .  .  <  A  .  .  .  .  .  0  Ñ  .  .  ¬  L  @  .  ˜  Ö  @  .  Z  ö  @  .
+†  .  ö  .  ’  .  ö  .  a  .  ö  .  ¬  .  ö  .  .  ∆  @  .  X  ≈  @  .  g  .  ö  .  ›  %  `  .
+ê  %  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  r  .  .  .  .  .  .  .  «  -  €  Ñ
+
+--------------------------------2013/11/4 11:07:19--------------------------------
+FastMM has detected an attempt to call a virtual method on a freed object. An access violation will now be raised in order to abort the current operation.
+
+Freed object class: THintAction
+
+Virtual method: Offset +16
+
+Virtual method address: 463B44
+
+The allocation number was: 34067
+
+The object was allocated by thread 0x26DC, and the stack trace (return addresses) at the time was:
+404CC2 [System.pas][System][@GetMem][3448]
+4068AB [System.pas][System][TObject.NewInstance][12921]
+406F4E [System.pas][System][@ClassCreate][14085]
+4DB032 [Vcl.StdActns.pas][Vcl.StdActns][Stdactns.THintAction.$bctr]
+42EA18 [System.SysUtils][Sysutils.AnsiPos]
+570774 [Vcl.Forms][Forms.TApplication.SetHint]
+57053F [Vcl.Forms][Forms.TApplication.Idle]
+56F848 [Vcl.Forms][Forms.TApplication.HandleMessage]
+56B0C2 [Vcl.Forms][Forms.TCustomForm.ShowModal]
+9A7274 [GUITestRunner.pas][GUITestRunner][RunTest][472]
+9A72D7 [GUITestRunner.pas][GUITestRunner][RunRegisteredTests][490]
+
+The object was subsequently freed by thread 0x26DC, and the stack trace (return addresses) at the time was:
+404CDE [System.pas][System][@FreeMem][3496]
+4068C9 [System.pas][System][TObject.FreeInstance][12927]
+406F99 [System.pas][System][@ClassDestroy][14127]
+406F8B [System.pas][System][@ClassCreate][14117]
+76E071F9 [RtlRaiseStatus]
+76E071CB [RtlRaiseStatus]
+76DDF987 [Unknown function at RtlGetGroupSecurityDescriptor]
+7673C590 [Unknown function at gapfnScSendMessage]
+7673C641 [Unknown function at gapfnScSendMessage]
+7673C5FE [Unknown function at gapfnScSendMessage]
+76731B31 [Unknown function at PeekMessageA]
+
+The current thread ID is 0x26DC, and the stack trace (return addresses) leading to this error is:
+462B0C [System.Classes][Classes.TComponent.RemoveComponent]
+4628D2 [System.Classes][Classes.TComponent.$bdtr]
+4AA1BE [Vcl.Controls.pas][Vcl.Controls][Controls.TControl.$bdtr][5360]
+4068C9 [System.pas][System][TObject.FreeInstance][12927]
+406F99 [System.pas][System][@ClassDestroy][14127]
+454EBD [System.Classes.pas][System.Classes][Classes.TPersistent.$bdtr][4721]
+4AEA01 [Vcl.Controls.pas][Vcl.Controls][Controls.TWinControl.$bdtr][8359]
+4B717A [Vcl.Controls.pas][Vcl.Controls][Controls.TCustomControl.$bdtr][13706]
+40690F [System.pas][System][TObject.Free][12946]
+5703A8 [Vcl.Forms][Forms.TApplication.SetShowHint]
+5633E2 [Vcl.Forms.pas][Vcl.Forms][Forms.DoneApplication][2125]
+
+Current memory dump of 256 bytes starting at pointer address 7FF26F50:
+84 12 9D 00 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80
+80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80
+80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80
+80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80
+80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80
+80 80 80 80 80 80 80 80 80 80 80 80 7D D5 6D 3C 80 80 80 80 80 80 80 80 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+Ñ  .  ù  .  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä
+Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä
+Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä
+Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä
+Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä
+Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  }  ’  m  <  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  .  .  .  .  .  .  .  .
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+
+--------------------------------2013/11/4 11:08:51--------------------------------
+FastMM has detected an attempt to call a virtual method on a freed object. An access violation will now be raised in order to abort the current operation.
+
+Freed object class: THintAction
+
+Virtual method: Offset +16
+
+Virtual method address: 463B44
+
+The allocation number was: 34098
+
+The object was allocated by thread 0x23AC, and the stack trace (return addresses) at the time was:
+404CC2 [System.pas][System][@GetMem][3448]
+4068AB [System.pas][System][TObject.NewInstance][12921]
+406F4E [System.pas][System][@ClassCreate][14085]
+4DB032 [Vcl.StdActns.pas][Vcl.StdActns][Stdactns.THintAction.$bctr]
+42EA18 [System.SysUtils][Sysutils.AnsiPos]
+570774 [Vcl.Forms][Forms.TApplication.SetHint]
+57053F [Vcl.Forms][Forms.TApplication.Idle]
+56F848 [Vcl.Forms][Forms.TApplication.HandleMessage]
+56B0C2 [Vcl.Forms][Forms.TCustomForm.ShowModal]
+9A7274 [GUITestRunner.pas][GUITestRunner][RunTest][472]
+9A72D7 [GUITestRunner.pas][GUITestRunner][RunRegisteredTests][490]
+
+The object was subsequently freed by thread 0x23AC, and the stack trace (return addresses) at the time was:
+404CDE [System.pas][System][@FreeMem][3496]
+4068C9 [System.pas][System][TObject.FreeInstance][12927]
+406F99 [System.pas][System][@ClassDestroy][14127]
+406F8B [System.pas][System][@ClassCreate][14117]
+76E071F9 [RtlRaiseStatus]
+76E071CB [RtlRaiseStatus]
+76DDF987 [Unknown function at RtlGetGroupSecurityDescriptor]
+7673C5FE [Unknown function at gapfnScSendMessage]
+76731B31 [Unknown function at PeekMessageA]
+76731B57 [CallWindowProcW]
+4B16CD [Vcl.Controls.pas][Vcl.Controls][Controls.TWinControl.DefaultHandler][10017]
+
+The current thread ID is 0x23AC, and the stack trace (return addresses) leading to this error is:
+462B0C [System.Classes][Classes.TComponent.RemoveComponent]
+4628D2 [System.Classes][Classes.TComponent.$bdtr]
+4AA1BE [Vcl.Controls.pas][Vcl.Controls][Controls.TControl.$bdtr][5360]
+4068C9 [System.pas][System][TObject.FreeInstance][12927]
+406F99 [System.pas][System][@ClassDestroy][14127]
+454EBD [System.Classes.pas][System.Classes][Classes.TPersistent.$bdtr][4721]
+4AEA01 [Vcl.Controls.pas][Vcl.Controls][Controls.TWinControl.$bdtr][8359]
+4B717A [Vcl.Controls.pas][Vcl.Controls][Controls.TCustomControl.$bdtr][13706]
+40690F [System.pas][System][TObject.Free][12946]
+5703A8 [Vcl.Forms][Forms.TApplication.SetShowHint]
+5633E2 [Vcl.Forms.pas][Vcl.Forms][Forms.DoneApplication][2125]
+
+Current memory dump of 256 bytes starting at pointer address 7FF26F50:
+84 12 9D 00 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80
+80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80
+80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80
+80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80
+80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80
+80 80 80 80 80 80 80 80 80 80 80 80 6B 35 97 B2 80 80 80 80 80 80 80 80 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+Ñ  .  ù  .  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä
+Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä
+Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä
+Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä
+Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä
+Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  k  5  ó  ≤  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  .  .  .  .  .  .  .  .
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+
+--------------------------------2013/11/4 11:20:54--------------------------------
+A memory block has been leaked. The size is: 36
+
+This block was allocated by thread 0x2044, and the stack trace (return addresses) at the time was:
+404CC2 [System.pas][System][@GetMem][3448]
+4085F7 [System.pas][System][@NewUnicodeString][18929]
+408A84 [System.pas][System][@UStrAsg][19894]
+9738A2 [IBIntf][Generics.Collections.%TDictionary__2$20System.UnicodeString46System.%DelphiInterface$t18Ibintf.IGDSLibrary%%.DoAdd]
+973E32 [IBIntf][Generics.Collections.%TDictionary__2$20System.UnicodeString46System.%DelphiInterface$t18Ibintf.IGDSLibrary%%.Add]
+9729FE [IBIntf.pas][IBIntf][AddIBInterface][1328]
+9BDE2F 
+4080B0 [System.pas][System][InitUnits][17512]
+40811C [System.pas][System][@StartExe][17580]
+40D0AF [SysInit.pas][SysInit][@InitExe][1112]
+9BE07C 
+
+The block is currently used for an object of class: UnicodeString
+
+The allocation number is: 23113
+
+Current memory dump of 256 bytes starting at pointer address 7E414F00:
+B0 04 02 00 01 00 00 00 08 00 00 00 49 00 42 00 53 00 65 00 72 00 76 00 65 00 72 00 00 00 87 6B
+FC 7C 80 80 80 80 80 80 00 00 00 00 70 19 41 7E 00 00 00 00 00 00 00 00 18 3C 41 00 00 00 00 00
+4B 5A 00 00 C2 4C 40 00 F7 85 40 00 84 8A 40 00 A2 38 97 00 32 3E 97 00 FE 29 97 00 61 DE 9B 00
+B0 80 40 00 1C 81 40 00 AF D0 40 00 7C E0 9B 00 44 20 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 22 00 00 00 00 00 00 00 60 95 03 83 B0 04 02 00 01 00 00 00 0A 00 00 00 49 00 42 00
+45 00 6D 00 62 00 65 00 64 00 64 00 65 00 64 00 00 00 9F 6A FC 7C 80 80 00 00 00 00 91 50 41 7E
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 4C 5A 00 00 C2 4C 40 00 AB 68 40 00 D5 C5 40 00
+∞  .  .  .  .  .  .  .  .  .  .  .  I  .  B  .  S  .  e  .  r  .  v  .  e  .  r  .  .  .  á  k
+¸  |  Ä  Ä  Ä  Ä  Ä  Ä  .  .  .  .  p  .  A  ~  .  .  .  .  .  .  .  .  .  <  A  .  .  .  .  .
+K  Z  .  .  ¬  L  @  .  ˜  Ö  @  .  Ñ  ä  @  .  ¢  8  ó  .  2  >  ó  .  ˛  )  ó  .  a  ﬁ  õ  .
+∞  Ä  @  .  .  Å  @  .  Ø  –  @  .  |  ‡  õ  .  D     .  .  .  .  .  .  .  .  .  .  .  .  .  .
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+.  .  .  .  "  .  .  .  .  .  .  .  `  ï  .  É  ∞  .  .  .  .  .  .  .  .  .  .  .  I  .  B  .
+E  .  m  .  b  .  e  .  d  .  d  .  e  .  d  .  .  .  ü  j  ¸  |  Ä  Ä  .  .  .  .  ë  P  A  ~
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  L  Z  .  .  ¬  L  @  .  ´  h  @  .  ’  ≈  @  .
+
+--------------------------------2013/11/4 11:20:54--------------------------------
+A memory block has been leaked. The size is: 36
+
+This block was allocated by thread 0x2044, and the stack trace (return addresses) at the time was:
+404CC2 [System.pas][System][@GetMem][3448]
+4085F7 [System.pas][System][@NewUnicodeString][18929]
+408A84 [System.pas][System][@UStrAsg][19894]
+9738A2 [IBIntf][Generics.Collections.%TDictionary__2$20System.UnicodeString46System.%DelphiInterface$t18Ibintf.IGDSLibrary%%.DoAdd]
+973E32 [IBIntf][Generics.Collections.%TDictionary__2$20System.UnicodeString46System.%DelphiInterface$t18Ibintf.IGDSLibrary%%.Add]
+9729FE [IBIntf.pas][IBIntf][AddIBInterface][1328]
+9BDE61 
+4080B0 [System.pas][System][InitUnits][17512]
+40811C [System.pas][System][@StartExe][17580]
+40D0AF [SysInit.pas][SysInit][@InitExe][1112]
+9BE07C 
+
+The block is currently used for an object of class: UnicodeString
+
+The allocation number is: 23115
+
+Current memory dump of 256 bytes starting at pointer address 7E414FB0:
+B0 04 02 00 01 00 00 00 0A 00 00 00 49 00 42 00 45 00 6D 00 62 00 65 00 64 00 64 00 65 00 64 00
+00 00 9F 6A FC 7C 80 80 00 00 00 00 91 50 41 7E 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+4C 5A 00 00 C2 4C 40 00 AB 68 40 00 D5 C5 40 00 4E 6F 40 00 32 F4 42 00 61 DE 9B 00 F5 DE 9B 00
+B0 80 40 00 1C 81 40 00 AF D0 40 00 7C E0 9B 00 44 20 00 00 44 20 00 00 DE 4C 40 00 C9 68 40 00
+99 6F 40 00 92 F4 42 00 0F 69 40 00 71 1F 99 00 44 80 40 00 26 84 40 00 A8 E0 9B 00 5C ED 66 76
+EB 37 E2 76 18 00 00 00 A0 2E 42 00 26 15 A2 72 84 12 9D 00 80 80 80 80 80 80 80 80 80 80 80 80
+80 80 80 80 80 80 80 80 D9 EA 5D 8D 80 80 80 80 80 80 80 80 80 80 80 80 00 00 00 00 41 51 41 7E
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 66 5A 00 00 C2 4C 40 00 F7 85 40 00 28 88 40 00
+∞  .  .  .  .  .  .  .  .  .  .  .  I  .  B  .  E  .  m  .  b  .  e  .  d  .  d  .  e  .  d  .
+.  .  ü  j  ¸  |  Ä  Ä  .  .  .  .  ë  P  A  ~  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+L  Z  .  .  ¬  L  @  .  ´  h  @  .  ’  ≈  @  .  N  o  @  .  2  Ù  B  .  a  ﬁ  õ  .  ı  ﬁ  õ  .
+∞  Ä  @  .  .  Å  @  .  Ø  –  @  .  |  ‡  õ  .  D     .  .  D     .  .  ﬁ  L  @  .  …  h  @  .
+ô  o  @  .  í  Ù  B  .  .  i  @  .  q  .  ô  .  D  Ä  @  .  &  Ñ  @  .  ®  ‡  õ  .  \  Ì  f  v
+Î  7  ‚  v  .  .  .  .  †  .  B  .  &  .  ¢  r  Ñ  .  ù  .  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä
+Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ÿ  Í  ]  ç  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  .  .  .  .  A  Q  A  ~
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  f  Z  .  .  ¬  L  @  .  ˜  Ö  @  .  (  à  @  .
+
+--------------------------------2013/11/4 11:20:54--------------------------------
+A memory block has been leaked. The size is: 388
+
+This block was allocated by thread 0x2044, and the stack trace (return addresses) at the time was:
+404CC2 [System.pas][System][@GetMem][3448]
+4068AB [System.pas][System][TObject.NewInstance][12921]
+40C5D5 [System.pas][System][TInterfacedObject.NewInstance][30024]
+406F4E [System.pas][System][@ClassCreate][14085]
+4068E0 [System.pas][System][TObject.$bctr][12936]
+9BDE09 
+4080B0 [System.pas][System][InitUnits][17512]
+40811C [System.pas][System][@StartExe][17580]
+40D0AF [SysInit.pas][SysInit][@InitExe][1112]
+9BE07C 
+7666ED5C [BaseThreadInitThunk]
+
+The block is currently used for an object of class: TIBServerLibrary
+
+The allocation number is: 23111
+
+Current memory dump of 256 bytes starting at pointer address 7FD76A30:
+1C BF 96 00 01 00 00 00 88 1E 40 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+.  ø  ñ  .  .  .  .  .  à  .  @  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+
+--------------------------------2013/11/4 11:20:54--------------------------------
+A memory block has been leaked. The size is: 388
+
+This block was allocated by thread 0x2044, and the stack trace (return addresses) at the time was:
+404CC2 [System.pas][System][@GetMem][3448]
+4068AB [System.pas][System][TObject.NewInstance][12921]
+40C5D5 [System.pas][System][TInterfacedObject.NewInstance][30024]
+406F4E [System.pas][System][@ClassCreate][14085]
+4068E0 [System.pas][System][TObject.$bctr][12936]
+9BDE3B 
+4080B0 [System.pas][System][InitUnits][17512]
+40811C [System.pas][System][@StartExe][17580]
+40D0AF [SysInit.pas][SysInit][@InitExe][1112]
+9BE07C 
+7666ED5C [BaseThreadInitThunk]
+
+The block is currently used for an object of class: TIBEmbeddedLibrary
+
+The allocation number is: 23114
+
+Current memory dump of 256 bytes starting at pointer address 7FD76C40:
+E8 F9 96 00 01 00 00 00 88 1E 40 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+Ë  ˘  ñ  .  .  .  .  .  à  .  @  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+
+--------------------------------2013/11/4 11:20:54--------------------------------
+A memory block has been leaked. The size is: 52
+
+This block was allocated by thread 0x2044, and the stack trace (return addresses) at the time was:
+404CC2 [System.pas][System][@GetMem][3448]
+4068AB [System.pas][System][TObject.NewInstance][12921]
+406F4E [System.pas][System][@ClassCreate][14085]
+973AA2 [IBIntf][Generics.Collections.%TDictionary__2$20System.UnicodeString46System.%DelphiInterface$t18Ibintf.IGDSLibrary%%.$bctr]
+9BDDF8 
+4080B0 [System.pas][System][InitUnits][17512]
+40811C [System.pas][System][@StartExe][17580]
+40D0AF [SysInit.pas][SysInit][@InitExe][1112]
+9BE07C 
+7666ED5C [BaseThreadInitThunk]
+76E237EB [Unknown function at RtlInitializeExceptionChain]
+
+The block is currently used for an object of class: TDictionary<System.string,IBIntf.IGDSLibrary>
+
+The allocation number is: 23110
+
+Current memory dump of 256 bytes starting at pointer address 7FF7F390:
+4C B2 96 00 88 68 F9 7F 02 00 00 00 4C 29 9C 00 03 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 4A C3 30 8C 00 00 00 00 11 F6 F7 7F
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 CD 01 00 00 C2 4C 40 00 F7 85 40 00 EB 98 40 00
+D7 CC 40 00 57 CD 40 00 7E 67 40 00 CA 22 45 00 91 28 45 00 53 2D 45 00 39 28 5F 00 49 D0 6D 00
+44 20 00 00 44 20 00 00 B1 86 40 00 61 A2 40 00 A9 A1 40 00 A9 A2 40 00 1F 7B 45 00 CF 24 45 00
+A9 29 45 00 C5 2D 45 00 CC 5E 46 00 44 80 40 00 26 84 40 00 2E 00 00 00 B0 04 02 00 79 E1 F8 85
+84 12 9D 00 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80
+80 80 80 80 80 80 80 80 80 80 80 80 80 80 86 1E 07 7A 80 80 80 80 80 80 00 00 00 00 51 F5 F7 7F
+L  ≤  ñ  .  à  h  ˘    .  .  .  .  L  )  ú  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  J  √  0  å  .  .  .  .  .  ˆ  ˜  
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Õ  .  .  .  ¬  L  @  .  ˜  Ö  @  .  Î  ò  @  .
+◊  Ã  @  .  W  Õ  @  .  ~  g  @  .     "  E  .  ë  (  E  .  S  -  E  .  9  (  _  .  I  –  m  .
+D     .  .  D     .  .  ±  Ü  @  .  a  ¢  @  .  ©  °  @  .  ©  ¢  @  .  .  {  E  .  œ  $  E  .
+©  )  E  .  ≈  -  E  .  Ã  ^  F  .  D  Ä  @  .  &  Ñ  @  .  .  .  .  .  ∞  .  .  .  y  ·  ¯  Ö
+Ñ  .  ù  .  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä
+Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ü  .  .  z  Ä  Ä  Ä  Ä  Ä  Ä  .  .  .  .  Q  ı  ˜  
+
+--------------------------------2013/11/4 11:20:54--------------------------------
+A memory block has been leaked. The size is: 68
+
+This block was allocated by thread 0x2044, and the stack trace (return addresses) at the time was:
+404D31 [System.pas][System][@ReallocMem][3634]
+40AC7E [System.pas][System][DynArraySetLength][28205]
+40AD5A [System.pas][System][@DynArraySetLength][28268]
+9735AB [IBIntf][Generics.Collections.%TDictionary__2$20System.UnicodeString46System.%DelphiInterface$t18Ibintf.IGDSLibrary%%.Rehash]
+973683 [IBIntf][Generics.Collections.%TDictionary__2$20System.UnicodeString46System.%DelphiInterface$t18Ibintf.IGDSLibrary%%.Grow]
+973DEE [IBIntf][Generics.Collections.%TDictionary__2$20System.UnicodeString46System.%DelphiInterface$t18Ibintf.IGDSLibrary%%.Add]
+9729FE [IBIntf.pas][IBIntf][AddIBInterface][1328]
+9BDE2F 
+4080B0 [System.pas][System][InitUnits][17512]
+40811C [System.pas][System][@StartExe][17580]
+40D0AF [SysInit.pas][SysInit][@InitExe][1112]
+
+The block is currently used for an object of class: Unknown
+
+The allocation number is: 23112
+
+Current memory dump of 256 bytes starting at pointer address 7FF96880:
+01 00 00 00 04 00 00 00 FF FF FF FF 00 00 00 00 00 00 00 00 59 4A 5F 31 0C 4F 41 7E 94 6B D7 7F
+FF FF FF FF 00 00 00 00 00 00 00 00 E7 1A B5 15 BC 4F 41 7E A4 6D D7 7F 0A DE A2 77 80 80 80 80
+80 80 80 80 80 80 80 80 00 00 00 00 A1 69 F9 7F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+53 5A 00 00 C2 4C 40 00 F7 85 40 00 28 88 40 00 D9 CD 40 00 63 00 61 00 74 00 61 00 FD A1 E4 76
+70 65 E1 76 62 00 75 00 4D 00 4D 00 94 62 E0 76 44 20 00 00 44 20 00 00 DE 4C 40 00 16 87 40 00
+6A A2 40 00 28 31 99 00 44 80 40 00 26 84 40 00 A8 E0 9B 00 5C ED 66 76 EB 37 E2 76 BE 37 E2 76
+00 00 00 00 40 00 00 00 B0 04 02 00 79 86 CB 4D 84 12 9D 00 80 80 80 80 80 80 80 80 80 80 80 80
+80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80
+.  .  .  .  .  .  .  .  ˇ  ˇ  ˇ  ˇ  .  .  .  .  .  .  .  .  Y  J  _  1  .  O  A  ~  î  k  ◊  
+ˇ  ˇ  ˇ  ˇ  .  .  .  .  .  .  .  .  Á  .  µ  .  º  O  A  ~  §  m  ◊    .  ﬁ  ¢  w  Ä  Ä  Ä  Ä
+Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  .  .  .  .  °  i  ˘    .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+S  Z  .  .  ¬  L  @  .  ˜  Ö  @  .  (  à  @  .  Ÿ  Õ  @  .  c  .  a  .  t  .  a  .  ˝  °  ‰  v
+p  e  ·  v  b  .  u  .  M  .  M  .  î  b  ‡  v  D     .  .  D     .  .  ﬁ  L  @  .  .  á  @  .
+j  ¢  @  .  (  1  ô  .  D  Ä  @  .  &  Ñ  @  .  ®  ‡  õ  .  \  Ì  f  v  Î  7  ‚  v  æ  7  ‚  v
+.  .  .  .  @  .  .  .  ∞  .  .  .  y  Ü  À  M  Ñ  .  ù  .  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä
+Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä
+
+--------------------------------2013/11/4 11:20:54--------------------------------
+This application has leaked memory. The small block leaks are (excluding expected leaks registered by pointer):
+
+21 - 36 bytes: UnicodeString x 2
+37 - 52 bytes: TDictionary<System.string,IBIntf.IGDSLibrary> x 1
+53 - 68 bytes: Unknown x 1
+341 - 388 bytes: TIBEmbeddedLibrary x 1, TIBServerLibrary x 1
+
+Note: Memory leak detail is logged to a text file in the same folder as this application. To disable this memory leak check, undefine "EnableMemoryLeakReporting".
+
+--------------------------------2013/11/4 11:21:48--------------------------------
+FastMM has detected an attempt to call a virtual method on a freed object. An access violation will now be raised in order to abort the current operation.
+
+Freed object class: THintAction
+
+Virtual method: Offset +16
+
+Virtual method address: 463B44
+
+The allocation number was: 34082
+
+The object was allocated by thread 0x1794, and the stack trace (return addresses) at the time was:
+404CC2 [System.pas][System][@GetMem][3448]
+4068AB [System.pas][System][TObject.NewInstance][12921]
+406F4E [System.pas][System][@ClassCreate][14085]
+4DB032 [Vcl.StdActns.pas][Vcl.StdActns][Stdactns.THintAction.$bctr]
+42EA18 [System.SysUtils][Sysutils.AnsiPos]
+570774 [Vcl.Forms][Forms.TApplication.SetHint]
+57053F [Vcl.Forms][Forms.TApplication.Idle]
+56F848 [Vcl.Forms][Forms.TApplication.HandleMessage]
+56B0C2 [Vcl.Forms][Forms.TCustomForm.ShowModal]
+9A7274 [GUITestRunner.pas][GUITestRunner][RunTest][472]
+9A72D7 [GUITestRunner.pas][GUITestRunner][RunRegisteredTests][490]
+
+The object was subsequently freed by thread 0x1794, and the stack trace (return addresses) at the time was:
+404CDE [System.pas][System][@FreeMem][3496]
+4068C9 [System.pas][System][TObject.FreeInstance][12927]
+406F99 [System.pas][System][@ClassDestroy][14127]
+406F8B [System.pas][System][@ClassCreate][14117]
+76E071F9 [RtlRaiseStatus]
+76E071CB [RtlRaiseStatus]
+76DDF987 [Unknown function at RtlGetGroupSecurityDescriptor]
+7673C590 [Unknown function at gapfnScSendMessage]
+7673C641 [Unknown function at gapfnScSendMessage]
+7673C5FE [Unknown function at gapfnScSendMessage]
+76731B31 [Unknown function at PeekMessageA]
+
+The current thread ID is 0x1794, and the stack trace (return addresses) leading to this error is:
+462B0C [System.Classes][Classes.TComponent.RemoveComponent]
+4628D2 [System.Classes][Classes.TComponent.$bdtr]
+4AA1BE [Vcl.Controls.pas][Vcl.Controls][Controls.TControl.$bdtr][5360]
+4068C9 [System.pas][System][TObject.FreeInstance][12927]
+406F99 [System.pas][System][@ClassDestroy][14127]
+454EBD [System.Classes.pas][System.Classes][Classes.TPersistent.$bdtr][4721]
+4AEA01 [Vcl.Controls.pas][Vcl.Controls][Controls.TWinControl.$bdtr][8359]
+4B717A [Vcl.Controls.pas][Vcl.Controls][Controls.TCustomControl.$bdtr][13706]
+40690F [System.pas][System][TObject.Free][12946]
+5703A8 [Vcl.Forms][Forms.TApplication.SetShowHint]
+5633E2 [Vcl.Forms.pas][Vcl.Forms][Forms.DoneApplication][2125]
+
+Current memory dump of 256 bytes starting at pointer address 7FF26F50:
+84 12 9D 00 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80
+80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80
+80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80
+80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80
+80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80
+80 80 80 80 80 80 80 80 80 80 80 80 FE F3 6D 3C 80 80 80 80 80 80 80 80 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+Ñ  .  ù  .  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä
+Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä
+Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä
+Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä
+Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä
+Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  ˛  Û  m  <  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  .  .  .  .  .  .  .  .
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .

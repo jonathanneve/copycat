@@ -1,0 +1,53 @@
+package CopyCat_D5;
+
+{$R *.RES}
+{$R CopyCat.dcr}
+{$ALIGN OFF}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST ON}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $00400000}
+{$IMPLICITBUILD OFF}
+{$DESCRIPTION 'CopyCat Replication Suite'}
+
+requires
+  vcl50,
+  Vcldb50,
+  dsnide50;
+
+contains
+  CCat in 'CCat.pas',
+  CcConf in 'CcConf.pas',
+  CcConflictMgr in 'CcConflictMgr.pas',
+  CcConfStorage in 'CcConfStorage.pas',
+  CcEditors in 'CcEditors.pas',
+  CcInterbase in 'CcInterbase.pas',
+  CcInterbaseConn in 'CcInterbaseConn.pas',
+  CcKeys in 'CcKeys.pas',
+  CcLog in 'CcLog.pas',
+  CcMemDS in 'CcMemDS.pas',
+  CcProviders in 'CcProviders.pas',
+  CcReplicator in 'CcReplicator.pas',
+  CcRplList in 'CcRplList.pas',
+  CcTransports in 'CcTransports.pas',
+  CcOracle in 'CcOracle.pas',
+  CcSQLServer in 'CcSQLServer.pas',
+  CcDB in 'CcDB.pas';
+
+end.

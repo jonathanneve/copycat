@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<PersonalityInfo>
+		<Option>
+			<Option Name="Personality">Default.Personality</Option>
+			<Option Name="ProjectType"></Option>
+			<Option Name="Version">1.0</Option>
+			<Option Name="GUID">{543FBA16-77FA-40FA-8F1A-9C10BC080D68}</Option>
+		</Option>
+	</PersonalityInfo>
+	<Default.Personality>  <Projects>
+      <Projects Name="CopyCat_2006.bpl">CopyCat_2006.bdsproj</Projects>
+      <Projects Name="CopyCatIBO_2006.bpl">IBO\CopyCatIBO_2006.bdsproj</Projects>
+      <Projects Name="CopyCatIBX_2006.bpl">IBX\CopyCatIBX_2006.bdsproj</Projects>
+      <Projects Name="CopyCatUIB_2006.bpl">UIB\CopyCatUIB_2006.bdsproj</Projects>
+      <Projects Name="CopyCatFIB_2006.bpl">FIBPlus\CopyCatFIB_2006.bdsproj</Projects>
+      <Projects Name="CopyCatXMLRPC_2006.bpl">XMLRPC\CopyCatXMLRPC_2006.bdsproj</Projects>
+      <Projects Name="CopyCatRTC_2006.bpl">RTC\CopyCatRTC_2006.bdsproj</Projects>
+      <Projects Name="CopyCat_2006UnitTests.exe">Test\CopyCat_2006UnitTests.bdsproj</Projects>
+      <Projects Name="CopyCatADO_2006.bpl">ADO\CopyCatADO_2006.bdsproj</Projects>
+      <Projects Name="Targets">CopyCat_2006.bpl CopyCatIBO_2006.bpl CopyCatIBX_2006.bpl CopyCatUIB_2006.bpl CopyCatFIB_2006.bpl CopyCatXMLRPC_2006.bpl CopyCatRTC_2006.bpl CopyCat_2006UnitTests.exe CopyCatADO_2006.bpl</Projects>
+    </Projects>
+    <Dependencies>
+      <Dependency GUID="{C82DD929-0EF3-4A87-A913-3995B8F3F889}">
+        <Dependency GUID="{2638A5B3-754D-4395-8E30-729AE9C6DDBE}"/>
+      </Dependency>
+      <Dependency GUID="{65617D83-B2EF-41E5-ABC9-B82EFAEB2747}">
+        <Dependency GUID="{2638A5B3-754D-4395-8E30-729AE9C6DDBE}"/>
+      </Dependency>
+      <Dependency GUID="{37F5C6F2-AD6D-4307-B95B-14A8B6531205}">
+        <Dependency GUID="{2638A5B3-754D-4395-8E30-729AE9C6DDBE}"/>
+      </Dependency>
+      <Dependency GUID="{D3F87A62-8EFA-4156-B8EE-1FE1B4F3C7C8}">
+        <Dependency GUID="{2638A5B3-754D-4395-8E30-729AE9C6DDBE}"/>
+      </Dependency>
+      <Dependency GUID="{2CFFEE53-E7F5-4651-B5CE-841BF063299D}">
+        <Dependency GUID="{2638A5B3-754D-4395-8E30-729AE9C6DDBE}"/>
+      </Dependency>
+    </Dependencies>
+  </Default.Personality>
+	<StarTeamAssociation></StarTeamAssociation>
+	<StarTeamNonRelativeFiles></StarTeamNonRelativeFiles>
+</BorlandProject>

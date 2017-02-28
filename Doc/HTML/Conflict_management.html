@@ -1,0 +1,118 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN">
+<html>
+<head>
+<title>Conflict management</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+    <meta name="generator" content="Doc-O-Matic" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <link rel="STYLESHEET" href="default.css" type="text/css" />
+
+<script type="text/javascript" src="scripts.js"></script>
+</head>
+<body class="Element700" onload="onBodyLoadEx('frames.html', 'topic', 'Conflict_management.html');" onmousedown="onBodyMouseDown();">
+
+<!-- Begin Popups -->
+<div class="Element801" id="popup00002">
+<div class="Element800">
+<div class="Element14">
+Links</div>
+<div class="Element11">
+<div class="Element10">
+<a href="_Conflict_management_5_See_Also.html" target="topic">See Also</a></div>
+</div>
+</div>
+</div>
+
+<!-- End Popups -->
+
+<!-- Begin Page Header -->
+<div class="Element710" id="areafixed">
+<div class="Element92">
+<table width="100%" cellspacing="0" cellpadding="0">
+<tr><td width="33%">
+<div class="Element1">
+<a href="#" onmousedown="showPopup(this, 'popup00002');"><img src="seealsolink.png" border="0" alt=""></a> <a href="http://www.copycat.fr" target="new_page"><img src="copycat_70x70.png"><h3>CopyCat Developer Tools</h3></img></a></div>
+</td><td width="34%">
+<div class="Element2">
+<a href="contents.html" target="tocidx">Contents</a> | <a href="idx.html" target="tocidx">Index</a></div>
+</td><td width="33%">
+<div class="Element90">
+<a href="Replication_nodes.html" target="topic">Previous</a> | <a href="Database_tables.html" target="topic">Next</a></div>
+</td></tr></table><div class="Element5">
+Conflict management</div>
+<div class="Element7">
+<a href="_Conflict_management_5_See_Also.html" target="topic">See Also</a></div>
+<div class="Element730">
+<a href="#" onclick="showAllElements();">Show All</a></div>
+</div>
+</div>
+
+<!-- End Page Header -->
+
+<!-- Begin Client Area -->
+<div class="Element720" id="areascroll">
+<div class="Element721">
+
+<!-- Begin Page Content -->
+<div class="Element58">
+<div class="Element11">
+<div class="Element10">
+<p class="Element10">
+CopyCat features a set of advanced conflict management techniques.&nbsp;</p>
+<p class="Element10">
+&nbsp;</p>
+<p class="Element10">
+Before replication starts, both the local and the remote replication logs (that is, database table <a href="RPL$LOG.html" target="topic">RPL$LOG</a>) are checked for conflicts. If a conflict is found, that is, if a certain record has been modified in both databases since the last replication, the conflict is reported, and the record is not replicated in either direction until it is resolved. The record will remain unsynchronized until the conflict is resolved: <strong>thus, there can never be any data loss.</strong>&nbsp;</p>
+<p class="Element10">
+&nbsp;</p>
+<p class="Element10">
+There are two levels of conflict management:&nbsp;</p>
+<p class="Element10">
+&nbsp;</p>
+<ol class="Element630">
+<li value="1" class="Element600">First, the <a href="TCcReplicator_OnResolveConflict.html" target="topic">TCcReplicator.OnResolveConflict</a> event is fired, allowing the developer to implement customized conflict resolution policies as applicable. A <a href="TConflictRecord.html" target="topic">TConflictRecord</a> containing all the information about the conflict is passed as a parameter to this event, so that you have all the information you need for resolving the conflict at your fingertips. To resolve the conflicte, set TConflictRecord.ChosenNode to the name of the node whose changes you would like to keep, and the record will directly be replicated accordingly.</li>
+<li value="2" class="Element600">If The OnResolveConflict is not implemented or if no node is chosen, the conflict is logged to <a href="RPL$CONFLICTS.html" target="topic">RPL$CONFLICTS</a>. The <a href="RPL$CONFLICTS.html" target="topic">RPL$CONFLICTS</a> table copies the main fields of <a href="RPL$LOG.html" target="topic">RPL$LOG</a> (so as to be able to identify the conflictual record), and adds a few of its own, namely CONFLICT_DATE (date when the conflict was first logged), USER1 and USER2 (the two <a href="Replication_nodes.html" target="topic">replication nodes</a> the conflict is between), and CHOSEN_USER (the user whose version of the record should be kept). CHOSEN_USER is blank by default, it's up to the application user to resolve the conflict by choosing either USER1 or USER2 as having the correct version of the record, and putting the chosen user's name into the CHOSEN_USER field. Upon the next replication, <a href="TCcReplicator.html" target="topic">TCcReplicator</a> will check the conflict log: if a conflict has been resolved (that is, if CHOSEN_USER is not blank), the correct version of the record will be replicated to the other side, and the log of the conflict will be removed.</li>
+</ol></div>
+</div>
+<div class="Element14">
+<a onclick="toggleVisibilityStored('See_Also');" class="a_Element14"><img src="sectionminus.png" border="0" alt="sectionminus.png" id="imgSee_Also">See Also</a></div>
+<div id="divSee_Also">
+<div class="Element11">
+<div class="Element10">
+<p class="Element10">
+<a href="RPL$CONFLICTS.html" target="topic">RPL$CONFLICTS</a>, <a href="TCcConflictMgr.html" target="topic">TCcConflictMgr</a></p></div>
+</div>
+</div>
+<div class="Element14">
+<a onclick="toggleVisibilityStored('Links');" class="a_Element14"><img src="sectionminus.png" border="0" alt="sectionminus.png" id="imgLinks">Links</a></div>
+<div id="divLinks">
+<div class="Element11">
+<div class="Element10">
+<a href="_Conflict_management_5_See_Also.html" target="topic">See Also</a></div>
+</div>
+</div>
+<div class="Element62">
+Created with a commercial version of <a href="http://www.doc-o-matic.com">Doc-O-Matic</a>. In order to make this message disappear you need to register this software. If you have problems registering this software please contact us at <a href="mailto:support@toolsfactory.com">support@toolsfactory.com</a>.</div>
+</div>
+<!-- End Page Content -->
+
+<!-- Begin Page Footer -->
+<div class="Element93">
+<table width="100%" cellspacing="0" cellpadding="0">
+<tr><td width="100%">
+<div class="Element3">
+Copyright (c) 2015. All rights reserved. http://www.copycat.fr</div>
+</td></tr><tr><td width="100%">
+<div class="Element4">
+<a href="contents.html" target="tocidx">Contents</a> | <a href="idx.html" target="tocidx">Index</a></div>
+</td></tr><tr><td width="100%">
+<div class="Element97">
+What do you think about this topic?  Send feedback through our <a href="http://copycat.fr/wordpress/contact-us/" target="new_page">contact form</a></div>
+</td></tr></table></div>
+
+<!-- End Page Footer -->
+</div>
+</div>
+
+<!-- End Client Area -->
+</body></html>

@@ -1,0 +1,903 @@
+:Base CopyCat.HLP>MAIN
+:Title CopyCat Developer Tools
+1 Introduction=id_1
+1 Getting started=id_8
+1 Replication nodes=id_9
+1 Conflict management=id_14
+1 Database tables
+2 Database tables=id_20
+2 RPL$LOG=id_12
+2 RPL$USERS=id_11
+2 RPL$CONFLICTS=id_18
+2 RPL$TABLES=id_23
+2 RPL$PROCEDURES=id_24
+2 RPL$ERRORS=id_25
+2 RPL$TRACE=id_26
+2 RPL$LOG_VALUES=id_22
+1 Classes
+2 ECcLostConnection Class
+3 ECcLostConnection Class=id_33
+3 ECcLostConnection.Connection Property=id_39
+3 ECcLostConnection.Create Constructor =id_40
+2 ECcReplicationAborted Class
+3 ECcReplicationAborted Class=id_43
+3 ECcReplicationAborted.Replicator Property=id_49
+3 ECcReplicationAborted.Create Constructor =id_50
+2 EReplError Class
+3 EReplError Class=id_53
+2 TAutoRepl Class
+3 TAutoRepl Class=id_54
+3 TAutoRepl.Enabled Property=id_60
+2 TCcAbstractQueryObject Class
+3 TCcAbstractQueryObject Class=id_71
+3 TCcAbstractQueryObject.Query Property=id_76
+3 TCcAbstractQueryObject.SelectStatement Property=id_77
+3 TCcAbstractQueryObject.Create Constructor =id_79
+2 TCcArray Class
+3 TCcArray Class=id_82
+3 TCcArray.Count Property=id_88
+3 TCcArray.Value Property=id_89
+3 TCcArray.Add Method =id_91
+3 TCcArray.AddValue Method =id_92
+3 TCcArray.Clear Method =id_93
+3 TCcArray.Create Constructor =id_94
+3 TCcArray.Destroy Destructor =id_95
+2 TCcAutoCommit Class
+3 TCcAutoCommit Class=id_99
+3 TCcAutoCommit.CommitType Property=id_104
+2 TCcClientTransport Class
+3 TCcClientTransport Class=id_111
+3 TCcClientTransport.AutoCommit Property=id_118
+3 TCcClientTransport.DatabaseAlias Property=id_120
+3 TCcClientTransport.KeepAliveInterval Property=id_121
+3 TCcClientTransport.Password Property=id_122
+3 TCcClientTransport.ServerCopyCatVersion Property=id_123
+3 TCcClientTransport.SessionActive Property=id_124
+3 TCcClientTransport.Create Constructor =id_142
+3 TCcClientTransport.Destroy Destructor =id_143
+2 TCcConfig Class
+3 TCcConfig Class=id_3
+3 TCcConfig.ConfigName Property=id_30
+3 TCcConfig.Connection Property=id_194
+3 TCcConfig.FailIfNoPK Property=id_195
+3 TCcConfig.Nodes Property=id_191
+3 TCcConfig.OnQueryReady Event=id_200
+3 TCcConfig.OnScriptReady Event=id_201
+3 TCcConfig.Script Property=id_196
+3 TCcConfig.Tables Property=id_190
+3 TCcConfig.TrackFieldChanges Property=id_197
+3 TCcConfig.Version Property=id_198
+3 TCcConfig.Connect Method =id_203
+3 TCcConfig.ConnectAndRemoveConfig Method =id_204
+3 TCcConfig.Create Constructor =id_205
+3 TCcConfig.Destroy Destructor =id_206
+3 TCcConfig.Disconnect Method =id_207
+3 TCcConfig.GenerateConfig Method =id_192
+3 TCcConfig.GenerateTriggers Method =id_208
+3 TCcConfig.GetGenerator Method =id_209
+3 TCcConfig.PrepareBatchImport Method =id_210
+3 TCcConfig.RemoveTriggers Method =id_211
+3 TCcConfig.TableNameWithConfig Method =id_212
+2 TCcConfigTable Class
+3 TCcConfigTable Class=id_229
+3 TCcConfigTable.Condition Property=id_234
+3 TCcConfigTable.DeleteCondition Property=id_235
+3 TCcConfigTable.FieldsExcluded Property=id_236
+3 TCcConfigTable.FieldsIncluded Property=id_237
+3 TCcConfigTable.InsertCondition Property=id_238
+3 TCcConfigTable.PKSyncStatements Property=id_239
+3 TCcConfigTable.Priority Property=id_240
+3 TCcConfigTable.SyncFieldNames Property=id_241
+3 TCcConfigTable.SyncStatements Property=id_242
+3 TCcConfigTable.TableName Property=id_243
+3 TCcConfigTable.UpdateCondition Property=id_244
+3 TCcConfigTable.Create Constructor =id_246
+3 TCcConfigTable.Destroy Destructor =id_247
+2 TCcConfigTables Class
+3 TCcConfigTables Class=id_221
+3 TCcConfigTables.Item Property=id_255
+3 TCcConfigTables.Add Method =id_256
+3 TCcConfigTables.Create Constructor =id_257
+3 TCcConfigTables.FindTable Method =id_258
+2 TCcConflictMgr Class
+3 TCcConflictMgr Class=id_19
+2 TCcConnection Class
+3 TCcConnection Class=id_5
+3 TCcConnection.CanUseRowsAffected Property=id_125
+3 TCcConnection.Connected Property=id_126
+3 TCcConnection.ConnectionParams Property=id_127
+3 TCcConnection.DBAdaptor Property=id_128
+3 TCcConnection.DBName Property=id_129
+3 TCcConnection.DBType Property=id_130
+3 TCcConnection.DBVersion Property=id_132
+3 TCcConnection.DDLQuery Property=id_133
+3 TCcConnection.InTransaction Property=id_134
+3 TCcConnection.OnConnectionLost Event=id_177
+3 TCcConnection.OnDestroyQueries Property=id_135
+3 TCcConnection.OnQueryExecute Property=id_136
+3 TCcConnection.ReplicatingNode Property=id_137
+3 TCcConnection.ReplicatingNodePassword Property=id_138
+3 TCcConnection.SelectQuery Property=id_139
+3 TCcConnection.UpdateQuery Property=id_140
+3 TCcConnection.Assign Method =id_144
+3 TCcConnection.CheckDisconnected Method =id_145
+3 TCcConnection.ClearQueries Method =id_146
+3 TCcConnection.Commit Method =id_119
+3 TCcConnection.CommitRetaining Method =id_147
+3 TCcConnection.Connect Method =id_131
+3 TCcConnection.ConnectAsNode Method =id_148
+3 TCcConnection.ConnectorName Method =id_149
+3 TCcConnection.Create Constructor =id_150
+3 TCcConnection.DatabaseTypes Method =id_151
+3 TCcConnection.DatabaseVersions Method =id_152
+3 TCcConnection.Destroy Destructor =id_153
+3 TCcConnection.Disconnect Method =id_154
+3 TCcConnection.ExecQuery Method =id_155
+3 TCcConnection.FindQuery Method =id_156
+3 TCcConnection.Gen_Id Method =id_157
+3 TCcConnection.GetFieldType Method =id_158
+3 TCcConnection.ListAllProcedures Method =id_159
+3 TCcConnection.ListAllTables Method =id_160
+3 TCcConnection.ListFieldsForNoPK Method =id_161
+3 TCcConnection.ListGenerators Method =id_162
+3 TCcConnection.ListKeywordsForbiddenAsFieldNames Method =id_163
+3 TCcConnection.ListPrimaryKeys Method =id_164
+3 TCcConnection.ListProcedures Method =id_165
+3 TCcConnection.ListTableFields Method =id_166
+3 TCcConnection.ListTables Method =id_167
+3 TCcConnection.ListTriggers Method =id_168
+3 TCcConnection.ListUpdatableTableFields Method =id_169
+3 TCcConnection.Loaded Method =id_170
+3 TCcConnection.MaxDDLNameLength Method =id_171
+3 TCcConnection.RefreshNodes Method =id_172
+3 TCcConnection.Rollback Method =id_173
+3 TCcConnection.RollbackRetaining Method =id_174
+3 TCcConnection.StartTransaction Method =id_175
+2 TCcCustomConflictMgr Class
+3 TCcCustomConflictMgr Class=id_262
+2 TCcCustomLog Class
+3 TCcCustomLog Class=id_274
+3 TCcCustomLog.AllowedOperations Property=id_279
+3 TCcCustomLog.CurrentLine Property=id_280
+3 TCcCustomLog.Dest Property=id_281
+3 TCcCustomLog.Eof Property=id_282
+3 TCcCustomLog.Keys Property=id_283
+3 TCcCustomLog.LineCount Property=id_284
+3 TCcCustomLog.LocalMode Property=id_285
+3 TCcCustomLog.OldRecordID Property=id_286
+3 TCcCustomLog.Origin Property=id_287
+3 TCcCustomLog.PrimaryKeys Property=id_288
+3 TCcCustomLog.RecordID Property=id_289
+3 TCcCustomLog.RemoteTableName Property=id_290
+3 TCcCustomLog.TableName Property=id_291
+3 TCcCustomLog.FBN Method =id_293
+3 TCcCustomLog.FieldByName Method =id_294
+3 TCcCustomLog.FieldExists Method =id_295
+3 TCcCustomLog.Next Method =id_296
+2 TCcDataSet Class
+3 TCcDataSet Class=id_6
+3 TCcDataSet.Active Property=id_313
+3 TCcDataSet.Connection Property=id_314
+3 TCcDataSet.DeleteQuery Property=id_315
+3 TCcDataSet.InsertQuery Property=id_316
+3 TCcDataSet.RefreshQuery Property=id_317
+3 TCcDataSet.RowsAffected Property=id_318
+3 TCcDataSet.SelectQuery Property=id_319
+3 TCcDataSet.SQL Property=id_307
+3 TCcDataSet.SQLDelete Property=id_310
+3 TCcDataSet.SQLInsert Property=id_309
+3 TCcDataSet.SQLRefresh Property=id_311
+3 TCcDataSet.SQLUpdate Property=id_308
+3 TCcDataSet.UpdateQuery Property=id_320
+3 TCcDataSet.CopyCurrentRecord Method =id_346
+3 TCcDataSet.Create Constructor =id_347
+3 TCcDataSet.Destroy Destructor =id_348
+2 TCcDBAdaptor Class
+3 TCcDBAdaptor Class=id_272
+3 TCcDBAdaptor.CurrentTimeStampSQL Property=id_370
+3 TCcDBAdaptor.QuoteMetadata Property=id_371
+3 TCcDBAdaptor.SupportedVersions Property=id_372
+3 TCcDBAdaptor.UseRowsAffected Property=id_373
+3 TCcDBAdaptor.Version Property=id_374
+3 TCcDBAdaptor.CheckCustomMetadata Method =id_376
+3 TCcDBAdaptor.CheckExtraCustomMetadata Method =id_378
+3 TCcDBAdaptor.ConvertValue Method =id_379
+3 TCcDBAdaptor.Create Constructor =id_377
+3 TCcDBAdaptor.CreateProcedures Method =id_380
+3 TCcDBAdaptor.DeclareField Method =id_381
+3 TCcDBAdaptor.DeclareGenerator Method =id_382
+3 TCcDBAdaptor.DeclarePK Method =id_383
+3 TCcDBAdaptor.Destroy Destructor =id_384
+3 TCcDBAdaptor.DropGenerator Method =id_385
+3 TCcDBAdaptor.DropProcedures Method =id_386
+3 TCcDBAdaptor.ExecutedReplicationQuery Method =id_387
+3 TCcDBAdaptor.ExecutingReplicationQuery Method =id_388
+3 TCcDBAdaptor.ExecutingReplicationQuerySQL Method =id_389
+3 TCcDBAdaptor.FieldExists Method =id_390
+3 TCcDBAdaptor.GenDeclared Method =id_391
+3 TCcDBAdaptor.GenerateTriggers Method =id_392
+3 TCcDBAdaptor.GetAdaptorName Method =id_393
+3 TCcDBAdaptor.GetGenerator Method =id_394
+3 TCcDBAdaptor.GetInsertOrUpdateSQL Method =id_395
+3 TCcDBAdaptor.GetProcGenerator Method =id_396
+3 TCcDBAdaptor.GetProcParams Method =id_397
+3 TCcDBAdaptor.GrantRightsToTable Method =id_398
+3 MetaQuote
+4 TCcDBAdaptor.MetaQuote Method (string)=id_399
+4 TCcDBAdaptor.MetaQuote Method (string, TCcDBAdaptor)=id_413
+3 TCcDBAdaptor.ProcedureExists Method 
+4 TCcDBAdaptor.ProcedureExists Method =id_400
+3 TCcDBAdaptor.RemoveCustomMetadata Method 
+4 TCcDBAdaptor.RemoveCustomMetadata Method =id_401
+3 TCcDBAdaptor.RemoveExtraCustomMetadata Method 
+4 TCcDBAdaptor.RemoveExtraCustomMetadata Method =id_402
+3 TCcDBAdaptor.RemoveTriggers Method 
+4 TCcDBAdaptor.RemoveTriggers Method =id_403
+3 TCcDBAdaptor.SQLFormatValue Method 
+4 TCcDBAdaptor.SQLFormatValue Method =id_404
+3 TCcDBAdaptor.SupportsGenerators Method 
+4 TCcDBAdaptor.SupportsGenerators Method =id_405
+3 TCcDBAdaptor.SupportsInsertOrUpdate Method 
+4 TCcDBAdaptor.SupportsInsertOrUpdate Method =id_406
+3 TCcDBAdaptor.TableExists Method 
+4 TCcDBAdaptor.TableExists Method =id_407
+3 TCcDBAdaptor.TriggerExists Method 
+4 TCcDBAdaptor.TriggerExists Method =id_408
+3 TCcDBAdaptor.UnQuotedIdentifier Method 
+4 TCcDBAdaptor.UnQuotedIdentifier Method =id_409
+2 TCcDBAdaptorsEditor Class
+3 TCcDBAdaptorsEditor Class=id_414
+3 TCcDBAdaptorsEditor.GetAttributes Method =id_419
+3 TCcDBAdaptorsEditor.GetValues Method =id_420
+2 TCcDBAdaptorVersionsEditor Class
+3 TCcDBAdaptorVersionsEditor Class=id_423
+3 TCcDBAdaptorVersionsEditor.GetAttributes Method =id_427
+3 TCcDBAdaptorVersionsEditor.GetValues Method =id_428
+3 TCcDBAdaptorVersionsEditor.SetValue Method =id_429
+2 TCcField Class
+3 TCcField Class=id_303
+3 TCcField.AsCurrency Property=id_436
+3 TCcField.AsDateTime Property=id_437
+3 TCcField.AsFloat Property=id_438
+3 TCcField.AsInteger Property=id_439
+3 TCcField.AsString Property=id_440
+3 TCcField.DataType Property=id_441
+3 TCcField.FieldName Property=id_442
+3 TCcField.index Property=id_443
+3 TCcField.IsNull Property=id_444
+3 TCcField.IsParam Property=id_445
+3 TCcField.Size Property=id_446
+3 TCcField.Value Property=id_447
+3 TCcField.Clear Method =id_448
+3 TCcField.Create Constructor =id_449
+3 TCcField.SetValueAsType Method =id_450
+2 TCcFieldInfo Class
+3 TCcFieldInfo Class=id_453
+3 TCcFieldInfo.DataType Field=id_457
+3 TCcFieldInfo.FieldName Field=id_458
+3 TCcFieldInfo.IsNull Field=id_459
+3 TCcFieldInfo.Size Field=id_460
+3 TCcFieldInfo.Value Field=id_461
+2 TCcFieldList Class
+3 TCcFieldList Class=id_464
+3 TCcFieldList.Count Property=id_469
+3 TCcFieldList.FieldInfo Property=id_470
+3 TCcFieldList.FieldInfoByName Property=id_471
+3 TCcFieldList.Add Method =id_473
+3 TCcFieldList.Clear Method =id_474
+3 TCcFieldList.Create Constructor =id_475
+3 TCcFieldList.Destroy Destructor =id_476
+2 TCcInterbaseAdaptor Class
+3 TCcInterbaseAdaptor Class=id_479
+3 TCcInterbaseAdaptor.BranchVersion Property=id_486
+3 TCcInterbaseAdaptor.DBBranch Property=id_487
+3 TCcInterbaseAdaptor.SQLDialect Property=id_488
+3 TCcInterbaseAdaptor.CheckCustomMetadata Method =id_490
+3 TCcInterbaseAdaptor.CheckExtraCustomMetadata Method =id_491
+3 TCcInterbaseAdaptor.ConvertValue Method =id_492
+3 TCcInterbaseAdaptor.Create Constructor =id_493
+3 TCcInterbaseAdaptor.CreateProcedures Method =id_494
+3 TCcInterbaseAdaptor.DeclareField Method =id_495
+3 TCcInterbaseAdaptor.DeclareGenerator Method =id_496
+3 TCcInterbaseAdaptor.DeclarePK Method =id_497
+3 TCcInterbaseAdaptor.Destroy Destructor =id_498
+3 TCcInterbaseAdaptor.DropProcedures Method =id_499
+3 TCcInterbaseAdaptor.GenDeclared Method =id_500
+3 TCcInterbaseAdaptor.GenerateTriggers Method =id_501
+3 TCcInterbaseAdaptor.GetAdaptorName Method =id_502
+3 TCcInterbaseAdaptor.GetGenerator Method =id_503
+3 TCcInterbaseAdaptor.GetGeneratorValue Method =id_504
+3 TCcInterbaseAdaptor.GetProcParams Method =id_505
+3 TCcInterbaseAdaptor.RemoveCustomMetadata Method =id_506
+3 TCcInterbaseAdaptor.RemoveExtraCustomMetadata Method =id_507
+3 TCcInterbaseAdaptor.RemoveTriggers Method =id_508
+3 TCcInterbaseAdaptor.SQLFormatValue Method =id_509
+3 TCcInterbaseAdaptor.SupportsGenerators Method =id_510
+2 TCcInterbaseConnection Class
+3 TCcInterbaseConnection Class=id_515
+3 TCcInterbaseConnection.CharSet Property=id_522
+3 TCcInterbaseConnection.DBName Property=id_523
+3 TCcInterbaseConnection.DBType Property=id_524
+3 TCcInterbaseConnection.DBVersion Property=id_525
+3 TCcInterbaseConnection.RoleName Property=id_526
+3 TCcInterbaseConnection.SQLDialect Property=id_527
+3 TCcInterbaseConnection.TRParams Property=id_528
+3 TCcInterbaseConnection.UserLogin Property=id_529
+3 TCcInterbaseConnection.UserPassword Property=id_530
+3 TCcInterbaseConnection.Assign Method =id_532
+3 TCcInterbaseConnection.Create Constructor =id_533
+3 TCcInterbaseConnection.Destroy Destructor =id_534
+2 TCcInternalMemoryData Class
+3 TCcInternalMemoryData Class=id_538
+3 TCcInternalMemoryData.Active Property=id_321
+3 TCcInternalMemoryData.AfterCancel Property=id_322
+3 TCcInternalMemoryData.AfterClose Property=id_323
+3 TCcInternalMemoryData.AfterDelete Property=id_324
+3 TCcInternalMemoryData.AfterEdit Property=id_325
+3 TCcInternalMemoryData.AfterInsert Property=id_326
+3 TCcInternalMemoryData.AfterOpen Property=id_327
+3 TCcInternalMemoryData.AfterPost Property=id_328
+3 TCcInternalMemoryData.AfterScroll Property=id_329
+3 TCcInternalMemoryData.BeforeCancel Property=id_330
+3 TCcInternalMemoryData.BeforeClose Property=id_331
+3 TCcInternalMemoryData.BeforeDelete Property=id_332
+3 TCcInternalMemoryData.BeforeEdit Property=id_333
+3 TCcInternalMemoryData.BeforeInsert Property=id_334
+3 TCcInternalMemoryData.BeforeOpen Property=id_335
+3 TCcInternalMemoryData.BeforePost Property=id_336
+3 TCcInternalMemoryData.BeforeScroll Property=id_337
+3 TCcInternalMemoryData.Capacity Property=id_338
+3 TCcInternalMemoryData.OnCalcFields Property=id_339
+3 TCcInternalMemoryData.OnDeleteError Property=id_340
+3 TCcInternalMemoryData.OnEditError Property=id_341
+3 TCcInternalMemoryData.OnFilterRecord Property=id_342
+3 TCcInternalMemoryData.OnNewRecord Property=id_343
+3 TCcInternalMemoryData.OnPostError Property=id_344
+3 TCcInternalMemoryData.BookmarkValid Method =id_351
+3 TCcInternalMemoryData.CompareBookmarks Method =id_352
+3 TCcInternalMemoryData.Create Constructor =id_353
+3 TCcInternalMemoryData.CreateBlobStream Method =id_354
+3 TCcInternalMemoryData.Destroy Destructor =id_355
+3 TCcInternalMemoryData.EmptyTable Method =id_356
+3 TCcInternalMemoryData.GetCurrentRecord Method =id_357
+3 GetFieldData
+4 TCcInternalMemoryData.GetFieldData Method (TField, Pointer)=id_358
+4 TCcInternalMemoryData.GetFieldData Method (TField, TValueBuffer)=id_548
+3 TCcInternalMemoryData.IsSequenced Method 
+4 TCcInternalMemoryData.IsSequenced Method =id_359
+3 TCcInternalMemoryData.Locate Method 
+4 TCcInternalMemoryData.Locate Method =id_360
+3 TCcInternalMemoryData.SaveToDataSet Method 
+4 TCcInternalMemoryData.SaveToDataSet Method =id_361
+3 TCcInternalMemoryData.SortOnFields Method 
+4 TCcInternalMemoryData.SortOnFields Method =id_362
+2 TCcKey Class
+3 TCcKey Class=id_549
+3 TCcKey.DataType Field=id_554
+3 TCcKey.GenericSyncStatement Field=id_555
+3 TCcKey.KeyName Field=id_556
+3 TCcKey.KeyValue Field=id_557
+3 TCcKey.OriginalKeyValue Field=id_558
+3 TCcKey.PrimaryKey Field=id_559
+3 TCcKey.SyncStatement Field=id_560
+2 TCcKeyRing Class
+3 TCcKeyRing Class=id_301
+3 TCcKeyRing.Count Property=id_569
+3 TCcKeyRing.FailIfNoPK Property=id_570
+3 TCcKeyRing.GenericPrimaryKeySync Property=id_571
+3 TCcKeyRing.GenericUniqueKeySync Property=id_572
+3 TCcKeyRing.Keys Property=id_567
+3 TCcKeyRing.PrimaryKeySync Property=id_573
+3 TCcKeyRing.PrimaryKeyValues Property=id_574
+3 TCcKeyRing.TableKeys Property=id_575
+3 TCcKeyRing.TableName Property=id_576
+3 TCcKeyRing.UniqueKeyNames Property=id_577
+3 TCcKeyRing.UniqueKeySync Property=id_578
+3 TCcKeyRing.Clear Method =id_580
+3 TCcKeyRing.ClearTableKeys Method =id_581
+3 TCcKeyRing.Create Constructor =id_582
+3 TCcKeyRing.Destroy Destructor =id_583
+3 TCcKeyRing.FindKey Method =id_584
+3 TCcKeyRing.KeyExists Method =id_585
+3 TCcKeyRing.LoadFromDataSet Method =id_586
+3 TCcKeyRing.LoadKeys Method =id_587
+3 LoadKeysFromDataSet
+4 TCcKeyRing.LoadKeysFromDataSet Method (String, TCcMemoryTable, String, String)=id_588
+4 TCcKeyRing.LoadKeysFromDataSet Method (String, TCcQuery, String, String)=id_595
+3 TCcKeyRing.SaveKeys Method 
+4 TCcKeyRing.SaveKeys Method =id_589
+3 TCcKeyRing.SaveToDataSet Method 
+4 TCcKeyRing.SaveToDataSet Method =id_590
+2 TCcLog Class
+3 TCcLog Class=id_28
+3 TCcLog.Create Constructor =id_605
+3 TCcLog.Destroy Destructor =id_606
+3 TCcLog.FBN Method =id_602
+3 TCcLog.FieldByName Method =id_601
+3 TCcLog.FieldExists Method =id_607
+3 TCcLog.ListChangedFields Method =id_608
+3 TCcLog.Next Method =id_609
+2 TCcLogConfigListener Class
+3 TCcLogConfigListener Class=id_614
+2 TCcLogFile Class
+3 TCcLogFile Class=id_616
+3 TCcLogFile.Create Constructor =id_622
+2 TCcLogFileList Class
+3 TCcLogFileList Class=id_620
+3 TCcLogFileList.Active Property=id_631
+3 TCcLogFileList.ConfigName Property=id_632
+3 TCcLogFileList.ConfigNames Property=id_633
+3 TCcLogFileList.ConfigStorage Property=id_634
+3 TCcLogFileList.Logs Property=id_635
+3 TCcLogFileList.OnLogLine Event=id_637
+3 TCcLogFileList.Clear Method =id_639
+3 TCcLogFileList.Create Constructor =id_640
+3 TCcLogFileList.Destroy Destructor =id_641
+2 TCcMacro Class
+3 TCcMacro Class=id_645
+3 TCcMacro.name Property=id_649
+3 TCcMacro.Value Property=id_650
+2 TCcMemoField Class
+3 TCcMemoField Class=id_653
+3 TCcMemoField.GetAsVariant Method =id_657
+2 TCcMemoryData Class
+3 TCcMemoryData Class=id_7
+3 TCcMemoryData.AddField Method =id_349
+3 TCcMemoryData.SortRows Method =id_350
+2 TCcMemoryField Class
+3 TCcMemoryField Class=id_667
+3 TCcMemoryField.AsString Property=id_672
+3 TCcMemoryField.DataType Property=id_673
+3 TCcMemoryField.FieldName Property=id_674
+3 TCcMemoryField.index Property=id_675
+3 TCcMemoryField.IsNull Property=id_676
+3 TCcMemoryField.Size Property=id_677
+3 TCcMemoryField.Value Property=id_678
+3 TCcMemoryField.Visible Property=id_679
+3 TCcMemoryField.Clear Method =id_680
+3 TCcMemoryField.Create Constructor =id_681
+2 TCcMemoryFields Class
+3 TCcMemoryFields Class=id_684
+3 TCcMemoryFields.Count Property=id_689
+3 TCcMemoryFields.FieldByIndex Property=id_690
+3 TCcMemoryFields.Add Method =id_692
+3 TCcMemoryFields.Clear Method =id_693
+3 TCcMemoryFields.Create Constructor =id_694
+3 TCcMemoryFields.Delete Method =id_695
+3 TCcMemoryFields.Destroy Destructor =id_696
+3 TCcMemoryFields.FieldByName Method =id_697
+3 TCcMemoryFields.FindField Method =id_698
+2 TCcMemoryRow Class
+3 TCcMemoryRow Class=id_701
+3 TCcMemoryRow.Count Property=id_706
+3 TCcMemoryRow.Value Property=id_707
+3 TCcMemoryRow.CopyFrom Method =id_709
+3 TCcMemoryRow.Create Constructor =id_710
+3 TCcMemoryRow.Destroy Destructor =id_711
+2 TCcMemoryTable Class
+3 TCcMemoryTable Class=id_594
+3 TCcMemoryTable.Active Property=id_718
+3 TCcMemoryTable.Bof Property=id_719
+3 TCcMemoryTable.CanCancelEdits Property=id_720
+3 TCcMemoryTable.Eof Property=id_721
+3 TCcMemoryTable.fields Property=id_722
+3 TCcMemoryTable.RecNo Property=id_723
+3 TCcMemoryTable.RecordCount Property=id_724
+3 TCcMemoryTable.AddNewRecord Method =id_726
+3 TCcMemoryTable.Append Method =id_727
+3 TCcMemoryTable.CancelChanges Method =id_728
+3 TCcMemoryTable.CheckActive Method =id_729
+3 TCcMemoryTable.CheckInactive Method =id_730
+3 TCcMemoryTable.Clear Method =id_731
+3 TCcMemoryTable.CopyStructure Method =id_732
+3 TCcMemoryTable.Create Constructor =id_733
+3 TCcMemoryTable.Delete Method =id_734
+3 TCcMemoryTable.Destroy Destructor =id_735
+3 TCcMemoryTable.EditCurrentRecord Method =id_736
+3 TCcMemoryTable.FieldByName Method =id_737
+3 TCcMemoryTable.FindField Method =id_738
+3 TCcMemoryTable.First Method =id_739
+3 TCcMemoryTable.Last Method =id_740
+3 TCcMemoryTable.LoadFromDataSet Method =id_741
+3 TCcMemoryTable.Next Method =id_742
+3 TCcMemoryTable.PostChanges Method =id_743
+3 TCcMemoryTable.Prior Method =id_744
+2 TCcMySQLAdaptor Class
+3 TCcMySQLAdaptor Class=id_747
+3 TCcMySQLAdaptor.CheckCustomMetadata Method =id_753
+3 TCcMySQLAdaptor.ConvertValue Method =id_754
+3 TCcMySQLAdaptor.Create Constructor =id_755
+3 TCcMySQLAdaptor.CreateProcedures Method =id_756
+3 TCcMySQLAdaptor.DeclareField Method =id_757
+3 TCcMySQLAdaptor.DeclareGenerator Method =id_758
+3 TCcMySQLAdaptor.Destroy Destructor =id_759
+3 TCcMySQLAdaptor.DropProcedures Method =id_760
+3 TCcMySQLAdaptor.GenDeclared Method =id_761
+3 TCcMySQLAdaptor.GenerateTriggers Method =id_762
+3 TCcMySQLAdaptor.GetAdaptorName Method =id_763
+3 TCcMySQLAdaptor.GetGenerator Method =id_764
+3 TCcMySQLAdaptor.GetProcParams Method =id_765
+3 TCcMySQLAdaptor.GrantRightsToTable Method =id_766
+3 TCcMySQLAdaptor.RemoveCustomMetadata Method =id_767
+3 TCcMySQLAdaptor.RemoveTriggers Method =id_768
+3 TCcMySQLAdaptor.SQLFormatValue Method =id_769
+3 TCcMySQLAdaptor.SupportsGenerators Method =id_770
+2 TCcNexusDBAdaptor Class
+3 TCcNexusDBAdaptor Class=id_774
+3 TCcNexusDBAdaptor.CheckCustomMetadata Method =id_780
+3 TCcNexusDBAdaptor.ConvertValue Method =id_781
+3 TCcNexusDBAdaptor.Create Constructor =id_782
+3 TCcNexusDBAdaptor.DeclareField Method =id_783
+3 TCcNexusDBAdaptor.DeclarePK Method =id_784
+3 TCcNexusDBAdaptor.Destroy Destructor =id_785
+3 TCcNexusDBAdaptor.GenDeclared Method =id_786
+3 TCcNexusDBAdaptor.GenerateTriggers Method =id_787
+3 TCcNexusDBAdaptor.GetAdaptorName Method =id_788
+3 TCcNexusDBAdaptor.GrantRightsToTable Method =id_789
+3 TCcNexusDBAdaptor.RemoveCustomMetadata Method =id_790
+3 TCcNexusDBAdaptor.RemoveTriggers Method =id_791
+3 TCcNexusDBAdaptor.SQLFormatValue Method =id_792
+3 TCcNexusDBAdaptor.SupportsGenerators Method =id_793
+2 TCcNode Class
+3 TCcNode Class=id_300
+3 TCcNode.ConfigName Property=id_802
+3 TCcNode.Connection Property=id_804
+3 TCcNode.CurrentTableName Property=id_805
+3 TCcNode.Name Property=id_803
+3 TCcNode.Password Property=id_806
+3 TCcNode.Create Constructor =id_807
+3 TCcNode.FindConfigName Method =id_808
+2 TCcNodes Class
+3 TCcNodes Class=id_811
+3 TCcNodes.LocalNode Property=id_816
+3 TCcNodes.RemoteNode Property=id_817
+3 TCcNodes.Create Constructor =id_820
+3 TCcNodes.Destroy Destructor =id_821
+2 TCcPostgresAdaptor Class
+3 TCcPostgresAdaptor Class=id_824
+3 TCcPostgresAdaptor.BranchVersion Property=id_831
+3 TCcPostgresAdaptor.CheckCustomMetadata Method =id_833
+3 TCcPostgresAdaptor.CheckExtraCustomMetadata Method =id_834
+3 TCcPostgresAdaptor.ConvertValue Method =id_835
+3 TCcPostgresAdaptor.Create Constructor =id_836
+3 TCcPostgresAdaptor.CreateProcedures Method =id_837
+3 TCcPostgresAdaptor.DeclareField Method =id_838
+3 TCcPostgresAdaptor.DeclareGenerator Method =id_839
+3 TCcPostgresAdaptor.DeclarePK Method =id_840
+3 TCcPostgresAdaptor.Destroy Destructor =id_841
+3 TCcPostgresAdaptor.DropProcedures Method =id_842
+3 TCcPostgresAdaptor.GenDeclared Method =id_843
+3 TCcPostgresAdaptor.GenerateTriggers Method =id_844
+3 TCcPostgresAdaptor.GetAdaptorName Method =id_845
+3 TCcPostgresAdaptor.GetGenerator Method =id_846
+3 TCcPostgresAdaptor.GetGeneratorValue Method =id_847
+3 TCcPostgresAdaptor.RemoveCustomMetadata Method =id_848
+3 TCcPostgresAdaptor.RemoveExtraCustomMetadata Method =id_849
+3 TCcPostgresAdaptor.RemoveTriggers Method =id_850
+3 TCcPostgresAdaptor.SQLFormatValue Method =id_851
+3 TCcPostgresAdaptor.SupportsGenerators Method =id_852
+3 TCcPostgresAdaptor.UnQuotedIdentifier Method =id_853
+2 TCcProcParams Class
+3 TCcProcParams Class=id_857
+3 TCcProcParams.Create Constructor =id_861
+2 TCcQuery Class
+3 TCcQuery Class=id_4
+3 TCcQuery.Active Property=id_870
+3 TCcQuery.Connection Property=id_871
+3 TCcQuery.Eof Property=id_872
+3 TCcQuery.Field Property=id_874
+3 TCcQuery.FieldByIndex Property=id_875
+3 TCcQuery.FieldCount Property=id_876
+3 TCcQuery.Macro Property=id_877
+3 TCcQuery.MacroCount Property=id_878
+3 TCcQuery.Param Property=id_879
+3 TCcQuery.ParamByIndex Property=id_880
+3 TCcQuery.ParamCheck Property=id_881
+3 TCcQuery.ParamCount Property=id_883
+3 TCcQuery.Prepared Property=id_884
+3 TCcQuery.Properties Property=id_885
+3 TCcQuery.QueryID Property=id_886
+3 TCcQuery.RealSQL Property=id_887
+3 TCcQuery.RecordCount Property=id_888
+3 TCcQuery.RowsAffected Property=id_889
+3 TCcQuery.SelectStatement Property=id_890
+3 TCcQuery.SQL Property=id_882
+3 TCcQuery.CheckInactive Method =id_892
+3 TCcQuery.Close Method =id_893
+3 Create
+4 TCcQuery.Create Constructor (TCcConnection, string, Boolean)=id_894
+4 TCcQuery.Create Constructor (TComponent)=id_907
+3 TCcQuery.Destroy Destructor 
+4 TCcQuery.Destroy Destructor =id_895
+3 TCcQuery.Exec Method 
+4 TCcQuery.Exec Method =id_896
+3 TCcQuery.FieldExists Method 
+4 TCcQuery.FieldExists Method =id_897
+3 TCcQuery.FindField Method 
+4 TCcQuery.FindField Method =id_898
+3 TCcQuery.FindMacro Method 
+4 TCcQuery.FindMacro Method =id_899
+3 TCcQuery.FindParam Method 
+4 TCcQuery.FindParam Method =id_900
+3 TCcQuery.MacroExists Method 
+4 TCcQuery.MacroExists Method =id_901
+3 TCcQuery.Next Method 
+4 TCcQuery.Next Method =id_873
+3 TCcQuery.ParamExists Method 
+4 TCcQuery.ParamExists Method =id_902
+3 TCcQuery.Prepare Method 
+4 TCcQuery.Prepare Method =id_903
+3 TCcQuery.UnPrepare Method 
+4 TCcQuery.UnPrepare Method =id_904
+2 TCcQueryClient Class
+3 TCcQueryClient Class=id_908
+3 TCcQueryClient.Transport Property=id_913
+3 TCcQueryClient.Create Constructor =id_915
+3 TCcQueryClient.Destroy Destructor =id_916
+2 TCcRecord Class
+3 TCcRecord Class=id_365
+3 TCcRecord.Count Property=id_923
+3 TCcRecord.FieldName Property=id_924
+3 TCcRecord.Value Property=id_925
+3 TCcRecord.Add Method =id_927
+3 TCcRecord.Clear Method =id_928
+3 TCcRecord.Create Constructor =id_929
+3 TCcRecord.Destroy Destructor =id_930
+3 TCcRecord.FieldExists Method =id_931
+2 TCcReplicator Class
+3 TCcReplicator Class=id_2
+3 TCcReplicator.LastResult Field=id_947
+3 TCcReplicator.AbortOnError Property=id_941
+3 TCcReplicator.AutoClearMetadata Property=id_949
+3 TCcReplicator.AutoCommit Property=id_105
+3 TCcReplicator.AutoPriority Property=id_950
+3 TCcReplicator.AutoReplicate Property=id_63
+3 TCcReplicator.BeforeReplicate Event=id_977
+3 TCcReplicator.Busy Property=id_951
+3 TCcReplicator.Closing Property=id_952
+3 TCcReplicator.CommitOnFinished Property=id_953
+3 TCcReplicator.ConfigurationName Property=id_954
+3 TCcReplicator.Direction Property=id_956
+3 TCcReplicator.EmptyStringsToNull Property=id_957
+3 TCcReplicator.ExtraFields Property=id_958
+3 TCcReplicator.FailIfNoPK Property=id_959
+3 TCcReplicator.Finished Property=id_960
+3 TCcReplicator.HarmonizeFields Property=id_961
+3 TCcReplicator.KeepConnection Property=id_962
+3 TCcReplicator.LocalDB Property=id_963
+3 TCcReplicator.LocalNode Property=id_964
+3 TCcReplicator.Log Property=id_603
+3 TCcReplicator.LogErrors Property=id_965
+3 TCcReplicator.MergeChangedFieldsOnConflict Property=id_966
+3 TCcReplicator.Nodes Property=id_13
+3 TCcReplicator.OnAutoCommit Event=id_978
+3 TCcReplicator.OnCanReplicate Event=id_979
+3 TCcReplicator.OnCommit Event=id_980
+3 TCcReplicator.OnConflict Event=id_981
+3 TCcReplicator.OnConnectionLost Event=id_982
+3 TCcReplicator.OnConnectLocal Event=id_983
+3 TCcReplicator.OnConnectRemote Event=id_984
+3 TCcReplicator.OnDisconnect Event=id_985
+3 TCcReplicator.OnEmptyLog Event=id_986
+3 TCcReplicator.OnException Event=id_942
+3 TCcReplicator.OnFinished Event=id_987
+3 TCcReplicator.OnGenReplError Event=id_988
+3 TCcReplicator.OnGenReplicating Event=id_989
+3 TCcReplicator.OnGetExtraFieldValue Event=id_990
+3 TCcReplicator.OnGetFields Event=id_991
+3 TCcReplicator.OnKeySynchronized Event=id_992
+3 TCcReplicator.OnLogLoaded Event=id_993
+3 TCcReplicator.OnProgress Event=id_943
+3 TCcReplicator.OnQueryDone Event=id_994
+3 TCcReplicator.OnReplicateProc Event=id_995
+3 TCcReplicator.OnReplicationAborted Event=id_996
+3 TCcReplicator.OnReplicationError Event=id_940
+3 TCcReplicator.OnReplicationResult Property=id_967
+3 TCcReplicator.OnResolveConflict Event=id_16
+3 TCcReplicator.OnRowBeforeReplicate Event=id_997
+3 TCcReplicator.OnRowReplFinishing Event=id_998
+3 TCcReplicator.OnRowReplicated Event=id_999
+3 TCcReplicator.OnRowReplicating Event=id_1000
+3 TCcReplicator.OnRowReplicatingError Event=id_1001
+3 TCcReplicator.OnRowReplicatingQuery Event=id_1002
+3 TCcReplicator.OnTableBegin Event=id_1003
+3 TCcReplicator.OnTableEnd Event=id_1004
+3 TCcReplicator.RecordChunks Property=id_968
+3 TCcReplicator.RemoteDB Property=id_969
+3 TCcReplicator.RemoteNode Property=id_970
+3 TCcReplicator.ReplicateOnlyChangedFields Property=id_222
+3 TCcReplicator.TableMapping Property=id_971
+3 TCcReplicator.TraceEvents Property=id_972
+3 TCcReplicator.TrimCharFields Property=id_973
+3 TCcReplicator.UsePKSynchronization Property=id_974
+3 TCcReplicator.Version Property=id_975
+3 TCcReplicator.AbortReplication Method =id_944
+3 TCcReplicator.BatchImport Method =id_1006
+3 TCcReplicator.ClearMetadataCache Method =id_1007
+3 TCcReplicator.Connect Method =id_1008
+3 Create
+4 TCcReplicator.Create Constructor (TComponent)=id_1009
+4 TCcReplicator.Create Constructor (TComponent, string)=id_1064
+3 TCcReplicator.Destroy Destructor 
+4 TCcReplicator.Destroy Destructor =id_1010
+3 TCcReplicator.Disconnect Method 
+4 TCcReplicator.Disconnect Method =id_1011
+3 TCcReplicator.GetLocalTableName Method 
+4 TCcReplicator.GetLocalTableName Method =id_1012
+3 TCcReplicator.GetRemoteTableName Method 
+4 TCcReplicator.GetRemoteTableName Method =id_1013
+3 TCcReplicator.GetWhereValues Method 
+4 TCcReplicator.GetWhereValues Method =id_1014
+3 TCcReplicator.RefreshDisplay Method 
+4 TCcReplicator.RefreshDisplay Method =id_1015
+3 TCcReplicator.Replicate Method 
+4 TCcReplicator.Replicate Method =id_939
+3 TCcReplicator.SynchronizeRows Method 
+4 TCcReplicator.SynchronizeRows Method =id_1016
+2 TCcReplicatorList Class
+3 TCcReplicatorList Class=id_955
+3 TCcReplicatorList.BeforeReplicate Event=id_1072
+3 TCcReplicatorList.ConfigNames Property=id_1099
+3 TCcReplicatorList.CurrentReplicator Property=id_1100
+3 TCcReplicatorList.OnAbort Event=id_1073
+3 TCcReplicatorList.OnAutoCommit Event=id_1074
+3 TCcReplicatorList.OnCommit Event=id_1075
+3 TCcReplicatorList.OnConflict Event=id_1076
+3 TCcReplicatorList.OnConnectionLost Event=id_1077
+3 TCcReplicatorList.OnConnectLocal Event=id_1078
+3 TCcReplicatorList.OnConnectRemote Event=id_1079
+3 TCcReplicatorList.OnDisconnect Event=id_1080
+3 TCcReplicatorList.OnEmptyLog Event=id_1081
+3 TCcReplicatorList.OnException Event=id_1082
+3 TCcReplicatorList.OnFinished Event=id_1083
+3 TCcReplicatorList.OnGenReplError Event=id_1084
+3 TCcReplicatorList.OnGenReplicated Event=id_1085
+3 TCcReplicatorList.OnGenReplicating Event=id_1086
+3 TCcReplicatorList.OnGetFields Event=id_1087
+3 TCcReplicatorList.OnLogLoaded Event=id_1088
+3 TCcReplicatorList.OnProgress Event=id_1089
+3 TCcReplicatorList.OnQueryDone Event=id_1090
+3 TCcReplicatorList.OnReplicateProc Event=id_1091
+3 TCcReplicatorList.OnReplicationError Event=id_1092
+3 TCcReplicatorList.OnRowBeforeReplicate Event=id_1093
+3 TCcReplicatorList.OnRowReplicated Event=id_1094
+3 TCcReplicatorList.OnRowReplicating Event=id_1095
+3 TCcReplicatorList.OnTableBegin Event=id_1096
+3 TCcReplicatorList.OnTableEnd Event=id_1097
+3 TCcReplicatorList.ReplicatorCount Property=id_1101
+3 TCcReplicatorList.Replicators Property=id_1102
+3 TCcReplicatorList.Create Constructor =id_1104
+3 TCcReplicatorList.Destroy Destructor =id_1105
+2 TCcServerTransport Class
+3 TCcServerTransport Class=id_181
+3 TCcServerTransport.Connection Property=id_1112
+3 TCcServerTransport.DatabaseAlias Property=id_182
+3 TCcServerTransport.OnCloseSession Event=id_1119
+3 TCcServerTransport.OnNewSession Event=id_1120
+3 TCcServerTransport.Password Property=id_184
+3 TCcServerTransport.Session Property=id_1115
+3 TCcServerTransport.SessionCount Property=id_1116
+3 TCcServerTransport.SessionTimeout Property=id_1117
+3 TCcServerTransport.Create Constructor =id_1122
+3 TCcServerTransport.Destroy Destructor =id_1123
+3 TCcServerTransport.FindSession Method =id_1124
+3 TCcServerTransport.StartServer Method =id_1113
+3 TCcServerTransport.StopServer Method =id_1125
+2 TCcSession Class
+3 TCcSession Class=id_1129
+3 TCcSession.ClientCopyCatVersion Property=id_1134
+3 TCcSession.Connection Property=id_1135
+3 TCcSession.SessionID Property=id_1136
+3 TCcSession.Create Constructor =id_1138
+3 TCcSession.Destroy Destructor =id_1139
+2 TCcSQLiteAdaptor Class
+3 TCcSQLiteAdaptor Class=id_1142
+3 TCcSQLiteAdaptor.CheckCustomMetadata Method =id_1148
+3 TCcSQLiteAdaptor.ConvertValue Method =id_1149
+3 TCcSQLiteAdaptor.Create Constructor =id_1150
+3 TCcSQLiteAdaptor.DeclareField Method =id_1151
+3 TCcSQLiteAdaptor.Destroy Destructor =id_1152
+3 TCcSQLiteAdaptor.GenDeclared Method =id_1153
+3 TCcSQLiteAdaptor.GenerateTriggers Method =id_1154
+3 TCcSQLiteAdaptor.GetAdaptorName Method =id_1155
+3 TCcSQLiteAdaptor.GrantRightsToTable Method =id_1156
+3 TCcSQLiteAdaptor.RemoveTriggers Method =id_1157
+3 TCcSQLiteAdaptor.SQLFormatValue Method =id_1158
+3 TCcSQLiteAdaptor.SupportsGenerators Method =id_1159
+2 TCcSqlParser Class
+3 TCcSqlParser Class=id_1163
+3 TCcSqlParser.Offset Property=id_1168
+3 TCcSqlParser.QuoteCount Property=id_1169
+3 TCcSqlParser.Token Property=id_1170
+3 TCcSqlParser.TokenChar Property=id_1171
+3 TCcSqlParser.TokenCount Property=id_1172
+3 TCcSqlParser.Create Constructor =id_1174
+3 TCcSqlParser.Destroy Destructor =id_1175
+3 TCcSqlParser.Parse Method =id_1176
+2 TCcSQLServerAdaptor Class
+3 TCcSQLServerAdaptor Class=id_1179
+3 TCcSQLServerAdaptor.CheckCustomMetadata Method =id_1186
+3 TCcSQLServerAdaptor.Create Constructor =id_1187
+3 TCcSQLServerAdaptor.CreateProcedures Method =id_1188
+3 TCcSQLServerAdaptor.DeclareField Method =id_1189
+3 TCcSQLServerAdaptor.DeclareGenerator Method =id_1190
+3 TCcSQLServerAdaptor.Destroy Destructor =id_1191
+3 TCcSQLServerAdaptor.DropProcedures Method =id_1192
+3 TCcSQLServerAdaptor.GenDeclared Method =id_1193
+3 TCcSQLServerAdaptor.GenerateTriggers Method =id_1194
+3 TCcSQLServerAdaptor.GetAdaptorName Method =id_1195
+3 TCcSQLServerAdaptor.GetGenerator Method =id_1196
+3 TCcSQLServerAdaptor.GetGeneratorValue Method =id_1197
+3 TCcSQLServerAdaptor.RemoveCustomMetadata Method =id_1198
+3 TCcSQLServerAdaptor.RemoveTriggers Method =id_1199
+3 TCcSQLServerAdaptor.SQLFormatValue Method =id_1200
+3 TCcSQLServerAdaptor.SupportsGenerators Method =id_1201
+2 TCcStringList Class
+3 TCcStringList Class=id_250
+3 TCcStringList.SQLCommaText Property=id_1206
+2 TCcValue Class
+3 TCcValue Class=id_98
+3 TCcValue.AsArray Property=id_1212
+3 TCcValue.AsField Property=id_1213
+3 TCcValue.Value Property=id_1214
+3 TCcValue.ValueType Property=id_1215
+3 TCcValue.Assign Method =id_1217
+3 TCcValue.Clear Method =id_1218
+3 TCcValue.Create Constructor =id_1219
+3 TCcValue.Destroy Destructor =id_1220
+3 TCcValue.SetValueAsType Method =id_1221
+2 TCcWideMemoField Class
+3 TCcWideMemoField Class=id_1225
+2 TPeriodicity Class
+3 TPeriodicity Class=id_59
+3 TPeriodicity.Frequency Property=id_65
+3 TPeriodicity.Create Constructor =id_67
+3 TPeriodicity.Destroy Destructor =id_68
+3 TPeriodicity.Start Method =id_61
+3 TPeriodicity.Stop Method =id_62
+1 Functions
+2 ExtractItemsInCommon Function=id_1233
+2 GetDBConnectorClass Function=id_1235
+2 ParseKeyValues Function=id_1237
+2 ReadBinaryStream Function=id_1238
+2 RegisterDBConnector Function=id_1239
+2 RemoveItemsInCommon Function=id_1240
+2 RxAssignRecord Function=id_1241
+2 WriteBinaryStream Function=id_1242
+1 Structs, Records, Enums
+2 TCcCommitType Enumeration=id_110
+2 TCcFieldType Record=id_1243
+2 TCcInterbaseBranch Enumeration=id_513
+2 TCcKeyOrigin Enumeration=id_593
+2 TCcLogState Enumeration=id_1244
+2 TCcQueryResult Enumeration=id_1245
+2 TCcQueryType Enumeration=id_1246
+2 TCcRemoteFunction Enumeration=id_1247
+2 TCcReplicationResult Record=id_1020
+2 TCcReplicationResultType Enumeration=id_1248
+2 TCcSyncDirection Enumeration=id_1025
+2 TCcSysTable Enumeration=id_1249
+2 TCcTraceType Enumeration=id_1061
+2 TCcValueType Enumeration=id_1224
+2 TConflictRecord Record=id_17
+1 Files
+2 CCat.pas=id_1234
+2 CcConf.pas=id_185
+2 CcConflictMgr.pas=id_261
+2 CcDB.pas=id_83
+2 CcEditors.pas=id_415
+2 CcInterbase.pas=id_480
+2 CcInterbaseConn.pas=id_516
+2 CcKeys.pas=id_550
+2 CcLog.pas=id_596
+2 CcMemDS.pas=id_539
+2 CcMySQL.pas=id_748
+2 CcNexusDB.pas=id_775
+2 CcOracle.pas=id_1296
+2 CcPostgres.pas=id_825
+2 CcProviders.pas=id_34
+2 CcReplicator.pas=id_44
+2 CcRplList.pas=id_615
+2 CcSQLite.pas=id_1143
+2 CcSQLServer.pas=id_1180
+2 CcTransports.pas=id_112

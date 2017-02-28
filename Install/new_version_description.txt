@@ -1,0 +1,42 @@
+Microtec is pleased to announce a new release of our database replication engine, CopyCat Developer !
+
+CopyCat Developer is a set of Delphi / C++Builder components providing customizable replication for Firebird, Interbase, Microsoft SQL Server, MySQL, NexusDB, SQLite, PostgreSQL and Oracle, including heteogenous replication between different database types.
+
+Have a look at our site for more information : http://www.copycat.fr
+
+This new release includes the following improvements: 
+
+* PostgreSQL support
+
+* Oracle support
+
+* TCcConfig 
+  - Raise error if ConfigName property is set while connection is open.
+  - Fixed bug that caused incorrect priority numbers to be inserted into RPL$TABLES
+  - Automatically grant full rights to system tables created by CopyCat for all users 
+  - New ConnectAndRemoveConfig method allows to totally remove all CopyCat triggers and system tables from the database. This can be particularly useful when upgrading from an old version of CopyCat, so as to ensure that the tables are created correctly and up-to-date.
+
+* TCcConnection : On databases that support quoted meta-data, we now always quote all meta-data identifiers (table names, field names, etc), which means that if any reserverd words or spaces are used in the names, it causes no trouble during replication.
+
+* TCcReplicator 
+  - Replication log counters (line number and total number of rows to replicate) are now cleared correctly after a call to AbortReplication or a connection loss (previously, they would be reset only on new connection).
+  - Fixed bug causing null values in ftWideString and ftWideMemo fields to get changed to '' (empty string) during replication.
+  - Fixed a bug causing the AutoReplicate property to be disabled after a lost connection
+  - For Firebird / Interbase dialect 1 databases (which do not support quoted meta-data), fields using reserved keywords as names are excluded from replication.
+
+
+* SQLite : Fixed bug in SQLite adaptor causing dates to be parsed wrong when using FireDAC connector in recent Delphi versions
+
+
+* Transport layer : 
+  - Improved error reporting with clearer error message when connection gets dropped.
+  - Improved parameter type detection of null parameters, particularly useful when dealing with SQLite.
+
+
+* XMLRPC Transport : Fixed bug that caused an access violation when using Delphi XE.
+
+* FireDAC connector : Improved parameter datatype detection when replicating with FireDAC connector, solving issues with "Data type unknown" errors, particularly when replicating to or from SQLite.
+
+* DataSnap Transport : 
+  - Support for blob fields
+  - Various bugfixes

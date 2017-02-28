@@ -1,0 +1,467 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN">
+<html>
+<head>
+<title>TCcLogFileList Class</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+    <meta name="generator" content="Doc-O-Matic" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <link rel="STYLESHEET" href="default.css" type="text/css" />
+
+<script type="text/javascript" src="scripts.js"></script>
+</head>
+<body class="Element700" onload="onBodyLoadEx('frames.html', 'topic', 'TCcLogFileList.html');" onmousedown="onBodyMouseDown();">
+
+<!-- Begin Popups -->
+<div class="Element801" id="popup00370">
+<div class="Element800">
+<div class="Element14">
+Links</div>
+<div class="Element11">
+<div class="Element10">
+<a href="CcRplList_pas.html" target="topic">CcRplList</a>, <a href="_TCcLogFileList_14_Properties.html" target="topic">Properties</a>, <a href="_TCcLogFileList_14_Methods.html" target="topic">Methods</a>, <a href="_TCcLogFileList_14_Events.html" target="topic">Events</a>, <a href="_TCcLogFileList_14_Legend.html" target="topic">Legend</a></div>
+</div>
+</div>
+</div>
+
+<!-- End Popups -->
+
+<!-- Begin Page Header -->
+<div class="Element710" id="areafixed">
+<div class="Element92">
+<table width="100%" cellspacing="0" cellpadding="0">
+<tr><td width="33%">
+<div class="Element1">
+<a href="#" onmousedown="showPopup(this, 'popup00370');"><img src="seealsolink.png" border="0" alt=""></a> <a href="http://www.copycat.fr" target="new_page"><img src="copycat_70x70.png"><h3>CopyCat Developer Tools</h3></img></a></div>
+</td><td width="34%">
+<div class="Element2">
+<a href="contents.html" target="tocidx">Contents</a> | <a href="idx.html" target="tocidx">Index</a></div>
+</td><td width="33%">
+<div class="Element90">
+<a href="TCcLogFile.html" target="topic">Previous</a> | <a href="TCcMacro.html" target="topic">Next</a></div>
+</td></tr></table><div class="Element5">
+TCcLogFileList Class</div>
+<div class="Element7">
+<a href="CcRplList_pas.html" target="topic">CcRplList</a> | <a href="_TCcLogFileList_14_Properties.html" target="topic">Properties</a> | <a href="_TCcLogFileList_14_Methods.html" target="topic">Methods</a> | <a href="_TCcLogFileList_14_Events.html" target="topic">Events</a> | <a href="_TCcLogFileList_14_Legend.html" target="topic">Legend</a></div>
+<div class="Element730">
+<a href="#" onclick="showAllElements();">Show All</a></div>
+</div>
+</div>
+
+<!-- End Page Header -->
+
+<!-- Begin Client Area -->
+<div class="Element720" id="areascroll">
+<div class="Element721">
+
+<!-- Begin Page Content -->
+<div class="Element58">
+<div class="Element11">
+<div class="Element10">
+<p class="Element10">
+TCcLogFileList is a TDataSet descendant designed to internally hold a list of replication log files (datasets), while displaying at all times the contents of the currently selected configuration in the associated TCcConfigStorage.</p></div>
+</div>
+<div class="Element14">
+<a onclick="toggleVisibilityStored('Class_Hierarchy');" class="a_Element14"><img src="sectionminus.png" border="0" alt="sectionminus.png" id="imgClass_Hierarchy">Class Hierarchy</a></div>
+<div id="divClass_Hierarchy">
+<div class="Element151"><div class="Element150"><pre class="Element150"><img src="TCcLogFileList.png" border="0" alt="" usemap="#TCcLogFileList"><map class="Element150" name="TCcLogFileList"><area class="Element150" shape="rect" coords="88,0,210,15" href="TCcInternalMemoryData.html"><area class="Element150" shape="rect" coords="240,0,330,15" href="TCcMemoryData.html"><area class="Element150" shape="rect" coords="360,0,437,15" href="TCcLogFileList.html"></map></pre></div></div>
+</div>
+<div class="Element101"><div class="Element100"><pre class="Element100">TCcLogFileList = <strong>class</strong>(<a href="TCcMemoryData.html" target="topic">TCcMemoryData</a>);</pre></div></div>
+<div class="Element101"><div class="Element100"><pre class="Element100"><strong>class</strong> TCcLogFileList : <strong>public</strong> <a href="TCcMemoryData.html" target="topic">TCcMemoryData</a>;</pre></div></div>
+<div class="Element14">
+<a onclick="toggleVisibilityStored('File');" class="a_Element14"><img src="sectionminus.png" border="0" alt="sectionminus.png" id="imgFile">File</a></div>
+<div id="divFile">
+<div class="Element11">
+<div class="Element10">
+<p class="Element10">
+<a href="CcRplList_pas.html" target="topic">CcRplList</a></p></div>
+</div>
+</div>
+<div class="Element14">
+<a onclick="toggleVisibilityStored('Events');" class="a_Element14"><img src="sectionminus.png" border="0" alt="sectionminus.png" id="imgEvents">Events</a></div>
+<div id="divEvents">
+<div class="Element11">
+<div class="Element10">
+<div class="Element212">
+<div class="TableDiv">
+<table cellspacing="0" class="Table1">
+<tr>
+<td class="Element200" valign="top" width="50%">
+<div class="Element201">
+Event&nbsp;</div></td><td class="Element204" valign="top" width="50%">
+<div class="Element205">
+Description&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_event.png" border="0" alt=""> <a href="TCcLogFileList_OnLogLine.html" target="topic">OnLogLine</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+&nbsp;</div></td></tr></table></div></div>
+</div>
+</div>
+</div>
+<div class="Element14">
+<a onclick="toggleVisibilityStored('Methods');" class="a_Element14"><img src="sectionminus.png" border="0" alt="sectionminus.png" id="imgMethods">Methods</a></div>
+<div id="divMethods">
+<div class="Element11">
+<div class="Element10">
+<div class="Element212">
+<div class="TableDiv">
+<table cellspacing="0" class="Table1">
+<tr>
+<td class="Element200" valign="top" width="50%">
+<div class="Element201">
+Method&nbsp;</div></td><td class="Element204" valign="top" width="50%">
+<div class="Element205">
+Description&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_method.png" border="0" alt=""> <a href="TCcLogFileList_Clear.html" target="topic">Clear</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_method.png" border="0" alt=""><img src="indicator_virtual.png" border="0" alt=""> <a href="TCcLogFileList_Create@TComponent.html" target="topic">Create</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_method.png" border="0" alt=""><img src="indicator_virtual.png" border="0" alt=""> <a href="TCcLogFileList_Destroy.html" target="topic">Destroy</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+&nbsp;</div></td></tr></table></div></div>
+<div class="Element215">
+TCcMemoryData Class</div>
+<div class="Element212">
+<div class="TableDiv">
+<table cellspacing="0" class="Table1">
+<tr>
+<td class="Element200" valign="top" width="50%">
+<div class="Element201">
+Method&nbsp;</div></td><td class="Element204" valign="top" width="50%">
+<div class="Element205">
+Description&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_method.png" border="0" alt=""> <a href="TCcMemoryData_AddField@string@TFieldType@Integer.html" target="topic">AddField</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_method.png" border="0" alt=""> <a href="TCcMemoryData_SortRows@string@Boolean.html" target="topic">SortRows</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+&nbsp;</div></td></tr></table></div></div>
+<div class="Element215">
+TCcInternalMemoryData Class</div>
+<div class="Element212">
+<div class="TableDiv">
+<table cellspacing="0" class="Table1">
+<tr>
+<td class="Element200" valign="top" width="50%">
+<div class="Element201">
+Method&nbsp;</div></td><td class="Element204" valign="top" width="50%">
+<div class="Element205">
+Description&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_method.png" border="0" alt=""><img src="indicator_virtual.png" border="0" alt=""> <a href="TCcInternalMemoryData_BookmarkValid@TBookmark.html" target="topic">BookmarkValid</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_method.png" border="0" alt=""><img src="indicator_virtual.png" border="0" alt=""> <a href="TCcInternalMemoryData_CompareBookmarks@TBookmark@TBookmark.html" target="topic">CompareBookmarks</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_method.png" border="0" alt=""><img src="indicator_virtual.png" border="0" alt=""> <a href="TCcInternalMemoryData_Create@TComponent.html" target="topic">Create</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_method.png" border="0" alt=""><img src="indicator_virtual.png" border="0" alt=""> <a href="TCcInternalMemoryData_CreateBlobStream@TField@TBlobStreamMode.html" target="topic">CreateBlobStream</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_method.png" border="0" alt=""><img src="indicator_virtual.png" border="0" alt=""> <a href="TCcInternalMemoryData_Destroy.html" target="topic">Destroy</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_method.png" border="0" alt=""> <a href="TCcInternalMemoryData_EmptyTable.html" target="topic">EmptyTable</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_method.png" border="0" alt=""><img src="indicator_virtual.png" border="0" alt=""> <a href="TCcInternalMemoryData_GetCurrentRecord@PCcMemBuffer.html" target="topic">GetCurrentRecord</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_method.png" border="0" alt=""><img src="indicator_virtual.png" border="0" alt=""> <a href="TCcInternalMemoryData_GetFieldData@TField@Pointer.html" target="topic">GetFieldData</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_method.png" border="0" alt=""><img src="indicator_virtual.png" border="0" alt=""> <a href="TCcInternalMemoryData_IsSequenced.html" target="topic">IsSequenced</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_method.png" border="0" alt=""><img src="indicator_virtual.png" border="0" alt=""> <a href="TCcInternalMemoryData_Locate@string@Variant@TLocateOptions.html" target="topic">Locate</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_method.png" border="0" alt=""> <a href="TCcInternalMemoryData_SaveToDataSet@TDataSet@Integer.html" target="topic">SaveToDataSet</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_method.png" border="0" alt=""> <a href="TCcInternalMemoryData_SortOnFields@string@Boolean@Boolean.html" target="topic">SortOnFields</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+&nbsp;</div></td></tr></table></div></div>
+</div>
+</div>
+</div>
+<div class="Element14">
+<a onclick="toggleVisibilityStored('Properties');" class="a_Element14"><img src="sectionminus.png" border="0" alt="sectionminus.png" id="imgProperties">Properties</a></div>
+<div id="divProperties">
+<div class="Element11">
+<div class="Element10">
+<div class="Element212">
+<div class="TableDiv">
+<table cellspacing="0" class="Table1">
+<tr>
+<td class="Element200" valign="top" width="50%">
+<div class="Element201">
+Property&nbsp;</div></td><td class="Element204" valign="top" width="50%">
+<div class="Element205">
+Description&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_property.png" border="0" alt=""> <a href="TCcLogFileList_Active.html" target="topic">Active</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_property.png" border="0" alt=""> <a href="TCcLogFileList_ConfigName.html" target="topic">ConfigName</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_property.png" border="0" alt=""><img src="indicator_readonly.png" border="0" alt=""> <a href="TCcLogFileList_ConfigNames.html" target="topic">ConfigNames</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_property.png" border="0" alt=""> <a href="TCcLogFileList_ConfigStorage.html" target="topic">ConfigStorage</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_property.png" border="0" alt=""><img src="indicator_readonly.png" border="0" alt=""> <a href="TCcLogFileList_Logs.html" target="topic">Logs</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+&nbsp;</div></td></tr></table></div></div>
+<div class="Element215">
+TCcInternalMemoryData Class</div>
+<div class="Element212">
+<div class="TableDiv">
+<table cellspacing="0" class="Table1">
+<tr>
+<td class="Element200" valign="top" width="50%">
+<div class="Element201">
+Property&nbsp;</div></td><td class="Element204" valign="top" width="50%">
+<div class="Element205">
+Description&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_property.png" border="0" alt=""> <a href="TCcInternalMemoryData_Active.html" target="topic">Active</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_property.png" border="0" alt=""> <a href="TCcInternalMemoryData_AfterCancel.html" target="topic">AfterCancel</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_property.png" border="0" alt=""> <a href="TCcInternalMemoryData_AfterClose.html" target="topic">AfterClose</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_property.png" border="0" alt=""> <a href="TCcInternalMemoryData_AfterDelete.html" target="topic">AfterDelete</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_property.png" border="0" alt=""> <a href="TCcInternalMemoryData_AfterEdit.html" target="topic">AfterEdit</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_property.png" border="0" alt=""> <a href="TCcInternalMemoryData_AfterInsert.html" target="topic">AfterInsert</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_property.png" border="0" alt=""> <a href="TCcInternalMemoryData_AfterOpen.html" target="topic">AfterOpen</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_property.png" border="0" alt=""> <a href="TCcInternalMemoryData_AfterPost.html" target="topic">AfterPost</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_property.png" border="0" alt=""> <a href="TCcInternalMemoryData_AfterScroll.html" target="topic">AfterScroll</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_property.png" border="0" alt=""> <a href="TCcInternalMemoryData_BeforeCancel.html" target="topic">BeforeCancel</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_property.png" border="0" alt=""> <a href="TCcInternalMemoryData_BeforeClose.html" target="topic">BeforeClose</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_property.png" border="0" alt=""> <a href="TCcInternalMemoryData_BeforeDelete.html" target="topic">BeforeDelete</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_property.png" border="0" alt=""> <a href="TCcInternalMemoryData_BeforeEdit.html" target="topic">BeforeEdit</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_property.png" border="0" alt=""> <a href="TCcInternalMemoryData_BeforeInsert.html" target="topic">BeforeInsert</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_property.png" border="0" alt=""> <a href="TCcInternalMemoryData_BeforeOpen.html" target="topic">BeforeOpen</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_property.png" border="0" alt=""> <a href="TCcInternalMemoryData_BeforePost.html" target="topic">BeforePost</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_property.png" border="0" alt=""> <a href="TCcInternalMemoryData_BeforeScroll.html" target="topic">BeforeScroll</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_property.png" border="0" alt=""> <a href="TCcInternalMemoryData_Capacity.html" target="topic">Capacity</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_property.png" border="0" alt=""> <a href="TCcInternalMemoryData_OnCalcFields.html" target="topic">OnCalcFields</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_property.png" border="0" alt=""> <a href="TCcInternalMemoryData_OnDeleteError.html" target="topic">OnDeleteError</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_property.png" border="0" alt=""> <a href="TCcInternalMemoryData_OnEditError.html" target="topic">OnEditError</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_property.png" border="0" alt=""> <a href="TCcInternalMemoryData_OnFilterRecord.html" target="topic">OnFilterRecord</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_property.png" border="0" alt=""> <a href="TCcInternalMemoryData_OnNewRecord.html" target="topic">OnNewRecord</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_property.png" border="0" alt=""> <a href="TCcInternalMemoryData_OnPostError.html" target="topic">OnPostError</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+&nbsp;</div></td></tr></table></div></div>
+</div>
+</div>
+</div>
+<div class="Element14">
+<a onclick="toggleVisibilityStored('Legend');" class="a_Element14"><img src="sectionminus.png" border="0" alt="sectionminus.png" id="imgLegend">Legend</a></div>
+<div id="divLegend">
+<div class="Element11">
+<div class="Element10">
+<div class="Element212">
+<div class="TableDiv">
+<table cellspacing="0" class="Table3">
+<tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_property.png" border="0" alt="">&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Property&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_readonly.png" border="0" alt="">&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+read only&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_event.png" border="0" alt="">&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Event&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_method.png" border="0" alt="">&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Method&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_virtual.png" border="0" alt="">&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+virtual&nbsp;</div></td></tr></table></div></div>
+</div>
+</div>
+</div>
+<div class="Element14">
+<a onclick="toggleVisibilityStored('Links');" class="a_Element14"><img src="sectionminus.png" border="0" alt="sectionminus.png" id="imgLinks">Links</a></div>
+<div id="divLinks">
+<div class="Element11">
+<div class="Element10">
+<a href="CcRplList_pas.html" target="topic">CcRplList</a>, <a href="_TCcLogFileList_14_Properties.html" target="topic">Properties</a>, <a href="_TCcLogFileList_14_Methods.html" target="topic">Methods</a>, <a href="_TCcLogFileList_14_Events.html" target="topic">Events</a>, <a href="_TCcLogFileList_14_Legend.html" target="topic">Legend</a></div>
+</div>
+</div>
+<div class="Element62">
+Created with a commercial version of <a href="http://www.doc-o-matic.com">Doc-O-Matic</a>. In order to make this message disappear you need to register this software. If you have problems registering this software please contact us at <a href="mailto:support@toolsfactory.com">support@toolsfactory.com</a>.</div>
+</div>
+<!-- End Page Content -->
+
+<!-- Begin Page Footer -->
+<div class="Element93">
+<table width="100%" cellspacing="0" cellpadding="0">
+<tr><td width="100%">
+<div class="Element3">
+Copyright (c) 2015. All rights reserved. http://www.copycat.fr</div>
+</td></tr><tr><td width="100%">
+<div class="Element4">
+<a href="contents.html" target="tocidx">Contents</a> | <a href="idx.html" target="tocidx">Index</a></div>
+</td></tr><tr><td width="100%">
+<div class="Element97">
+What do you think about this topic?  Send feedback through our <a href="http://copycat.fr/wordpress/contact-us/" target="new_page">contact form</a></div>
+</td></tr></table></div>
+
+<!-- End Page Footer -->
+</div>
+</div>
+
+<!-- End Client Area -->
+</body></html>

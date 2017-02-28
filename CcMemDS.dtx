@@ -1,0 +1,46 @@
+
+@@_DBError@string
+Utility routines
+
+@@CcMemDS.pas
+<b>CopyCat replication suite</b>
+
+ Copyright (c) 2005 Microtec Communications. For any questions
+ or technical support, contact Jonathan Neve
+ (jonathan@microtec.fr)
+
+
+
+ Based on the RxMemDS unit from the Rx library
+
+
+
+ The original Rx code is Copyright (c) 2001,2002 SGB Software
+ Copyright (c) 1997, 1998 Fedor Koshevnikov, Igor Pavluk and
+ Serge Korolev
+
+@@TCcMemoryData
+Summary:
+In-memory TDataSet descendant.
+Description:
+TCcMemoryData is an in-memory TDataSet descendant, used internally as an ancestor
+for several CopyCat components.<p/>
+<p/>
+TCcMemoryData is based on the RxLib TRxMemoryData component.
+
+@@TCcMemoryData.BeforeOpen
+property AutoCalcFields;
+    property Filtered;
+{$IFDEF CC_D4}
+    property FieldDefs;
+    property ObjectView default False;
+{$ENDIF}
+
+@@TMemBlobData
+TCcMemoryData
+
+@@TMemBlobStream
+TMemBlobStream
+
+@@TMemoryRecord
+TMemoryRecord

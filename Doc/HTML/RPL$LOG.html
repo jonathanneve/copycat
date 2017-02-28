@@ -1,0 +1,246 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN">
+<html>
+<head>
+<title>RPL$LOG</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+    <meta name="generator" content="Doc-O-Matic" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <link rel="STYLESHEET" href="default.css" type="text/css" />
+
+<script type="text/javascript" src="scripts.js"></script>
+</head>
+<body class="Element700" onload="onBodyLoadEx('frames.html', 'topic', 'RPL$LOG.html');" onmousedown="onBodyMouseDown();">
+
+<!-- Begin Popups -->
+<div class="Element801" id="popup00004">
+<div class="Element800">
+<div class="Element14">
+Links</div>
+<div class="Element11">
+<div class="Element10">
+<a href="Database_tables.html" target="topic">Database tables</a>, <a href="_RPL$LOG_5_See_Also.html" target="topic">See Also</a></div>
+</div>
+</div>
+</div>
+
+<!-- End Popups -->
+
+<!-- Begin Page Header -->
+<div class="Element710" id="areafixed">
+<div class="Element92">
+<table width="100%" cellspacing="0" cellpadding="0">
+<tr><td width="33%">
+<div class="Element1">
+<a href="#" onmousedown="showPopup(this, 'popup00004');"><img src="seealsolink.png" border="0" alt=""></a> <a href="http://www.copycat.fr" target="new_page"><img src="copycat_70x70.png"><h3>CopyCat Developer Tools</h3></img></a></div>
+</td><td width="34%">
+<div class="Element2">
+<a href="contents.html" target="tocidx">Contents</a> | <a href="idx.html" target="tocidx">Index</a></div>
+</td><td width="33%">
+<div class="Element90">
+<a href="Database_tables.html" target="topic">Up</a> | <a href="RPL$USERS.html" target="topic">Next</a></div>
+</td></tr></table><div class="Element5">
+RPL$LOG</div>
+<div class="Element7">
+<a href="Database_tables.html" target="topic">Database tables</a> | <a href="_RPL$LOG_5_See_Also.html" target="topic">See Also</a></div>
+<div class="Element730">
+<a href="#" onclick="showAllElements();">Show All</a></div>
+</div>
+</div>
+
+<!-- End Page Header -->
+
+<!-- Begin Client Area -->
+<div class="Element720" id="areascroll">
+<div class="Element721">
+
+<!-- Begin Page Content -->
+<div class="Element58">
+<div class="Element11">
+<div class="Element10">
+<p class="Element10">
+The RPL$LOG table is a log of every data change that takes place in the database. One line is created per user in <a href="RPL$USERS.html" target="topic">RPL$USERS</a>. It has the following fields:&nbsp;</p>
+<p class="Element10">
+&nbsp;</p><div class="Element63">
+<div class="TableDiv">
+<table cellspacing="0" class="Table2">
+<tr>
+<td class="Element75" valign="top" width="25%">
+<div class="Element76">
+Field name&nbsp;</div></td><td class="Element75" valign="top" width="10%">
+<div class="Element76">
+Type&nbsp;</div></td><td class="Element65" valign="top" width="65%">
+<div class="Element66">
+Description&nbsp;</div></td></tr><tr>
+<td class="Element77" valign="top" width="25%">
+<div class="Element78">
+</p><p class="Element78" style="text-align: center">
+TABLE_NAME</p><p class="Element78">
+&nbsp;</div></td><td class="Element77" valign="top" width="10%">
+<div class="Element78">
+</p><p class="Element78" style="text-align: center">
+String</p><p class="Element78">
+&nbsp;</div></td><td class="Element67" valign="top" width="65%">
+<div class="Element68">
+Table name&nbsp;</div></td></tr><tr>
+<td class="Element77" valign="top" width="25%">
+<div class="Element78">
+</p><p class="Element78" style="text-align: center">
+PRIMARY_KEY_VALUES</p><p class="Element78">
+&nbsp;</div></td><td class="Element77" valign="top" width="10%">
+<div class="Element78">
+</p><p class="Element78" style="text-align: center">
+String</p><p class="Element78">
+&nbsp;</div></td><td class="Element67" valign="top" width="65%">
+<div class="Element68">
+Values of the primary key fields&nbsp;</div></td></tr><tr>
+<td class="Element77" valign="top" width="25%">
+<div class="Element78">
+</p><p class="Element78" style="text-align: center">
+PRIMARY_KEY_SYNC</p><p class="Element78">
+&nbsp;</div></td><td class="Element77" valign="top" width="10%">
+<div class="Element78">
+</p><p class="Element78" style="text-align: center">
+String</p><p class="Element78">
+&nbsp;</div></td><td class="Element67" valign="top" width="65%">
+<div class="Element68">
+Synchronization statements for each of the primary key fields These are SQL statements that can be used for fetching unique primary key values from the remote server.&nbsp;</div></td></tr><tr>
+<td class="Element77" valign="top" width="25%">
+<div class="Element78">
+</p><p class="Element78" style="text-align: center">
+UNIQUE_KEY_SYNC</p><p class="Element78">
+&nbsp;</div></td><td class="Element77" valign="top" width="10%">
+<div class="Element78">
+</p><p class="Element78" style="text-align: center">
+String</p><p class="Element78">
+&nbsp;</div></td><td class="Element67" valign="top" width="65%">
+<div class="Element68">
+Synchronization statements for each of the unique key fields. These are SQL statements that can be used for fetching unique field values from the remote server.&nbsp;</div></td></tr><tr>
+<td class="Element77" valign="top" width="25%">
+<div class="Element78">
+</p><p class="Element78" style="text-align: center">
+PROCEDURE_STATEMENT</p><p class="Element78">
+&nbsp;</div></td><td class="Element77" valign="top" width="10%">
+<div class="Element78">
+</p><p class="Element78" style="text-align: center">
+String</p><p class="Element78">
+&nbsp;</div></td><td class="Element67" valign="top" width="65%">
+<div class="Element68">
+SQL of the EXECUTE PROCEDURE statement that is to be executed in order to replicate a stored procedure.&nbsp;</div></td></tr><tr>
+<td class="Element77" valign="top" width="25%">
+<div class="Element78">
+</p><p class="Element78" style="text-align: center">
+LOGIN</p><p class="Element78">
+&nbsp;</div></td><td class="Element77" valign="top" width="10%">
+<div class="Element78">
+</p><p class="Element78" style="text-align: center">
+String</p><p class="Element78">
+&nbsp;</div></td><td class="Element67" valign="top" width="65%">
+<div class="Element68">
+<a href="Replication_nodes.html" target="topic">Replication node</a> that this line is addressed to.&nbsp;</div></td></tr><tr>
+<td class="Element77" valign="top" width="25%">
+<div class="Element78">
+</p><p class="Element78" style="text-align: center">
+OPERATION_DATE</p><p class="Element78">
+&nbsp;</div></td><td class="Element77" valign="top" width="10%">
+<div class="Element78">
+</p><p class="Element78" style="text-align: center">
+Date/Time</p><p class="Element78">
+&nbsp;</div></td><td class="Element67" valign="top" width="65%">
+<div class="Element68">
+Date and time of the data change. This field is merely informational, and is not used internally by CopyCat.&nbsp;</div></td></tr><tr>
+<td class="Element77" valign="top" width="25%">
+<div class="Element78">
+</p><p class="Element78" style="text-align: center">
+CONFLICT</p><p class="Element78">
+&nbsp;</div></td><td class="Element77" valign="top" width="10%">
+<div class="Element78">
+</p><p class="Element78" style="text-align: center">
+String</p><p class="Element78">
+&nbsp;</div></td><td class="Element67" valign="top" width="65%">
+<div class="Element68">
+'Y' or 'N', to indicate whether a <a href="Conflict_management.html" target="topic">conflict</a> has been logged for this line or not.&nbsp;</div></td></tr><tr>
+<td class="Element77" valign="top" width="25%">
+<div class="Element78">
+</p><p class="Element78" style="text-align: center">
+CODE</p><p class="Element78">
+&nbsp;</div></td><td class="Element77" valign="top" width="10%">
+<div class="Element78">
+</p><p class="Element78" style="text-align: center">
+Integer</p><p class="Element78">
+&nbsp;</div></td><td class="Element67" valign="top" width="65%">
+<div class="Element68">
+Integer code uniquely identifying the log line.&nbsp;</div></td></tr><tr>
+<td class="Element77" valign="top" width="25%">
+<div class="Element78">
+SENT_FROM&nbsp;</div></td><td class="Element77" valign="top" width="10%">
+<div class="Element78">
+String&nbsp;</div></td><td class="Element67" valign="top" width="65%">
+<div class="Element68">
+<a href="Replication_nodes.html" target="topic">Replication node</a> that this line originates from.&nbsp;</div></td></tr><tr>
+<td class="Element77" valign="top" width="25%">
+<div class="Element78">
+OPERATION_TYPE&nbsp;</div></td><td class="Element77" valign="top" width="10%">
+<div class="Element78">
+String&nbsp;</div></td><td class="Element67" valign="top" width="65%">
+<div class="Element68">
+I, U or D to indicate whether it was an insert, an update or a delete&nbsp;</div></td></tr><tr>
+<td class="Element77" valign="top" width="25%">
+<div class="Element78">
+CHANGE_NUMBER&nbsp;</div></td><td class="Element77" valign="top" width="10%">
+<div class="Element78">
+Integer&nbsp;</div></td><td class="Element67" valign="top" width="65%">
+<div class="Element68">
+Unique number identifying the change&nbsp;</div></td></tr></table></div></div>
+</div>
+</div>
+<div class="Element14">
+<a onclick="toggleVisibilityStored('See_Also');" class="a_Element14"><img src="sectionminus.png" border="0" alt="sectionminus.png" id="imgSee_Also">See Also</a></div>
+<div id="divSee_Also">
+<div class="Element11">
+<div class="Element10">
+<p class="Element10">
+<a href="TCcLog.html" target="topic">TCcLog</a></p></div>
+</div>
+</div>
+<div class="Element14">
+<a onclick="toggleVisibilityStored('Group');" class="a_Element14"><img src="sectionminus.png" border="0" alt="sectionminus.png" id="imgGroup">Group</a></div>
+<div id="divGroup">
+<div class="Element11">
+<div class="Element10">
+<p class="Element10">
+<a href="Database_tables.html" target="topic">Database tables</a></p></div>
+</div>
+</div>
+<div class="Element14">
+<a onclick="toggleVisibilityStored('Links');" class="a_Element14"><img src="sectionminus.png" border="0" alt="sectionminus.png" id="imgLinks">Links</a></div>
+<div id="divLinks">
+<div class="Element11">
+<div class="Element10">
+<a href="Database_tables.html" target="topic">Database tables</a>, <a href="_RPL$LOG_5_See_Also.html" target="topic">See Also</a></div>
+</div>
+</div>
+<div class="Element62">
+Created with a commercial version of <a href="http://www.doc-o-matic.com">Doc-O-Matic</a>. In order to make this message disappear you need to register this software. If you have problems registering this software please contact us at <a href="mailto:support@toolsfactory.com">support@toolsfactory.com</a>.</div>
+</div>
+<!-- End Page Content -->
+
+<!-- Begin Page Footer -->
+<div class="Element93">
+<table width="100%" cellspacing="0" cellpadding="0">
+<tr><td width="100%">
+<div class="Element3">
+Copyright (c) 2015. All rights reserved. http://www.copycat.fr</div>
+</td></tr><tr><td width="100%">
+<div class="Element4">
+<a href="contents.html" target="tocidx">Contents</a> | <a href="idx.html" target="tocidx">Index</a></div>
+</td></tr><tr><td width="100%">
+<div class="Element97">
+What do you think about this topic?  Send feedback through our <a href="http://copycat.fr/wordpress/contact-us/" target="new_page">contact form</a></div>
+</td></tr></table></div>
+
+<!-- End Page Footer -->
+</div>
+</div>
+
+<!-- End Client Area -->
+</body></html>

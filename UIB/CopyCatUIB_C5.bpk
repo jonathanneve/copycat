@@ -1,0 +1,132 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!-- C++Builder XML Project -->
+<PROJECT>
+  <MACROS>
+    <VERSION value="BCB.05.03"/>
+    <PROJECT value="CopyCatUIB_C5.bpl"/>
+    <OBJFILES value="CcProvUIB.obj CopyCatUIB_C5.obj"/>
+    <RESFILES value="CopyCatUIB_C5.res"/>
+    <DEFFILE value=""/>
+    <RESDEPEN value="$(RESFILES)"/>
+    <LIBFILES value=""/>
+    <LIBRARIES value=""/>
+    <SPARELIBS value="Vcl50.lib VCLDB50.lib CopyCat_C5.lib JVUIBC5R.lib"/>
+    <PACKAGES value="vcl50.bpi VCLDB50.bpi CopyCat_C5.bpi JvUIBC5R.bpi"/>
+    <PATHCPP value=".;"/>
+    <PATHPAS value=".;"/>
+    <PATHRC value=".;"/>
+    <PATHASM value=".;"/>
+    <DEBUGLIBPATH value="$(BCB)\lib\debug"/>
+    <RELEASELIBPATH value="$(BCB)\lib\release"/>
+    <LINKER value="tlink32"/>
+    <USERDEFINES value="_DEBUG"/>
+    <SYSDEFINES value="_RTLDLL;NO_STRICT;USEPACKAGES"/>
+    <MAINSOURCE value="CopyCatUIB_C5.cpp"/>
+    <INCLUDEPATH value="..;..\BCB5;$(BCB)\include;$(BCB)\include\vcl;&quot;c:\Program Files\uib\Source\&quot;"/>
+    <LIBPATH value="..;..\BCB5;$(BCB)\projects\lib;$(BCB)\lib\obj;$(BCB)\lib;&quot;c:\Program Files\uib\Source\&quot;"/>
+    <WARNINGS value="-w-par"/>
+  </MACROS>
+  <OPTIONS>
+    <CFLAG1 value="-Od -H=$(BCB)\lib\vcl50.csm -Hc -Vx -Ve -X- -r- -a8 -b- -k -y -v -vi- -c 
+      -tWM"/>
+    <PFLAGS value="-$YD -$W -$O- -v -JPHNE -M"/>
+    <RFLAGS value=""/>
+    <AFLAGS value="/mx /w2 /zd"/>
+    <LFLAGS value="-D&quot;CopyCat UIB Provider&quot; -aa -Tpp -GD -s -Gn -Gl -Gi -v"/>
+  </OPTIONS>
+  <LINKER>
+    <ALLOBJ value="c0pkg32.obj $(PACKAGES) Memmgr.Lib sysinit.obj $(OBJFILES)"/>
+    <ALLRES value="$(RESFILES)"/>
+    <ALLLIB value="$(LIBFILES) $(LIBRARIES) import32.lib cp32mti.lib"/>
+  </LINKER>
+  <IDEOPTIONS>
+[Version Info]
+IncludeVerInfo=1
+AutoIncBuild=0
+MajorVer=1
+MinorVer=0
+Release=0
+Build=0
+Debug=0
+PreRelease=0
+Special=0
+Private=0
+DLL=0
+Locale=1036
+CodePage=1252
+
+[Version Info Keys]
+CompanyName=
+FileDescription=
+FileVersion=1.0.0.0
+InternalName=
+LegalCopyright=
+LegalTrademarks=
+OriginalFilename=
+ProductName=
+ProductVersion=1.0.0.0
+
+[Excluded Packages]
+C:\Documents and Settings\Microtec\Application Data\DelphiSpeedUp\DelphiSpeedUpLoader5.bpl=(untitled)
+$(BCB)\Projects\Bpl\IniDataSet_B5.bpl=IniDataSet_B5
+$(BCB)\Projects\Bpl\mxNativeExcel_c5.bpl=mxNativeExcel_c5
+$(BCB)\Projects\Bpl\JvGlobusC5D.bpl=JVCL Globus Components
+$(BCB)\Projects\Bpl\TntUnicodeQR3_DC50.bpl=c:\program files\borland\cbuilder5\Projects\Bpl\TntUnicodeQR3_DC50
+C:\PROGRA~1\Borland\CBUILDER5\Projects\Bpl\TNTUNICODEQR3_RC50.BPL=c:\program files\borland\cbuilder5\Projects\Bpl\TntUnicodeQR3_RC50
+$(BCB)\Projects\Bpl\regScr.bpl=c:\program files\borland\cbuilder5\Projects\Bpl\regScr
+$(BCB)\Projects\Bpl\FIBAliasManager.bpl=FIBPlusEditors
+$(BCB)\Bin\dclite50.bpl=Borland Integrated Translation Environment
+$(BCB)\Projects\Bpl\IBO40CDT_C5.bpl=IB Objects Core Components
+$(BCB)\Projects\Bpl\IBO40ADT_C5.bpl=IB Objects Native Data Access
+$(BCB)\Projects\Bpl\IBO40TDT_C5.bpl=IB Objects Tools Components
+$(BCB)\Projects\Bpl\IBO40WDT_C5.bpl=IB Objects Internet Extensions
+$(BCB)\Projects\Bpl\IBO40WXDT_C5.bpl=IB Objects TDataset Internet Extensions
+C:\Program Files\Delos\XMLCLX\Source\dclXML50.dpl=XMLCLX
+$(BCB)\Projects\Bpl\OQB50.bpl=Open QBuilder
+$(BCB)\Projects\Bpl\iFIBScript.bpl=c:\program files\borland\cbuilder5\Projects\Bpl\iFIBScript
+$(BCB)\Projects\Bpl\AdobeActiveX.bpl=c:\program files\borland\cbuilder5\Projects\Bpl\AdobeActiveX
+C:\Program Files\FastReports\FastReport 3\LibBCB5\frxado5.bpl=FastReport 3.0 ADO Components
+C:\Program Files\FastReports\FastReport 3\LibBCB5\fsado5.bpl=FastScript 1.9 ADO Components
+C:\Program Files\FastReports\FastReport 3\LibBCB5\dclfstee5.bpl=FastScript Charts
+C:\Program Files\FastReports\FastReport 3\LibBCB5\dclfrxtee5.bpl=FastReport 3 Charts
+C:\Program Files\AidAim\MsgCommunicator\Lib\C++ Builder 5\dclMsgComB5.bpl=MsgCom - Design package
+$(BCB)\Projects\Bpl\CopyCatIBX_C5.bpl=CopyCat IBX provider
+
+[HistoryLists\hlIncludePath]
+Count=3
+Item0=..\;..\BCB5;$(BCB)\include;$(BCB)\include\vcl;c:\Program Files\uib\Source\
+Item1=..\;..\BCB5;$(BCB)\include;$(BCB)\include\vcl
+Item2=..\;..;$(BCB)\include;$(BCB)\include\vcl
+
+[HistoryLists\hlLibraryPath]
+Count=5
+Item0=..\;..\BCB5;$(BCB)\projects\lib;$(BCB)\lib\obj;$(BCB)\lib;c:\Program Files\uib\Source\
+Item1=..\;$(BCB)\projects\lib;..;$(BCB)\lib\obj;$(BCB)\lib;..\..;c:\Program Files\uib\Source
+Item2=..\;$(BCB)\projects\lib;..;$(BCB)\lib\obj;$(BCB)\lib;..\..
+Item3=$(BCB)\projects\lib;..\;..;$(BCB)\lib\obj;$(BCB)\lib;..\..
+Item4=$(BCB)\projects\lib;..\;..;$(BCB)\lib\obj;$(BCB)\lib
+
+[HistoryLists\hlDebugSourcePath]
+Count=1
+Item0=$(BCB)\source\vcl
+
+[HistoryLists\hlConditionals]
+Count=1
+Item0=_DEBUG
+
+[Debugging]
+DebugSourceDirs=$(BCB)\source\vcl
+
+[Parameters]
+RunParams=
+HostApplication=
+RemoteHost=
+RemotePath=
+RemoteDebug=0
+
+[Compiler]
+ShowInfoMsgs=0
+LinkDebugVcl=0
+LinkCGLIB=0
+  </IDEOPTIONS>
+</PROJECT>

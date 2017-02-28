@@ -1,0 +1,69 @@
+<?php if (!$this->licenses): ?>
+<div class="softsale-no-licenses"><?php __e('No licenses assigned yet'); ?>.</div>
+<?php else: ?>
+<table class="grid">
+<tr>
+    <th><?php __e('Application') ?></th>
+    <th><?php __e('License Key')?></th>
+    <th><?php __e('Created')?></th>
+    <th><?php __e('Expires')?></th>
+    <?php if (!empty($this->hasActivation)):?>
+    <th><?php __e('Activation')?></th>
+    <?php endif ?>
+</tr>
+<?php foreach ($this->licenses as $license): ?>
+<tr>
+    <td><?php p($license->getScheme()->title) ?></td>
+    <td class="softsale-license-td"><?php echo $license->renderKey(32) ?></td>
+    <td><?php p(amDate($license->created)) ?></td>
+    <td><?php p(amDate($license->expires)) ?></td>
+    <?php if (!empty($this->hasActivation)):?>
+    <td><?php echo amRenderActivation($license)?></td>
+    <?php endif ?>
+</tr>
+<?php endforeach; ?>
+</table>
+<?php endif; ?>
+
+<?php 
+function amRenderActivation(License $license)
+{
+    if (!$license->needActivation())
+        return '';
+    if ($license->isActivated())
+    {
+        if ($this->getDi()->config->get('softsale.show_activation_details'))
+        { // show license activation details if enabled in module config
+  
+            $ret = "";
+            foreach ($license->getActivations(0) as $licenseActivation)
+            {
+                $s = implode(", ", array_values($licenseActivation->getRequest()));
+                $ret .= Am_Controller::escape($s) . "<br />\n";
+            }
+            return $ret;
+        } else { // just show number of activations 
+            return ___('Active') . ' (' . $license->countActivations(0) . ')';
+        }
+    }
+}
+?>
+
+<script type="text/javascript">
+function softsaleActivateLicense(license_id)
+{
+    var $ = jQuery;
+    var url = window.rootUrl + '/softsale/license/render-activation/id/' + license_id;
+    var onResponse;
+    $.get(url, onResponse = function(response){
+        $(".manual-activator-popup").parents(".am-popup").remove();
+        var el = $("<div class='manual-activator-popup'>" + response + "</div>");
+        el.find("form").submit(function(event){
+            event.stopPropagation();
+            $.post(url, $(this).val(), onResponse);
+            return false;
+        });
+        el.amPopup();
+    });
+}
+</script>

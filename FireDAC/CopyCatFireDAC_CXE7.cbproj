@@ -1,0 +1,226 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{E388C378-85AB-45E0-BB31-DC69B624EBEE}</ProjectGuid>
+        <ProjectVersion>15.4</ProjectVersion>
+        <FrameworkType>None</FrameworkType>
+        <MainSource>CopyCatFireDAC_CXE6.cpp</MainSource>
+        <Base>True</Base>
+        <Config Condition="'$(Config)'==''">Debug</Config>
+        <Platform Condition="'$(Platform)'==''">Win32</Platform>
+        <TargetedPlatforms>1</TargetedPlatforms>
+        <AppType>Package</AppType>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Android' and '$(Base)'=='true') or '$(Base_Android)'!=''">
+        <Base_Android>true</Base_Android>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='iOSDevice' and '$(Base)'=='true') or '$(Base_iOSDevice)'!=''">
+        <Base_iOSDevice>true</Base_iOSDevice>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='OSX32' and '$(Base)'=='true') or '$(Base_OSX32)'!=''">
+        <Base_OSX32>true</Base_OSX32>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Base)'=='true') or '$(Base_Win32)'!=''">
+        <Base_Win32>true</Base_Win32>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win64' and '$(Base)'=='true') or '$(Base_Win64)'!=''">
+        <Base_Win64>true</Base_Win64>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_1)'!=''">
+        <Cfg_1>true</Cfg_1>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_2)'!=''">
+        <Cfg_2>true</Cfg_2>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Android' and '$(Cfg_2)'=='true') or '$(Cfg_2_Android)'!=''">
+        <Cfg_2_Android>true</Cfg_2_Android>
+        <CfgParent>Cfg_2</CfgParent>
+        <Cfg_2>true</Cfg_2>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='iOSDevice' and '$(Cfg_2)'=='true') or '$(Cfg_2_iOSDevice)'!=''">
+        <Cfg_2_iOSDevice>true</Cfg_2_iOSDevice>
+        <CfgParent>Cfg_2</CfgParent>
+        <Cfg_2>true</Cfg_2>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win64' and '$(Cfg_2)'=='true') or '$(Cfg_2_Win64)'!=''">
+        <Cfg_2_Win64>true</Cfg_2_Win64>
+        <CfgParent>Cfg_2</CfgParent>
+        <Cfg_2>true</Cfg_2>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base)'!=''">
+        <DCC_Namespace>System;Xml;Data;Datasnap;Web;Soap;$(DCC_Namespace)</DCC_Namespace>
+        <ProjectType>CppPackage</ProjectType>
+        <SanitizedProjectName>CopyCatFireDAC_CXE6</SanitizedProjectName>
+        <ILINK_GenerateLibFile>true</ILINK_GenerateLibFile>
+        <IncludePath>C:\Projects\copycat\FireDAC\;$(IncludePath)</IncludePath>
+        <_TCHARMapping>char</_TCHARMapping>
+        <Multithreaded>true</Multithreaded>
+        <ILINK_LibraryPath>C:\Projects\copycat\FireDAC\;$(ILINK_LibraryPath)</ILINK_LibraryPath>
+        <ILINK_GenerateImportLibrary>true</ILINK_GenerateImportLibrary>
+        <DCC_CBuilderOutput>JPHNE</DCC_CBuilderOutput>
+        <DynamicRTL>true</DynamicRTL>
+        <UsePackages>true</UsePackages>
+        <IntermediateOutputDir>.\$(Platform)\$(Config)</IntermediateOutputDir>
+        <BCC_wpar>false</BCC_wpar>
+        <BCC_OptimizeForSpeed>true</BCC_OptimizeForSpeed>
+        <BCC_ExtendedErrorInfo>true</BCC_ExtendedErrorInfo>
+        <ILINK_TranslatedLibraryPath>$(BDSLIB)\$(PLATFORM)\release\$(LANGDIR);$(ILINK_TranslatedLibraryPath)</ILINK_TranslatedLibraryPath>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base_Android)'!=''">
+        <BCC_PCHName_Clang>CopyCatFireDAC_CXE6.h</BCC_PCHName_Clang>
+        <PackageImports>bindcomp;bindcompdbx;bindcompfmx;bindengine;CloudService;CopyCat_XE6;CustomIPTransport;DataSnapClient;DataSnapCommon;DataSnapFireDAC;DataSnapNativeClient;DataSnapProviderClient;dbexpress;dbrtl;dbxcds;DbxClientDriver;DbxCommonDriver;DBXInterBaseDriver;DBXSqliteDriver;dsnap;dsnapxml;FireDAC;FireDACCommon;FireDACCommonDriver;FireDACDBXDriver;FireDACDSDriver;FireDACIBDriver;FireDACSqliteDriver;fmx;fmxFireDAC;FMXTee;FmxTeeUI;frxFD20;ibxpress;IndyCore;IndyIPClient;IndyIPCommon;IndyIPServer;IndyProtocols;IndySystem;inet;RESTBackendComponents;RESTComponents;rtl;soapmidas;soaprtl;soapserver;tethering;xmlrtl;$(PackageImports)</PackageImports>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base_iOSDevice)'!=''">
+        <BCC_PCHName_Clang>CopyCatFireDAC_CXE6.h</BCC_PCHName_Clang>
+        <PackageImports>bindcomp;bindcompdbx;bindcompfmx;bindengine;CloudService;CopyCat_XE6;CustomIPTransport;DataSnapClient;DataSnapCommon;DataSnapFireDAC;DataSnapNativeClient;DataSnapProviderClient;dbexpress;dbrtl;dbxcds;DbxClientDriver;DbxCommonDriver;DBXInterBaseDriver;DBXSqliteDriver;dsnap;dsnapxml;FireDAC;FireDACCommon;FireDACCommonDriver;FireDACDBXDriver;FireDACDSDriver;FireDACIBDriver;FireDACSqliteDriver;fmx;fmxase;fmxFireDAC;FMXTee;FmxTeeUI;ibxpress;IndyCore;IndyIPClient;IndyIPCommon;IndyIPServer;IndyProtocols;IndySystem;inet;RESTBackendComponents;RESTComponents;rtl;soapmidas;soaprtl;soapserver;tethering;xmlrtl;$(PackageImports)</PackageImports>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base_OSX32)'!=''">
+        <PackageImports>bindcomp;bindcompdbx;bindcompfmx;bindengine;CloudService;CustomIPTransport;DataSnapClient;DataSnapCommon;DataSnapFireDAC;DataSnapIndy10ServerTransport;DataSnapNativeClient;DataSnapProviderClient;DataSnapServer;DataSnapServerMidas;dbexpress;dbrtl;dbxcds;DbxClientDriver;DbxCommonDriver;DBXFirebirdDriver;DBXInformixDriver;DBXInterBaseDriver;DBXMySQLDriver;DBXOracleDriver;DBXSqliteDriver;DBXSybaseASADriver;dsnap;dsnapxml;FireDAC;FireDACADSDriver;FireDACASADriver;FireDACCommon;FireDACCommonDriver;FireDACDb2Driver;FireDACDBXDriver;FireDACDSDriver;FireDACIBDriver;FireDACInfxDriver;FireDACMSAccDriver;FireDACMSSQLDriver;FireDACMySQLDriver;FireDACODBCDriver;FireDACOracleDriver;FireDACPgDriver;FireDACSqliteDriver;fmx;fmxase;fmxdae;fmxFireDAC;fmxobj;FMXTee;FmxTeeUI;ibxpress;IndyCore;IndyIPClient;IndyIPCommon;IndyIPServer;IndyProtocols;IndySystem;inet;inetdb;inetdbxpress;RESTBackendComponents;RESTComponents;rtl;soapmidas;soaprtl;soapserver;tethering;xmlrtl;$(PackageImports)</PackageImports>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base_Win32)'!=''">
+        <VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+        <DCC_Namespace>Winapi;System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;Bde;$(DCC_Namespace)</DCC_Namespace>
+        <VerInfo_Locale>1033</VerInfo_Locale>
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <PackageImports>AbbreviaVCL;adortl;AsyncPro;bcbie;bcbsmp;bdertl;bindcomp;bindcompdbx;bindcompfmx;bindcompvcl;bindengine;CloudService;CodeSiteExpressPkg;CopyCat_XE6;CopyCatNexusDB_XE6;crcontrols200;CustomIPTransport;cxBarEditItemRS20;cxDataRS20;cxEditorsRS20;cxExportRS20;cxGridRS20;cxLibraryRS20;cxPageControldxBarPopupMenuRS20;cxPageControlRS20;cxPivotGridChartRS20;cxPivotGridOLAPRS20;cxPivotGridRS20;cxSchedulerGridRS20;cxSchedulerRibbonStyleEventEditorRS20;cxSchedulerRS20;cxSchedulerTreeBrowserRS20;cxSpreadSheetRS20;cxTreeListdxBarPopupMenuRS20;cxTreeListRS20;cxVerticalGridRS20;dac200;dacfmx200;dacvcl200;DataSnapClient;DataSnapCommon;DataSnapConnectors;DatasnapConnectorsFreePascal;DataSnapFireDAC;DataSnapIndy10ServerTransport;DataSnapNativeClient;DataSnapProviderClient;DataSnapServer;DataSnapServerMidas;dbexpress;dbrtl;dbxcds;DbxClientDriver;DbxCommonDriver;DBXDb2Driver;DBXFirebirdDriver;DBXInformixDriver;DBXInterBaseDriver;DBXMSSQLDriver;DBXMySQLDriver;DBXOdbcDriver;DBXOracleDriver;DBXSqliteDriver;DBXSybaseASADriver;DBXSybaseASEDriver;dclAsyncPro;dcldxSkinsCoreRS20;dsnap;dsnapcon;dsnapxml;dxADOServerModeRS20;dxBarDBNavRS20;dxBarExtDBItemsRS20;dxBarExtItemsRS20;dxBarRS20;dxComnRS20;dxCoreRS20;dxdborRS20;dxdbtrRS20;dxDBXServerModeRS20;dxDockingRS20;dxFireDACServerModeRS20;dxFlowChartRS20;dxGDIPlusRS20;dxLayoutControlRS20;dxmdsRS20;dxNavBarRS20;dxorgcRS20;dxPSCoreRS20;dxPScxCommonRS20;dxPScxExtCommonRS20;dxPScxGridLnkRS20;dxPScxPCProdRS20;dxPScxPivotGridLnkRS20;dxPScxSchedulerLnkRS20;dxPScxSSLnkRS20;dxPScxTLLnkRS20;dxPScxVGridLnkRS20;dxPSDBTeeChartRS20;dxPSdxDBOCLnkRS20;dxPSdxDBTVLnkRS20;dxPSdxFCLnkRS20;dxPSdxLCLnkRS20;dxPSdxOCLnkRS20;dxPSLnksRS20;dxPsPrVwAdvRS20;dxPSPrVwRibbonRS20;dxPSTeeChartRS20;dxRibbonRS20;dxServerModeRS20;dxSkinBlackRS20;dxSkinBlueprintRS20;dxSkinBlueRS20;dxSkinCaramelRS20;dxSkinCoffeeRS20;dxSkinDarkRoomRS20;dxSkinDevExpressStyleRS20;dxSkinOffice2013DarkGrayRS20;dxSkinOffice2013LightGrayRS20;dxSkinOffice2013WhiteRS20;dxSkinsCoreRS20;dxSkinscxPCPainterRS20;dxSkinscxSchedulerPainterRS20;dxSkinsdxBarPainterRS20;dxSkinsdxDLPainterRS20;dxSkinsdxNavBarPainterRS20;dxSkinsdxRibbonPainterRS20;dxSpellCheckerRS20;dxTabbedMDIRS20;dxThemeRS20;dxTileControlRS20;dxtrmdRS20;dxWizardControlRS20;E111_R;EhLib200;EhLibADODataDrivers200;EhLibBDEDataDrivers200;EhLibDBXDataDrivers200;EhLibIBXDataDrivers200;FireDAC;FireDACADSDriver;FireDACASADriver;FireDACCommon;FireDACCommonDriver;FireDACDb2Driver;FireDACDBXDriver;FireDACDSDriver;FireDACIBDriver;FireDACInfxDriver;FireDACMSAccDriver;FireDACMSSQLDriver;FireDACMySQLDriver;FireDACODBCDriver;FireDACOracleDriver;FireDACPgDriver;FireDACSqliteDriver;fmx;fmxase;fmxdae;fmxFireDAC;fmxobj;FMXTee;FmxTeeUI;frx20;frxADO20;frxBDE20;frxDB20;frxDBX20;frxe20;frxFD20;frxIBX20;frxTee20;fs20;fsADO20;fsBDE20;fsDB20;fsIBX20;fsTee20;GR32_DSGN_RSXE6;GR32_RSXE6;ibxpress;IndyCore;IndyIPClient;IndyIPCommon;IndyIPServer;IndyProtocols;IndySystem;inet;inetdb;inetdbbde;inetdbxpress;Intraweb;Jcl;JclContainers;JclDeveloperTools;JclVcl;JvCmp;JvControls;JvCore;JvCrypt;JvCustom;JvDB;JvDlgs;JvNet;JvStdCtrls;JvSystem;JvWizards;MetropolisUILiveTile;NexusDB400ch200;NexusDB400db200;NexusDB400iv200;NexusDB400lg200;NexusDB400ll200;NexusDB400psd200;NexusDB400psi200;NexusDB400pt200;NexusDB400pv200;NexusDB400rb200;NexusDB400rc200;NexusDB400rd200;NexusDB400re200;NexusDB400rp200;NexusDB400scr200;NexusDB400sd200;NexusDB400se200;NexusDB400si200;NexusDB400sq200;NexusDB400sr200;NexusDB400sscr200;NexusDB400st200;NexusDB400tc200;NexusDB400tm200;NexusDB400tn200;NexusDB400ts200;NexusDB400tw200;P164_D70;PKIECtrl20;PKIEDB20;QR506RunDXE6;RaizeComponentsVcl;RaizeComponentsVclDb;RESTBackendComponents;RESTComponents;rtl;RtmRxBDE200;RtmRxCtl200;RtmRxDB200;soapmidas;soaprtl;soapserver;svn;Tee;TeeDB;TeeUI;tethering;tmsdXE6;tmsexdXE6;tmswizdXE6;tmsxlsdXE6;unidac200;unidacfmx200;unidacvcl200;vcl;vclactnband;vcldb;vcldbx;vcldsnap;vclFireDAC;vclib;vclie;vclimg;VCLRESTComponents;vclribbon;VclSmp;vcltouch;vclx;VirtualTreesR;xmlrtl;$(PackageImports)</PackageImports>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base_Win64)'!=''">
+        <BCC_PCHName_Clang>CopyCatFireDAC_CXE6.h</BCC_PCHName_Clang>
+        <PackageImports>AbbreviaVCL;adortl;bindcomp;bindcompdbx;bindcompfmx;bindcompvcl;bindengine;CloudService;CustomIPTransport;cxBarEditItemRS20;cxDataRS20;cxEditorsRS20;cxExportRS20;cxGridRS20;cxLibraryRS20;cxPageControldxBarPopupMenuRS20;cxPageControlRS20;cxPivotGridChartRS20;cxPivotGridOLAPRS20;cxPivotGridRS20;cxSchedulerGridRS20;cxSchedulerRibbonStyleEventEditorRS20;cxSchedulerRS20;cxSchedulerTreeBrowserRS20;cxSpreadSheetRS20;cxTreeListdxBarPopupMenuRS20;cxTreeListRS20;cxVerticalGridRS20;DataSnapClient;DataSnapCommon;DataSnapConnectors;DatasnapConnectorsFreePascal;DataSnapFireDAC;DataSnapIndy10ServerTransport;DataSnapNativeClient;DataSnapProviderClient;DataSnapServer;DataSnapServerMidas;dbexpress;dbrtl;dbxcds;DbxClientDriver;DbxCommonDriver;DBXDb2Driver;DBXFirebirdDriver;DBXInformixDriver;DBXInterBaseDriver;DBXMSSQLDriver;DBXMySQLDriver;DBXOdbcDriver;DBXOracleDriver;DBXSqliteDriver;DBXSybaseASADriver;DBXSybaseASEDriver;dcldxSkinsCoreRS20;dsnap;dsnapcon;dsnapxml;dxADOServerModeRS20;dxBarDBNavRS20;dxBarExtDBItemsRS20;dxBarExtItemsRS20;dxBarRS20;dxComnRS20;dxCoreRS20;dxdborRS20;dxdbtrRS20;dxDBXServerModeRS20;dxDockingRS20;dxFireDACServerModeRS20;dxFlowChartRS20;dxGDIPlusRS20;dxLayoutControlRS20;dxmdsRS20;dxNavBarRS20;dxorgcRS20;dxPSCoreRS20;dxPScxCommonRS20;dxPScxExtCommonRS20;dxPScxGridLnkRS20;dxPScxPCProdRS20;dxPScxPivotGridLnkRS20;dxPScxSchedulerLnkRS20;dxPScxSSLnkRS20;dxPScxTLLnkRS20;dxPScxVGridLnkRS20;dxPSDBTeeChartRS20;dxPSdxDBOCLnkRS20;dxPSdxDBTVLnkRS20;dxPSdxFCLnkRS20;dxPSdxLCLnkRS20;dxPSdxOCLnkRS20;dxPSLnksRS20;dxPsPrVwAdvRS20;dxPSPrVwRibbonRS20;dxPSTeeChartRS20;dxRibbonRS20;dxServerModeRS20;dxSkinBlackRS20;dxSkinBlueprintRS20;dxSkinBlueRS20;dxSkinCaramelRS20;dxSkinCoffeeRS20;dxSkinDarkRoomRS20;dxSkinDevExpressStyleRS20;dxSkinOffice2013DarkGrayRS20;dxSkinOffice2013LightGrayRS20;dxSkinOffice2013WhiteRS20;dxSkinsCoreRS20;dxSkinscxPCPainterRS20;dxSkinscxSchedulerPainterRS20;dxSkinsdxBarPainterRS20;dxSkinsdxDLPainterRS20;dxSkinsdxNavBarPainterRS20;dxSkinsdxRibbonPainterRS20;dxSpellCheckerRS20;dxTabbedMDIRS20;dxThemeRS20;dxTileControlRS20;dxtrmdRS20;dxWizardControlRS20;EhLib200;EhLibADODataDrivers200;EhLibBDEDataDrivers200;EhLibDBXDataDrivers200;EhLibIBXDataDrivers200;FireDAC;FireDACADSDriver;FireDACASADriver;FireDACCommon;FireDACCommonDriver;FireDACDb2Driver;FireDACDBXDriver;FireDACDSDriver;FireDACIBDriver;FireDACInfxDriver;FireDACMSAccDriver;FireDACMSSQLDriver;FireDACMySQLDriver;FireDACODBCDriver;FireDACOracleDriver;FireDACPgDriver;FireDACSqliteDriver;fmx;fmxase;fmxdae;fmxFireDAC;fmxobj;FMXTee;FmxTeeUI;ibxpress;IndyCore;IndyIPClient;IndyIPCommon;IndyIPServer;IndyProtocols;IndySystem;inet;inetdb;inetdbxpress;Intraweb;MetropolisUILiveTile;NexusDB400ch200;NexusDB400db200;NexusDB400iv200;NexusDB400lg200;NexusDB400ll200;NexusDB400psd200;NexusDB400psi200;NexusDB400pt200;NexusDB400pv200;NexusDB400rb200;NexusDB400rc200;NexusDB400rd200;NexusDB400re200;NexusDB400rp200;NexusDB400scr200;NexusDB400sd200;NexusDB400se200;NexusDB400si200;NexusDB400sq200;NexusDB400sr200;NexusDB400sscr200;NexusDB400st200;NexusDB400tc200;NexusDB400tm200;NexusDB400tn200;NexusDB400ts200;NexusDB400tw200;PKIECtrl20;PKIEDB20;RESTBackendComponents;RESTComponents;rtl;soapmidas;soaprtl;soapserver;Tee;TeeDB;TeeUI;tethering;tmsdXE6;tmsexdXE6;vcl;vclactnband;vcldb;vcldsnap;vclFireDAC;vclib;vclie;vclimg;VCLRESTComponents;vclribbon;VclSmp;vcltouch;vclx;VirtualTreesR;xmlrtl;$(PackageImports)</PackageImports>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_1)'!=''">
+        <BCC_OptimizeForSpeed>false</BCC_OptimizeForSpeed>
+        <BCC_DisableOptimizations>true</BCC_DisableOptimizations>
+        <DCC_Optimize>false</DCC_Optimize>
+        <DCC_DebugInfoInExe>true</DCC_DebugInfoInExe>
+        <Defines>_DEBUG;$(Defines)</Defines>
+        <BCC_InlineFunctionExpansion>false</BCC_InlineFunctionExpansion>
+        <BCC_UseRegisterVariables>None</BCC_UseRegisterVariables>
+        <DCC_Define>DEBUG</DCC_Define>
+        <BCC_DebugLineNumbers>true</BCC_DebugLineNumbers>
+        <TASM_DisplaySourceLines>true</TASM_DisplaySourceLines>
+        <BCC_StackFrames>true</BCC_StackFrames>
+        <ILINK_FullDebugInfo>true</ILINK_FullDebugInfo>
+        <TASM_Debugging>Full</TASM_Debugging>
+        <BCC_SourceDebuggingOn>true</BCC_SourceDebuggingOn>
+        <BCC_EnableCPPExceptions>true</BCC_EnableCPPExceptions>
+        <BCC_DisableFramePtrElimOpt>true</BCC_DisableFramePtrElimOpt>
+        <BCC_DisableSpellChecking>true</BCC_DisableSpellChecking>
+        <CLANG_UnwindTables>true</CLANG_UnwindTables>
+        <ILINK_LibraryPath>$(BDSLIB)\$(PLATFORM)\debug;$(ILINK_LibraryPath)</ILINK_LibraryPath>
+        <ILINK_TranslatedLibraryPath>$(BDSLIB)\$(PLATFORM)\debug\$(LANGDIR);$(ILINK_TranslatedLibraryPath)</ILINK_TranslatedLibraryPath>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_2)'!=''">
+        <Defines>NDEBUG;$(Defines)</Defines>
+        <TASM_Debugging>None</TASM_Debugging>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_2_Android)'!=''">
+        <BCC_PCHName_Clang>CopyCatFireDAC_CXE6.h</BCC_PCHName_Clang>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_2_iOSDevice)'!=''">
+        <BCC_PCHName_Clang>CopyCatFireDAC_CXE6.h</BCC_PCHName_Clang>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_2_Win64)'!=''">
+        <BCC_PCHName_Clang>CopyCatFireDAC_CXE6.h</BCC_PCHName_Clang>
+    </PropertyGroup>
+    <ItemGroup>
+        <DelphiCompile Include="CcProvFDSQLite.pas">
+            <BuildOrder>3</BuildOrder>
+        </DelphiCompile>
+        <DelphiCompile Include="CcProvFireDAC.pas">
+            <BuildOrder>4</BuildOrder>
+        </DelphiCompile>
+        <CppCompile Include="CopyCatFireDAC_CXE6.cpp">
+            <BuildOrder>0</BuildOrder>
+        </CppCompile>
+        <PCHCompile Include="CopyCatFireDAC_CXE6.h">
+            <BuildOrder>2</BuildOrder>
+        </PCHCompile>
+        <PackageImport Include="dbrtl.bpi">
+            <BuildOrder>7</BuildOrder>
+        </PackageImport>
+        <PackageImport Include="FireDAC.bpi">
+            <BuildOrder>8</BuildOrder>
+        </PackageImport>
+        <PackageImport Include="FireDACCommon.bpi">
+            <BuildOrder>5</BuildOrder>
+        </PackageImport>
+        <PackageImport Include="FireDACCommonDriver.bpi">
+            <BuildOrder>10</BuildOrder>
+        </PackageImport>
+        <PackageImport Include="FireDACSqliteDriver.bpi">
+            <BuildOrder>9</BuildOrder>
+        </PackageImport>
+        <PackageImport Include="rtl.bpi">
+            <BuildOrder>1</BuildOrder>
+        </PackageImport>
+        <PackageImport Include="xmlrtl.bpi">
+            <BuildOrder>6</BuildOrder>
+        </PackageImport>
+        <BuildConfiguration Include="Release">
+            <Key>Cfg_2</Key>
+            <CfgParent>Base</CfgParent>
+        </BuildConfiguration>
+        <BuildConfiguration Include="Base">
+            <Key>Base</Key>
+        </BuildConfiguration>
+        <BuildConfiguration Include="Debug">
+            <Key>Cfg_1</Key>
+            <CfgParent>Base</CfgParent>
+        </BuildConfiguration>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>CPlusPlusBuilder.Personality.12</Borland.Personality>
+        <Borland.ProjectType>CppPackage</Borland.ProjectType>
+        <BorlandProject>
+            <CPlusPlusBuilder.Personality>
+                <ProjectProperties>
+                    <ProjectProperties Name="AutoShowDeps">False</ProjectProperties>
+                    <ProjectProperties Name="ManagePaths">True</ProjectProperties>
+                    <ProjectProperties Name="VerifyPackages">True</ProjectProperties>
+                    <ProjectProperties Name="IndexFiles">False</ProjectProperties>
+                </ProjectProperties>
+                <Source>
+                    <Source Name="MainSource">CopyCatFireDAC_CXE6.cpp</Source>
+                </Source>
+            </CPlusPlusBuilder.Personality>
+            <Deployment/>
+            <Platforms>
+                <Platform value="Android">False</Platform>
+                <Platform value="iOSDevice">False</Platform>
+                <Platform value="OSX32">False</Platform>
+                <Platform value="Win32">True</Platform>
+                <Platform value="Win64">False</Platform>
+            </Platforms>
+<!-- EurekaLog First Line
+[Exception Log]
+EurekaLog Version=7007
+Activate=0
+DeleteMapAfterCompile=1
+Encrypt Password=""
+EurekaLog Last Line -->
+        </BorlandProject>
+        <ProjectFileVersion>12</ProjectFileVersion>
+    </ProjectExtensions>
+    <Import Project="$(BDS)\Bin\CodeGear.Cpp.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Cpp.Targets')"/>
+    <Import Project="$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj" Condition="Exists('$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj')"/>
+</Project>

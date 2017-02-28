@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="9"/>
+    <BuildModes Active="Default"/>
+    <Units Count="12">
+      <Unit0>
+        <Filename Value="CopyCatDemo.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="main.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="MainForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="main"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="250"/>
+        <CursorPos X="94" Y="268"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="..\..\..\CcConf.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="20"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="..\..\..\CcConfStorage.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="CcConfStorage"/>
+        <EditorIndex Value="9"/>
+        <CursorPos X="33" Y="11"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="..\..\..\CcInterbaseConn.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="CcInterbaseConn"/>
+        <EditorIndex Value="8"/>
+        <TopLine Value="34"/>
+        <CursorPos X="37" Y="7"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="..\..\..\CcProviders.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="..\..\..\CcOracle.pas"/>
+        <UnitName Value="CcOracle"/>
+        <EditorIndex Value="4"/>
+        <CursorPos X="9" Y="5"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="..\..\..\CcInterbase.pas"/>
+        <UnitName Value="CcInterbase"/>
+        <EditorIndex Value="7"/>
+        <CursorPos X="38" Y="1323"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="..\..\..\CC.INC"/>
+        <EditorIndex Value="5"/>
+        <CursorPos X="9" Y="34"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="..\..\..\CcMemDS.pas"/>
+        <UnitName Value="CcMemDS"/>
+        <EditorIndex Value="6"/>
+        <TopLine Value="275"/>
+        <CursorPos X="32" Y="301"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="C:\lazarus\lcl\interfaces\carbon\pascocoa\appkit\appkit.pas"/>
+        <UnitName Value="appkit"/>
+        <EditorIndex Value="3"/>
+        <CursorPos X="72" Y="28"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="C:\lazarus\lcl\interfaces\gtk\gtkdefines.inc"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="58"/>
+        <CursorPos X="89" Y="85"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit11>
+    </Units>
+    <JumpHistory Count="18" HistoryIndex="17">
+      <Position1>
+        <Filename Value="..\..\..\CcOracle.pas"/>
+      </Position1>
+      <Position2>
+        <Filename Value="..\..\..\CcOracle.pas"/>
+        <Caret Line="7" Column="127"/>
+      </Position2>
+      <Position3>
+        <Filename Value="..\..\..\CcInterbase.pas"/>
+      </Position3>
+      <Position4>
+        <Filename Value="..\..\..\CcOracle.pas"/>
+        <Caret Line="5" Column="9"/>
+      </Position4>
+      <Position5>
+        <Filename Value="..\..\..\CcMemDS.pas"/>
+      </Position5>
+      <Position6>
+        <Filename Value="..\..\..\CcMemDS.pas"/>
+        <Caret Line="294" Column="3" TopLine="274"/>
+      </Position6>
+      <Position7>
+        <Filename Value="..\..\..\CcMemDS.pas"/>
+        <Caret Line="149" Column="15" TopLine="131"/>
+      </Position7>
+      <Position8>
+        <Filename Value="main.pas"/>
+        <Caret Line="5" Column="33"/>
+      </Position8>
+      <Position9>
+        <Filename Value="main.pas"/>
+        <Caret Line="250" Column="3" TopLine="248"/>
+      </Position9>
+      <Position10>
+        <Filename Value="main.pas"/>
+        <Caret Line="255" Column="3" TopLine="253"/>
+      </Position10>
+      <Position11>
+        <Filename Value="main.pas"/>
+        <Caret Line="257" Column="3" TopLine="255"/>
+      </Position11>
+      <Position12>
+        <Filename Value="main.pas"/>
+        <Caret Line="256" Column="3" TopLine="254"/>
+      </Position12>
+      <Position13>
+        <Filename Value="main.pas"/>
+        <Caret Line="255" Column="3" TopLine="253"/>
+      </Position13>
+      <Position14>
+        <Filename Value="main.pas"/>
+        <Caret Line="254" Column="3" TopLine="252"/>
+      </Position14>
+      <Position15>
+        <Filename Value="main.pas"/>
+        <Caret Line="256" Column="3" TopLine="254"/>
+      </Position15>
+      <Position16>
+        <Filename Value="main.pas"/>
+        <Caret Line="262" Column="3" TopLine="260"/>
+      </Position16>
+      <Position17>
+        <Filename Value="C:\lazarus\lcl\interfaces\carbon\pascocoa\appkit\appkit.pas"/>
+      </Position17>
+      <Position18>
+        <Filename Value="C:\lazarus\lcl\interfaces\gtk\gtkdefines.inc"/>
+      </Position18>
+    </JumpHistory>
+  </ProjectSession>
+</CONFIG>

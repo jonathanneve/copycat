@@ -1,0 +1,418 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN">
+<html>
+<head>
+<title>TCcLog Class</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+    <meta name="generator" content="Doc-O-Matic" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <link rel="STYLESHEET" href="default.css" type="text/css" />
+
+<script type="text/javascript" src="scripts.js"></script>
+</head>
+<body class="Element700" onload="onBodyLoadEx('frames.html', 'topic', 'TCcLog.html');" onmousedown="onBodyMouseDown();">
+
+<!-- Begin Popups -->
+<div class="Element801" id="popup00359">
+<div class="Element800">
+<div class="Element14">
+Links</div>
+<div class="Element11">
+<div class="Element10">
+<a href="CcLog_pas.html" target="topic">CcLog</a>, <a href="_TCcLog_14_Properties.html" target="topic">Properties</a>, <a href="_TCcLog_14_Methods.html" target="topic">Methods</a>, <a href="_TCcLog_14_Legend.html" target="topic">Legend</a>, <a href="_TCcLog_5_See_Also.html" target="topic">See Also</a></div>
+</div>
+</div>
+</div>
+
+<!-- End Popups -->
+
+<!-- Begin Page Header -->
+<div class="Element710" id="areafixed">
+<div class="Element92">
+<table width="100%" cellspacing="0" cellpadding="0">
+<tr><td width="33%">
+<div class="Element1">
+<a href="#" onmousedown="showPopup(this, 'popup00359');"><img src="seealsolink.png" border="0" alt=""></a> <a href="http://www.copycat.fr" target="new_page"><img src="copycat_70x70.png"><h3>CopyCat Developer Tools</h3></img></a></div>
+</td><td width="34%">
+<div class="Element2">
+<a href="contents.html" target="tocidx">Contents</a> | <a href="idx.html" target="tocidx">Index</a></div>
+</td><td width="33%">
+<div class="Element90">
+<a href="TCcKeyRing.html" target="topic">Previous</a> | <a href="TCcLogConfigListener.html" target="topic">Next</a></div>
+</td></tr></table><div class="Element5">
+TCcLog Class</div>
+<div class="Element7">
+<a href="CcLog_pas.html" target="topic">CcLog</a> | <a href="_TCcLog_14_Properties.html" target="topic">Properties</a> | <a href="_TCcLog_14_Methods.html" target="topic">Methods</a> | <a href="_TCcLog_14_Legend.html" target="topic">Legend</a> | <a href="_TCcLog_5_See_Also.html" target="topic">See Also</a></div>
+<div class="Element730">
+<a href="#" onclick="showAllElements();">Show All</a></div>
+</div>
+</div>
+
+<!-- End Page Header -->
+
+<!-- Begin Client Area -->
+<div class="Element720" id="areascroll">
+<div class="Element721">
+
+<!-- Begin Page Content -->
+<div class="Element58">
+<div class="Element11">
+<div class="Element10">
+<p class="Element10">
+Component for accessing the replication log.</p></div>
+</div>
+<div class="Element14">
+<a onclick="toggleVisibilityStored('Class_Hierarchy');" class="a_Element14"><img src="sectionminus.png" border="0" alt="sectionminus.png" id="imgClass_Hierarchy">Class Hierarchy</a></div>
+<div id="divClass_Hierarchy">
+<div class="Element151"><div class="Element150"><pre class="Element150"><img src="TCcLog.png" border="0" alt="" usemap="#TCcLog"><map class="Element150" name="TCcLog"><area class="Element150" shape="rect" coords="102,0,183,15" href="TCcCustomLog.html"><area class="Element150" shape="rect" coords="213,0,262,15" href="TCcLog.html"></map></pre></div></div>
+</div>
+<div class="Element101"><div class="Element100"><pre class="Element100">TCcLog = <strong>class</strong>(<a href="TCcCustomLog.html" target="topic">TCcCustomLog</a>);</pre></div></div>
+<div class="Element101"><div class="Element100"><pre class="Element100"><strong>class</strong> TCcLog : <strong>public</strong> <a href="TCcCustomLog.html" target="topic">TCcCustomLog</a>;</pre></div></div>
+<div class="Element14">
+<a onclick="toggleVisibilityStored('File');" class="a_Element14"><img src="sectionminus.png" border="0" alt="sectionminus.png" id="imgFile">File</a></div>
+<div id="divFile">
+<div class="Element11">
+<div class="Element10">
+<p class="Element10">
+<a href="CcLog_pas.html" target="topic">CcLog</a></p></div>
+</div>
+</div>
+<div class="Element14">
+<a onclick="toggleVisibilityStored('Description');" class="a_Element14"><img src="sectionminus.png" border="0" alt="sectionminus.png" id="imgDescription">Description</a></div>
+<div id="divDescription">
+<div class="Element11">
+<div class="Element10">
+<p class="Element10">
+TCcLog is used by <a href="TCcReplicator.html" target="topic">TCcReplicator</a> to hold and manage the replication log. Applications can access the replication log by using the Log property of <a href="TCcReplicator.html" target="topic">TCcReplicator</a>. TCcLog reflects the merged content of both local and remote RPL$LOG tables, grouping duplicate record logs, so as to optimize performance.&nbsp;</p>
+<p class="Element10">
+&nbsp;</p>
+<p class="Element10">
+Internally, TCcLog holds a dataset with the following fields, which are made accessible by using the <a href="TCcLog_FieldByName@string.html" target="topic">FieldByName</a> or <a href="TCcLog_FBN@string.html" target="topic">FBN</a> methods:&nbsp;</p>
+<p class="Element10">
+&nbsp;</p><div class="Element63">
+<div class="TableDiv">
+<table cellspacing="0" class="Table2">
+<tr>
+<td class="Element67" valign="top" width="100%">
+<div class="Element68">
+Field name Type Description&nbsp;</div></td></tr><tr>
+<td class="Element67" valign="top" width="100%">
+<div class="Element68">
+======================== ============ ----------------------------------------------------&nbsp;</div></td></tr><tr>
+<td class="Element67" valign="top" width="100%">
+<div class="Element68">
+TABLE_NAME String Table name&nbsp;</div></td></tr><tr>
+<td class="Element67" valign="top" width="100%">
+<div class="Element68">
+REMOTE_TABLE_NAME String Remote table name&nbsp;</div></td></tr><tr>
+<td class="Element67" valign="top" width="100%">
+<div class="Element68">
+PRIMARY_KEY_VALUES<br>String Values of all the primary key fields&nbsp;</div></td></tr><tr>
+<td class="Element67" valign="top" width="100%">
+<div class="Element68">
+PRIMARY_KEY_SYNC<br>String Synchronization statement(s) for updating the primary key field(s) (taken from RPL$LOG)&nbsp;</div></td></tr><tr>
+<td class="Element67" valign="top" width="100%">
+<div class="Element68">
+GENERIC_PRIMARY_KEY_SYNC String Generic synchronization statement(s) for updating the primary key field(s) (taken from RPL$TABLES)&nbsp;</div></td></tr><tr>
+<td class="Element67" valign="top" width="100%">
+<div class="Element68">
+UNIQUE_KEY_NAMES<br>String Values of all the unique key fields (fields that aren't part of the primary key&nbsp;</div></td></tr><tr>
+<td class="Element67" valign="top" width="100%">
+<div class="Element68">
+yet need to be synchronized).&nbsp;</div></td></tr><tr>
+<td class="Element67" valign="top" width="100%">
+<div class="Element68">
+OLD_PRIMARY_KEY_VALUES String We keep a trace of the original primary key value in case it changes (due to key synchronisation).&nbsp;</div></td></tr><tr>
+<td class="Element67" valign="top" width="100%">
+<div class="Element68">
+Only for internal use, do not edit.&nbsp;</div></td></tr><tr>
+<td class="Element67" valign="top" width="100%">
+<div class="Element68">
+UNIQUE_KEY_SYNC<br>String Synchronization statement(s) for updating the unique key field(s) (taken from RPL$LOG)&nbsp;</div></td></tr><tr>
+<td class="Element67" valign="top" width="100%">
+<div class="Element68">
+GENERIC_UNIQUE_KEY_SYNC String Generic synchronization statement(s) for updating the unique key field(s) (taken from RPL$TABLES)&nbsp;</div></td></tr><tr>
+<td class="Element67" valign="top" width="100%">
+<div class="Element68">
+REPL_INSERTS<br>String 'Y' or 'N' to indicate whether INSERT statements are replicated or not.&nbsp;</div></td></tr><tr>
+<td class="Element67" valign="top" width="100%">
+<div class="Element68">
+REPL_UPDATES<br>String 'Y' or 'N' to indicate whether UPDATE statements are replicated or not.&nbsp;</div></td></tr><tr>
+<td class="Element67" valign="top" width="100%">
+<div class="Element68">
+REPL_DELETES<br>String 'Y' or 'N' to indicate whether DELETE statements are replicated or not.&nbsp;</div></td></tr><tr>
+<td class="Element67" valign="top" width="100%">
+<div class="Element68">
+OPERATION_DATE<br>DateTime Date and time of the earliest change for the current record&nbsp;</div></td></tr><tr>
+<td class="Element67" valign="top" width="100%">
+<div class="Element68">
+PROCEDURE_STATEMENT<br>String<br>SQL of the EXECUTE PROCEDURE statement that is to&nbsp;</div></td></tr><tr>
+<td class="Element67" valign="top" width="100%">
+<div class="Element68">
+be executed in order to replicate a stored&nbsp;</div></td></tr><tr>
+<td class="Element67" valign="top" width="100%">
+<div class="Element68">
+procedure.&nbsp;</div></td></tr><tr>
+<td class="Element67" valign="top" width="100%">
+<div class="Element68">
+PRIORITY<br>Integer Priority of the table. This value is designed to&nbsp;</div></td></tr><tr>
+<td class="Element67" valign="top" width="100%">
+<div class="Element68">
+avoid problems arising from inter-table&nbsp;</div></td></tr><tr>
+<td class="Element67" valign="top" width="100%">
+<div class="Element68">
+dependencies, and is used for sorting the rows in&nbsp;</div></td></tr><tr>
+<td class="Element67" valign="top" width="100%">
+<div class="Element68">
+the log.&nbsp;</div></td></tr></table></div></div>
+<p class="Element10">
+&nbsp;</p>
+<p class="Element10">
+Most of these fields take their value from the corresponding fields in the RPL$LOG table of the database, and are filled in by the replication triggers. These triggers are generated using the <a href="TCcConfig.html" target="topic">TCcConfig</a> component.</p></div>
+</div>
+</div>
+<div class="Element14">
+<a onclick="toggleVisibilityStored('See_Also');" class="a_Element14"><img src="sectionminus.png" border="0" alt="sectionminus.png" id="imgSee_Also">See Also</a></div>
+<div id="divSee_Also">
+<div class="Element11">
+<div class="Element10">
+<p class="Element10">
+<a href="TCcReplicator_Log.html" target="topic">TCcReplicator.Log</a>, <a href="TCcConfig_Tables.html" target="topic">TCcConfig.Tables</a>, <a href="RPL$LOG.html" target="topic">RPL$LOG</a></p></div>
+</div>
+</div>
+<div class="Element14">
+<a onclick="toggleVisibilityStored('Methods');" class="a_Element14"><img src="sectionminus.png" border="0" alt="sectionminus.png" id="imgMethods">Methods</a></div>
+<div id="divMethods">
+<div class="Element11">
+<div class="Element10">
+<div class="Element212">
+<div class="TableDiv">
+<table cellspacing="0" class="Table1">
+<tr>
+<td class="Element200" valign="top" width="50%">
+<div class="Element201">
+Method&nbsp;</div></td><td class="Element204" valign="top" width="50%">
+<div class="Element205">
+Description&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_method.png" border="0" alt=""><img src="indicator_virtual.png" border="0" alt=""> <a href="TCcLog_Create@TComponent.html" target="topic">Create</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_method.png" border="0" alt=""><img src="indicator_virtual.png" border="0" alt=""> <a href="TCcLog_Destroy.html" target="topic">Destroy</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_method.png" border="0" alt=""><img src="indicator_virtual.png" border="0" alt=""> <a href="TCcLog_FBN@string.html" target="topic">FBN</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Retrieve field value as a string.&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_method.png" border="0" alt=""><img src="indicator_virtual.png" border="0" alt=""> <a href="TCcLog_FieldByName@string.html" target="topic">FieldByName</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Retieve field object by name.&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_method.png" border="0" alt=""><img src="indicator_virtual.png" border="0" alt=""> <a href="TCcLog_FieldExists@string.html" target="topic">FieldExists</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_method.png" border="0" alt=""> <a href="TCcLog_ListChangedFields@TCcConnection@TStringList@String@String@String.html" target="topic">ListChangedFields</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_method.png" border="0" alt=""><img src="indicator_virtual.png" border="0" alt=""> <a href="TCcLog_Next.html" target="topic">Next</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Go to the next record of the log, if any.&nbsp;</div></td></tr></table></div></div>
+<div class="Element215">
+TCcCustomLog Class</div>
+<div class="Element212">
+<div class="TableDiv">
+<table cellspacing="0" class="Table1">
+<tr>
+<td class="Element200" valign="top" width="50%">
+<div class="Element201">
+Method&nbsp;</div></td><td class="Element204" valign="top" width="50%">
+<div class="Element205">
+Description&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_method.png" border="0" alt=""><img src="indicator_abstract.png" border="0" alt=""> <a href="TCcCustomLog_FBN@string.html" target="topic">FBN</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Retrieve field value as a string.&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_method.png" border="0" alt=""><img src="indicator_abstract.png" border="0" alt=""> <a href="TCcCustomLog_FieldByName@string.html" target="topic">FieldByName</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Retieve field object by name.&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_method.png" border="0" alt=""><img src="indicator_abstract.png" border="0" alt=""> <a href="TCcCustomLog_FieldExists@string.html" target="topic">FieldExists</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_method.png" border="0" alt=""><img src="indicator_abstract.png" border="0" alt=""> <a href="TCcCustomLog_Next.html" target="topic">Next</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Go to the next record of the log, if any.&nbsp;</div></td></tr></table></div></div>
+</div>
+</div>
+</div>
+<div class="Element14">
+<a onclick="toggleVisibilityStored('Properties');" class="a_Element14"><img src="sectionminus.png" border="0" alt="sectionminus.png" id="imgProperties">Properties</a></div>
+<div id="divProperties">
+<div class="Element11">
+<div class="Element10">
+<div class="Element215">
+TCcCustomLog Class</div>
+<div class="Element212">
+<div class="TableDiv">
+<table cellspacing="0" class="Table1">
+<tr>
+<td class="Element200" valign="top" width="50%">
+<div class="Element201">
+Property&nbsp;</div></td><td class="Element204" valign="top" width="50%">
+<div class="Element205">
+Description&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_property.png" border="0" alt=""><img src="indicator_readonly.png" border="0" alt=""> <a href="TCcCustomLog_AllowedOperations.html" target="topic">AllowedOperations</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+List of operations allowed for the current record in the log.&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_property.png" border="0" alt=""><img src="indicator_readonly.png" border="0" alt=""> <a href="TCcCustomLog_CurrentLine.html" target="topic">CurrentLine</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Current line number&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_property.png" border="0" alt=""><img src="indicator_readonly.png" border="0" alt=""> <a href="TCcCustomLog_Dest.html" target="topic">Dest</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Destination database for the current record.&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_property.png" border="0" alt=""><img src="indicator_readonly.png" border="0" alt=""> <a href="TCcCustomLog_Eof.html" target="topic">Eof</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Eof is true on the last record of the log&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_property.png" border="0" alt=""><img src="indicator_readonly.png" border="0" alt=""> <a href="TCcCustomLog_Keys.html" target="topic">Keys</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+List of primary keys for the current record, with their values&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_property.png" border="0" alt=""><img src="indicator_readonly.png" border="0" alt=""> <a href="TCcCustomLog_LineCount.html" target="topic">LineCount</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Total number of lines in the log&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_property.png" border="0" alt=""><img src="indicator_readonly.png" border="0" alt=""> <a href="TCcCustomLog_LocalMode.html" target="topic">LocalMode</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Indicates whether the record comes from the local database.&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_property.png" border="0" alt=""><img src="indicator_readonly.png" border="0" alt=""> <a href="TCcCustomLog_OldRecordID.html" target="topic">OldRecordID</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_property.png" border="0" alt=""><img src="indicator_readonly.png" border="0" alt=""> <a href="TCcCustomLog_Origin.html" target="topic">Origin</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Source database for the current record.&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_property.png" border="0" alt=""><img src="indicator_readonly.png" border="0" alt=""> <a href="TCcCustomLog_PrimaryKeys.html" target="topic">PrimaryKeys</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_property.png" border="0" alt=""><img src="indicator_readonly.png" border="0" alt=""> <a href="TCcCustomLog_RecordID.html" target="topic">RecordID</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_property.png" border="0" alt=""><img src="indicator_readonly.png" border="0" alt=""> <a href="TCcCustomLog_RemoteTableName.html" target="topic">RemoteTableName</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_property.png" border="0" alt=""><img src="indicator_readonly.png" border="0" alt=""> <a href="TCcCustomLog_TableName.html" target="topic">TableName</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+&nbsp;</div></td></tr></table></div></div>
+</div>
+</div>
+</div>
+<div class="Element14">
+<a onclick="toggleVisibilityStored('Legend');" class="a_Element14"><img src="sectionminus.png" border="0" alt="sectionminus.png" id="imgLegend">Legend</a></div>
+<div id="divLegend">
+<div class="Element11">
+<div class="Element10">
+<div class="Element212">
+<div class="TableDiv">
+<table cellspacing="0" class="Table3">
+<tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_method.png" border="0" alt="">&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Method&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_virtual.png" border="0" alt="">&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+virtual&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_abstract.png" border="0" alt="">&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+abstract&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_property.png" border="0" alt="">&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Property&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_readonly.png" border="0" alt="">&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+read only&nbsp;</div></td></tr></table></div></div>
+</div>
+</div>
+</div>
+<div class="Element14">
+<a onclick="toggleVisibilityStored('Links');" class="a_Element14"><img src="sectionminus.png" border="0" alt="sectionminus.png" id="imgLinks">Links</a></div>
+<div id="divLinks">
+<div class="Element11">
+<div class="Element10">
+<a href="CcLog_pas.html" target="topic">CcLog</a>, <a href="_TCcLog_14_Properties.html" target="topic">Properties</a>, <a href="_TCcLog_14_Methods.html" target="topic">Methods</a>, <a href="_TCcLog_14_Legend.html" target="topic">Legend</a>, <a href="_TCcLog_5_See_Also.html" target="topic">See Also</a></div>
+</div>
+</div>
+<div class="Element62">
+Created with a commercial version of <a href="http://www.doc-o-matic.com">Doc-O-Matic</a>. In order to make this message disappear you need to register this software. If you have problems registering this software please contact us at <a href="mailto:support@toolsfactory.com">support@toolsfactory.com</a>.</div>
+</div>
+<!-- End Page Content -->
+
+<!-- Begin Page Footer -->
+<div class="Element93">
+<table width="100%" cellspacing="0" cellpadding="0">
+<tr><td width="100%">
+<div class="Element3">
+Copyright (c) 2015. All rights reserved. http://www.copycat.fr</div>
+</td></tr><tr><td width="100%">
+<div class="Element4">
+<a href="contents.html" target="tocidx">Contents</a> | <a href="idx.html" target="tocidx">Index</a></div>
+</td></tr><tr><td width="100%">
+<div class="Element97">
+What do you think about this topic?  Send feedback through our <a href="http://copycat.fr/wordpress/contact-us/" target="new_page">contact form</a></div>
+</td></tr></table></div>
+
+<!-- End Page Footer -->
+</div>
+</div>
+
+<!-- End Client Area -->
+</body></html>

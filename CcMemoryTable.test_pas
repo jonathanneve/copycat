@@ -1,0 +1,118 @@
+unit CcMemoryTable;
+
+interface
+
+uses Classes, DB, CcProviders;
+
+(*
+type
+
+{$IFDEF NEXTGEN}
+PCcRecBuffer = TRecBuf;
+{$ELSE}
+PCcRecBuffer = TRecordBuffer;
+{$ENDIF}
+
+TCcRecord = class
+
+end;
+
+TCcQueryDataSet = class(TDataSet)
+  private
+    FRecordPos: Integer;
+    FRecords: TList;
+    FRecordSize: Integer;
+    FQuery: TCcQuery;
+    procedure RecordToBuffer(Rec: TCcRecord; Buffer: PCcRecBuffer);
+	protected
+		function GetRecord(Buffer: PCcRecBuffer; GetMode: TGetMode; DoCheck: Boolean): TGetResult; override;
+    function GetFieldData(Field: TField; Buffer: PCcRecBuffer): Boolean;override;
+		procedure InternalClose; override;
+		procedure InternalHandleException; override;
+		procedure InternalInitFieldDefs; override;
+		procedure InternalOpen; override;
+		function IsCursorOpen: Boolean; override;
+    property Query: TCcQuery read FQuery write FQuery;
+end;
+
+*)
+
+implementation
+
+{ TCcMemoryTable }
+
+(*
+function TCcQueryDataSet.GetFieldData(Field: TField;
+  Buffer: PCcRecBuffer): Boolean;
+begin
+
+end;
+
+function TCcQueryDataSet.GetRecord(Buffer: PCcRecBuffer; GetMode: TGetMode;
+  DoCheck: Boolean): TGetResult;
+var
+  Accept: Boolean;
+begin
+  Result := grOk;
+  Accept := True;
+  case GetMode of
+    gmPrior:
+      if FRecordPos <= 0 then
+      begin
+        Result := grBOF;
+        FRecordPos := -1;
+      end
+      else
+        Dec(FRecordPos);
+    gmCurrent:
+      if (FRecordPos < 0) or (FRecordPos >= RecordCount) then
+        Result := grError;
+    gmNext:
+      if FRecordPos >= RecordCount - 1 then
+        Result := grEOF
+      else
+        Inc(FRecordPos);
+  end;
+  if Result = grOk then
+    RecordToBuffer(TCcRecord(FRecords[FRecordPos]), Buffer)
+  else
+{  if (Result = grError) and DoCheck then
+    Error(SMemNoRecords);  }
+end;
+
+procedure TCcQueryDataSet.RecordToBuffer(Rec: TCcRecord; Buffer: PCcRecBuffer);
+begin
+  Move(Rec, Buffer^, SizeOf(Pointer));
+end;
+
+procedure TCcQueryDataSet.InternalClose;
+begin
+  inherited;
+
+end;
+
+procedure TCcQueryDataSet.InternalHandleException;
+begin
+  inherited;
+
+end;
+
+procedure TCcQueryDataSet.InternalInitFieldDefs;
+begin
+  inherited;
+
+end;
+
+procedure TCcQueryDataSet.InternalOpen;
+begin
+  inherited;
+
+end;
+
+function TCcQueryDataSet.IsCursorOpen: Boolean;
+begin
+
+end;
+*)
+
+end.

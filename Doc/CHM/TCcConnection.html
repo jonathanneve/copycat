@@ -1,0 +1,464 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>TCcConnection Class</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+    <meta name="generator" content="Doc-O-Matic" />
+    <meta name="save" content="history" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <link rel="STYLESHEET" href="default.css" type="text/css" />
+
+<script type="text/javascript" src="scripts.js"></script>
+</head>
+<body class="Element700" onload="onBodyLoad();" onmousedown="onBodyMouseDown();">
+<div id="persistenceDiv" style="display:none; behavior:url(#default#userData);"></div>
+
+<!-- Begin Popups -->
+<div class="Element801" id="popup00086">
+<div class="Element800">
+<div class="Element14">
+Links</div>
+<div class="Element11">
+<div class="Element10">
+<a href="CcProviders_pas.html">CcProviders</a>, <a href="_TCcConnection_14_Properties.html">Properties</a>, <a href="_TCcConnection_14_Methods.html">Methods</a>, <a href="_TCcConnection_14_Events.html">Events</a>, <a href="_TCcConnection_14_Legend.html">Legend</a></div>
+</div>
+</div>
+</div>
+
+<!-- End Popups -->
+
+<!-- Begin Page Header -->
+<div class="Element710" id="areafixed">
+<div class="Element92">
+<table width="100%" cellspacing="0" cellpadding="0">
+<tr><td width="33%">
+<div class="Element1">
+<a href="#" onmousedown="showPopup(this, 'popup00086');"><img src="seealsolink.png" border="0" alt=""></a> <a href="http://www.copycat.fr" target="new_page"><img src="copycat_70x70.png" border="0"><h3>CopyCat Developer Tools</h3></img></a></div>
+</td><td width="34%">
+<div class="Element2">
+<a href="contents.html">Contents</a> | <a href="idx.html">Index</a></div>
+</td><td width="33%">
+<div class="Element90">
+<a href="TCcConflictMgr.html">Previous</a> | <a href="TCcCustomConflictMgr.html">Next</a></div>
+</td></tr></table><div class="Element5">
+TCcConnection Class</div>
+<div class="Element7">
+<a href="CcProviders_pas.html">CcProviders</a> | <a href="_TCcConnection_14_Properties.html">Properties</a> | <a href="_TCcConnection_14_Methods.html">Methods</a> | <a href="_TCcConnection_14_Events.html">Events</a> | <a href="_TCcConnection_14_Legend.html">Legend</a></div>
+<div class="Element730">
+<a href="#" onclick="showAllElements();">Show All</a></div>
+</div>
+</div>
+
+<!-- End Page Header -->
+
+<!-- Begin Client Area -->
+<div class="Element720" id="areascroll">
+<div class="Element721">
+
+<!-- Begin Page Content -->
+<div class="Element58">
+<div class="Element11">
+<div class="Element10">
+<p class="Element10">
+Abstract database connection class.</p></div>
+</div>
+<div class="Element14">
+<a onclick="toggleVisibilityStored('Class_Hierarchy');" class="a_Element14"><img src="sectionminus.png" border="0" alt="sectionminus.png" id="imgClass_Hierarchy">Class Hierarchy</a></div>
+<div id="divClass_Hierarchy">
+<div class="Element151"><div class="Element150"><pre class="Element150"><img src="TCcConnection.png" border="0" alt="" usemap="#TCcConnection"><map class="Element150" name="TCcConnection"><area class="Element150" shape="rect" coords="102,15,183,30" href="TCcConnection.html"><area class="Element150" shape="rect" coords="213,0,333,15" href="TCcClientTransport.html"><area class="Element150" shape="rect" coords="213,30,333,45" href="TCcInterbaseConnection.html"></map></pre></div></div>
+</div>
+<div class="Element101"><div class="Element100"><pre class="Element100">TCcConnection = <strong>class</strong>(TComponent);</pre></div></div>
+<div class="Element101"><div class="Element100"><pre class="Element100"><strong>class</strong> TCcConnection : <strong>public</strong> TComponent;</pre></div></div>
+<div class="Element14">
+<a onclick="toggleVisibilityStored('File');" class="a_Element14"><img src="sectionminus.png" border="0" alt="sectionminus.png" id="imgFile">File</a></div>
+<div id="divFile">
+<div class="Element11">
+<div class="Element10">
+<p class="Element10">
+<a href="CcProviders_pas.html">CcProviders</a></p></div>
+</div>
+</div>
+<div class="Element14">
+<a onclick="toggleVisibilityStored('Description');" class="a_Element14"><img src="sectionminus.png" border="0" alt="sectionminus.png" id="imgDescription">Description</a></div>
+<div id="divDescription">
+<div class="Element11">
+<div class="Element10">
+<p class="Element10">
+TCcConnection is used by <a href="TCcReplicator.html">TCcReplicator</a> and <a href="TCcConfig.html">TCcConfig</a> in order to acheive database access component independence. Descendants of TCcConnection override the NewDatabase, NewTransaction and NewQuery methods in order to provide database connectivity for CopyCat.&nbsp;</p>
+<p class="Element10">
+&nbsp;</p>
+<p class="Element10">
+Thus, CopyCat can be used interchangeably with any database access components for which a TCcConnection descendant has been written. Currently, FIBPlus, IBX, IBO and UIB have been implemented. Support for other component sets (such as Zeos and DBX) is also possible, and planned for future versions.</p></div>
+</div>
+</div>
+<div class="Element14">
+<a onclick="toggleVisibilityStored('Events');" class="a_Element14"><img src="sectionminus.png" border="0" alt="sectionminus.png" id="imgEvents">Events</a></div>
+<div id="divEvents">
+<div class="Element11">
+<div class="Element10">
+<div class="Element212">
+<div class="TableDiv">
+<table cellspacing="0" class="Table1">
+<tr>
+<td class="Element200" valign="top" width="50%">
+<div class="Element201">
+Event&nbsp;</div></td><td class="Element204" valign="top" width="50%">
+<div class="Element205">
+Description&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_event.png" border="0" alt=""> <a href="TCcConnection_OnConnectionLost.html">OnConnectionLost</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Fired upon database connection loss.&nbsp;</div></td></tr></table></div></div>
+</div>
+</div>
+</div>
+<div class="Element14">
+<a onclick="toggleVisibilityStored('Methods');" class="a_Element14"><img src="sectionminus.png" border="0" alt="sectionminus.png" id="imgMethods">Methods</a></div>
+<div id="divMethods">
+<div class="Element11">
+<div class="Element10">
+<div class="Element212">
+<div class="TableDiv">
+<table cellspacing="0" class="Table1">
+<tr>
+<td class="Element200" valign="top" width="50%">
+<div class="Element201">
+Method&nbsp;</div></td><td class="Element204" valign="top" width="50%">
+<div class="Element205">
+Description&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_method.png" border="0" alt=""><img src="indicator_virtual.png" border="0" alt=""> <a href="TCcConnection_Assign@TPersistent.html">Assign</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_method.png" border="0" alt=""> <a href="TCcConnection_CheckDisconnected.html">CheckDisconnected</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_method.png" border="0" alt=""> <a href="TCcConnection_ClearQueries.html">ClearQueries</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Clear the query cache associated with this connection&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_method.png" border="0" alt=""> <a href="TCcConnection_Commit.html">Commit</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_method.png" border="0" alt=""> <a href="TCcConnection_CommitRetaining.html">CommitRetaining</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_method.png" border="0" alt=""> <a href="TCcConnection_Connect.html">Connect</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Connect to database and start transaction&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_method.png" border="0" alt=""> <a href="TCcConnection_ConnectAsNode@string@string.html">ConnectAsNode</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+<a href="TCcConnection_Connect.html">Connect</a> to database and start transaction, specifying the name of the currently replicating node.&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_method.png" border="0" alt=""><img src="indicator_virtual.png" border="0" alt=""> <a href="TCcConnection_ConnectorName.html">ConnectorName</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Return the name of the database access component set for which this connection type is designed.&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_method.png" border="0" alt=""><img src="indicator_virtual.png" border="0" alt=""> <a href="TCcConnection_Create@TComponent.html">Create</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_method.png" border="0" alt=""> <a href="TCcConnection_DatabaseTypes@TStrings.html">DatabaseTypes</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Returns the list of supported database types.&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_method.png" border="0" alt=""> <a href="TCcConnection_DatabaseVersions@TStrings.html">DatabaseVersions</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Returns the list of supported versions of the current database type.&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_method.png" border="0" alt=""><img src="indicator_virtual.png" border="0" alt=""> <a href="TCcConnection_Destroy.html">Destroy</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_method.png" border="0" alt=""> <a href="TCcConnection_Disconnect.html">Disconnect</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+<a href="TCcConnection_Commit.html">Commit</a> transaction and disconnect from database&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_method.png" border="0" alt=""> <a href="TCcConnection_ExecQuery@string.html">ExecQuery</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Call ExecQuery to execute a query directly.&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_method.png" border="0" alt=""> <a href="TCcConnection_FindQuery@string.html">FindQuery</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Returns a managed query by name&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_method.png" border="0" alt=""> <a href="TCcConnection_Gen_Id@string@Integer.html">Gen_Id</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_method.png" border="0" alt=""> <a href="TCcConnection_GetFieldType@string@string.html">GetFieldType</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_method.png" border="0" alt=""> <a href="TCcConnection_ListAllProcedures.html">ListAllProcedures</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Lists all stored procedures in the database.&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_method.png" border="0" alt=""> <a href="TCcConnection_ListAllTables.html">ListAllTables</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Returns the list of tables in the database, including temporary tables.&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_method.png" border="0" alt=""> <a href="TCcConnection_ListFieldsForNoPK@string.html">ListFieldsForNoPK</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Returns the list of fields to use as keys in tables with no primary keys.&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_method.png" border="0" alt=""> <a href="TCcConnection_ListGenerators.html">ListGenerators</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Lists all the generators (sequences) defined in the database.&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_method.png" border="0" alt=""> <a href="TCcConnection_ListKeywordsForbiddenAsFieldNames.html">ListKeywordsForbiddenAsFieldNames</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Lists the database-specific keywords that can't be used as field names Any existing fields named using these keywords are excluded from replication&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_method.png" border="0" alt=""> <a href="TCcConnection_ListPrimaryKeys@string.html">ListPrimaryKeys</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Returns the list of primary key fields in the specified table&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_method.png" border="0" alt=""> <a href="TCcConnection_ListProcedures.html">ListProcedures</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Lists stored procedures that can be replicated, that is, procedures that don't return any value.&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_method.png" border="0" alt=""> <a href="TCcConnection_ListTableFields@string.html">ListTableFields</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Returns the list of fields in the specified table&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_method.png" border="0" alt=""> <a href="TCcConnection_ListTables.html">ListTables</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Returns the list of tables in the database.&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_method.png" border="0" alt=""> <a href="TCcConnection_ListTriggers.html">ListTriggers</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Returns the list of triggers in the database&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_method.png" border="0" alt=""> <a href="TCcConnection_ListUpdatableTableFields@string.html">ListUpdatableTableFields</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Returns the list of fields in the specified table, excluding read-only fields&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_method.png" border="0" alt=""><img src="indicator_virtual.png" border="0" alt=""> <a href="TCcConnection_Loaded.html">Loaded</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_method.png" border="0" alt=""> <a href="TCcConnection_MaxDDLNameLength.html">MaxDDLNameLength</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Maximum length of meta-data names for the selected database type&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_method.png" border="0" alt=""> <a href="TCcConnection_RefreshNodes.html">RefreshNodes</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Call RefreshNodes after inserting new nodes into RPL$USERS, in order to register them.&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_method.png" border="0" alt=""> <a href="TCcConnection_Rollback.html">Rollback</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_method.png" border="0" alt=""> <a href="TCcConnection_RollbackRetaining.html">RollbackRetaining</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_method.png" border="0" alt=""> <a href="TCcConnection_StartTransaction.html">StartTransaction</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+&nbsp;</div></td></tr></table></div></div>
+</div>
+</div>
+</div>
+<div class="Element14">
+<a onclick="toggleVisibilityStored('Properties');" class="a_Element14"><img src="sectionminus.png" border="0" alt="sectionminus.png" id="imgProperties">Properties</a></div>
+<div id="divProperties">
+<div class="Element11">
+<div class="Element10">
+<div class="Element212">
+<div class="TableDiv">
+<table cellspacing="0" class="Table1">
+<tr>
+<td class="Element200" valign="top" width="50%">
+<div class="Element201">
+Property&nbsp;</div></td><td class="Element204" valign="top" width="50%">
+<div class="Element205">
+Description&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_property.png" border="0" alt=""><img src="indicator_readonly.png" border="0" alt=""> <a href="TCcConnection_CanUseRowsAffected.html">CanUseRowsAffected</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Determines whether the current combination of connector and db adaptor can support use of rowsaffected property&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_property.png" border="0" alt=""> <a href="TCcConnection_Connected.html">Connected</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_property.png" border="0" alt=""> <a href="TCcConnection_ConnectionParams.html">ConnectionParams</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+List of database-specific connection parameters to use when opening a connection.&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_property.png" border="0" alt=""><img src="indicator_readonly.png" border="0" alt=""> <a href="TCcConnection_DBAdaptor.html">DBAdaptor</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+The currently selected database adaptor object&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_property.png" border="0" alt=""> <a href="TCcConnection_DBName.html">DBName</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Name of the database The exact format will depend on the underlying database type&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_property.png" border="0" alt=""> <a href="TCcConnection_DBType.html">DBType</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Type of database to <a href="TCcConnection_Connect.html">connect</a> to.&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_property.png" border="0" alt=""> <a href="TCcConnection_DBVersion.html">DBVersion</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Version of the database.&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_property.png" border="0" alt=""><img src="indicator_readonly.png" border="0" alt=""> <a href="TCcConnection_DDLQuery.html">DDLQuery</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Gets a DDL managed query object by name, that is, a query with ParamCheck set to false.&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_property.png" border="0" alt=""><img src="indicator_readonly.png" border="0" alt=""> <a href="TCcConnection_InTransaction.html">InTransaction</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_property.png" border="0" alt=""> <a href="TCcConnection_OnDestroyQueries.html">OnDestroyQueries</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Fired when the internal pool of database queries is about to be emptied.&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_property.png" border="0" alt=""> <a href="TCcConnection_OnQueryExecute.html">OnQueryExecute</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+This event is fired whenever a query is executed using this connection.&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_property.png" border="0" alt=""><img src="indicator_readonly.png" border="0" alt=""> <a href="TCcConnection_ReplicatingNode.html">ReplicatingNode</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Node that is currently being replicated&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_property.png" border="0" alt=""><img src="indicator_readonly.png" border="0" alt=""> <a href="TCcConnection_ReplicatingNodePassword.html">ReplicatingNodePassword</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Password of the replicating node&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_property.png" border="0" alt=""><img src="indicator_readonly.png" border="0" alt=""> <a href="TCcConnection_SelectQuery.html">SelectQuery</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Get a query object by name&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_property.png" border="0" alt=""><img src="indicator_readonly.png" border="0" alt=""> <a href="TCcConnection_UpdateQuery.html">UpdateQuery</a>&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Get a query object by name&nbsp;</div></td></tr></table></div></div>
+</div>
+</div>
+</div>
+<div class="Element14">
+<a onclick="toggleVisibilityStored('Legend');" class="a_Element14"><img src="sectionminus.png" border="0" alt="sectionminus.png" id="imgLegend">Legend</a></div>
+<div id="divLegend">
+<div class="Element11">
+<div class="Element10">
+<div class="Element212">
+<div class="TableDiv">
+<table cellspacing="0" class="Table3">
+<tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_property.png" border="0" alt="">&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Property&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_readonly.png" border="0" alt="">&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+read only&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_event.png" border="0" alt="">&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Event&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_method.png" border="0" alt="">&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+Method&nbsp;</div></td></tr><tr>
+<td class="Element202" valign="top" width="50%">
+<div class="Element203">
+<img src="indicator_virtual.png" border="0" alt="">&nbsp;</div></td><td class="Element206" valign="top" width="50%">
+<div class="Element207">
+virtual&nbsp;</div></td></tr></table></div></div>
+</div>
+</div>
+</div>
+<div class="Element14">
+<a onclick="toggleVisibilityStored('Links');" class="a_Element14"><img src="sectionminus.png" border="0" alt="sectionminus.png" id="imgLinks">Links</a></div>
+<div id="divLinks">
+<div class="Element11">
+<div class="Element10">
+<a href="CcProviders_pas.html">CcProviders</a>, <a href="_TCcConnection_14_Properties.html">Properties</a>, <a href="_TCcConnection_14_Methods.html">Methods</a>, <a href="_TCcConnection_14_Events.html">Events</a>, <a href="_TCcConnection_14_Legend.html">Legend</a></div>
+</div>
+</div>
+<div class="Element62">
+Created with a commercial version of <a href="http://www.doc-o-matic.com">Doc-O-Matic</a>. In order to make this message disappear you need to register this software. If you have problems registering this software please contact us at <a href="mailto:support@toolsfactory.com">support@toolsfactory.com</a>.</div>
+</div>
+<!-- End Page Content -->
+
+<!-- Begin Page Footer -->
+<div class="Element93">
+<table width="100%" cellspacing="0" cellpadding="0">
+<tr><td width="100%">
+<div class="Element3">
+Copyright (c) 2015. All rights reserved. http://www.copycat.fr</div>
+</td></tr><tr><td width="100%">
+<div class="Element4">
+<a href="contents.html">Contents</a> | <a href="idx.html">Index</a></div>
+</td></tr><tr><td width="100%">
+<div class="Element97">
+What do you think about this topic?  <a href="#" onclick="sendFeedback('jonathan@copycat.fr', 'Documentation Feedback', 'Project: CopyCat Developer Tools%0ATopic ID: TCcConnection%0ATitle: TCcConnection Class');"> Send feedback! </a></div>
+</td></tr></table></div>
+
+<!-- End Page Footer -->
+</div>
+</div>
+
+<!-- End Client Area -->
+</body></html>

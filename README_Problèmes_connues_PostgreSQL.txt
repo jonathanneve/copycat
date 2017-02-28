@@ -1,0 +1,11 @@
+﻿Problèmes connues Postgresql :
+	- "timestamp with time zone" (perte des fuseaux horaires)
+	- "interval"	(perte des données)
+	- "time with time zone" (perte des fuseaux horaires)
+	- "money" en clé primaire (envoie un exception)
+	- Les "timestamps" et "time" ne gèrent que jusqu'à la milliseconde
+	- Types géométriques (envoie un exception)
+	- Tableaux (envoie un exception)
+	- Types adresses réseau (envoie un exception)
+	- "json" (envoie un exception)
+	- Types de recherche plein texte (envoie un exception)

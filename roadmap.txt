@@ -1,0 +1,46 @@
+COPYCAT ROADMAP 
+
+Plans
+
+July
+
+- Minor release of LiveMirror with bug fixes
+- Minor release of CopyCat Developer with a few small improvements and various bug fixes
+- First beta of DataMerge for Interbase / Firebird and MS SQL
+
+September
+
+- Final release of DataMerge for all supported databases
+- LiveMirror : new licencing option allowing unlimited database backups on one machine 
+
+Q4 2014
+
+- Embarcadero Delphi XE7 support
+- Tracing / auditing support for CopyCat Developer : log changes in full with a diff of each changed field, so that the all the changes to the database can be traced and selectively rolled back.
+- FreePascal support for CopyCat Developer
+- Linux release for LiveMirror and DataMerge
+- PostgreSQL support in CopyCat Developer
+
+2015
+
+- Meta-data synchronisation and data pumping component in CopyCat Developer.
+- LiveMirror and DataMerge : Database revisionning tool making use of the new tracing/auditing features of CopyCat : users will be able to easily see all the versions of their data, rollback all or selected changes from a revision, and so on.
+- LiveMirror and DataMerge : Features for easily creating a new database node, including creating the database and pumping all the data automatically.
+- LiveMirror and DataMerge : Option to keep meta-data in sync.
+- Record merging in case of conflict (if different fields were modified) : based on the new tracing/auditing feature, we will be able to offer fine-grained conflict resolution and optional record merging.
+- Oracle support
+- DBISAM support
+- MacOS and Win64 releases for LiveMirror and DataMerge
+- New database monitoring tools for LiveMirror and DataMerge : periodic consistency checks configurable for each table, multi-level error reporting (depending on severity), etc
+- New hands-off LiveMirror management service, where we will take care of everything, installation, configuration, management, monitoring, upgrades, etc. This will be a monthly subscription, and users will receive regular reports on the backups, as well as a tool to access old versions of their data, optionally rollback errorneous changes, restore deleted rows, etc. 
+
+Unconfirmed ideas for later
+
+- Oxygene support
+- Cloud support
+- Support for replicating to non-SQL databases and/or indirectly 
+- WordPress plugin to open up MySQL database for replication with LiveMirror / DataMerge 
+- Free or cheap iOS / Android developer library enabling replication with LiveMirror / DataMerge, and/or an app that can be easily plugged into a mobile database so as to connect with LM / DM
+- Add encryption abilities to LiveMirror, either over-the-wire (which can already be done using SSH tunnelling) or even be able to store/read encrypted data.
+- GUI tool in LiveMirror allowing end-users to query the mirror database for either the latest or an old version of a record.
+- Hosted LiveMirror cloud service : we could provide a hosted environment to receive users' LiveMirror database backups.

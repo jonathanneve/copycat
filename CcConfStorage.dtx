@@ -1,0 +1,202 @@
+
+@@CcConfStorage.pas
+CopyCat replication suite                     
+                                              
+Copyright (c) 2005 Microtec Communications    
+                                              
+For any questions or technical support,       
+contact Jonathan Neve (jonathan@microtec.fr)
+
+@@TCcComponent
+Summary:
+TCcComponent is a base component allowing to interact with a TCcProvider and/or a
+TCcConfigStorage.
+
+@@TCcComponent.ConfigStorage
+Summary:
+Automatic storage and reloading of all the replication parameters of the
+TCcComponent.
+Description:
+The ConfigStorage property is not compulsory. If it is used, the configuration
+options of the TCcComponent are automatically filled in based on the current
+record of the associated TCcConfigStorage component.In such a case, these
+properties become read-only, and cannot be modified manually on the component. If
+ConfigStorage is not assigned, each property must be set explicitly.<p/>
+<p/>
+Thus, using ConfigStorage, several replication configurations can be stored in
+the same configuration file (or in the Registry), allowing a replicator
+application to switch between the different available configurations in a very
+simple manner.
+
+@@TCcComponent.DBProvider
+Summary:                                                      
+Database provider for the component.                          
+Description:                                                  
+Every TCcComponent must have a DBProvider in order to         
+function correctly. The DBProvider is required in order to be 
+able to create all the internal database related objects      
+(database connections, transactions, and query objects).      
+See Also:                                                     
+TCcProvider
+
+@@TCcComponent.DestroyQueries
+DestroyQueries is called just before changing the provider
+
+@@TCcComponent.InitQueries
+InitQueries is called when the provider is loaded, to enable the queries to be created
+
+@@TCcComponent.SetDBProvider@TCcProvider
+TCcComponent
+
+@@TCcConfig.DestroyQueries
+DestroyQueries is called just before changing the provider
+
+@@TCcConfig.InitQueries
+InitQueries is called when the provider is loaded, to enable the queries to be created
+
+@@TCcConfigStorage
+Summary:
+Manages loading and saving configuration options to and from TCcReplicator and
+TCcConfig.
+Description:
+TCcConfigStorage is designed to manage configuration options. These can be stored
+in the registry or in an INI-file. TCcConfigStorage is a dataset descendant, that
+defines the following fields:
+
+<table 30c%, 10c%>
+Field name               Type      \Description
+=======================  ========  ----------------------------------------------------------------
+ConfigName               String    Name of the configuration. There may be several different
+                                    configurations in the same INI-file.
+ProceduresPath           String    Path of the INI-file defining the list of procedures (by
+                                    default, the root directory of the general configuration
+                                    \file).
+TablesPath               String    Path of the INI-file defining the list of tables (by
+                                    default, the root directory of the general configuration
+                                    \file).
+LocalUserName            String    User name in the local database (see <link Replication users>).
+LocalPassword            String    Password for the local database.
+LocalSYSDBAName          String    SYSDBA user name for the local server.
+LocalSYSDBAPassword      String    SYSDBA password for the local server.
+RemoteUserName           String    User name in the local database (see <link Replication users>).
+RemotePassword           String    Password for the remote database.
+LocalCharSet             String    Character set for local database login.
+LocalDBName              String    Local database path.
+LocalSQLDialect          Integer   Local database SQL dialect.
+RemoteCharSet            String    Character set for remote database login.
+RemoteDBName             String    Remote database path.
+RemoteSQLDialect         Integer   Remote database SQL dialect.
+AutoReplicateFrequency   Integer   Auto-replication frequency (in seconds). Set to 0 for no
+                                    auto-replication.
+</table>
+
+See Also:
+TCcComponent.ConfigStorage, TCcDetailDataSet.ConfigStorage
+
+@@TCcConfigStorage.ConfigName
+Summary:
+Current configuration name.
+Description:
+ConfigName represents the configuration name of the current record. Setting
+ConfigName amounts to locating a different configuration by name within the
+selected configuration file.
+
+@@TCcConfigStorage.UseRegistry
+Description:
+Determines whether to store the configuration in the Windows Registry or in an
+INI-file.
+
+@@TCcCustomReplicator.DestroyQueries
+DestroyQueries is called just before changing the provider
+
+@@TCcCustomReplicator.InitQueries
+InitQueries is called when the provider is loaded, to enable the queries to be created
+
+@@TCcCustomStorage.Active
+Summary:
+Indicates whether the dataset is open or not.
+Description:
+Set Active to True in order to open the dataset, or to False in order to close
+it.
+
+@@TCcCustomStorage.BeforeLoad
+Fired before loading the data into the dataset (after opening).
+
+@@TCcCustomStorage.BeforeSave
+Fired before writing the data from the dataset into the INI-file or registry
+(before posting).
+
+@@TCcCustomStorage.Path
+Description:
+Depending on the value of UseRegistry, Path is either the path to the storage
+\file, or the registry key.
+
+@@TCcCustomStorage.Sort
+Sort the dataset. The field to sort on is determined by each descendant.
+
+@@TCcCustomStorage.UseRegistry
+Description:
+Determines whether to store the configuration in the Windows Registry or in an
+INI-file.
+
+@@TCcDetailDataset
+Summary:
+Detail dataset linked to a TCcConfigStortage component.
+Description:
+TCcDetailDataset is the ancestor of TCcTables and TCcProcedures. It can be linked
+to a TCcConfigStorage component through its ConfigStorage, and in such a case, it
+acts as a detail dataset in relation to it. In other words, the DataSet is
+automatically reloaded every time the active record changes in the
+TCcConfigStorage component (using the TABLES_PATH or PROCEDURES_PATH fields to
+provide the file path of the INI-file).
+
+@@TCcDetailDataset.ConfigStorage
+Summary:
+Allows automatic configuration loading.
+Description:
+The ConfigStorage property is not compulsory. If it is used, the Path property is
+automatically filled in based on the current record of the associated
+TCcConfigStorage component, and in such a case, Path cannot be modified manually.
+If ConfigStorage is not assigned, the Path property must be set explicitly.<p/>
+<p/>
+Thus, using ConfigStorage, several replication configurations can be stored in
+the same configuration file (or in the Registry), with different Tables and
+Procedures INI-files for each one.
+
+@@TCcProcedures
+Summary:
+Holds the list of procedures in the current database.
+Description:
+TCcProcedures is used in conjunction with TCcConfig, and provides the list of
+stored procedures available in the current database, as well as the configuration
+options of each one.<p/>
+<p/>
+This list of procedures is stored in an INI-file (or the Windows Registry) as
+specified by the Path and UseRegistry properties, and loaded upon opening.<p/>
+<p/>
+When the associated TCcConfig component connects to the database, the list of
+procedures is automatically synchronized with the procedures actually existing in
+the database, but the existing entries in the INI-file are not deleted.
+
+@@TCcReplicator.DestroyQueries
+DestroyQueries is called just before changing the provider
+
+@@TCcReplicator.InitQueries
+InitQueries is called when the provider is loaded, to enable the queries to be created
+
+@@TCcTables
+Summary:
+Holds the list of tables in the current database.
+Description:
+TCcTables is used in conjunction with TCcConfig, and provides the list of tables
+available in the current database, as well as the configuration options of each
+one.<p/>
+<p/>
+This list of tables is stored in an INI-file (or the Windows Registry) as
+specified by the Path and UseRegistry properties, and loaded upon opening.<p/>
+<p/>
+When the associated TCcConfig component connects to the database, the list of
+tables is automatically synchronized with the tables actually existing in the
+database, but the existing entries in the INI-file are not deleted.
+See Also:
+TCcConfig.Tables

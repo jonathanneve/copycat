@@ -1,0 +1,690 @@
+
+@@CcReplicator.pas
+CopyCat replication suite                     
+                                              
+Copyright (c) 2005 Microtec Communications    
+                                              
+For any questions or technical support,       
+contact Jonathan Neve (jonathan@microtec.fr)
+
+@@TAutoRepl
+Summary:
+Defines automatic replication properties.
+Description:
+Use TAutoRepl to automatically launch a replication session periodically, if
+there is none already in progress.<p/>
+<p/>
+To enable automatic replication, set Enabled to True, and call the Start method
+when you are ready to start the timer. Automatic replication can be temporarily
+disabled at any time, by calling the Stop method.
+See Also:
+TCcReplicator.AutoReplicate
+
+@@TAutoRepl.Enabled
+Summary:
+Enables or disables automatic replication.
+Description:
+Set Enabled to enable or disable automatic replication is a general way. If
+auto-replication is enabled, the Start method must still be called however, in
+order to start the timer.
+
+@@TCcAutoCommit
+Summary:
+Represents auto-commit properties.
+Description:
+The TCcAutoCommit object allows to periodically commit the transactions after
+Frequency seconds of replication. Use the CommitType property to select the type
+of commit that you want to perform.<p/>
+<p/>
+It is not necessary to call the Start nor Stop methods, as this is handled
+internally be TCcReplicator. Setting CommitType to ctNone means that no automatic
+commit will be performed.
+See Also:
+TCcReplicator.AutoCommit
+
+@@TCcAutoCommit.CommitType
+Summary:
+Type of automatic commit to perform.
+Description:
+Set CommitType to determine how you wish to commit the replication transactions.
+
+@@TCcCustomLog.Bof
+Bof is true on the first record of the log
+
+@@TCcCustomLog.CurrentLine
+Current line number
+
+@@TCcCustomLog.dpDest
+Overview: Destination database for the current record.
+Description: dpDest corresponds to the destination database of the current record, that is,
+  the database towards which the current record is to be replicated.
+SeeAlso TCcCustomLog.dpOrigin
+
+@@TCcCustomLog.dpOrigin
+Summary:
+Source database for the current record.
+Description:
+dpOrigin corresponds to the source database of the current
+record, that is, the database from which the current record
+originates. SeeAlso TCcCustomLog.dpDest
+
+@@TCcCustomLog.Edit
+Summary:
+Edit the current record of the replication log.
+Description:
+Identical to its TDataSet counterpart.
+
+@@TCcCustomLog.Eof
+Eof is true on the last record of the log
+
+@@TCcCustomLog.FBN@String
+Summary:
+Retrieve field value as a string.
+Description:
+FBN(FieldName) is equivalent to FieldByName(FieldName).AsString.
+
+@@TCcCustomLog.FieldByName@String
+Summary:
+Retieve field object by name.
+Description:
+Use field name to access the TField object, in order to read or write the value
+of a field.<p/>
+Please note however, that application shouldn't normally change the values of any
+fields of the replication log, and doing so may cause unpredicted misbehavior.
+See Also:
+FBN
+
+@@TCcCustomLog.First
+Summary:
+Go to first record of the log.
+Description:
+Identical to its TDataSet counterpart.
+
+@@TCcCustomLog.Last
+Summary:
+Go to last record of the log.
+Description:
+Identical to its TDataSet counterpart.
+
+@@TCcCustomLog.LineCount
+Total number of lines in the log
+
+@@TCcCustomLog.LocalMode
+Indicates whether the record comes from the local database.
+
+@@TCcCustomLog.LogConflict
+TCcReplicator
+
+@@TCcCustomLog.Next
+Summary:
+Go to the next record of the log, if any.
+Description:
+If the current record is already the last, the Eof property is set to True.
+
+@@TCcCustomLog.Post
+Summary:
+Post the current record of the replication log.
+Description:
+Identical to its TDataSet counterpart.
+
+@@TCcCustomLog.Prior
+Summary:
+Go to previous record of the replication log.
+Description:
+Identical to its TDataSet counterpart.
+
+@@TCcCustomLog.ReplState
+Overview: State of the current record.
+Description: The state may be either lsNone (non-replicated), lsOk (replicated),
+  lsConflict (cannot be replicated due to a conflict), or lsError (an error occured while
+  trying to replicate).
+
+@@TCcLog.Edit
+Summary:
+Edit the current record of the replication log.
+Description:
+Identical to its TDataSet counterpart.
+
+@@TCcLog.FBN@String
+Summary:
+Retrieve field value as a string.
+Description:
+FBN(FieldName) is equivalent to FieldByName(FieldName).AsString.
+
+@@TCcLog.FieldByName@String
+Summary:
+Retieve field object by name.
+Description:
+Use field name to access the TField object, in order to read or write the value
+of a field.<p/>
+Please note however, that application shouldn't normally change the values of any
+fields of the replication log, and doing so may cause unpredicted misbehavior.
+See Also:
+FBN
+
+@@TCcLog.First
+Summary:
+Go to first record of the log.
+Description:
+Identical to its TDataSet counterpart.
+
+@@TCcLog.Last
+Summary:
+Go to last record of the log.
+Description:
+Identical to its TDataSet counterpart.
+
+@@TCcLog.Next
+Summary:
+Go to the next record of the log, if any.
+Description:
+If the current record is already the last, the Eof property is set to True.
+
+@@TCcLog.Post
+Summary:
+Post the current record of the replication log.
+Description:
+Identical to its TDataSet counterpart.
+
+@@TCcLog.Prior
+Summary:
+Go to previous record of the replication log.
+Description:
+Identical to its TDataSet counterpart.
+
+@@TCcQueryType
+Description:
+Type of SQL query.
+See Also:
+TCcReplicator.OnQueryDone
+
+@@TCcQueryType.qtDelete
+Description:
+DELETE query.
+
+@@TCcQueryType.qtInsert
+Description:
+INSERT query.
+
+@@TCcQueryType.qtSelect
+Description:
+SELECT query.
+
+@@TCcQueryType.qtUpdate
+Description:
+UPDATE query.
+
+@@TCcReplicator
+Summary:
+TCcReplicator provides the core replication functionality of
+CopyCat.
+Description:
+\ \ 
+
+<b>How to use TCcReplicator:</b>
+  1. Set the DBProvider property to the data access component
+     set of your choice.
+  2. Fill in the LocalDB and RemoteDB properties with the
+     connection parameters for each database.
+  3. Provide the LocalSYSDBA, LocalDB, and RemoteDB usernames
+     and passwords. LocalSYSDBA corresponds to the SYSDBA of the
+     local server, while LocalDB and RemoteDB users correspond to
+     the names attibuted to the replication sites. See Users for
+     more information.
+  4. Call the Replicate method.
+  5. Optionnaly, implement a few of the events, in order to
+     provide user feedback at every stage of the replication
+     process.
+  6. Optionnaly, you may set up automatic timer-based
+     replication, using the AutoReplicate property.
+  
+<align justify>
+Alternatively, the configuration of the replicator can be
+held in an INI-file, using the ConfigStorage property to link
+to the TCcConfigStorage component managing the configuration.
+  
+If an exception occurs during replication, an
+OnReplicationError event is fired, where you can choose to
+either abort the whole replication process, or to continue
+trying to replicate the next record. The default behaviour
+depends on the AbortOnError property.
+  
+If an exception occurs at any other point (e.g. during
+database connection), an OnException event is fired, and
+replication is aborted.
+  
+TCcReplicator frequently fires the OnProgress event, in order
+to allow the application to refresh user interface, process
+any pending user messages, and possibly, update a progress
+bar. It is also possible to abort the replication at any
+time, using the AbortReplication method. Refer to the
+provided example projects for an illustration of the use of
+most of the events and properties.
+</align>
+See Also:
+AbortOnError, OnProgress
+
+@@TCcReplicator.AbortOnError
+Summary:
+Determines whether or not to abort replication when an error occurs.
+Description:
+When an error occurs during replication, the OnReplicationError event is fired,
+to determine whether replication may resume (i.e. skip the current record, and
+and continue with the subsequent ones), or must be aborted. AbortOnError is used
+as a default behaviour in case this event is not implemented.
+See Also:
+OnReplicationError
+
+@@TCcReplicator.AbortReplication
+Summary:
+Call AbortReplication to stop the current replication process.
+Description:
+Once replication has started, you may abort it at any time using the
+AbortReplication method. AbortReplication doesn't actually stop replicating
+immediately (because the database component will in most cases be busy, with no
+way of interrupting them). As soon as the replication process has been aborted,
+the OnAbort event is called.
+See Also:
+OnAbort
+
+@@TCcReplicator.AutoCommit
+Summary:
+Handles automatic, timer-based committing during replication.
+Description:
+AutoCommit allows you to enable/disable automatic committing. If CommitType \<\>
+ctNone, the transactions will automatically be committed every Frequency seconds,
+using the commit type specified in CommitType.<p/>
+If the commit timer fires during replication of a record, the commit will only
+actually be performed once the record has been fully replicated. This timer is
+reset every time the Replicate method is called.
+See Also:
+Replicate
+
+@@TCcReplicator.AutoReplicate
+Summary:
+Handles automatic, timer-based replication.
+Description:
+AutoReplicate allows you to enable/disable automatic replication. If Enabled is
+true, the replication process will automatically be launched every Frequency
+seconds, unless another process is already in progress.<p/>
+<p/>
+In order to start the auto-replication timer, you must call the Start method.
+Thus, Enabled should be set to true to enable auto-replication is a general way,
+and Start must be called when the application is ready to start auto-replicating.
+Use Stop to end the auto-replication timer.
+See Also:
+TAutoRepl.Start, TAutoRepl.Stop, Replicate, Busy
+
+@@TCcReplicator.BeforeReplicate
+Summary:
+Fired just before replication begins.
+Description:
+BeforeReplicate occurs as soon as the Replicate method is called or the
+auto-replicate timer is fired, before any replication takes place.
+See Also:
+Replicate, AutoReplicate
+
+@@TCcReplicator.Busy
+Overview: Indicates whether the replicator component is available or not.
+Description: Busy is true from the moment the Replicate procedure is called,
+until replication is either finished or aborted.
+
+@@TCcReplicator.Closing
+Overview: Indicates that the replication in the process of closing.
+Description: Closing is set to true whenever the user chooses to abort the replication
+  process (whether by the AbortReplication method, or in response to an OnReplicationError
+  event). As soon as an appropriate moment is found, replication then stops, and Closing
+  is set back to false.
+
+@@TCcReplicator.CommitOnFinished
+Overview: Determines how the transaction is ended after replication.
+Description: Possible options are Commit, CommitRetaining, or none.
+
+@@TCcReplicator.Connect
+Overview: Connect to both local and remote databases.
+Description: Connect establishes a connection with both the remote and the local databases,
+if there was no existing connection, and starts both transactions. If the database connections
+and/or transactions were already active, no error is produced.
+
+Before establishing the connection, the OnConnectLocal or the OnConnectRemote events are fired.
+
+@@TCcReplicator.Disconnect
+Overview: Disconnect local and remote databases.
+Description: Call Disconnect to cut the connection to both local and remote databases.
+
+If the transactions are active, Disconnect first commits them. After this,
+the OnDisconnect event is fired, and the database connections are cut.
+
+@@TCcReplicator.Finished
+Overview: Indicates that replication is finished.
+
+@@TCcReplicator.HarmonizeFields
+Summary:
+Harmonize field list between local and remote databases.
+Description:
+If HarmonizeFields is true, only the fields that exist in both local and remote
+databases will be replicated. In order to find the list of fields, the local
+database is queried and (if necessary) the remote database also. The OnGetFields
+event is then fired, in order to let the developer change the list of fields.<p/>
+This implies that in certain cases, CopyCat will issue an additionnal query
+against the remote database to find the list of fields for each table. Therefore,
+setting HarmonizeFields to false will slightly improve performance, but will
+produce an exception if ever a field is missing.<p/>
+Actually, if there are lines in the log coming from the remote database, there is
+no need to explicitly fetch the list of fields from the remote database, since
+the data will be SELECTed from it. This optimizes performance by avoiding (part
+of the time) an extra query against the remote database, and it also means that
+in such cases, the field list is always harmonized, regardless of the value of
+the HarmonizeFields property.
+See Also:
+OnGetFields
+
+@@TCcReplicator.KeepConnection
+Overview: Keep the database connections open after replication ends.
+Description: If KeepConnection is false, the connections will be closed after every call to
+  Replicate, and reopened upon the next replication. If KeepConnection is true,
+  the database connections will be kept open. This is especially useful when performing
+  automatic, periodic replication.
+
+@@TCcReplicator.LegacyRplTables
+Overview: Used only for backwards compatability.
+Description: Deprecated. Should always be set to False.
+
+@@TCcReplicator.LocalSYSDBA
+Overview: Username and password of the local SYSDBA.
+Description: This is only needed for local primary key updates.
+
+@@TCcReplicator.LocalUser
+Summary:
+Username and password corresponding to the local replication site.
+Description:
+This is the name of the local replication site. When the replicator logs in to
+the remote database, it uses the LocalUser name and password, in order to fetch
+all changes applying to the specified user.<p/>
+<p/>
+The name specified must correspond to a database user on the remote server.
+See Also:
+<link Replication users>
+
+@@TCcReplicator.Log
+Summary:
+Replication log.
+Description:
+Use the Log property to access the TCcLog component used by the replicator.<p/>
+<p/>
+This component encapsulates the replication log, and provides properties for
+accessing its data and manipulating its data. Until the OnLogLoaded event, the
+log will be empty.
+
+@@TCcReplicator.OnAbort
+Summary:
+Fired when the replication is aborted
+Description:
+OnAbort is fired whenever replication is aborted. This may be because:
+         
+  1. The application called the AbortReplication method.
+  2. A replication error occured, and the application chose to abort (using the
+OnReplicationError event and/or the AbortOnError property).
+  3. The database connection was lost during processing.
+See Also:
+Replicate, OnConnectionLost
+
+@@TCcReplicator.OnAutoCommit
+Summary:
+Fired whenever the replication transactions are auto-committed.
+Description:
+This event occurs when the AutoCommit property is enabled, and the replication
+transactions are automatically committed. See AutoCommit for more information.
+See Also:
+AutoCommit
+
+@@TCcReplicator.OnCommit
+Summary:
+Fired just before the transaction is commited at the end of the replication
+process.
+Description:
+This event occurs at the end of the replication, when the CommitOnFinished
+property is set to something other than ctNone (that is, ctCommit or
+ctRetaining).<p/>
+\Note that this is different from the OnAutoCommit event: OnCommit only occurs
+when replication is finished, not when performing automatic, timer-based commits.
+
+@@TCcReplicator.OnConflict
+Overview: Fired when a conflict is detected.
+Description: OnConflict is called
+  as soon as a conflict is detected. This does not stop replication of the other records from
+  continuing, it simply means that the conflictual record will not be replicated.
+SeeAlso:TCcConflictMgr
+
+@@TCcReplicator.OnConnectionLost
+Summary:
+Fired when a database connection is lost.
+Description:
+When CopyCat detects that a database connection has been dropped, an
+OnConnectionLost event is fired. All remaning database connections are then cut,
+and replication is aborted (firing an OnAbort event). This means that if the
+remote database becomes temporarily unavailable while replication is in progress,
+the application will abort the replication gracefully without throwing any
+\exceptions (only events). As soon as the remote database is back online,
+replication will be able to resume.
+
+@@TCcReplicator.OnConnectLocal
+Summary:
+Fired before connecting to the local database.
+See Also:
+Connect
+
+@@TCcReplicator.OnConnectRemote
+Summary:
+Fired before connecting to the remote database.
+See Also:
+Connect
+
+@@TCcReplicator.OnDisconnect
+Summary:
+Fired before disconnecting from both local and remote database.
+Description:
+\Note that this event is not fired when the connection is unintentionnaly lost,
+but only if the application calls the Disconnect method, or if KeepConnection is
+set to False.
+See Also:
+OnConnectionLost
+
+@@TCcReplicator.OnEmptyLog
+Overview: Fired when neither local nor remote replication logs contain any records.
+
+@@TCcReplicator.OnException
+Summary:
+Fired when an error occurs while no records are being replicated.
+Description:
+When an error occurs outside the scope of any replication (e.g. when checking for
+resolved conflicts, or when loading the log), the OnException event is fired. In
+such cases, it's of course impossible to resume replication (as with the
+OnReplicationError event), it is simply aborted.
+See Also:
+Replicate
+
+@@TCcReplicator.OnFinished
+Summary:
+Fired when the replication process is finished.
+Description:
+If the log was not empty, an OnFinished event is fired after replicating the
+records, even if an error occured and replication was aborted. OnFinished merely
+indicates that the replication process is no longer in progress, and can be used
+for such things as refreshing the user display and status labels (for example).
+See Also:
+OnLogLoaded, OnEmptyLog
+
+@@TCcReplicator.OnGenReplError
+Summary:
+Fired if an error occurs when trying to update the local value of a generator
+field.
+Description:
+This event is fired if an error occurs while updating the value generator field
+locally. By implementing the event, you can choose whether to re-try the update,
+or to abort. In the latter case, the exception is re-raised, and the
+OnReplicationError event is fired.
+See Also:
+TCcConfig
+
+@@TCcReplicator.OnGenReplicated
+Overview: Fired after a generator field was replicated.
+Description: This event occurs every time a generator field has been replicated, and
+  it provides the name of the field as well as its new value. This occurs once for every
+  generator field of a record, but before the fields are updated in the local database.
+SeeAlso: TCcConfig
+
+@@TCcReplicator.OnGenReplicating
+Overview: Fired just before replicating the generator fields of a record.
+Description: This event occurs before the generator fields of the current record get fetched
+  from the remote server and applied locally.
+SeeAlso: TCcConfig
+
+@@TCcReplicator.OnGetFields
+Summary:
+Fired after creating the list of fields to be replicated for a table
+Description:
+This event is called in order to let the developer access, and possibly alter,
+the list of fields that are to be replicated for a certain table.<p/>
+Every time a new table is encountered in the replication log, the list of
+existing fields is loaded from the local database, and (if necessary) from the
+remote database also. If Harmonize fields is true, the field list is harmonized,
+and then OnGetFields is fired. Thus, the developer can override field list
+created by CopyCat.
+See Also:
+HarmonizeFields
+
+@@TCcReplicator.OnLogLoaded
+Summary:
+Fired after a non-empty replication log has been loaded
+Description:
+This event occurs immediately after the log has been loaded, and only if there is
+something to replicate. It can therefore be used (for example) for displaying how
+many records there are to replicate, and for initializing a progress bar. Before
+this point, the log is empty.
+See Also:
+Replicate, TCcLog
+
+@@TCcReplicator.OnProgress
+Summary:
+Frequently fired to give the application a chance to refresh the display.
+Description:
+This event is primarily designed to avoid the application freezing while
+replication is in progress. OnProgress is fired after every potentially slow
+operation (that is, mainly, remote database operations), and it is therefore a
+perfect place to process user-interface messages (using
+Application.ProcessMessages for instance), or to otherwise refresh the display.<p/>
+<p/>
+It is also called every time the current record changes, during replication, so
+it can be used for refreshing a progress bar.<p/>
+
+@@TCcReplicator.OnQueryDone
+Summary:
+Fired for every query that is executing while replicating a record.
+Description:
+The OnQueryDone event provides the type of query that was executed (SELECT,
+UPDATE, INSERT or DELETE), as well as number of rows affected or retrieved.<p/>
+<p/>
+This allows you to know exactly what database operations were performed, which is
+helpful for diagnosing problems, or simply understanding how CopyCat works.
+
+@@TCcReplicator.OnReplicateProc
+Overview: Fired every time a stored procedure is replicated.
+Description: The OnReplicateProc event occurs every time a stored procedure is replicated,
+  providing the name of the procedure. The complete SQL text of the EXECUTE PROCEDURE
+  query is available using the PROCEDURE_STATEMENT field of the Log property.
+SeeAlso: TCcLog
+
+@@TCcReplicator.OnReplicationError
+Summary:
+Fired when an error occurs while records are being replicated.
+Description:
+When an error occurs during replication, the OnReplicationError event is fired,
+to determine whether replication may resume (i.e. skip the current record, and
+and continue with the subsequent ones), or must be aborted. AbortOnError is used
+as a default behaviour in case this event is not implemented.
+See Also:
+Replicate, OnException
+
+@@TCcReplicator.OnRowReplicated
+Overview: Fired after a record has been replicated.
+
+@@TCcReplicator.OnRowReplicating
+Overview: Fired upon starting to replicate a new record.
+
+@@TCcReplicator.OnTableBegin
+Summary:
+Fired upon beginning a new table.
+Description:
+The lines in the replication log are grouped up by table (due to dependencies
+between tables). Therefore, this event is called every time records from a new
+table start replicating.
+See Also:
+OnTableEnd
+
+@@TCcReplicator.OnTableEnd
+Summary:
+Fired upon finishing a table.
+Description:
+The lines in the replication log are grouped up by table (due to dependencies
+between tables). Therefore, this event is called whenever all the records from a
+table have finished replicating.
+See Also:
+OnTableBegin
+
+@@TCcReplicator.RemoteUser
+Summary:
+Username and password corresponding to the remote replication site.
+Description:
+This is the name of the remote replication site. When the replicator logs in to
+the local database, it uses the RemoteUser name and password, in order to fetch
+all changes applying to the specified user.<p/>
+<p/>
+The name specified must correspond to a database user on the local server.
+See Also:
+<link Replication users>
+
+@@TCcReplicator.Replicate
+Summary:
+Call Replicate to start replicating the two databases.
+Description:
+If no replication process is already in progress, calling the Replicate method
+initiates the replication.<p/>
+First a BeforeReplicate event is fired, after which, the database connections are
+established, and the replication log is loaded. If the same record is found in
+both the remote and the local logs, a conflict is detected, and the OnConflict
+event occurs. This does not stop the other records from replicating, it merely
+means that the conflictual record will be put "in hold" until the user resolves
+the conflict. See TCcConflictMgr for more information about conflict management.<p/>
+<p/>
+If the log is empty, an OnEmptyLog event is fired. If not, an OnLogLoaded event
+is fired, and replication begins. The records to be replicated are grouped up by
+table priority, so all the records of the same table replicate together (whether
+they from the local or remote databases). Each table is enclosed by the
+OnTableBegin and OnTableEnd events, and the OnRowReplicating and OnRowReplicated
+events are fired before and after each record. For further detail, the
+OnQueryDone event is fired after every query (SELECT, UPDATE, INSERT or DELETE)
+that is performed during the replication of one record.<p/>
+<p/>
+Once replication has started, you may abort it at any time using the
+AbortReplication method. If you choose to do so, an OnAbort event will be fired
+as soon as the replication process is actually stopped.<p/>
+<p/>
+If an exception occurs during the replication of a record, the OnReplicationError
+event is fired, allowing to either resume replication, or to abort. If an
+exception occurs at any other point, an OnException event is fired, and
+replication is stopped.<p/>
+<p/>
+If the log was not empty, an OnFinished event is fired after replicating the
+records, even if an error occured and replication was aborted. OnFinished merely
+indicates that the replication process is no longer in progress, and can be used
+for such things as refreshing the user display and status labels (for example).
+
+@@TCcReplicator.Users
+Summary:
+User-names and passwords for local, remote and local SYSDBA users.
+Description:
+The Users property holds the LocalUser, RemoteUser and LocalSYSDBA
+sub-properties.
+See Also:
+<link Replication users>

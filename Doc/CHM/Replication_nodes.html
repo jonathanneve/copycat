@@ -1,0 +1,142 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Replication nodes</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+    <meta name="generator" content="Doc-O-Matic" />
+    <meta name="save" content="history" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <link rel="STYLESHEET" href="default.css" type="text/css" />
+
+<script type="text/javascript" src="scripts.js"></script>
+</head>
+<body class="Element700" onload="onBodyLoad();" onmousedown="onBodyMouseDown();">
+<div id="persistenceDiv" style="display:none; behavior:url(#default#userData);"></div>
+
+<!-- Begin Popups -->
+<div class="Element801" id="popup00001">
+<div class="Element800">
+<div class="Element14">
+Links</div>
+<div class="Element11">
+<div class="Element10">
+<a href="_Replication_nodes_5_See_Also.html">See Also</a></div>
+</div>
+</div>
+</div>
+
+<!-- End Popups -->
+
+<!-- Begin Page Header -->
+<div class="Element710" id="areafixed">
+<div class="Element92">
+<table width="100%" cellspacing="0" cellpadding="0">
+<tr><td width="33%">
+<div class="Element1">
+<a href="#" onmousedown="showPopup(this, 'popup00001');"><img src="seealsolink.png" border="0" alt=""></a> <a href="http://www.copycat.fr" target="new_page"><img src="copycat_70x70.png" border="0"><h3>CopyCat Developer Tools</h3></img></a></div>
+</td><td width="34%">
+<div class="Element2">
+<a href="contents.html">Contents</a> | <a href="idx.html">Index</a></div>
+</td><td width="33%">
+<div class="Element90">
+<a href="Getting_started.html">Previous</a> | <a href="Conflict_management.html">Next</a></div>
+</td></tr></table><div class="Element5">
+Replication nodes</div>
+<div class="Element7">
+<a href="_Replication_nodes_5_See_Also.html">See Also</a></div>
+<div class="Element730">
+<a href="#" onclick="showAllElements();">Show All</a></div>
+</div>
+</div>
+
+<!-- End Page Header -->
+
+<!-- Begin Client Area -->
+<div class="Element720" id="areascroll">
+<div class="Element721">
+
+<!-- Begin Page Content -->
+<div class="Element58">
+<div class="Element11">
+<div class="Element10">
+<p class="Element10">
+A replication node is simply a database that is involved in the replication. If, for instance, you set up replication between one central server and two branch offices, there will be three nodes, one for each database involved.&nbsp;</p>
+<p class="Element10">
+&nbsp;</p>
+<p class="Element10">
+Each of these nodes must be given a name that will be used within CopyCat to identify which database the changes come from, so that the changes that are replicated to one node are not bounced back to the originating node.&nbsp;</p>
+<p class="Element10">
+&nbsp;</p>
+<p class="Element10">
+So, in each database involved in the replication, you have to fill the <a href="RPL$USERS.html">RPL$USERS</a> table with the list of nodes towards which this database is to send its changes. Every change that is made to a replicated table, triggers one new line in <a href="RPL$LOG.html">RPL$LOG</a> for each of these nodes.&nbsp;</p>
+<p class="Element10">
+&nbsp;</p>
+<p class="Element10">
+Then, in <a href="TCcReplicator.html">TCcReplicator</a>, you have to set the names of the two nodes you are replicating between. Typically, the local node would be the branch office, and the remote node would be the central server (and it must be this way if you want to use CopyCat's primary key synchronization), but it could be the other way around.&nbsp;</p>
+<p class="Element10">
+&nbsp;</p>
+<p class="Element10">
+<a href="TCcReplicator.html">TCcReplicator</a> uses the node names that you give it (via the LocalNode.Name and RemoteNode.Name properties) when connecting to the databases. The remote node is queried to see if there are any new changes to replicate for the local node, and vice-versa.&nbsp;</p>
+<p class="Element10">
+&nbsp;</p>
+<p class="Element10">
+This means that if you want bi-directional replication, you need to make sure the name of the local node is present in the RPL$USERS table of the remote node, and vice versa. If on the other hand you only want the changes from the remote database to be sent to the local database, you should put the local node name in the remote node's RPL$USERS, but exclude the remote node from the local node's RPL$USERS.&nbsp;</p>
+<p class="Element10">
+&nbsp;</p>
+<p class="Element10">
+For example, suppose a replication setup had one main server (called user 'S'), and two branch offices (called users 'A' and 'B'). For full two-way replication, S would need to have both A and B in its <a href="RPL$USERS.html">RPL$USERS</a> table, while A and B would each have S in their's. When a data change occurs in S, it triggers two lines in <a href="RPL$USERS.html">RPL</a>$<a href="RPL$USERS.html">USERS</a>, one for A, and one for B.&nbsp;</p>
+<p class="Element10">
+&nbsp;</p>
+<p class="Element10">
+The next time you replicate between A and S, <a href="TCcReplicator.html">TCcReplicator</a> will fetch from <a href="RPL$LOG.html">RPL$LOG</a> all the records that concern node A, without interfering with node B in any way. B may replicate before, after, or simultaneously, without it making any difference whatsoever.&nbsp;</p>
+<p class="Element10">
+&nbsp;</p>
+<p class="Element10">
+Suppose on the other hand, that a data change takes place in database A. This will trigger a line in A's <a href="RPL$LOG.html">RPL$LOG</a> table, addressed to node S. When you replicate between A and S, <a href="TCcReplicator.html">TCcReplicator</a> fetches from the local database (A) all the records in <a href="RPL$LOG.html">RPL$LOG</a> that concern the node S. It then replicates the change to database S.&nbsp;</p>
+<p class="Element10">
+&nbsp;</p>
+<p class="Element10">
+This data change in S triggers a new line in S's <a href="RPL$LOG.html">RPL$LOG</a> table, addressed to node B. When B then connects to S, it gets A's data change. Since (from B's viewpoint) the data change came from S, it does not replicate back to S.</p></div>
+</div>
+<div class="Element14">
+<a onclick="toggleVisibilityStored('See_Also');" class="a_Element14"><img src="sectionminus.png" border="0" alt="sectionminus.png" id="imgSee_Also">See Also</a></div>
+<div id="divSee_Also">
+<div class="Element11">
+<div class="Element10">
+<p class="Element10">
+<a href="RPL$USERS.html">RPL$USERS</a>, <a href="TCcReplicator_Nodes.html">TCcReplicator.Nodes</a></p></div>
+</div>
+</div>
+<div class="Element14">
+<a onclick="toggleVisibilityStored('Links');" class="a_Element14"><img src="sectionminus.png" border="0" alt="sectionminus.png" id="imgLinks">Links</a></div>
+<div id="divLinks">
+<div class="Element11">
+<div class="Element10">
+<a href="_Replication_nodes_5_See_Also.html">See Also</a></div>
+</div>
+</div>
+<div class="Element62">
+Created with a commercial version of <a href="http://www.doc-o-matic.com">Doc-O-Matic</a>. In order to make this message disappear you need to register this software. If you have problems registering this software please contact us at <a href="mailto:support@toolsfactory.com">support@toolsfactory.com</a>.</div>
+</div>
+<!-- End Page Content -->
+
+<!-- Begin Page Footer -->
+<div class="Element93">
+<table width="100%" cellspacing="0" cellpadding="0">
+<tr><td width="100%">
+<div class="Element3">
+Copyright (c) 2015. All rights reserved. http://www.copycat.fr</div>
+</td></tr><tr><td width="100%">
+<div class="Element4">
+<a href="contents.html">Contents</a> | <a href="idx.html">Index</a></div>
+</td></tr><tr><td width="100%">
+<div class="Element97">
+What do you think about this topic?  <a href="#" onclick="sendFeedback('jonathan@copycat.fr', 'Documentation Feedback', 'Project: CopyCat Developer Tools%0ATopic ID: Replication nodes%0ATitle: Replication nodes');"> Send feedback! </a></div>
+</td></tr></table></div>
+
+<!-- End Page Footer -->
+</div>
+</div>
+
+<!-- End Client Area -->
+</body></html>
