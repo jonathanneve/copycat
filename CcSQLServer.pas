@@ -67,6 +67,7 @@ TCcSQLServerAdaptor = class (TCcDBAdaptor)
     function GenerateTriggers(qTable:TCcQuery; qTableConf: TCcQuery; FailIfNoPK: Boolean; TrackFieldChanges: Boolean): Integer;override;
 
     procedure DeclareGenerator(GenName:String);override;
+    procedure DropGenerator(cGeneratorName: string);override;
     function GetGenerator(GenName: String; Increment: Integer): String;override;
     function GetGeneratorValue(GenName: String; Increment: Integer):
      {$IFDEF CC_D2K9}
@@ -192,6 +193,11 @@ begin
   Query.Clear;
   Query.Add('insert into rpl$generators(name, value) values (' + QuotedStr(GenName) + ', 1)');
   ExecConfQuery;
+end;
+
+procedure TCcSQLServerAdaptor.DropGenerator(cGeneratorName: string);
+begin
+
 end;
 
 function TCcSQLServerAdaptor.GenDeclared(GenName: String): Boolean;
