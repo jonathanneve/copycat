@@ -8,7 +8,7 @@
 ; #define LICENSE_FILE "..\License\License.txt"
 #endif
 #define VERSION "3.9.4"
-#define MAXCOMPVERSIONS 18
+#define MAXCOMPVERSIONS 19
 
 [Setup]
 AppName=CopyCat
@@ -180,6 +180,12 @@ UninstallDisplayName=Microtec CopyCat v.{#VERSION}
   #define public RegDir "Software\Embarcadero\BDS\18.0"
   #define public suffixe "D10_1";
   #define public DESC "Delphi 10.1 Berlin for Windows / MacOS / iOS / Android";
+#elif i == 19
+  #define public BDS
+  #define public DIR "D102"
+  #define public RegDir "Software\Embarcadero\BDS\19.0"
+  #define public suffixe "D10_2";
+  #define public DESC "Delphi 10.2 Tokyo for Windows / MacOS / iOS / Android / Linux";
 #endif
 
 #ifdef Trial
