@@ -716,9 +716,9 @@ var
       Query.Add('  into :field_name, :field_length, :field_type do');
       Query.Add('  begin');
       Query.Add('      if (field_length <= 250 and field_type not in (15, 16, 39)) then');
-      Query.Add('        current_stmt = ''select ''''''|| :field_name || '''''',cast('' || :field_name || '' as varchar(250)), cast(null as blob),'' || field_type || '' from ' + MetaQuote(TableName) + ' where rdb$db_key=:dbkey'';');
+      Query.Add('        current_stmt = ''select ''''''|| :field_name || '''''',cast('' || :field_name || '' as varchar(250)), cast(null as blob),'' || field_type || '' from ' + MetaQuote(TableName) + ' where rdb$db_key='''''' || :dbkey || '''''';');
       Query.Add('      else');
-      Query.Add('        current_stmt = ''select ''''''|| :field_name || '''''',cast(null as varchar(250)),cast('' || :field_name || '' as blob),'' || field_type || '' from ' + MetaQuote(TableName) + ' where rdb$db_key=:dbkey'';');
+      Query.Add('        current_stmt = ''select ''''''|| :field_name || '''''',cast(null as varchar(250)),cast('' || :field_name || '' as blob),'' || field_type || '' from ' + MetaQuote(TableName) + ' where rdb$db_key='''''' || :dbkey || '''''';');
       Query.Add('');
       Query.Add('      if (stmt is null) then');
       Query.Add('        stmt = current_stmt;');
@@ -726,7 +726,7 @@ var
       Query.Add('        stmt = stmt || '' union all '' || current_stmt;');
       Query.Add('');
       Query.Add('      if (character_length(stmt) >= 4000 or octet_length(stmt) >= 10000 or counter >= 100) then begin');
-      Query.Add('        for execute statement (stmt) (dbkey := :dbkey) into :field_name, :val, :val_blob, :field_type do  begin');
+      Query.Add('        for execute statement (stmt) into :field_name, :val, :val_blob, :field_type do  begin');
       Query.Add('          if (val is not null or val_blob is not null) then');
       Query.Add('            update or insert into rpl$tmp_values(field_name,field_type,'+ cNewOld + '_value,'+ cNewOld + '_blob, '+ cNewOld + '_blob_null, change_number) values (trim(:field_name), :field_type, :val, :val_blob, iif(:val_blob is null, ''Y'', ''N''), :change_number);');
       Query.Add('        end');
@@ -736,7 +736,7 @@ var
       Query.Add('     counter = counter + 1;');
       Query.Add('  end');
       Query.Add('  if (stmt is not null) then begin');
-      Query.Add('    for execute statement (stmt) (dbkey := :dbkey) into :field_name, :val, :val_blob, :field_type do  begin');
+      Query.Add('    for execute statement (stmt) into :field_name, :val, :val_blob, :field_type do  begin');
       Query.Add('      if (val is not null or val_blob is not null) then');
       Query.Add('        update or insert into rpl$tmp_values(field_name,field_type,'+ cNewOld + '_value,'+ cNewOld + '_blob, '+ cNewOld + '_blob_null, change_number) values (trim(:field_name), :field_type, :val, :val_blob, iif(:val_blob is null, ''Y'', ''N''), :change_number);');
       Query.Add('    end');
