@@ -169,6 +169,9 @@ TCcConfigTables = class (TCollection)
 //of RPL$TABLES_CONFIG to 'N' for the row corresponding to the table and configuration that you need to update. This 
 //setting will force CopyCat to recreate the trigger next time you call GenerateConfig.
 //[ComponentPlatformsAttribute( PidWin32 Or PidiOSDevice Or PidiOSSimulator )]
+
+{ TCcConfig }
+
 TCcConfig = class(TComponent)
   private
     FPrevDestroyQueries: TNotifyEvent;
@@ -190,10 +193,12 @@ TCcConfig = class(TComponent)
     FFailIfNoPK: Boolean;
     FTrackFieldChanges: Boolean;
     FOnProgress :TNotifyEvent;
+    procedure AddUser(cUserName: String);
     function GetConnection :TCcConnection;
     procedure QueryReady;
     procedure QueryExecuted(Sender: TObject);
     procedure DestroyQueries(Sender: TObject);
+    procedure RemoveUser(cUserName: String);
 		procedure SetConnection(const Value: TCcConnection);
 		function FindTable(TableName: String) :Boolean;
 
@@ -217,6 +222,7 @@ protected
 	procedure FillTables;virtual;
 	procedure Notification(AComponent: TComponent; Operation: TOperation);override;
 public
+  procedure CheckUsers;
   procedure DropAllTriggers;
   procedure ConnectAndRemoveConfig;
   function TableNameWithConfig(cTableName: String): String;
@@ -447,9 +453,14 @@ implementation
 uses SysUtils;
 
 function TCcConfig.TableNameWithConfig(cTableName: String): String;
+var
+  test: String;
 begin
+  //test := concat('_', PChar(cTableName));
+  //Result := test;
 	if (ConfigName <> '') then
-		Result := ConfigName + '_' + Trim(cTableName)
+   //        Result := '_' + cTableName
+		Result := concat(PChar(FConfigName), '_', PChar(cTableName))
 	else
 		Result := Trim(cTableName);
 end;
@@ -956,6 +967,7 @@ end; *)
 
 function TCcConfig.ListRPLTables: String;
 begin
+  Result := '';
 	qTable := GetConnection.SelectQuery['TCcConfig_qRPLTables'];
 	with qTable do begin
 		Close;
@@ -988,6 +1000,7 @@ end;
  }
 function TCcConfig.ListRPLTablesConfig: String;
 begin
+  Result := '';
 	qTable := GetConnection.SelectQuery['TCcConfig_qRPLTables_Config'];
 	with qTable do begin
 		Close;
@@ -1006,6 +1019,7 @@ end;
 
 function TCcConfig.ListRPLTablesConfigWithTriggerNames: String;
 begin
+  Result := '';
 	qTable := GetConnection.SelectQuery['TCcConfig_qRPLTables_Config'];
 	with qTable do begin
 		Close;
@@ -1063,7 +1077,7 @@ var
 //	qTables: TCcQuery;
 	slTables,slRPLTables,slRPLTablesConfig: TStringList;
 	I: Integer;
-  cTriggerName: String;
+  cTriggerName, cRPLTablesConfig: String;
 begin
 	if GetConnection.Connected then
 	begin
@@ -1072,7 +1086,8 @@ begin
     slRPLTablesConfig := TStringList.Create;
     try
       slRPLTables.CommaText := ListRPLTables;
-      slRPLTablesConfig.CommaText := ListRPLTablesConfig;
+      cRPLTablesConfig := ListRPLTablesConfig;
+      slRPLTablesConfig.CommaText := cRPLTablesConfig;
       for I:=0 to slTables.Count-1 do begin
         cTableName := slTables[i];
         cTriggerName := CalcTriggerName(cTableName);
@@ -1720,6 +1735,72 @@ begin
     end;
 end;
 
+procedure TCcConfig.RemoveUser(cUserName: String);
+var
+  qDeleteUser: TCcQuery;
+begin
+  qDeleteUser := FConnection.UpdateQuery['TCcConfig_qDeleteUser'];
+  qDeleteUser.Close;
+  qDeleteUser.SQL.Text := 'delete from rpl$users where login = :user_name';
+  qDeleteUser.Param['user_name'].Value := cUserName;
+  qDeleteUser.Exec();
+end;
+
+procedure TCcConfig.AddUser(cUserName: String);
+var
+  qAddUser: TCcQuery;
+begin
+  qAddUser := FConnection.UpdateQuery['TCcConfig_qAddUser'];
+  qAddUser.Close;
+  qAddUser.SQL.Text := 'insert into RPL$USERS (config_name, login, condition_value) values (:config_name, :login, :login)';
+  qAddUser.Param['login'].Value := cUserName;
+  if (ConfigName <> '') then
+	  qAddUser.Param['config_name'].Value := ConfigName
+  else
+	  qAddUser.Param['config_name'].Clear;
+  qAddUser.Exec();
+end;
+
+procedure TCcConfig.CheckUsers;
+var
+  slExistingUsers: TStringList;
+  cUserName: String;
+  i: Integer;
+  qUsers: TCcQuery;
+begin
+  slExistingUsers := TStringList.Create;
+  qUsers := TCcQuery.Create(Self);
+  try
+    qUsers.SelectStatement := True;
+    qUsers.Close;
+    qUsers.Connection := FConnection;
+    qUsers.SQL.Text := 'select login from RPL$USERS where %config_name';
+    if (ConfigName <> '') then
+      qUsers.Macro['config_name'].Value := 'config_name = ' + QuotedStr(ConfigName)
+    else
+      qUsers.Macro['config_name'].Value := '0=0';
+    qUsers.Exec;
+    while (not qUsers.Eof) do begin
+      slExistingUsers.Add(Trim(qUsers.Field['LOGIN'].AsString));
+      qUsers.Next;
+    end;
+    for i:=0 to slExistingUsers.Count-1 do begin
+      cUserName := slExistingUsers[i];
+      if (Nodes.IndexOf(cUserName) = -1) then
+	RemoveUser(cUserName);
+    end;
+    for i:=0 to Nodes.Count-1 do begin
+      cUserName := Nodes[i];
+      if (slExistingUsers.IndexOf(cUserName) = -1) then
+	AddUser(cUserName);
+    end;
+  finally
+    qUsers.Free;
+    slExistingUsers.Free;
+    FConnection.CommitRetaining;
+  end;
+end;
+
 procedure TCcConfig.GenerateConfig(lForceRecreateTriggers: Boolean; lCheckUsers: Boolean);
 
  	function GetIncludedFields (tableConfig: TCcConfigTable): String;
@@ -1787,42 +1868,6 @@ procedure TCcConfig.GenerateConfig(lForceRecreateTriggers: Boolean; lCheckUsers:
 
 		RemoveTriggers(cTableName);
 		EmptyLog(cTableName, '');
-	end;
-
-	procedure RemoveUser(cUserName: String);
-	var
-	  qDeleteUser: TCcQuery;
-	begin
-//		if Assigned(OnCreateTriggers) then
-//			OnCreateTriggers(Self, cTableName);
-//		LogMessage('Suppression de l''utilisateur ' + cUserName, cDest);
-
-		qDeleteUser := FConnection.UpdateQuery['TCcConfig_qDeleteUser'];
-		qDeleteUser.Close;
-		qDeleteUser.SQL.Text := 'delete from rpl$users where login = :user_name';
-		qDeleteUser.Param['user_name'].Value := cUserName;
-		qDeleteUser.Exec();
-
-	 //	EmptyLog('', cUserName);
-	end;
-
-	procedure AddUser(cUserName: String);
-	var
-	  qAddUser: TCcQuery;
-	begin
-//		if Assigned(OnCreateTriggers) then
-//			OnCreateTriggers(Self, cTableName);
-//		LogMessage('Ajout de l''utilisateur ' + cUserName, cDest);
-
-		qAddUser := FConnection.UpdateQuery['TCcConfig_qAddUser'];
-		qAddUser.Close;
-		qAddUser.SQL.Text := 'insert into RPL$USERS (config_name, login, condition_value) values (:config_name, :login, :login)';
-		qAddUser.Param['login'].Value := cUserName;
-		if (ConfigName <> '') then
-			qAddUser.Param['config_name'].Value := ConfigName
-		else
-			qAddUser.Param['config_name'].Clear;
-		qAddUser.Exec();
 	end;
 
   function GetTrackedFields(tableConfig: TCcConfigTable): String;
@@ -1988,46 +2033,6 @@ procedure TCcConfig.GenerateConfig(lForceRecreateTriggers: Boolean; lCheckUsers:
 			qTables.Free;
       slTriggers.Free;
 			slExistingTables.Free;
-			FConnection.CommitRetaining;
-		end;
-	end;
-
-	procedure CheckUsers;
-	var
-		slExistingUsers: TStringList;
-		cUserName: String;
-		i: Integer;
-		qUsers: TCcQuery;
-	begin
-		slExistingUsers := TStringList.Create;
-		qUsers := TCcQuery.Create(Self);
-		try
-      qUsers.SelectStatement := True;
-			qUsers.Close;
-			qUsers.Connection := FConnection;
-			qUsers.SQL.Text := 'select login from RPL$USERS where %config_name';
-			if (ConfigName <> '') then
-				qUsers.Macro['config_name'].Value := 'config_name = ' + QuotedStr(ConfigName)
-			else
-				qUsers.Macro['config_name'].Value := '0=0';
-			qUsers.Exec;
-			while (not qUsers.Eof) do begin
-				slExistingUsers.Add(Trim(qUsers.Field['LOGIN'].AsString));
-				qUsers.Next;
-			end;
-			for i:=0 to slExistingUsers.Count-1 do begin
-				cUserName := slExistingUsers[i];
-				if (Nodes.IndexOf(cUserName) = -1) then
-					RemoveUser(cUserName);
-			end;
-			for i:=0 to Nodes.Count-1 do begin
-				cUserName := Nodes[i];
-				if (slExistingUsers.IndexOf(cUserName) = -1) then
-					AddUser(cUserName);
-			end;
-		finally
-			qUsers.Free;
-			slExistingUsers.Free;
 			FConnection.CommitRetaining;
 		end;
 	end;

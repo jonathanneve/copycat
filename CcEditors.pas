@@ -10,6 +10,7 @@ uses
   Classes
   {$IFDEF CC_D6}
     ,DesignEditors,DesignIntf
+
   {$else}
      ,DsgnIntf
   {$endif}

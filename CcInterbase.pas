@@ -31,6 +31,8 @@ TCcInterbaseAdaptor = class (TCcDBAdaptor)
     procedure GetUniqueIndices(cTableName: String; list: TStringList);
     function GetMillisecFractions(d: TDateTime): String;
     function GetFieldTypeSQLText(FieldName, TableName: String): String;override;
+    function QuoteSQLDataLite(cData: String; DataType: TFieldType;
+      lSQLStyle: Boolean): String;
   protected
     FKeys : TCcKeyRing;
     procedure DoRegisterNode(NodeName: String);override;
@@ -693,6 +695,25 @@ var
     end;
 
     procedure GetFieldValues(cNewOld:String);
+
+      function GetStmtWhere: String;
+      var
+        I: Integer;
+        cKeyName: string;
+      begin
+        Result := '';
+        if (DBBranch = dbFirebird) and (BranchVersion >= 25) then
+          Result := 'rdb$db_key='''''' || :dbkey || '''''''''
+        else begin
+          for I := 0 to FKeys.Count-1 do begin
+            if Result <> '' then
+              Result := Result + ' || '' and '' || ';
+            cKeyName := MetaQuote(FKeys[i].KeyName);
+            Result := Result + cKeyName + '='' || ' + QuoteSQLDataLite(cNewOld + '.' + cKeyName, FKeys[i].DataType, true);
+          end;
+        end;
+      end;
+
     begin
       Query.Add('  counter = 0;');
       Query.Add('  for select trim(rf.rdb$field_name), coalesce(f.rdb$character_length, f.rdb$field_length), case f.rdb$field_type');
@@ -716,9 +737,9 @@ var
       Query.Add('  into :field_name, :field_length, :field_type do');
       Query.Add('  begin');
       Query.Add('      if (field_length <= 250 and field_type not in (15, 16, 39)) then');
-      Query.Add('        current_stmt = ''select ''''''|| :field_name || '''''',cast('' || :field_name || '' as varchar(250)), cast(null as blob),'' || field_type || '' from ' + MetaQuote(TableName) + ' where rdb$db_key='''''' || :dbkey || '''''';');
+      Query.Add('        current_stmt = ''select ''''''|| :field_name || '''''',cast('' || :field_name || '' as varchar(250)), cast(null as blob),'' || :field_type || '' from ' + MetaQuote(TableName) + ' where ' + GetStmtWhere + ';');
       Query.Add('      else');
-      Query.Add('        current_stmt = ''select ''''''|| :field_name || '''''',cast(null as varchar(250)),cast('' || :field_name || '' as blob),'' || field_type || '' from ' + MetaQuote(TableName) + ' where rdb$db_key='''''' || :dbkey || '''''';');
+      Query.Add('        current_stmt = ''select ''''''|| :field_name || '''''',cast(null as varchar(250)),cast('' || :field_name || '' as blob),'' || :field_type || '' from ' + MetaQuote(TableName) + ' where ' + GetStmtWhere + ';');
       Query.Add('');
       Query.Add('      if (stmt is null) then');
       Query.Add('        stmt = current_stmt;');
@@ -1433,6 +1454,19 @@ begin
   begin
     if (lSQLStyle) then
       Result := 'select quoted_str from rpl$quote_str(' + cData + ')'
+    else
+      Result := QuotedStr(cData);
+  end;
+end;
+
+function TCcInterbaseAdaptor.QuoteSQLDataLite(cData: String; DataType: TFieldType; lSQLStyle: Boolean):String;
+begin
+  Result := cData;
+  if (DataType = ftDate) or (DataType = ftTime) or (DataType = ftDateTime)
+       or (DataType = ftFixedChar) or (DataType = ftString) then
+  begin
+    if (lSQLStyle) then
+      Result := '''' + cData + ''''
     else
       Result := QuotedStr(cData);
   end;

@@ -21,7 +21,7 @@ object MainForm: TMainForm
     Top = 3
     Width = 771
     Height = 566
-    ActivePage = TabSheet2
+    ActivePage = tsIntroduction
     TabOrder = 0
     object tsIntroduction: TTabSheet
       Caption = 'Introduction'
@@ -1700,26 +1700,26 @@ object MainForm: TMainForm
     BeforeReplicate = ReplicatorBeforeReplicate
     OnConnectionLost = ReplicatorConnectionLost
     OnResolveConflict = ReplicatorResolveConflict
-    Version = '3.9.1'
+    Version = '3.9.4'
     KeepRowsInLog = False
     Left = 616
     Top = 120
   end
   object RemoteConfig: TCcConfig
-    TrackFieldChanges = False
+    TrackFieldChanges = True
     FailIfNoPK = False
     ConfigName = 'DEMO'
     Tables = <>
-    Version = '3.9.1'
+    Version = '3.9.4'
     Left = 688
     Top = 120
   end
   object LocalConfig: TCcConfig
-    TrackFieldChanges = False
+    TrackFieldChanges = True
     FailIfNoPK = False
     ConfigName = 'DEMO'
     Tables = <>
-    Version = '3.9.1'
+    Version = '3.9.4'
     Left = 552
     Top = 120
   end
@@ -1741,10 +1741,9 @@ object MainForm: TMainForm
   end
   object FDConnection1: TFDConnection
     Params.Strings = (
-      'Database=localhost:C:\projects-data\kerozen\kerozen_local.mtc'
+      'Database=localhost/3050:C:\temp\medicontrol.FDB'
       'User_Name=SYSDBA'
       'Password=masterkey'
-      'SQLDialect=1'
       'DriverID=FB')
     TxOptions.AutoStop = False
     LoginPrompt = False
@@ -1761,10 +1760,9 @@ object MainForm: TMainForm
   end
   object FDConnection2: TFDConnection
     Params.Strings = (
-      'Database=localhost:C:\projects-data\kerozen\kerozen.mtc'
+      'Database=localhost/3050:C:\temp\medicontrol_mirror.fdb'
       'User_Name=SYSDBA'
       'Password=masterkey'
-      'SQLDialect=1'
       'DriverID=FB')
     TxOptions.AutoStop = False
     LoginPrompt = False
@@ -1807,6 +1805,6 @@ object MainForm: TMainForm
   end
   object FDPhysMSSQLDriverLink1: TFDPhysMSSQLDriverLink
     Left = 394
-    Top = 235
+    Top = 219
   end
 end

@@ -206,6 +206,7 @@ end;
 
 procedure TCcQuerySQLDB.DoUnPrepare;
 begin
+  SQLQuery.Close;
   if SQLQuery.Prepared then
     SQLQuery.UnPrepare;
 end;
