@@ -260,7 +260,18 @@ begin
     cmd.Parameters[0].Value.SetString(EncodeValue(DSParams));
 
 //    cmd.Parameters[0].Value.SetString(EncodeValue(DSParams));
-    cmd.ExecuteUpdate;
+    try
+      cmd.ExecuteUpdate;
+    except on E: Exception do
+      begin
+        if not SQLConnection.Connected then
+          SignalConnectLost
+        else begin
+          SQLConnection.Connected := False;
+          raise;
+        end;
+      end;
+    end;
     DecodeValue(cmd.Parameters[1].Value.AsString, Result);
   finally
     DSParams.Free;

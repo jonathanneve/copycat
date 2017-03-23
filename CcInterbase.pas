@@ -707,7 +707,7 @@ var
         else begin
           for I := 0 to FKeys.Count-1 do begin
             if Result <> '' then
-              Result := Result + ' || '' and '' || ';
+              Result := Result + ' || '' and '' || ''';
             cKeyName := MetaQuote(FKeys[i].KeyName);
             Result := Result + cKeyName + '='' || ' + QuoteSQLDataLite(cNewOld + '.' + cKeyName, FKeys[i].DataType, true);
           end;

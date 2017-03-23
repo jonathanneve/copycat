@@ -27,8 +27,8 @@ object MainForm: TMainForm
       Caption = 'Introduction'
       ImageIndex = 2
       object Label2: TLabel
-        Left = 8
-        Top = 8
+        Left = 3
+        Top = 3
         Width = 744
         Height = 38
         Caption = 
@@ -1727,7 +1727,7 @@ object MainForm: TMainForm
     FDConnection = FDConnection1
     FDTransaction = FDTransaction1
     DBType = 'Interbase'
-    DBVersion = 'FB2.5'
+    DBVersion = 'FB2.0'
     Left = 562
     Top = 67
   end
@@ -1735,13 +1735,13 @@ object MainForm: TMainForm
     FDConnection = FDConnection2
     FDTransaction = FDTransaction2
     DBType = 'Interbase'
-    DBVersion = 'FB2.5'
+    DBVersion = 'FB2.0'
     Left = 562
     Top = 243
   end
   object FDConnection1: TFDConnection
     Params.Strings = (
-      'Database=localhost/3050:C:\temp\medicontrol.FDB'
+      'Database=localhost/3052:C:\temp\test.FDB'
       'User_Name=SYSDBA'
       'Password=masterkey'
       'DriverID=FB')
@@ -1760,7 +1760,7 @@ object MainForm: TMainForm
   end
   object FDConnection2: TFDConnection
     Params.Strings = (
-      'Database=localhost/3050:C:\temp\medicontrol_mirror.fdb'
+      'Database=localhost/3052:C:\temp\test_mirror.fdb'
       'User_Name=SYSDBA'
       'Password=masterkey'
       'DriverID=FB')

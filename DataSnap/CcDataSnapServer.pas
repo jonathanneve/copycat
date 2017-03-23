@@ -15,6 +15,7 @@ TCcDSServerTransportLink = class (TComponent)
     function GetServer: TDSCustomServer;
   protected
     FServerClass: TDSServerClass;
+    procedure Notification(AComponent: TComponent; Operation: TOperation);
   published
     constructor Create(AOwner: TComponent);override;
     destructor Destroy;override;
@@ -82,6 +83,16 @@ begin
   FServerClass.OnGetClass := OnGetServerClass;
 end;
 
+procedure TCcDSServerTransportLink.Notification(AComponent: TComponent; Operation: TOperation);
+begin
+  if Operation = opRemove then
+  begin
+    if AComponent = Server then
+      SetServer(nil);
+  end;
+  inherited;
+end;
+
 destructor TCcDSServerTransportLink.Destroy;
 begin
   FreeAndNil(FServerClass);
@@ -101,7 +112,13 @@ end;
 
 procedure TCcDSServerTransportLink.SetServer(const Value: TDSCustomServer);
 begin
+  if FServerClass.Server <> nil then
+    FServerClass.RemoveFreeNotification(Self);
+
   FServerClass.Server := Value;
+
+  if Value <> nil then
+    Value.FreeNotification(Self);
 end;
 
 { TCcDSServerMethods }
