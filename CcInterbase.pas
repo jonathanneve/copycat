@@ -1466,7 +1466,7 @@ begin
        or (DataType = ftFixedChar) or (DataType = ftString) then
   begin
     if (lSQLStyle) then
-      Result := '''' + cData + ''''
+      Result := ''''''''' || ' + cData + ' || '''''''''
     else
       Result := QuotedStr(cData);
   end;

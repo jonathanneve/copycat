@@ -1741,7 +1741,7 @@ object MainForm: TMainForm
   end
   object FDConnection1: TFDConnection
     Params.Strings = (
-      'Database=localhost/3052:C:\temp\test.FDB'
+      'Database=127.0.0.1/3052:C:\temp\TAXPRO.FDB'
       'User_Name=SYSDBA'
       'Password=masterkey'
       'DriverID=FB')
