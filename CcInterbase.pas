@@ -1446,11 +1446,14 @@ begin
   end;
 end;
 
+const ftQuotedTypes = [ftDate, ftTime, ftDateTime, ftFixedChar, ftString, ftMemo,
+    ftFmtMemo, ftFixedChar, ftWideString, ftOraClob, ftTimeStamp, ftWideMemo,
+    ftOraTimeStamp];
+
 function TCcInterbaseAdaptor.QuoteSQLData(cData: String; DataType: TFieldType; lSQLStyle: Boolean):String;
 begin
   Result := cData;
-  if (DataType = ftDate) or (DataType = ftTime) or (DataType = ftDateTime)
-       or (DataType = ftFixedChar) or (DataType = ftString) then
+  if (DataType in ftQuotedTypes) then
   begin
     if (lSQLStyle) then
       Result := 'select quoted_str from rpl$quote_str(' + cData + ')'
@@ -1462,8 +1465,7 @@ end;
 function TCcInterbaseAdaptor.QuoteSQLDataLite(cData: String; DataType: TFieldType; lSQLStyle: Boolean):String;
 begin
   Result := cData;
-  if (DataType = ftDate) or (DataType = ftTime) or (DataType = ftDateTime)
-       or (DataType = ftFixedChar) or (DataType = ftString) then
+  if (DataType in ftQuotedTypes) then
   begin
     if (lSQLStyle) then
       Result := ''''''''' || ' + cData + ' || '''''''''
