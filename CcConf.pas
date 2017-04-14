@@ -1278,6 +1278,15 @@ begin
         Add('ADD ' + DeclareField('EXCLUDED_FIELDS', ftMemo, 0, False, False, False));
       end;
       QueryReady;
+    end
+    else if not Connection.DBAdaptor.FieldExists(UnQuotedIdentifier('RPL$TABLES_CONFIG'), UnQuotedIdentifier('PRIORITY')) then begin
+      with Query do
+      begin
+        Clear;
+				Add('ALTER TABLE RPL$TABLES_CONFIG ');
+        Add('ADD ' + DeclareField('PRIORITY', ftInteger, 0, False, False, False));
+      end;
+      QueryReady;
     end;
     if not Connection.DBAdaptor.FieldExists(UnQuotedIdentifier('RPL$TABLES_CONFIG'), UnQuotedIdentifier('PRIMARY_KEY_SYNC')) then begin
       with Query do

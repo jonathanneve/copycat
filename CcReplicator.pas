@@ -3182,33 +3182,40 @@ procedure TCcReplicator.BatchImport(TableName: string;
   Direction: TCcSyncDirection; SQLConditionSource, SQLConditionDest: string;
   DeleteAndReInsert: Boolean);
 var
-  lHarmonize: Boolean;
+  lHarmonize, lOldReplicateOnlyChangedFields: Boolean;
   cOrigTableName, cDestTableName: string;
 begin
-  FLog.Keys.FailIfNoPK := FailIfNoPK;
+  lOldReplicateOnlyChangedFields := FReplicateOnlyChangedFields;
+  try
+    FReplicateOnlyChangedFields := False;
+    FLog.Keys.FailIfNoPK := FailIfNoPK;
 
-  // lHarmonize := FHarmonizeFields;
-  if Direction = sdRemoteToLocal then
-  begin
-    FLog.SetLocalMode(false);
-    lHarmonize := false;
-    cOrigTableName := GetRemoteTableName(TableName);
-    cDestTableName := TableName;
-  end
-  else
-  begin
-    FLog.SetLocalMode(true);
-    lHarmonize := true;
-    cOrigTableName := TableName;
-    cDestTableName := GetRemoteTableName(TableName);
+    // lHarmonize := FHarmonizeFields;
+    if Direction = sdRemoteToLocal then
+    begin
+      FLog.SetLocalMode(false);
+      lHarmonize := false;
+      cOrigTableName := GetRemoteTableName(TableName);
+      cDestTableName := TableName;
+    end
+    else
+    begin
+      FLog.SetLocalMode(true);
+      lHarmonize := true;
+      cOrigTableName := TableName;
+      cDestTableName := GetRemoteTableName(TableName);
+    end;
+
+    Connect;
+    GetFields(lHarmonize, TableName);
+
+    FLog.LoadKeys(TableName, '', '', '', '', '', '');
+    ReplicateRecord(cOrigTableName, cDestTableName, SQLConditionSource,
+      SQLConditionDest, DeleteAndReInsert);
+
+  finally
+    FReplicateOnlyChangedFields := lOldReplicateOnlyChangedFields;
   end;
-
-  Connect;
-  GetFields(lHarmonize, TableName);
-
-  FLog.LoadKeys(TableName, '', '', '', '', '', '');
-  ReplicateRecord(cOrigTableName, cDestTableName, SQLConditionSource,
-    SQLConditionDest, DeleteAndReInsert);
 end;
 
 function TCcReplicator.ValueByKey(list: TStrings; key: string): string;

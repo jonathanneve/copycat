@@ -78,22 +78,22 @@ end;
 
 procedure TForm15.FormCreate(Sender: TObject);
 begin
-  FServer := TCcWSServerTransport.Create(Self);
+{  FServer := TCcWSServerTransport.Create(Self);
   FServer.Port := 9093;
   FServer.DatabaseAlias := 'Test';
-  FServer.Connection := CcConnection;
+  FServer.Connection := CcConnection;}
 
   FClient := TCcWSClientTransport.Create(Self);
   FClient.Host := 'localhost';
   FClient.Port := 9093;
-  FClient.DatabaseAlias := 'Test';
+  FClient.DatabaseAlias := 'Test2';
   FClient.RequestTimeout := 10000;
 
-  FGateway := TCcWSGateway.Create(Self);
-  FGateway.Port := 9093;
+{  FGateway := TCcWSGateway.Create(Self);
+  FGateway.Port := 9093;}
 
   FAgent := TCcWSAgentConnection.Create(Self);
-  FAgent.DatabaseAlias := 'Test';
+  FAgent.DatabaseAlias := 'Test2';
   FAgent.Connection := CcConnection;
   FAgent.Host := 'localhost';
   FAgent.Port := 9093;

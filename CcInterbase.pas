@@ -262,7 +262,7 @@ begin
     else begin
       //Dialect 1 format: 'D-MMM-YYYY HH:NN:SS.ssss'
       //converted (above) to: 'D.MMM.YYYY HH:NN:SS.ssss'
-      nDotPos := AnsiPos('.', cDate);
+      nDotPos := AnsiPos({$IFDEF CC_D2K13}FormatSettings.{$ENDIF}DateSeparator, cDate);
       cDate := Copy(cDate, 1, nDotPos) + GetMonth(Copy(cDate, nDotPos+1, 3)) + Copy(cDate, nDotPos + 4, Length(cDate));
       {$IFDEF CC_D2K13}
       FormatSettings.ShortDateFormat := 'dd/mm/yyyy';
@@ -796,7 +796,10 @@ var
     Query.Add('begin');
     Query.Add('  if (rdb$get_context(''USER_TRANSACTION'', ''RPL$NO_REPLICATION'') = ''TRUE'') then exit;');
     GetReplicatingNode;
-    Query.Add('  dbkey = coalesce(new.rdb$db_key, old.rdb$db_key);');
+    Query.Add('  if (deleting) then');
+    Query.Add('    dbkey = old.rdb$db_key;');
+    Query.Add('  else');
+    Query.Add('    dbkey = new.rdb$db_key;');
     Query.Add('  select max(change_number) from rpl$tmp_changes into :change_number;');
     Query.Add('  if (not deleting) then begin');
     if GetKeySyncVals <> '' then begin
@@ -1447,8 +1450,8 @@ begin
 end;
 
 const ftQuotedTypes = [ftDate, ftTime, ftDateTime, ftFixedChar, ftString, ftMemo,
-    ftFmtMemo, ftFixedChar, ftWideString, ftOraClob, ftTimeStamp, ftWideMemo,
-    ftOraTimeStamp];
+    ftFmtMemo {$IFNDEF FPC}, ftFixedChar, ftWideString, ftOraClob, ftTimeStamp, ftWideMemo,
+    ftOraTimeStamp {$ENDIF}];
 
 function TCcInterbaseAdaptor.QuoteSQLData(cData: String; DataType: TFieldType; lSQLStyle: Boolean):String;
 begin
