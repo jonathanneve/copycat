@@ -8,8 +8,22 @@ unit CcReplicator;
 interface
 
 uses
-  Classes, DB, SysUtils, CCat, CcProviders, CcKeys, SyncObjs, CcDB, {$IFDEF FPC}fptimer{$ELSE}
-{$IFDEF MSWINDOWS}{$IFDEF CC_D2K14}Vcl.ExtCtrls{$ELSE}ExtCtrls{$ENDIF}{$ELSE}FMX.Types{$ENDIF}{$ENDIF};
+  Classes, DB, SysUtils, CCat, CcProviders, CcKeys, SyncObjs, CcDB
+  {$IFNDEF CONSOLE}
+    {$IFDEF FPC}
+      ,fptimer
+    {$ELSE}
+      {$IFDEF MSWINDOWS}
+        {$IFDEF CC_D2K14}
+          ,Vcl.ExtCtrls
+        {$ELSE}
+          ,ExtCtrls
+        {$ENDIF}
+      {$ELSE}
+        ,FMX.Types
+      {$ENDIF}
+    {$ENDIF}
+  {$ENDIF};
 
 type
   TCcTraceType = (ttNoTrace, ttLocalOnly, ttRemoteOnly, ttEachSeparately,
@@ -30,6 +44,8 @@ type
     // the error message is reported in ExceptionMessage
     ExceptionMessage: string; // Error message, if applicable
     RowsReplicated: Integer; // Number of rows successfully replicated
+    RowsReplicatedFromRemote: Integer; // Number of rows successfully replicated from remote db
+    RowsReplicatedFromLocal: Integer; // Number of rows successfully replicated from local db
     RowsConflicted: Integer; // Number of conflictual rows detected
     RowsErrors: Integer;
     // Number of rows that could not be replicated because of errors.
@@ -103,7 +119,9 @@ type
   private
     FFrequency: Integer;
     FOwner: TComponent;
+{$IFNDEF CONSOLE}
     Timer: {$IFDEF FPC}TFPTimer{$ELSE}TTimer{$ENDIF};
+{$ENDIF}
   protected
     fEnabled: Boolean;
     OnPeriod: TCcNotifyEvent;
@@ -355,6 +373,9 @@ type
 		slInconsistentDeletes: TStringList;
 		FTrackInconsistentDeletes: Boolean;
     LastRowAborted: Boolean;
+    FHarmonizeChangedFields: Boolean;
+    FCheckConflicts: boolean;
+    FUseTransactionNumber: Boolean;
 		procedure HarmonizeLists(slFirst, slSecond: TStringList);
 		function CanReplicate(QueryType: TCcQueryType; TableName: string;
       Fields: TCcMemoryFields; var RetryLater: Boolean): Boolean;
@@ -408,6 +429,7 @@ type
     procedure SetVersion(Value: String);
     procedure UpdateRplLogWithNewKeys;
     function SanitizeParamName(paramName: String): String;
+    procedure SetUseTransactionNumber(const Value: Boolean);
 
   protected
     FReplicationQueryContext: string;
@@ -419,9 +441,12 @@ type
 
     property TableFields[TableName: string]: TStringList read GetTableFields;
   public
+
     // LastResult holds the result of the last call to Replicate.
     // See also: OnReplicationResult
     LastResult: TCcReplicationResult;
+
+    property CurrentRow: TCcMemoryTable read FSelect;
 
     procedure RefreshDisplay;
 
@@ -613,6 +638,8 @@ type
 
     procedure GetWhereValues(qQuery: TCcQuery);
 	published
+    property UseTransactionNumber: Boolean read FUseTransactionNumber write SetUseTransactionNumber;
+    property HarmonizeChangedFields: Boolean read FHarmonizeChangedFields write FHarmonizeChangedFields;
 		property TrackInconsistentDeletes: Boolean read FTrackInconsistentDeletes write FTrackInconsistentDeletes;
 
 		//Summary: Merges values of changed fields from both nodes, so as to avoid conflicts where possible
@@ -1149,9 +1176,11 @@ type
       default 0;
     property Version: String read GetVersion write SetVersion;
     property KeepRowsInLog: Boolean read FKeepRowsInLog write FKeepRowsInLog;
+    property CheckConflicts: boolean read FCheckConflicts write FCheckConflicts;
   end;
 
   TCcCustomLog = class(TComponent)
+  private
   protected
     FReplicator: TCcReplicator;
     procedure ClearKeyRing; virtual; abstract;
@@ -1166,6 +1195,8 @@ type
     function GetEof: Boolean; virtual; abstract;
     function GetCurrentLine: Integer; virtual; abstract;
     function GetLineCount: Integer; virtual; abstract;
+    function GetLineCountLocal: Integer; virtual; abstract;
+    function GetLineCountRemote: Integer; virtual; abstract;
     procedure SetReplicator(repl: TCcReplicator); virtual; abstract;
     function LoadFromDatabase: Boolean; virtual; abstract;
     procedure LogConflict(var Conflict: TConflictRecord);
@@ -1225,6 +1256,8 @@ type
     property Eof: Boolean read GetEof;
     // Total number of lines in the log
     property LineCount: Integer read GetLineCount;
+    property LineCountLocal: Integer read GetLineCountLocal;
+    property LineCountRemote: Integer read GetLineCountRemote;
     // Current line number
     property CurrentLine: Integer read GetCurrentLine;
 
@@ -1266,8 +1299,8 @@ type
 implementation
 
 uses CcLog, CcConflictMgr
-{$IFNDEF FPC}{$IFDEF MSWINDOWS} , Windows {$IFDEF CC_D2K14}, Vcl.Dialogs{$ELSE},
-  Dialogs{$ENDIF} {$ELSE}, FMX.Dialogs {$ENDIF}{$ENDIF}
+{$IFNDEF FPC}{$IFDEF MSWINDOWS} , Windows {$IFNDEF CONSOLE}{$IFDEF CC_D2K14}, Vcl.Dialogs{$ELSE},
+  Dialogs{$ENDIF} {$ELSE}, FMX.Dialogs {$ENDIF}{$ENDIF}{$ENDIF}
 {$IFDEF CC_UseVariants}, Variants{$ENDIF};
 
 { TCcReplicator }
@@ -1387,6 +1420,9 @@ end;
 constructor TCcReplicator.Create(Owner: TComponent);
 begin
 	inherited;
+  FUseTransactionNumber := False;
+  FCheckConflicts := True;
+  FHarmonizeChangedFields := false;
 	FTrackInconsistentDeletes := False;
 	slInconsistentDeletes := TStringList.Create;
 
@@ -1570,7 +1606,7 @@ begin
         end;
 
         cTableName := FLog.FBN('Table_Name');
-				if (cTableName <> cOldTableName) and not ReplicateOnlyChangedFields then
+				if (cTableName <> cOldTableName) and (not ReplicateOnlyChangedFields) then
         begin
           if Assigned(FOnTableEnd) and (cOldTableName <> '') then
             FOnTableEnd(Self, cOldTableName);
@@ -1579,7 +1615,10 @@ begin
 					GetFields(lHarmonize, cTableName);
 					if Assigned(FOnTableBegin) then
 						FOnTableBegin(Self, cTableName);
-				end;
+				end
+        else if HarmonizeChangedFields then
+          GetFields(true, cTableName);
+
 				try
 					if Assigned(FOnRowBeforeReplicate) then
 						FOnRowBeforeReplicate(Self);
@@ -1605,6 +1644,10 @@ begin
 					FLog.RecordReplicated(Self);
 
 					Inc(LastResult.RowsReplicated);
+          if FLog.Origin = RemoteNode then
+            Inc(LastResult.RowsReplicatedFromRemote)
+          else
+            Inc(LastResult.RowsReplicatedFromLocal);
 
 					if Assigned(FOnRowReplicated) then
 						FOnRowReplicated(Self, FLog.TableName, FSelect.Fields, queryPerformed);
@@ -1679,7 +1722,7 @@ var
   // i:Integer;
   slRemoteFields: TStringList;
 begin
-  if not ReplicateOnlyChangedFields then
+  if ((not ReplicateOnlyChangedFields) or (HarmonizeChangedFields)) then
   begin
     FTableFieldList := TableFields[cTableName];
     if (FTableFieldList.Count = 0) then
@@ -1986,9 +2029,8 @@ var
 begin
   if FMergeChangedFieldsOnConflict and FReplicateOnlyChangedFields and
     (Conflict.ConflictingFields.Count = 0) then
-    Conflict.ChosenNode := 'REPLICATE_BOTH_WAYS';
-
-  if (Assigned(OnResolveConflict)) then
+    Conflict.ChosenNode := 'REPLICATE_BOTH_WAYS'
+  else if (Assigned(OnResolveConflict)) then
     OnResolveConflict(Self, Conflict);
 
   if Conflict.ChosenNode <> 'REPLICATE_BOTH_WAYS' then
@@ -2052,6 +2094,8 @@ begin
     ResultType := rtNone;
     ExceptionMessage := '';
     RowsReplicated := 0;
+    RowsReplicatedFromRemote := 0;
+    RowsReplicatedFromLocal := 0;
     RowsConflicted := 0;
     RowsErrors := 0;
   end;
@@ -2271,7 +2315,7 @@ procedure TCcReplicator.UpdateReplicationFields;
 var
   I: Integer;
 begin
-  if ReplicateOnlyChangedFields then
+  if ReplicateOnlyChangedFields and (not HarmonizeChangedFields) then
     CopyFieldsFromDataset(FSelect, FFieldList)
   else
   begin
@@ -2445,65 +2489,70 @@ var
               FReplicationQueryContext := 'INSERT';
 
 						slFieldList.Assign(FFieldList);
-						FLog.Dest.Connection.DBAdaptor.ExecutingReplicationQuery(DestTable, FReplicationQueryContext, slFieldList);
-            try
+            if slFieldList.Count > 0 then begin
+              FLog.Dest.Connection.DBAdaptor.ExecutingReplicationQuery(DestTable, FReplicationQueryContext, slFieldList);
               try
-                q := FLog.Dest.Connection.UpdateQuery['TCcReplicator_q' + FReplicationQueryContext + DestTable];
-                q.Close;
+                try
+                  q := FLog.Dest.Connection.UpdateQuery['TCcReplicator_q' + FReplicationQueryContext + DestTable];
+                  q.Close;
 
-                // TODO add counter for insert or updates to distinguish them
-                if FLog.Dest.Connection.DBAdaptor.SupportsInsertOrUpdate
-                  and (not ReplicateOnlyChangedFields or (qt = qtInsert))
-                then
-                  q.SQL.Text := FLog.Dest.Connection.DBAdaptor.GetInsertOrUpdateSQL(slFieldList, FLog.Origin.Connection.DBAdaptor, FLog.Keys, LocalTable)
-                else if qt = qtUpdate then
-                  q.SQL.Text := 'update %cc_table_name_macro set '#13#10'' + GetFieldsSQL(slFieldList, 'U', FLog.Dest) + ''#13#10' where ' + cWhere
-                else
-                  q.SQL.Text := 'insert into %Cc_table_name_macro '#13#10' ' + GetFieldsSQL(slFieldList, 'I', FLog.Dest);
+                  // TODO add counter for insert or updates to distinguish them
+                  if FLog.Dest.Connection.DBAdaptor.SupportsInsertOrUpdate
+                    and (not ReplicateOnlyChangedFields or (qt = qtInsert))
+                  then
+                    q.SQL.Text := FLog.Dest.Connection.DBAdaptor.GetInsertOrUpdateSQL(slFieldList, FLog.Origin.Connection.DBAdaptor, FLog.Keys, LocalTable)
+                  else if qt = qtUpdate then
+                    q.SQL.Text := 'update %cc_table_name_macro set '#13#10'' + GetFieldsSQL(slFieldList, 'U', FLog.Dest) + ''#13#10' where ' + cWhere
+                  else
+                    q.SQL.Text := 'insert into %Cc_table_name_macro '#13#10' ' + GetFieldsSQL(slFieldList, 'I', FLog.Dest);
 
-                FLog.Dest.Connection.DBAdaptor.ExecutingReplicationQuerySQL(DestTable, FReplicationQueryContext, q);
+                  FLog.Dest.Connection.DBAdaptor.ExecutingReplicationQuerySQL(DestTable, FReplicationQueryContext, q);
 
-                q.Macro['cc_table_name_macro'].Value := DestTable;
+                  q.Macro['cc_table_name_macro'].Value := DestTable;
 
-                // The macros must be set first
-                for I := 0 to FLog.Keys.Count - 1 do
-                  if FLog.Keys[I].PrimaryKey and
-                    q.MacroExists(FLog.Keys[I].KeyName) then
-                      q.Macro[FLog.Keys[I].KeyName].Value := GetFieldValue(lLocal, FLog.Keys[I].KeyName, Log.Dest.Connection);
+                  // The macros must be set first
+                  for I := 0 to FLog.Keys.Count - 1 do
+                    if FLog.Keys[I].PrimaryKey and
+                      q.MacroExists(FLog.Keys[I].KeyName) then
+                        q.Macro[FLog.Keys[I].KeyName].Value := GetFieldValue(lLocal, FLog.Keys[I].KeyName, Log.Dest.Connection);
 
-                GetWhereValues(q);
-                for I := 0 to slFieldList.Count - 1 do
-                begin
-                  cFieldName := slFieldList.Strings[I];
-                  if q.ParamExists(cFieldName) then
-                    q.Param[SanitizeParamName(cFieldName)].SetValueAsType(GetFieldValue(lLocal, cFieldName, Log.Dest.Connection), GetFieldType(cFieldName));
+                  GetWhereValues(q);
+                  for I := 0 to slFieldList.Count - 1 do
+                  begin
+                    cFieldName := slFieldList.Strings[I];
+                    if q.ParamExists(cFieldName) then
+                      q.Param[SanitizeParamName(cFieldName)].SetValueAsType(GetFieldValue(lLocal, cFieldName, Log.Dest.Connection), GetFieldType(cFieldName));
+                  end;
+                  lRetry := TraceExec(q);
+                except
+                  on E: Exception do
+                    RaiseQueryError(q, E);
                 end;
-                lRetry := TraceExec(q);
-              except
-                on E: Exception do
-                  RaiseQueryError(q, E);
+              finally
+                FLog.Dest.Connection.DBAdaptor.ExecutedReplicationQuery(DestTable, FReplicationQueryContext, slFieldList);
               end;
-            finally
-              FLog.Dest.Connection.DBAdaptor.ExecutedReplicationQuery(DestTable, FReplicationQueryContext, slFieldList);
-            end;
 
-            if Assigned(FOnQueryDone) then
-              FOnQueryDone(Self, qt, q.RowsAffected);
-            RefreshDisplay;
+              if Assigned(FOnQueryDone) then
+                FOnQueryDone(Self, qt, q.RowsAffected);
+              RefreshDisplay;
 
-            if (FLog.Dest.Connection.CanUseRowsAffected) then
-            begin
-              if (q.RowsAffected = 0) then
-                Result := qrNoneAffected
+              if (FLog.Dest.Connection.CanUseRowsAffected) then
+              begin
+                if (q.RowsAffected = 0) then
+                  Result := qrNoneAffected
+                else
+                  Result := qrOK;
+              end
               else
+                // If we can't use RowsAffected, we have either called CheckRowExists before the update,
+                // or we have called INSERT OR UPDATE if supported.
+                // Either way, we can consider it a success and needn't insert.
                 Result := qrOK;
             end
-            else
-              // If we can't use RowsAffected, we have either called CheckRowExists before the update,
-              // or we have called INSERT OR UPDATE if supported.
-              // Either way, we can consider it a success and needn't insert.
-              Result := qrOK;
-
+            else begin
+              Result := qrOk;
+              lRetry := False;
+            end;
           until (not lRetry);
         finally
           slFieldList.Free;
@@ -2647,7 +2696,7 @@ begin
 
   if (FSelect.RecordCount > 0) then
   begin
-    if not ReplicateOnlyChangedFields then
+    if (not ReplicateOnlyChangedFields) then
     begin
       // Harmonize FTableFieldList with the fields in FSelect
       HarmonizeFieldList(FSelect, FTableFieldList);
@@ -2970,14 +3019,18 @@ constructor TPeriodicity.Create(Owner: TComponent);
 begin
   inherited Create;
   FOwner := Owner;
+{$IFNDEF CONSOLE}
   Timer := {$IFDEF FPC}TFPTimer{$ELSE}TTimer{$ENDIF}.Create(Owner);
+{$ENDIF}
   FFrequency := 30;
   fEnabled := false;
 end;
 
 destructor TPeriodicity.Destroy;
 begin
+{$IFNDEF CONSOLE}
   Timer.Free;
+{$ENDIF}
   inherited;
 end;
 
@@ -2987,12 +3040,14 @@ end;
 // Call Start to initiate the timer.
 procedure TPeriodicity.Start;
 begin
+{$IFNDEF CONSOLE}
   if (fEnabled and Assigned(OnPeriod)) then
   begin
     Timer.Interval := FFrequency * 1000;
     Timer.OnTimer := OnPeriod;
     Timer.Enabled := true;
   end
+{$ENDIF}
 end;
 
 { ****************************************
@@ -3003,7 +3058,9 @@ end;
   **************************************** }
 procedure TPeriodicity.Stop;
 begin
+{$IFNDEF CONSOLE}
   Timer.Enabled := false;
+{$ENDIF}
   // On arrête le compteur, mais on ne touche pas à la propriété Enabled
 end;
 
@@ -3318,6 +3375,11 @@ end;
 procedure TCcReplicator.SetTableMapping(const Value: TStrings);
 begin
   FTableMapping.Assign(Value);
+end;
+
+procedure TCcReplicator.SetUseTransactionNumber(const Value: Boolean);
+begin
+  FUseTransactionNumber := Value;
 end;
 
 procedure TCcReplicator.SetVersion(Value: String);

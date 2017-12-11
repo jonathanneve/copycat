@@ -1,4 +1,4 @@
-package CopyCatXMLRPC_D10;
+package CopyCatXMLRPC_D10_1;
 
 {$R *.res}
 {$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
@@ -36,7 +36,7 @@ requires
 {$ENDIF}
   rtl,
   dbrtl,
-  CopyCat_D10,
+  CopyCat_D10_1,
   IndyCore,
   IndySystem,
   IndyProtocols;

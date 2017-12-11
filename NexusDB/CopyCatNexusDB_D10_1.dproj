@@ -1,7 +1,7 @@
 ﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
     <PropertyGroup>
         <ProjectGuid>{A88502AC-B92D-4C10-BF19-7DC7DD830D9A}</ProjectGuid>
-        <MainSource>CopyCatNexusDB_D10.dpk</MainSource>
+        <MainSource>CopyCatNexusDB_D10_1.dpk</MainSource>
         <ProjectVersion>16.0</ProjectVersion>
         <FrameworkType>None</FrameworkType>
         <Base>True</Base>
@@ -60,7 +60,7 @@
         <Base>true</Base>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base)'!=''">
-        <SanitizedProjectName>CopyCatNexusDB_D10</SanitizedProjectName>
+        <SanitizedProjectName>CopyCatNexusDB_D10_1</SanitizedProjectName>
         <DCC_CBuilderOutput>All</DCC_CBuilderOutput>
         <GenDll>true</GenDll>
         <GenPackage>true</GenPackage>
@@ -93,7 +93,7 @@
         <VerInfo_Locale>1033</VerInfo_Locale>
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
         <VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
-        <DCC_UsePackage>rtl;vcl;dbrtl;CopyCat_D10;dac190;NexusDB312ll190;NexusDB312sd190;NexusDB312db190;NexusDB351ll190;NexusDB351sd190;NexusDB351db190;$(DCC_UsePackage)</DCC_UsePackage>
+        <DCC_UsePackage>rtl;vcl;dbrtl;CopyCat_D10_1;dac190;NexusDB312ll190;NexusDB312sd190;NexusDB312db190;NexusDB351ll190;NexusDB351sd190;NexusDB351db190;$(DCC_UsePackage)</DCC_UsePackage>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win64)'!=''">
         <DCC_UsePackage>rtl;vcl;dbrtl;NexusDB351ll190;NexusDB351sd190;NexusDB351db190;$(DCC_UsePackage)</DCC_UsePackage>
@@ -122,7 +122,7 @@
         <DCCReference Include="rtl.dcp"/>
         <DCCReference Include="vcl.dcp"/>
         <DCCReference Include="dbrtl.dcp"/>
-        <DCCReference Include="CopyCat_D10.dcp"/>
+        <DCCReference Include="CopyCat_D10_1.dcp"/>
         <DCCReference Include="CcProvNexusDB.pas"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
@@ -192,7 +192,7 @@
                     <VersionInfoKeys Name="theme"/>
                 </VersionInfoKeys>
                 <Source>
-                    <Source Name="MainSource">CopyCatNexusDB_D10.dpk</Source>
+                    <Source Name="MainSource">CopyCatNexusDB_D10_1.dpk</Source>
                 </Source>
             </Delphi.Personality>
             <Deployment/>

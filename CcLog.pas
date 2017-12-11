@@ -66,6 +66,8 @@ type
     FPrevOnError: TCcErrorEvent;
     FLocalMode: Boolean;
     FLineCount: Integer;
+    FLineCountLocal: Integer;
+    FLineCountRemote: Integer;
     FCurrentLine: Integer;
     FLogLocal: TCcQuery;
     FLogRemote: TCcQuery;
@@ -95,6 +97,8 @@ type
     function GetEof: Boolean; override;
     function GetCurrentLine: Integer; override;
     function GetLineCount: Integer; override;
+    function GetLineCountLocal: Integer; override;
+    function GetLineCountRemote: Integer; override;
     procedure SignalError(Sender: TObject; e: Exception; var CanContinue: Boolean);override;
     procedure RecordReplicated(Sender: TObject); override;
     procedure UpdateState(State: TCcLogState);
@@ -272,6 +276,16 @@ begin
   Result := FLineCount;
 end;
 
+function TCcLog.GetLineCountLocal: Integer;
+begin
+  Result := FLineCountLocal;
+end;
+
+function TCcLog.GetLineCountRemote: Integer;
+begin
+  Result := FLineCountRemote;
+end;
+
 function TCcLog.GetLocalMode: Boolean;
 begin
   Result := FLocalMode // (FieldByName('LOCAL').Value = 1);
@@ -304,6 +318,9 @@ begin
     Result := 'select l.change_number, t.priority, l.table_name, l.primary_key_values, l.code, l.conflict, l.login, ' +
       'l.procedure_statement, l.operation_date, l.primary_key_sync, l.unique_key_sync, ' +
       't.REPL_DELETES as REPL_DELETES, t.REPL_INSERTS as REPL_INSERTS, t.REPL_UPDATES as REPL_UPDATES, ';
+
+    if FReplicator.UseTransactionNumber then
+      Result := Result + 'l.transaction_number, ';
 
 //    if FReplicator.ReplicateOnlyChangedFields  then
       Result := Result + 'l.operation_type, ';
@@ -357,17 +374,21 @@ begin
       FLog := FLogRemote;
       FLogLocal.Next;
       Inc(FLineCount);
+      Inc(FLineCountRemote);
     end
     else if (Conflict.ChosenNode = Conflict.Node1) then
     begin
       FLog := FLogLocal;
       FLogRemote.Next;
       Inc(FLineCount);
+      Inc(FLineCountLocal);
     end
     else if (Conflict.ChosenNode = 'REPLICATE_BOTH_WAYS') then begin
       Inc(FLineCount, 2);
       FLogRemote.Next;
       FLogLocal.Next;
+      Inc(FLineCountRemote);
+      Inc(FLineCountLocal);
     end
     else begin
       Inc(FReplicator.LastResult.RowsConflicted);
@@ -450,6 +471,10 @@ function TCcLog.LoadFromDatabase: Boolean;
   begin
     q.Next;
     Inc(FLineCount);
+    if q = FLogLocal then
+      Inc(FLineCountLocal)
+    else
+      Inc(FLineCountRemote);
   end;
 
   procedure ExecQueries(CheckingConflicts: Boolean);
@@ -477,6 +502,8 @@ begin
   FKeys.ClearTableKeys;
 
   FLineCount := 0;
+  FLineCountLocal := 0;
+  FLineCountRemote := 0;
   FCurrentLine := 0;
   FAllowAllOperations := False;
 
@@ -490,7 +517,7 @@ begin
   FLogLocal := FReplicator.LocalDB.SelectQuery['TCcLog_qLogLocal'];
   FLogRemote := FReplicator.RemoteDB.SelectQuery['TCcLog_qLogRemote'];
 
-  if FReplicator.Direction = sdBoth then begin
+  if (FReplicator.Direction = sdBoth) and (FReplicator.CheckConflicts) then begin
     ExecQueries(True);
 
     while not(FLogLocal.Eof and FLogRemote.Eof) do
@@ -544,8 +571,11 @@ begin
 
     //We didn't check the conflicts, so we don't know the record count
     //We could add a property to check record count explicitly
-    if FReplicator.Direction <> sdBoth then
+    if (FReplicator.Direction <> sdBoth) or (not FReplicator.CheckConflicts) then begin
       FLineCount := 1;
+      FLineCountLocal := 1;
+      FLineCountRemote := 0;
+    end;
   end;
 
   ResetKeys;
@@ -623,6 +653,7 @@ procedure TCcLog.SetReplicator(Repl: TCcReplicator);
 begin
   FReplicator := Repl;
 end;
+
 
 procedure TCcLog.SignalError(Sender: TObject; e: Exception;
   var CanContinue: Boolean);

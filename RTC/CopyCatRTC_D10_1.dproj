@@ -1,7 +1,7 @@
 ﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
     <PropertyGroup>
         <ProjectGuid>{30657D52-02DE-4A6B-B193-60BD50CC0BD9}</ProjectGuid>
-        <MainSource>CopyCatRTC_D10.dpk</MainSource>
+        <MainSource>CopyCatRTC_D10_1.dpk</MainSource>
         <Base>True</Base>
         <Config Condition="'$(Config)'==''">Debug</Config>
         <TargetedPlatforms>17</TargetedPlatforms>
@@ -40,7 +40,7 @@
         <Base>true</Base>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base)'!=''">
-        <SanitizedProjectName>CopyCatRTC_D10</SanitizedProjectName>
+        <SanitizedProjectName>CopyCatRTC_D10_1</SanitizedProjectName>
         <VerInfo_Locale>1036</VerInfo_Locale>
         <DCC_N>false</DCC_N>
         <DCC_ImageBase>00400000</DCC_ImageBase>
@@ -86,7 +86,7 @@
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
         <DCCReference Include="rtl.dcp"/>
-        <DCCReference Include="CopyCat_D10.dcp"/>
+        <DCCReference Include="CopyCat_D10_1.dcp"/>
         <DCCReference Include="vcl.dcp"/>
         <DCCReference Include="CcRTCTransport.pas"/>
         <BuildConfiguration Include="Debug">
@@ -107,7 +107,7 @@
         <BorlandProject>
             <Delphi.Personality>
                 <Source>
-                    <Source Name="MainSource">CopyCatRTC_D10.dpk</Source>
+                    <Source Name="MainSource">CopyCatRTC_D10_1.dpk</Source>
                 </Source>
                 <VersionInfo>
                     <VersionInfo Name="IncludeVerInfo">True</VersionInfo>

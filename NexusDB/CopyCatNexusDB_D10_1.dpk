@@ -1,4 +1,4 @@
-package CopyCatNexusDB_D10;
+package CopyCatNexusDB_D10_1;
 
 {$R *.res}
 {$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
@@ -31,7 +31,7 @@ requires
   rtl,
   vcl,
   dbrtl,
-  CopyCat_D10;
+  CopyCat_D10_1;
 
 contains
   CcProvNexusDB in 'CcProvNexusDB.pas';

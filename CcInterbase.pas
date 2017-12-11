@@ -702,8 +702,9 @@ var
         cKeyName: string;
       begin
         Result := '';
-        if (DBBranch = dbFirebird) and (BranchVersion >= 25) then
-          Result := 'rdb$db_key='''''' || :dbkey || '''''''''
+        if (DBBranch = dbFirebird) and (BranchVersion >= 25) then begin
+          Result := 'rdb$db_key=:dbkey'''
+        end
         else begin
           for I := 0 to FKeys.Count-1 do begin
             if Result <> '' then
@@ -721,10 +722,14 @@ var
       Query.Add('    when 10 then 6 when 27 then 6 when 12 then 9');
       Query.Add('    when 13 then 10');
       Query.Add('    when 35 then 11');
-      Query.Add('    when 14 then iif(rdb$character_set_id = 4, 38, 23)');
+{      Query.Add('    when 14 then iif(rdb$character_set_id = 4, 38, 23)');
       Query.Add('    when 37 then iif(rdb$character_set_id = 4, 24, 1)');
       Query.Add('    when 40 then iif(rdb$character_set_id = 4, 24, 1)');
-      Query.Add('    when 261 then iif(rdb$field_sub_type = 0, 15, iif(rdb$character_set_id = 4, 39, 16))');
+      Query.Add('    when 261 then iif(rdb$field_sub_type = 0, 15, iif(rdb$character_set_id = 4, 39, 16))');}
+      Query.Add('    when 14 then case rdb$character_set_id when 4 then 38 else 23 end');
+      Query.Add('    when 37 then case rdb$character_set_id when 4 then 24 else 1 end');
+      Query.Add('    when 40 then case rdb$character_set_id when 4 then 24 else 1 end');
+      Query.Add('    when 261 then case rdb$field_sub_type when 0 then 15 else case rdb$character_set_id when 4 then 39 else 16 end end');
       Query.Add('    when 16 then 8');
       Query.Add('    when 23 then 5');
       Query.Add('  end');
@@ -747,9 +752,15 @@ var
       Query.Add('        stmt = stmt || '' union all '' || current_stmt;');
       Query.Add('');
       Query.Add('      if (character_length(stmt) >= 4000 or octet_length(stmt) >= 10000 or counter >= 100) then begin');
-      Query.Add('        for execute statement (stmt) into :field_name, :val, :val_blob, :field_type do  begin');
+
+      if (DBBranch = dbFirebird) and (BranchVersion >= 25) then
+        Query.Add('        for execute statement (stmt) (dbkey := :dbkey) ')
+      else
+        Query.Add('        for execute statement (stmt) ');
+
+      Query.Add('        into :field_name, :val, :val_blob, :field_type do  begin');
       Query.Add('          if (val is not null or val_blob is not null) then');
-      Query.Add('            update or insert into rpl$tmp_values(field_name,field_type,'+ cNewOld + '_value,'+ cNewOld + '_blob, '+ cNewOld + '_blob_null, change_number) values (trim(:field_name), :field_type, :val, :val_blob, iif(:val_blob is null, ''Y'', ''N''), :change_number);');
+      Query.Add('            update or insert into rpl$tmp_values(field_name,field_type,'+ cNewOld + '_value,'+ cNewOld + '_blob, '+ cNewOld + '_blob_null, change_number) values (trim(:field_name), :field_type, :val, :val_blob, case when :val_blob is null then ''Y'' else ''N'' end, :change_number);');
       Query.Add('        end');
       Query.Add('        stmt = null;');
       Query.Add('        counter = 0;');
@@ -757,9 +768,15 @@ var
       Query.Add('     counter = counter + 1;');
       Query.Add('  end');
       Query.Add('  if (stmt is not null) then begin');
-      Query.Add('    for execute statement (stmt) into :field_name, :val, :val_blob, :field_type do  begin');
+
+      if (DBBranch = dbFirebird) and (BranchVersion >= 25) then
+        Query.Add('    for execute statement (stmt) (dbkey := :dbkey) ')
+      else
+        Query.Add('    for execute statement (stmt) ');
+
+      Query.Add('    into :field_name, :val, :val_blob, :field_type do  begin');
       Query.Add('      if (val is not null or val_blob is not null) then');
-      Query.Add('        update or insert into rpl$tmp_values(field_name,field_type,'+ cNewOld + '_value,'+ cNewOld + '_blob, '+ cNewOld + '_blob_null, change_number) values (trim(:field_name), :field_type, :val, :val_blob, iif(:val_blob is null, ''Y'', ''N''), :change_number);');
+      Query.Add('        update or insert into rpl$tmp_values(field_name,field_type,'+ cNewOld + '_value,'+ cNewOld + '_blob, '+ cNewOld + '_blob_null, change_number) values (trim(:field_name), :field_type, :val, :val_blob, case when :val_blob is null then ''Y'' else ''N'' end, :change_number);');
       Query.Add('    end');
       Query.Add('  end');
     end;
@@ -824,7 +841,7 @@ var
     Query.Add('    select list(coalesce((select quoted_str from RPL$QUOTE_STR(val)), ''"''), '';'') || '';''');
     Query.Add('      from (select coalesce(r.old_value, r.new_value) as val');
     Query.Add('        from rdb$index_segments ins');
-    Query.Add('        join rpl$tmp_values r on r.field_name = ins.rdb$field_name and r.change_number = :change_number');
+    Query.Add('        left outer join rpl$tmp_values r on r.field_name = ins.rdb$field_name and r.change_number = :change_number');
     Query.Add('        where ins.rdb$index_name = (select first 1 i.rdb$index_name as index_name');
     Query.Add('          from rdb$indices i');
     Query.Add('          where i.rdb$relation_name = ' + QuotedStr(TableName));
@@ -836,7 +853,7 @@ var
     Query.Add('      from (select coalesce(r.old_value, r.new_value) as val');
     Query.Add('          from rdb$relation_fields rf');
     Query.Add('          join rdb$fields f on f.rdb$field_name = rf.rdb$field_source');
-    Query.Add('          join rpl$tmp_values r on r.field_name = rf.rdb$field_name and r.change_number = :change_number');
+    Query.Add('          left outer join rpl$tmp_values r on r.field_name = rf.rdb$field_name and r.change_number = :change_number');
     Query.Add('          where rf.rdb$relation_name = ' + QuotedStr(TableName));
     Query.Add('          and f.rdb$field_type <> 261 and f.rdb$field_length < 50');
     Query.Add('          order by rf.rdb$field_name');
@@ -977,7 +994,7 @@ begin
       qTable.Field['UNIQUE_KEY_NAMES'].AsString, qTable.Field['UNIQUE_KEY_SYNC'].AsString, koDelphi);
   end;
 
-  if TrackFieldChanges and (DBBranch = dbFirebird) and (BranchVersion >= 15) then begin
+  if TrackFieldChanges and (DBBranch = dbFirebird) and (BranchVersion >= 21) then begin
     GenerateChangedFields;
   end
   else begin
@@ -1089,10 +1106,12 @@ begin
     ExecConfQuery;
     FConnection.CommitRetaining;
   end;
-  if ProcedureExists('RPL$SPLIT_LIST') then begin
-    Query.Add('DROP PROCEDURE RPL$SPLIT_LIST');
-    ExecConfQuery;
-    FConnection.CommitRetaining;
+  if (DBBranch = dbFirebird) and (BranchVersion >= 21) then begin
+    if ProcedureExists('RPL$SPLIT_LIST') then begin
+      Query.Add('DROP PROCEDURE RPL$SPLIT_LIST');
+      ExecConfQuery;
+      FConnection.CommitRetaining;
+    end;
   end;
   if ProcedureExists('RPL$FORCE_REPL') then begin
     Query.Add('DROP PROCEDURE RPL$FORCE_REPL');
@@ -1137,6 +1156,7 @@ end;
 procedure TCcInterbaseAdaptor.CheckCustomMetadata;
 var
 	FB2: Boolean;
+  tmp: string;
 begin
 	inherited;
 	FB2 := (DBBranch = dbFirebird) and (BranchVersion >= 20);
@@ -1218,43 +1238,45 @@ begin
     ExecConfQuery;
   end;
 
-	if not ProcedureExists('RPL$SPLIT_LIST') then with Query do begin
-  	Add('create procedure RPL$SPLIT_LIST(list_to_split blob sub_type 1) returns (str varchar(100))');
-  	Add('as');
-  	Add('declare variable i integer;');
-  	Add('declare variable inQuote integer;');
-  	Add('declare variable c char(1);');
-  	Add('declare variable nStringLength integer;');
-  	Add('begin');
-    Add('i = 1;');
-    Add('str = '''';');
-    Add('inQuote = 0;');
-    Add('nStringLength = char_length(list_to_split);');
-    Add('while (i <= nStringLength) do');
-    Add('begin');
-    Add('  c = substring(list_to_split from i for 1);');
-    Add('  if (c = ''"'') then begin');
-    Add('    if (inQuote = 0) then');
-    Add('      inQuote = 1;');
-    Add('    else');
-    Add('      inQuote = 0;');
-    Add('  end');
-    Add('  else if (c = '','' and inQuote = 0) then begin');
-    Add('    suspend;');
-    Add('    str = '''';');
-    Add('  end');
-    Add('  else');
-    Add('    str = str || c;');
-    Add('');
-    Add('  i = i + 1;');
-    Add('end');
-    Add('if (char_length(str) > 0) then');
-    Add('  suspend;');
-    Add('end');
-    ExecConfQuery;
+  if (DBBranch = dbFirebird) and (BranchVersion >= 20) then begin
+    if not ProcedureExists('RPL$SPLIT_LIST') then with Query do begin
+      Add('create procedure RPL$SPLIT_LIST(list_to_split blob sub_type 1) returns (str varchar(100))');
+      Add('as');
+      Add('declare variable i integer;');
+      Add('declare variable inQuote integer;');
+      Add('declare variable c char(1);');
+      Add('declare variable nStringLength integer;');
+      Add('begin');
+      Add('i = 1;');
+      Add('str = '''';');
+      Add('inQuote = 0;');
+      Add('nStringLength = char_length(list_to_split);');
+      Add('while (i <= nStringLength) do');
+      Add('begin');
+      Add('  c = substring(list_to_split from i for 1);');
+      Add('  if (c = ''"'') then begin');
+      Add('    if (inQuote = 0) then');
+      Add('      inQuote = 1;');
+      Add('    else');
+      Add('      inQuote = 0;');
+      Add('  end');
+      Add('  else if (c = '','' and inQuote = 0) then begin');
+      Add('    suspend;');
+      Add('    str = '''';');
+      Add('  end');
+      Add('  else');
+      Add('    str = str || c;');
+      Add('');
+      Add('  i = i + 1;');
+      Add('end');
+      Add('if (char_length(str) > 0) then');
+      Add('  suspend;');
+      Add('end');
+      ExecConfQuery;
 
-    Query.Add('GRANT EXECUTE ON PROCEDURE RPL$SPLIT_LIST TO PUBLIC');
-    ExecConfQuery;
+      Query.Add('GRANT EXECUTE ON PROCEDURE RPL$SPLIT_LIST TO PUBLIC');
+      ExecConfQuery;
+    end;
   end;
 
 	if ((DBBranch = dbInterbase) or (BranchVersion < 20))and not TableExists('RPL$VARS') then begin
@@ -1293,6 +1315,13 @@ begin
       Query.Add('GRANT EXECUTE ON PROCEDURE RPL$FORCE_REPL TO PUBLIC');
       ExecConfQuery;
 		end;
+  end;
+
+  if (DBBranch = dbFirebird) and (BranchVersion >= 21) then begin
+    if BranchVersion >= 21 then
+      tmp := 'GLOBAL TEMPORARY'
+    else
+      tmp := '';
 
     if not TableExists(UnQuotedIdentifier('RPL$TMP_VALUES')) then begin
       with Query do
@@ -1339,7 +1368,7 @@ begin
       Query.Add('GRANT ALL ON RPL$TMP_CHANGES TO PUBLIC');
       ExecConfQuery;
     end;
-	end;
+  end;
 end;
 
 procedure TCcInterbaseAdaptor.DoRegisterNode(NodeName: String);
@@ -1450,8 +1479,8 @@ begin
 end;
 
 const ftQuotedTypes = [ftDate, ftTime, ftDateTime, ftFixedChar, ftString, ftMemo,
-    ftFmtMemo {$IFNDEF FPC}, ftFixedChar, ftWideString, ftOraClob, ftTimeStamp, ftWideMemo,
-    ftOraTimeStamp {$ENDIF}];
+    ftFmtMemo {$IFNDEF FPC}, ftFixedChar, ftWideString, ftOraClob, ftTimeStamp {$IFDEF CC_D2K9}, ftWideMemo,
+    ftOraTimeStamp{$ENDIF} {$ENDIF}];
 
 function TCcInterbaseAdaptor.QuoteSQLData(cData: String; DataType: TFieldType; lSQLStyle: Boolean):String;
 begin
@@ -1515,7 +1544,7 @@ constructor TCcInterbaseAdaptor.Create(Conn: TCcConnection);
 begin
   inherited;
   FKeys := TCcKeyRing.Create(Conn);
-  RegisterVersions(['IB6.0', 'IB6.5', 'IB7', 'IB7.5', 'FB1.0', 'FB1.5', 'FB2.0', 'FB2.5']);
+  RegisterVersions(['IB6.0', 'IB6.5', 'IB7', 'IB7.5', 'FB1.0', 'FB1.5', 'FB2.0', 'FB2.5', 'FB3.0']);
 end;
 
 procedure TCcInterbaseAdaptor.CreateProcedures;

@@ -1,0 +1,14 @@
+package CopyCatIBX_D10_2;
+
+requires
+  rtl,
+  dbrtl,
+  vcl,
+  vcldb,
+  ibxpress,
+  CopyCat_D10_2;
+
+contains
+  CcProvIBX in 'CcProvIBX.pas';
+
+end.

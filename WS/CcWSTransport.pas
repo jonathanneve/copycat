@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, ExtCtrls, SysUtils, DB, CcDB, CcTransports, CcProviders, SyncObjs, Generics.Collections, IdHTTPWebsocketClient,
-  IdServerWebsocketContext, IdWebsocketServer, IdSocketIOHandling,
+  IdServerWebsocketContext, IdWebsocketServer,
   IdIOHandlerWebsocket, uLkJSON, CcDIMime;
 
 type
@@ -445,7 +445,7 @@ end;
 constructor TCcWSClientTransport.Create(AOwner: TComponent);
 begin
   inherited;
-  FRequestTimeout := 0;
+  FRequestTimeout := 5000;
 	FConnectionLost := False;
   FWSClient := TIdHTTPWebsocketClient.Create(Self);
   FWSClient.SocketIOCompatible := False;

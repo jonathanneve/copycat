@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet>
+  <view uin="b54k1wdqbr0erho_v">
+    <property name="$name" value="default" />
+    <property name="$defaultDiagram" value="True" />
+    <property name="$metaclass" value="Package Diagram" />
+    <reference referencedUin="design:view:::4a36lpgobmepymm_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_class:src:CopyCat_2005:CcRplList.TCcLogFile" />
+      <reference referencedUin="delphi:e_class:src:CopyCat_2005:CcRplList.TCcLogFileList" />
+      <reference referencedUin="delphi:e_class:src:CopyCat_2005:CcRplList.TCcReplicatorList" />
+      <reference referencedUin="delphi:e_class:src:CopyCat_2005:CcRplList.TCcLogConfigListener" />
+    </reference>
+    <reference referencedUin="design:view:::0a3y1nmobic7jbn_v">
+      <property name="$shortcutReference" value="true" />
+      <property name="hideClass" value="False" />
+      <property name="bounds" value="150,0,128,149" />
+      <reference referencedUin="delphi:e_class:src:CopyCat_2005:CcConf.TDatabaseNode" />
+      <reference referencedUin="delphi:e_class:src:CopyCat_2005:CcConf.TCcConnectParams" />
+      <reference referencedUin="delphi:e_class:src:CopyCat_2005:CcConf.TCcProcParams" />
+      <reference referencedUin="delphi:e_class:src:CopyCat_2005:CcConf.TCcConfig" />
+    </reference>
+    <reference referencedUin="design:view:::ea3j7moob983s0h_v">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="139,152,143,201" />
+      <reference referencedUin="delphi:e_class:src:CopyCat_2005:CcReplicator.TCcQueryType" />
+      <reference referencedUin="delphi:e_class:src:CopyCat_2005:CcReplicator.TAutoRepl" />
+      <reference referencedUin="delphi:e_class:src:CopyCat_2005:CcReplicator.TCcAutoCommit" />
+      <reference referencedUin="delphi:e_class:src:CopyCat_2005:CcReplicator.TCcCustomConflictMgr" />
+      <reference referencedUin="delphi:e_class:src:CopyCat_2005:CcReplicator.TCcGenerator" />
+      <reference referencedUin="delphi:e_class:src:CopyCat_2005:CcReplicator.TCcReplicator" />
+      <reference referencedUin="delphi:e_class:src:CopyCat_2005:CcReplicator.TCcCustomLog" />
+      <reference referencedUin="delphi:e_class:src:CopyCat_2005:CcReplicator.EReplError" />
+    </reference>
+    <reference referencedUin="design:view:::ja3j7moob1bx3jt_v">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="24,152,107,163" />
+      <reference referencedUin="delphi:e_class:src:CopyCat_2005:CcProviders.TCcQuery" />
+      <reference referencedUin="delphi:e_class:src:CopyCat_2005:CcProviders.TCCDatabase" />
+      <reference referencedUin="delphi:e_class:src:CopyCat_2005:CcProviders.TCCTransaction" />
+      <reference referencedUin="delphi:e_class:src:CopyCat_2005:CcProviders.TCcMacro" />
+      <reference referencedUin="delphi:e_class:src:CopyCat_2005:CcProviders.TCCField" />
+      <reference referencedUin="delphi:e_class:src:CopyCat_2005:CcProviders.TCcProvider" />
+    </reference>
+    <reference referencedUin="design:view:::oa35clqob1f3ewo_v">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="312,1,112,125" />
+      <reference referencedUin="delphi:e_class:src:CopyCat_2005:CCat.TCcCommitType" />
+      <reference referencedUin="delphi:e_class:src:CopyCat_2005:CCat.TCcLogState" />
+    </reference>
+    <reference referencedUin="design:view:::ta35clqobyn0lwg_v">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="312,141,126,163" />
+      <reference referencedUin="delphi:e_class:src:CopyCat_2005:CcConfStorage.TCcTables" />
+      <reference referencedUin="delphi:e_class:src:CopyCat_2005:CcConfStorage.TCcConfigStorage" />
+      <reference referencedUin="delphi:e_class:src:CopyCat_2005:CcConfStorage.TCcComponent" />
+      <reference referencedUin="delphi:e_class:src:CopyCat_2005:CcConfStorage.TCcCustomStorage" />
+      <reference referencedUin="delphi:e_class:src:CopyCat_2005:CcConfStorage.TCcProcedures" />
+      <reference referencedUin="delphi:e_class:src:CopyCat_2005:CcConfStorage.TCcDetailDataset" />
+    </reference>
+    <reference referencedUin="design:view:::ya3qhksobr4yu0m_v">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="320,380,137,150" />
+      <reference referencedUin="delphi:e_class:src:CopyCat_2005:CCDBParams.TPeriodicity" />
+      <reference referencedUin="delphi:e_class:src:CopyCat_2005:CCDBParams.TCcCustomReplicator" />
+      <reference referencedUin="delphi:e_class:src:CopyCat_2005:CCDBParams.TCcUsers" />
+      <reference referencedUin="delphi:e_class:src:CopyCat_2005:CCDBParams.TCcUser" />
+      <reference referencedUin="delphi:e_class:src:CopyCat_2005:CCDBParams.TCcDBParams" />
+    </reference>
+    <reference referencedUin="design:view:::3b3qhksobwf6unl_v">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="190,370,76,98" />
+      <reference referencedUin="delphi:e_class:src:CopyCat_2005:CcLog.TCcLog" />
+    </reference>
+    <reference referencedUin="design:view:::8b3bnjuob71j54g_v">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="40,360,118,149" />
+      <reference referencedUin="delphi:e_class:src:CopyCat_2005:CcMemDS.TCcMemoryData" />
+      <reference referencedUin="delphi:e_class:src:CopyCat_2005:CcMemDS.TMemoryRecord" />
+      <reference referencedUin="delphi:e_class:src:CopyCat_2005:CcMemDS.TMemBlobStream" />
+      <reference referencedUin="delphi:e_class:src:CopyCat_2005:CcMemDS.TLoadMode" />
+    </reference>
+    <reference referencedUin="design:view:::cb3bnjuob3znp0t_v">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="479,1,105,98" />
+      <reference referencedUin="delphi:e_class:src:CopyCat_2005:CcConflictMgr.TCcConflictMgr" />
+    </reference>
+    <reference referencedUin="design:node:::981iamyzr20e0nq_n">
+      <property name="$shortcutReference" value="true" />
+      <property name="foreground_color" value="Black" />
+      <property name="background_color" value="White" />
+      <property name="bounds" value="512,343,76,42" />
+    </reference>
+    <reference referencedUin="design:node:::bl1kcr0aswcvj8l_n">
+      <property name="$shortcutReference" value="true" />
+      <property name="foreground_color" value="Black" />
+      <property name="background_color" value="White" />
+      <property name="bounds" value="500,420,76,42" />
+    </reference>
+  </view>
+  <node uin="981iamyzr20e0nq_n">
+    <property name="$name" value="Object1" />
+    <property name="$metaclass" value="Object" />
+  </node>
+  <node uin="bl1kcr0aswcvj8l_n">
+    <property name="$name" value="Object2" />
+    <property name="$metaclass" value="Object" />
+  </node>
+</nodeSet>

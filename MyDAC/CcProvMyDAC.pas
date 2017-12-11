@@ -41,14 +41,17 @@ TCcConnectionMyDAC = class(TCcConnection)
     procedure DoRollback;override;
     procedure DoRollbackRetaining;override;
     procedure DoStartTransaction;override;
-    function GetMyConnection: TMyConnection;
+		function GetConnectorConnected: Boolean;override;
+		function GetInTransaction: Boolean;override;
+		function RowsAffectedSupported: Boolean;override;
+		function GetMyConnection: TMyConnection;
     procedure Notification(AComponent: TComponent; Operation: TOperation);override;
   public
     class function ConnectorName: String;override;
     constructor Create(AOwner: TComponent);override;
     procedure Assign(Source: TPersistent);override;
   published
-    property MyConnection: TMyConnection read FMyConnection write SetMyConnection;
+		property MyConnection: TMyConnection read FMyConnection write SetMyConnection;
     property DBType;
     property DBVersion;
 end;
@@ -274,6 +277,25 @@ function TCcConnectionMyDAC.GetMyConnection: TMyConnection;
 begin
   if Assigned(MyConnection) then Result := MyConnection
   else raise Exception.Create('MySQL connection object must be assigned');
+end;
+
+function TCcConnectionMyDAC.GetConnectorConnected: Boolean;
+begin
+	Result := False;
+	if Assigned(MyConnection) then
+		Result := MyConnection.Connected;
+end;
+
+function TCcConnectionMyDAC.GetInTransaction: Boolean;
+begin
+	Result := False;
+	if Assigned(MyConnection) then
+    Result := MyConnection.InTransaction;
+end;
+
+function TCcConnectionMyDAC.RowsAffectedSupported: Boolean;
+begin
+  Result := False;
 end;
 
 initialization

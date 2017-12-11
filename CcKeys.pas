@@ -51,6 +51,7 @@ TCcKeyRing = class(TCcCustomKeyRing)
     procedure SetFailIfNoPK(const Value: Boolean);
     procedure AddKey(cTableName, cFieldName, cFieldSync, cGenericFieldSync: String);
     function GetKeyFieldType(Table, Field: String): TFieldType;
+    function GetTableKeyNames(cTableName: String): String;
   protected
     property KeyValues: TStringList read GetKeyValues;
     function DoLoadKeysFromDataSet(cTableName: String; cPKVals, cPKSync, cUKSync: String): String;
@@ -87,6 +88,7 @@ TCcKeyRing = class(TCcCustomKeyRing)
     //the PrimaryKeyValues, PrimaryKeySync, UniqueKeyNames, and UniqueKeySync properties
     procedure SaveKeys;
     procedure Clear;
+    property TableKeyNames[cTableName: String]: String read GetTableKeyNames;
     property TableKeys[cTableName: String]: TStringList read GetTableKeys;
     property Keys[Index: Integer]: TCcKey read GetKey; default;
     property Count: Integer read GetKeyCount;
@@ -283,6 +285,15 @@ begin
 			Next;
 		end;
 	end;}
+end;
+
+function TCcKeyRing.GetTableKeyNames(cTableName: String): String;
+var
+  i: Integer;
+begin
+  Result := '';
+  for i := 0 to TableKeys[cTableName].Count -1 do
+    Result := Result + QuotedStr(TableKeys[cTableName].Strings[i]) + ';';
 end;
 
 function TCcKeyRing.GetTableKeys(cTableName: String): TStringList;

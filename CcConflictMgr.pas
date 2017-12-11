@@ -72,7 +72,7 @@ begin
     qDeleteConflictFields := conn.UpdateQuery['TCcConflictMgr_qDeleteConflictLog'];
     qDeleteConflictFields.Close;
     qDeleteConflictFields.SQL.Text := 'delete from RPL$LOG_VALUES where change_number in ' +
-      '(select change_number from rpl$log where login = :table_name and table_name = :table_name and primary_key_values = :primary_key_values and replication_state is null)'+
+      '(select change_number from rpl$log where login = :node_name and table_name = :table_name and primary_key_values = :primary_key_values and replication_state is null)'+
       ' and node_name = :node_name and field_name in (%fields)';
     qDeleteConflictFields.Macro['fields'].Value := cFields;
     qDeleteConflictFields.Param['primary_key_values'].Value := cPrimaryKeyValues;

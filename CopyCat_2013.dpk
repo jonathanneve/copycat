@@ -1,7 +1,6 @@
 package CopyCat_2013;
 
 {$R *.res}
-{$R *.otares}
 {$R 'CopyCat.dcr'}
 {$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
 {$ALIGN 8}

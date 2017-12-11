@@ -66,6 +66,7 @@ UninstallDisplayName=Microtec CopyCat v.{#VERSION}
 #undef public Delphi
 #undef public BDS
 #undef public CRS
+
 #if i == 0
   #undef public Delphi
   #define public DIR "FPC"
@@ -269,7 +270,7 @@ Source: ..\{#SourceDir}\CcTrial.obj; DestDir: {app}\{#DIR}; Components: {#DIR}; 
 
 #endsub
 
-#for {i=0;i<=MAXCOMPVERSIONS;i++} AddSource
+#for {i=3;i<=MAXCOMPVERSIONS;i++} AddSource
 
 Source: ..\Examples\*; DestDir: {app}\Examples; Excludes: *.exe,*.tds,*.map, *.~*, *.elf, *.obj, *.h, *.dcu, *.il?, *.*pch, *.zip, *.identcache, *.#*, .svn; Components: Examples; Languages: ; Flags: recursesubdirs sortfilesbyextension overwritereadonly ignoreversion uninsremovereadonly
 Source: ..\changelog.txt; DestDir: {app}; Flags: sortfilesbyextension overwritereadonly ignoreversion uninsremovereadonly
@@ -284,13 +285,6 @@ Source: ..\Zeos\*; DestDir: {app}\Other Connectors; Excludes: *.exe,*.tds,*.map,
 Source: ..\UniDAC\*; DestDir: {app}\Other Connectors; Excludes: *.exe,*.tds,*.map, *.~*, *.elf, *.obj, *.h, *.dcu, .svn; Flags: sortfilesbyextension overwritereadonly ignoreversion uninsremovereadonly
 Source: ..\IBDAC\*; DestDir: {app}\Other Connectors; Excludes: *.exe,*.tds,*.map, *.~*, *.elf, *.obj, *.h, *.dcu, .svn; Flags: sortfilesbyextension overwritereadonly ignoreversion uninsremovereadonly
 
-Source: ..\..\CopyCatJava\*; DestDir: {app}\JavaServer; Flags: sortfilesbyextension overwritereadonly ignoreversion uninsremovereadonly
-Source: ..\..\CopyCatJava\copycat\*; DestDir: {app}\JavaServer\copycat\; Flags: sortfilesbyextension overwritereadonly ignoreversion uninsremovereadonly
-Source: ..\..\CopyCatJava\copycat\xmlrpc\*; DestDir: {app}\JavaServer\copycat\xmlrpc; Flags: sortfilesbyextension overwritereadonly ignoreversion uninsremovereadonly
-Source: ..\..\CopyCatJava\test\*; DestDir: {app}\JavaServer\test; Flags: sortfilesbyextension overwritereadonly ignoreversion uninsremovereadonly
-Source: ..\..\CopyCatPHP\*; DestDir: {app}\PHPServer; Flags: sortfilesbyextension overwritereadonly ignoreversion uninsremovereadonly
-Source: ..\..\CopyCatPHP\.settings\*; DestDir: {app}\PHPServer\copycat\; Flags: sortfilesbyextension overwritereadonly ignoreversion uninsremovereadonly
-Source: ..\..\CopyCatPHP\xmlrpc\*; DestDir: {app}\PHPServer\copycat\xmlrpc; Flags: sortfilesbyextension overwritereadonly ignoreversion uninsremovereadonly
 Source: ..\Doc\CopyCat.als; DestDir: {app}\Doc; Components: Doc; Flags: sortfilesbyextension overwritereadonly ignoreversion uninsremovereadonly
 Source: ..\Doc\CopyCat.cnt; DestDir: {app}\Doc; Components: Doc; Flags: sortfilesbyextension overwritereadonly ignoreversion uninsremovereadonly
 Source: ..\Doc\CopyCat.hlp; DestDir: {app}\Doc; Components: Doc; Flags: sortfilesbyextension overwritereadonly ignoreversion uninsremovereadonly

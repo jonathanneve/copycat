@@ -268,6 +268,7 @@ begin
   FFDConnection := Value;
 
   if Assigned(Value) then begin
+    Value.ResourceOptions.AutoReconnect := False;
     Value.TxOptions.AutoCommit := False;
     Value.FreeNotification(Self);
   end;

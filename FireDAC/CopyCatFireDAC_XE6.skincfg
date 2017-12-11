@@ -1,5 +1,15 @@
 [ExpressSkins]
-Default=1
+Default=0
 ShowNotifications=1
 Enabled=0
 dxSkinsDefaultPainters=1
+dxSkinBlack=1
+dxSkinBlue=1
+dxSkinBlueprint=1
+dxSkinCaramel=1
+dxSkinCoffee=1
+dxSkinDarkRoom=1
+dxSkinDevExpressStyle=1
+dxSkinOffice2013DarkGray=1
+dxSkinOffice2013LightGray=1
+dxSkinOffice2013White=1

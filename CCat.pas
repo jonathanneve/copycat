@@ -119,7 +119,7 @@ begin
 
     try
       Pos := Stream.Position;
-      Stream.SetSize(Stream.Size + Length(Text) div 2);
+      Stream.SetSize(Int64(Stream.Size + Length(Text) div 2));
 {$IFNDEF NEXTGEN}
       HexToBin(PChar(Text), PChar(Integer(Stream.Memory) + Stream.Position), Length(Text) div 2);
 {$ELSE}

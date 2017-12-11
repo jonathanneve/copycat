@@ -1,4 +1,4 @@
-package CopyCatRTC_D10;
+package CopyCatRTC_D10_1;
 
 {$R *.res}
 {$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
@@ -30,7 +30,7 @@ package CopyCatRTC_D10;
 
 requires
   rtl,
-  CopyCat_D10,
+  CopyCat_D10_1,
   rtcSDK,
   vcl;
 

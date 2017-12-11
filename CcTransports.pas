@@ -70,7 +70,7 @@ type
     function GetInTransaction: Boolean; override;
     property ProcedureName: string read GetProcedureName;
     property LoginProcName: string read GetLoginProcName;
-    procedure SignalConnectLost; override;
+		procedure SignalConnectLost; override;
     procedure DoDisconnect; override;
     procedure DoConnect; override;
     procedure DoCommit; override;
@@ -1295,7 +1295,7 @@ begin
 
 //    if res.ValueType = vtField then
 //    begin
-      //if VarIsNull(res.Value) or (res.Value = 'ERROR:NOT_LOGGED_IN') then
+			//if VarIsNull(res.Value) or (res.Value = 'ERROR:NOT_LOGGED_IN') then
 //        SignalConnectLost;
 //    end
     //else
@@ -1305,14 +1305,17 @@ begin
         SignalConnectLost;
       // raise Exception.Create('Internal transport error: remote function call returned incoherent result!');
 
-      cSessionID := res.AsArray[0].Value;
-    end
-    else
-      SignalConnectLost;
+			cSessionID := res.AsArray[0].Value;
+		end
+		else
+			SignalConnectLost;
 
-    // If there no session ID, it means the session has expired
-    if (cSessionID = '') or (cSessionID <> FSessionID) then
-      SignalConnectLost;
+		if (cSessionID = 'ERROR:NOT_LOGGED_IN') then
+			raise Exception.Create('Session reset on server');
+
+		// If there no session ID, it means the session has expired
+		if (cSessionID = '') or (cSessionID <> FSessionID) then
+			SignalConnectLost;
 
     if Assigned(Result) and (res.AsArray.Count = 2) then
       Result.Assign(res.AsArray[1]);

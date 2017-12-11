@@ -86,14 +86,14 @@ begin
   FClient := TCcWSClientTransport.Create(Self);
   FClient.Host := 'localhost';
   FClient.Port := 9093;
-  FClient.DatabaseAlias := 'Test2';
+  FClient.DatabaseAlias := 'UCAR';
   FClient.RequestTimeout := 10000;
 
-{  FGateway := TCcWSGateway.Create(Self);
-  FGateway.Port := 9093;}
+  FGateway := TCcWSGateway.Create(Self);
+  FGateway.Port := 9093;
 
   FAgent := TCcWSAgentConnection.Create(Self);
-  FAgent.DatabaseAlias := 'Test2';
+  FAgent.DatabaseAlias := 'UCAR';
   FAgent.Connection := CcConnection;
   FAgent.Host := 'localhost';
   FAgent.Port := 9093;
