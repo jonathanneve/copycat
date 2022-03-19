@@ -1,1 +1,0 @@
-<?php return '5JWjKHfJyUZ0qTWiJlXMgWOK9qW0MLkGci3CbmcgS4DlVr94hbVONCWqXYdtibqJq93ilkZf60auPj';

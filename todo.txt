@@ -1,9 +1,0 @@
-- Merge in CopyCat trigger changes from Duluard
-- Finish getting all sites to replicate
-- Test comparer against local database
-- Run comparer again
-- Generate new LiveMirror and publish for Halim
-- Test new LM against MS SQL for boeing
-- Contact UCAR with new LM
-- Publish CopyCat with fixes and new comparer component
-- Batch update mechanism for CopyCat and LM

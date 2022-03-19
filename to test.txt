@@ -1,2 +1,0 @@
-- MySQL http://copycat.fr/wordpress/discussions/#/discussion/105/copycat-3-9-ado-connector-mysql-5-1-73-issues
-- 

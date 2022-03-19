@@ -1,4 +1,0 @@
-CopyCat website:
-
-- Update prices and product descriptions on ShareIT
-- Create Roadmap page

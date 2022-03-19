@@ -1,8 +1,0 @@
-- Corrected bug causing a string overflow in replication triggers for large varchar fields, when using TrackChanges option.
-- Added a transaction number to RPL$LOG (Interbase/Firebird only), so that changes made within one transaction can be bunched together.
-- Added lCheckUsers parameter to TCcConfig.GenerateConfig. If this flag is set to False, GenerateConfig will only check the triggers not the nodes in RPL$USERS.
-- Fixed a bug causing an large varchar or memo field to sometimes be transliterated to the wrong character set when using TrackChanges.
-- Fixed a bug whereby TCcReplicator didn't correctly skip rows that were in error: if the ReplicateOnlyChangedFields option is used, rows that have failed to replicate are now flagged and not replicated again during the same replication cycle. Otherwise, rows could get incompletely replicated, or could even receive outdated values if the RPL$LOG row that was in error is successfully replicated during a subsequent replication cycle.
-- Fixed bug in GUID field parsing for MS SQL Server.
-- Improved TCcDBAdaptor.Gen_ID function to return an Int64 rather than an Integer
-- Fixed bug causing replication triggers to fail in some cases when using Firebird 1.5
