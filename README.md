@@ -10,8 +10,6 @@ In 2017, I took on an ambitious new project aiming to turn CopyCat from a develo
 
 In parallel with the technical design and implementation, I spent a long time throughout 2017 and 2018 studying the market and investigating the commercial feasibility and best approaches for the project. It was a learning experience for me, and there is a lot I would do differently next time. But after much time and effort, I was forced to conclude that the project as I envisaged it did not have enough market potential to be viable purely as a SaaS solution, and would only be worthwhile if I were to pivot towards a more hands-on, service-based model. That conclusion led me to abandon the project.
 
-The [CopyCat cloud project is available here](https://github.com/jonathanneve/copycat-cloud), if you want to take a look.
-
 ## Open sourcing
 
 Since 2022, the CopyCat project is now being offered as opensource, primarily for the benefit of existing customers who are still using it and who need to ensure continued availability in the future. The codebase is licenced under the MIT licence, which basically means you are free to do whatever you want with it. If you find the project interesting or would like to do something with it, please [drop me a line](mailto:jonneve@gmail.com), as I would love to hear about it. I'm also available for consultancy work on an ad-hoc basis if you need help either implementing or updating a CopyCat replication system.
